@@ -16,8 +16,9 @@
         {{--FONTS--}}
     </head>
     <body>
-        <div id="app" style="height: 200vh; background: #ffaabb">
+        <div id="app" style="height: 200vh;">
             <navbar api_link="@php echo getenv('APP_URL') @endphp"></navbar>
+            @yield('content')
         </div>
 
         {{--ADD VUE--}}

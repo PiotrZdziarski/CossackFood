@@ -12,9 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('app');
+    return view('home');
 });
 
-Route::get('/asdasdasd/asdasdasda/sadasdasdasd', function () {
-    return view('app');
-});

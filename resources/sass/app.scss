@@ -1,6 +1,4 @@
-
 // Fonts
-
 // Variables
 @import 'variables';
 
@@ -28,3 +26,88 @@ body {
 .clearfix {
   overflow: auto;
 }
+
+.claim {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  //border-bottom: #F34949 5px solid;
+  justify-content: center;
+  background: linear-gradient(
+                  rgba(0, 0, 0, 0.7),
+                  rgba(0, 0, 0, 0.7)
+  ), url('/images/claim.jpg');
+  background-size: cover;
+}
+
+.claimTitle {
+  margin-top: 40px;
+  color:white;
+  font-size: 100px;
+  animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+.claimSubTitle {
+  margin-top: 33px;
+  color:white;
+  font-size: 16px;
+  animation: .6s ease-out 0s 1 slideInFromTopMore;
+}
+
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTopMore {
+  0% {
+    transform: translateY(300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.menu {
+  width: 73%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .menuTag {
+    width: 17%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95px;
+    z-index: 1;
+    background-color: #f34949;
+    position: relative;
+    padding-bottom: 30px;
+    font-size: 20px;
+    color:white;
+  }
+  .menuTag::before {
+    background-color: white;
+    height: 30px;
+    width: 100%;
+    border-radius: 50% 50% 0 0;
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    z-index: -999999;
+  }
+
+
+}
+
+
