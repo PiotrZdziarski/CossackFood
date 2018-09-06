@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="navbar" :class="{boxShadow: !nav_active}">
+        <div id="navbar" class="navbar" :class="{boxShadow: !nav_active}">
             <div class="logo"><img class="logo-image" :src="api_link + '/images/logo.png'"></div>
             <div class="dropdown-menu">
                 <div class="dropdown-item">
@@ -51,15 +51,23 @@
                 nav_active: false
             }
         },
+        mounted() {
+            window.addEventListener('scroll', function () {
+                if(this.scrollY !== 0) {
+                    document.getElementById('navbar').classList.add('heightvh');
+                }
+                if(this.scrollY === 0) {
+                    document.getElementById('navbar').classList.remove('heightvh');
+                }
+            });
+        },
         methods: {
             show_nav() {
                 document.getElementById('hamburger').classList.toggle('open');
 
-                if(this.nav_active === false) {
+                if (this.nav_active === false) {
                     this.nav_active = true;
-                } else
-
-                if(this.nav_active === true) {
+                } else if (this.nav_active === true) {
                     this.nav_active = false;
                 }
 
@@ -73,21 +81,23 @@
     .boxShadow {
         box-shadow: 0 2px 4px #f1f1f1;
     }
+
     .slide-fade-enter-active {
         transition: all .3s ease;
         position: absolute;
     }
+
     .slide-fade-leave-active {
         transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
         opacity: 0;
     }
+
     .slide-fade-enter, .slide-fade-leave-to {
         transform: translateX(1000px);
         opacity: 0;
     }
 
-    @media(max-width: 999.99px)
-    {
+    @media(max-width: 999.99px) {
         .menu {
             width: 100%;
             top: 10vh;
@@ -117,7 +127,7 @@
             width: 60%;
             align-items: center;
             justify-content: center;
-            float:left;
+            float: left;
             position: relative;
         }
         .burger {
@@ -195,12 +205,11 @@
             top: 15px;
         }
 
-
         .hamburger-div {
             display: flex;
             justify-content: right;
             align-items: center;
-            float:left;
+            float: left;
             position: relative;
             width: 40%;
         }
@@ -216,6 +225,14 @@
     }
 
     @media(min-width: 1000px) {
+        .heightvh {
+            height: 9vh !important;
+            opacity: 0.95;
+            filter: alpha(opacity=95);
+        }
+        .heightvh * {
+            opacity: 1 !important;
+        }
         .logo-image {
             width: 60%;
             height: 60%;
@@ -223,14 +240,16 @@
         .navbar {
             margin-left: auto;
             margin-right: auto;
-            max-width: 100%;
-            max-width: 1400px;
-            position: relative;
-            height: 110px;
+            height: 14vh;
+            position: fixed;
+            width: 100%;
+            box-shadow: 0 1.5px 3px #b9bbbe;
+            background: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 1px 2px #d3d9df;
+            z-index: 1000;
+            transition: .3s all ease-in-out;
         }
 
         .logo {
