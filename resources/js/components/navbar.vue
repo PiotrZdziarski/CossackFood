@@ -1,0 +1,254 @@
+<template>
+    <div>
+        <div class="navbar" :class="{boxShadow: !nav_active}">
+            <div class="logo"><img class="logo-image" :src="api_link + '/images/logo.png'"></div>
+            <div class="dropdown-menu">
+                <div class="dropdown-item">
+                    Menu
+                </div>
+                <div class="dropdown-item">
+                    Story
+                </div>
+                <div class="dropdown-item">
+                    News
+                </div>
+                <div class="dropdown-item">
+                    Reserevations
+                </div>
+                <div class="dropdown-item">
+                    Contact
+                </div>
+            </div>
+            <div class="hamburger-div">
+                <a id="hamburger" class="burger" @click="show_nav">
+                    <div></div>
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <transition name="slide-fade">
+            <div v-if="nav_active" class="menu">
+                <div class="menu-item">Menu</div>
+                <div class="menu-item">Story</div>
+                <div class="menu-item">News</div>
+                <div class="menu-item">Reservations</div>
+                <div class="menu-item">Contact</div>
+            </div>
+        </transition>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "navbar",
+        props: {
+            api_link: {
+                type: String
+            }
+        },
+        data() {
+            return {
+                nav_active: false
+            }
+        },
+        methods: {
+            show_nav() {
+                document.getElementById('hamburger').classList.toggle('open');
+
+                if(this.nav_active === false) {
+                    this.nav_active = true;
+                } else
+
+                if(this.nav_active === true) {
+                    this.nav_active = false;
+                }
+
+            }
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+
+    .boxShadow {
+        box-shadow: 0 2px 4px #f1f1f1;
+    }
+    .slide-fade-enter-active {
+        transition: all .3s ease;
+        position: absolute;
+    }
+    .slide-fade-leave-active {
+        transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+        opacity: 0;
+    }
+    .slide-fade-enter, .slide-fade-leave-to {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    @media(max-width: 999.99px)
+    {
+        .menu {
+            width: 100%;
+            top: 10vh;
+            position: fixed;
+            background: white;
+            padding-top: 20px;
+        }
+
+        .menu-item {
+            text-align: center;
+            width: 100%;
+            min-height: 40px;
+        }
+        .navbar {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            padding: 15px;
+            z-index: 1000;
+            position: fixed;
+            background: white;
+            transition: .25s all ease-in-out;
+        }
+
+        .logo {
+            display: flex;
+            width: 60%;
+            align-items: center;
+            justify-content: center;
+            float:left;
+            position: relative;
+        }
+        .burger {
+            display: block;
+            position: absolute;
+            right: 20%;
+            width: 45px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .burger.open div {
+            background: none;
+        }
+
+        .burger.open div:before, .burger.open div:after {
+            top: 0;
+        }
+
+        .burger.open div:before {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .burger.open div:after {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .burger.open:hover div:before {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .burger.open:hover div:after {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .burger:hover:not(.open) div:before {
+            top: -15px;
+        }
+
+        .burger:hover:not(.open) div:after {
+            top: 15px;
+        }
+
+        .burger div,
+        .burger div:before,
+        .burger div:after {
+            width: 100%;
+            height: 6px;
+            background: #d31f3c;
+            -webkit-transition: all 0.4s ease;
+            -moz-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+
+        .burger div {
+            position: relative;
+            margin: 20px auto 0;
+        }
+
+        .burger div:before, div:after {
+            content: "";
+            position: absolute;
+        }
+
+        .burger div:before {
+            top: -15px;
+        }
+
+        .burger div:after {
+            top: 15px;
+        }
+
+
+        .hamburger-div {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            float:left;
+            position: relative;
+            width: 40%;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        .logo-image {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    @media(min-width: 1000px) {
+        .logo-image {
+            width: 60%;
+            height: 60%;
+        }
+        .navbar {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            max-width: 1400px;
+            position: relative;
+            height: 110px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 1px 2px #d3d9df;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            width: 30%;
+        }
+
+        .dropdown-menu {
+            width: 69%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .dropdown-item {
+            text-align: center;
+            font-size: 14px;
+            width: 14%;
+        }
+    }
+</style>
