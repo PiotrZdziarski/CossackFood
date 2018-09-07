@@ -45,14 +45,37 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("/images/claim.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/claim.jpg");
   background-size: cover;
+  background-position: 50%;
 }
 
 .claimTitle {
   margin-top: 40px;
   color: white;
-  font-size: 100px;
+  width: 100%;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 700;
   -webkit-animation: 1s ease-out 0s 1 slideInFromTop;
           animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+@media (min-width: 476px) {
+  .claimTitle {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .claimTitle {
+    font-size: 80px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1000px) {
+  .claimTitle {
+    font-size: 100px;
+  }
 }
 
 .claimSubTitle {
@@ -65,8 +88,8 @@ body {
 
 @-webkit-keyframes slideInFromTop {
   0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
   }
 
   100% {
@@ -77,8 +100,8 @@ body {
 
 @keyframes slideInFromTop {
   0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
   }
 
   100% {
@@ -89,8 +112,8 @@ body {
 
 @-webkit-keyframes slideInFromTopMore {
   0% {
-    -webkit-transform: translateY(300%);
-            transform: translateY(300%);
+    -webkit-transform: translateY(500%);
+            transform: translateY(500%);
   }
 
   100% {
@@ -101,8 +124,8 @@ body {
 
 @keyframes slideInFromTopMore {
   0% {
-    -webkit-transform: translateY(300%);
-            transform: translateY(300%);
+    -webkit-transform: translateY(500%);
+            transform: translateY(500%);
   }
 
   100% {
@@ -112,13 +135,31 @@ body {
 }
 
 .menu {
-  width: 73%;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
 
+@media (min-width: 476px) {
+  .menu {
+    width: 92%;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu {
+    width: 87%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .menu {
+    width: 83%;
+  }
+}
+
 .menu .menuTag {
-  width: 17%;
+  width: 57%;
   margin-left: auto;
   margin-right: auto;
   display: -webkit-box;
@@ -139,6 +180,24 @@ body {
   color: white;
 }
 
+@media (min-width: 476px) {
+  .menu .menuTag {
+    width: 42%;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu .menuTag {
+    width: 27%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .menu .menuTag {
+    width: 17%;
+  }
+}
+
 .menu .menuTag::before {
   background-color: white;
   height: 30px;
@@ -149,5 +208,83 @@ body {
   bottom: 0;
   left: 0;
   z-index: -999999;
+}
+
+.menu .menuList {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  padding-top: 50px;
+}
+
+@media (min-width: 768px) {
+  .menu .menuList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.menu .menuList .menuItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0 50px 0;
+  position: relative;
+}
+
+@media (min-width: 1000px) {
+  .menu .menuList .menuItem {
+    margin: 10px 20px 50px 20px;
+  }
+}
+
+.menu .menuList .menuItem .menuFood {
+  width: 55%;
+  padding: 15px;
+  font-size: 16px;
+  color: #555555;
+}
+
+@media (min-width: 1000px) {
+  .menu .menuList .menuItem .menuFood {
+    width: 50%;
+  }
+}
+
+.menu .menuList .menuItem .menuFood .subText {
+  color: #B7B7B7;
+  font-size: 12px;
+}
+
+.menu .menuList .menuItem .menuBorder {
+  width: 30%;
+  border-top: 1px solid #E3E1E1;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 1000px) {
+  .menu .menuList .menuItem .menuBorder {
+    width: 35%;
+  }
+}
+
+.menu .menuList .menuItem .menuPrice {
+  width: 15%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 

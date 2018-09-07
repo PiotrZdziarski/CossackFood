@@ -104,12 +104,13 @@
             position: fixed;
             background: white;
             padding-top: 20px;
+            z-index: 1000;
         }
 
         .menu-item {
             text-align: center;
             width: 100%;
-            min-height: 40px;
+            min-height: 50px;
         }
         .navbar {
             width: 100%;
@@ -141,6 +142,7 @@
 
         .burger.open div {
             background: none;
+            box-shadow: none !important;
         }
 
         .burger.open div:before, .burger.open div:after {
@@ -181,6 +183,7 @@
             width: 100%;
             height: 6px;
             background: #d31f3c;
+            box-shadow: 0 2px 4px #b9bbbe;
             -webkit-transition: all 0.4s ease;
             -moz-transition: all 0.4s ease;
             -o-transition: all 0.4s ease;

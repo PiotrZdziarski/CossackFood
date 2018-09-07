@@ -41,12 +41,28 @@ body {
                   rgba(0, 0, 0, 0.7)
   ), url('/images/claim.jpg');
   background-size: cover;
+  background-position: 50%;
 }
 
 .claimTitle {
   margin-top: 40px;
   color:white;
-  font-size: 100px;
+  width: 100%;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 700;
+  @media(min-width: 476px) {
+    font-size: 60px;
+  }
+
+  @media(min-width: 768px) {
+    font-size: 80px;
+    font-weight: 400;
+  }
+
+  @media(min-width: 1000px) {
+    font-size: 100px;
+  }
   animation: 1s ease-out 0s 1 slideInFromTop;
 }
 
@@ -60,7 +76,7 @@ body {
 
 @keyframes slideInFromTop {
   0% {
-    transform: translateY(100%);
+    transform: translateY(150%);
   }
   100% {
     transform: translateX(0);
@@ -69,7 +85,7 @@ body {
 
 @keyframes slideInFromTopMore {
   0% {
-    transform: translateY(300%);
+    transform: translateY(500%);
   }
   100% {
     transform: translateX(0);
@@ -77,12 +93,24 @@ body {
 }
 
 .menu {
-  width: 73%;
+  width: 95%;
+
+  @media(min-width: 476px) {
+    width: 92%;
+  }
+  @media(min-width: 768px) {
+    width: 87%;
+  }
+
+  @media(min-width: 1000px) {
+    width: 83%;
+  }
+
   margin-left: auto;
   margin-right: auto;
 
   .menuTag {
-    width: 17%;
+    width: 57%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -95,7 +123,20 @@ body {
     padding-bottom: 30px;
     font-size: 20px;
     color:white;
+
+    @media(min-width: 476px) {
+      width: 42%;
+    }
+
+    @media(min-width: 768px) {
+      width: 27%;
+    }
+
+    @media(min-width: 1000px) {
+      width: 17%;
+    }
   }
+
   .menuTag::before {
     background-color: white;
     height: 30px;
@@ -105,6 +146,59 @@ body {
     position: absolute;
     bottom: 0; left: 0;
     z-index: -999999;
+  }
+
+
+  .menuList {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    padding-top: 50px;
+
+    @media(min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    .menuItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0 50px 0;
+      position: relative;
+      @media(min-width: 1000px) {
+        margin: 10px 20px 50px 20px;
+      }
+      .menuFood {
+        width: 55%;
+        @media(min-width: 1000px) {
+          width: 50%;
+        }
+        padding: 15px;
+        font-size: 16px;
+        color: #555555;
+
+        .subText {
+          color: #B7B7B7;
+          font-size: 12px;
+        }
+      }
+      .menuBorder {
+        width: 30%;
+        @media(min-width: 1000px) {
+          width: 35%;
+        }
+        border-top: 1px solid #E3E1E1;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .menuPrice {
+        width: 15%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
   }
 
 
