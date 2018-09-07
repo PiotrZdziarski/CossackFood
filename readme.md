@@ -1,4 +1,4 @@
-#Developing food website from scratch using .psd design
+## Developing food website from scratch using .psd design
 
 Technologies: 
 - Vue.js
