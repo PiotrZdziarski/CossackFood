@@ -10,6 +10,80 @@
             <div class="menuTag">
                 The Menu
             </div>
+
+            <div class="menuList">
+                <div class="menuItem">
+                    <div class="menuFood">
+                        Completto Feliciana
+                        <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
+                    </div>
+                    <div class="menuBorder"></div>
+                    <div class="menuPrice">27$</div>
+                </div>
+
+                <div class="menuItem">
+                    <div class="menuFood">
+                        Completto Feliciana
+                        <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
+                    </div>
+                    <div class="menuBorder"></div>
+                    <div class="menuPrice">27$</div>
+                </div>
+
+                <div class="menuItem">
+                    <div class="menuFood">
+                        Completto Feliciana
+                        <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
+                    </div>
+                    <div class="menuBorder"></div>
+                    <div class="menuPrice">27$</div>
+                </div>
+
+                <div class="menuItem">
+                    <div class="menuFood">
+                        Completto Feliciana
+                        <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
+                    </div>
+                    <div class="menuBorder"></div>
+                    <div class="menuPrice">27$</div>
+                </div>
+
+                <div class="menuItem">
+                    <div class="menuFood">
+                        Completto Feliciana
+                        <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
+                    </div>
+                    <div class="menuBorder"></div>
+                    <div class="menuPrice">27$</div>
+                </div>
+
+                <div class="menuItem">
+                    <div class="menuFood">
+                        Completto Feliciana
+                        <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
+                    </div>
+                    <div class="menuBorder"></div>
+                    <div class="menuPrice">27$</div>
+                </div>
+
+                <div class="menuItem">
+                    <div class="menuFood">
+                        Completto Feliciana
+                        <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
+                    </div>
+                    <div class="menuBorder"></div>
+                    <div class="menuPrice">27$</div>
+                </div>
+
+                <div class="menuItem">
+                    <div class="menuFood">
+                        Completto Feliciana
+                        <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
+                    </div>
+                    <div class="menuBorder"></div>
+                    <div class="menuPrice">27$</div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
