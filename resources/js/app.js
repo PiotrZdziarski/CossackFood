@@ -17,6 +17,8 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('navbar', require('./components/navbar.vue'));
+Vue.component('scrolltop', require('./components/scrolltop.vue'));
+Vue.component('featuredDishes', require('./components/featuredDishes.vue'));
 
 const app = new Vue({
     el: '#app'

@@ -16,12 +16,13 @@
         {{--FONTS--}}
     </head>
     <body>
-        <div id="app" style="height: 200vh;">
-            <navbar api_link="@php echo getenv('APP_URL') @endphp"></navbar>
+        <div id="app" style="min-height: 420vh;">
+            <navbar id="mainnav" api_link="@php echo getenv('APP_URL') @endphp"></navbar>
             @yield('content')
+            <scrolltop></scrolltop>
         </div>
 
-        {{--ADD VUE--}}
+        {{--VUE--}}
         <script src="{{asset('js/app.js')}}"></script>
     </body>
 </html>

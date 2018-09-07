@@ -135,8 +135,8 @@
             display: block;
             position: absolute;
             right: 20%;
-            width: 45px;
-            height: 50px;
+            width: 40px;
+            height: 45px;
             cursor: pointer;
         }
 

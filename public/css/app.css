@@ -82,8 +82,8 @@ body {
   margin-top: 33px;
   color: white;
   font-size: 16px;
-  -webkit-animation: .6s ease-out 0s 1 slideInFromTopMore;
-          animation: .6s ease-out 0s 1 slideInFromTopMore;
+  -webkit-animation: 1s ease-out 0s 1 slideInFromTopMore;
+          animation: 1s ease-out 0s 1 slideInFromTopMore;
 }
 
 @-webkit-keyframes slideInFromTop {
@@ -134,32 +134,32 @@ body {
   }
 }
 
-.menu {
+.container {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (min-width: 476px) {
-  .menu {
+  .container {
     width: 92%;
   }
 }
 
 @media (min-width: 768px) {
-  .menu {
+  .container {
     width: 87%;
   }
 }
 
 @media (min-width: 1000px) {
-  .menu {
+  .container {
     width: 83%;
   }
 }
 
-.menu .menuTag {
-  width: 57%;
+.container .menuTag {
+  width: 48%;
   margin-left: auto;
   margin-right: auto;
   display: -webkit-box;
@@ -171,7 +171,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 95px;
+  height: 85px;
   z-index: 1;
   background-color: #f34949;
   position: relative;
@@ -181,24 +181,25 @@ body {
 }
 
 @media (min-width: 476px) {
-  .menu .menuTag {
-    width: 42%;
+  .container .menuTag {
+    width: 31%;
+    height: 95px;
   }
 }
 
 @media (min-width: 768px) {
-  .menu .menuTag {
-    width: 27%;
+  .container .menuTag {
+    width: 20%;
   }
 }
 
 @media (min-width: 1000px) {
-  .menu .menuTag {
-    width: 17%;
+  .container .menuTag {
+    width: 16%;
   }
 }
 
-.menu .menuTag::before {
+.container .menuTag::before {
   background-color: white;
   height: 30px;
   width: 100%;
@@ -210,7 +211,7 @@ body {
   z-index: -999999;
 }
 
-.menu .menuList {
+.container .menuList {
   display: grid;
   grid-template-columns: 1fr;
   position: relative;
@@ -218,12 +219,12 @@ body {
 }
 
 @media (min-width: 768px) {
-  .menu .menuList {
+  .container .menuList {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-.menu .menuList .menuItem {
+.container .menuList .menuItem {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,12 +239,12 @@ body {
 }
 
 @media (min-width: 1000px) {
-  .menu .menuList .menuItem {
+  .container .menuList .menuItem {
     margin: 10px 20px 50px 20px;
   }
 }
 
-.menu .menuList .menuItem .menuFood {
+.container .menuList .menuItem .menuFood {
   width: 55%;
   padding: 15px;
   font-size: 16px;
@@ -251,17 +252,17 @@ body {
 }
 
 @media (min-width: 1000px) {
-  .menu .menuList .menuItem .menuFood {
+  .container .menuList .menuItem .menuFood {
     width: 50%;
   }
 }
 
-.menu .menuList .menuItem .menuFood .subText {
+.container .menuList .menuItem .menuFood .subText {
   color: #B7B7B7;
   font-size: 12px;
 }
 
-.menu .menuList .menuItem .menuBorder {
+.container .menuList .menuItem .menuBorder {
   width: 30%;
   border-top: 1px solid #E3E1E1;
   padding-left: 15px;
@@ -269,12 +270,12 @@ body {
 }
 
 @media (min-width: 1000px) {
-  .menu .menuList .menuItem .menuBorder {
+  .container .menuList .menuItem .menuBorder {
     width: 35%;
   }
 }
 
-.menu .menuList .menuItem .menuPrice {
+.container .menuList .menuItem .menuPrice {
   width: 15%;
   padding: 10px;
   display: -webkit-box;
@@ -286,5 +287,131 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.container .featuredDishesTitle {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 80px;
+  position: relative;
+}
+
+@media (min-width: 476px) {
+  .container .featuredDishesTitle {
+    margin-top: 150px;
+    width: 100%;
+  }
+}
+
+.container .featuredDishesTitle .featuredTitle {
+  padding: 15px;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #3B3B3B;
+}
+
+@media (min-width: 768px) {
+  .container .featuredDishesTitle .borderDiv {
+    width: 40%;
+    margin-right: 15px;
+    height: 0;
+    position: relative;
+    border: 1px solid #E5E3E3;
+  }
+}
+
+.container .showMore {
+  font-size: 14px;
+  color: #A9A9A9;
+  border: 1px solid #D7D5D5;
+  padding: 10px;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 30px;
+  cursor: pointer;
+  -webkit-transition: .2s all ease-in-out;
+  transition: .2s all ease-in-out;
+}
+
+.container .showMore:hover {
+  color: #c6c8ca;
+  border: 1px solid #E3E1E1;
+}
+
+.container .showMore:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 4px #c3c3c3;
+          box-shadow: 0 0 4px #c3c3c3;
+}
+
+.container .galleryDishes {
+  position: relative;
+  display: grid;
+  height: 1632px;
+  grid-template-columns: 1fr;
+  padding-top: 30px;
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+@media (min-width: 476px) {
+  .container .galleryDishes {
+    height: 2100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container .galleryDishes {
+    grid-template-columns: 1fr 1fr;
+    height: 500px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container .galleryDishes {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.container .galleryDishes .galleryDish {
+  height: 100%;
+  position: relative;
+  background-position: 50%;
+  background-size: cover;
+  border-right: 1px solid white;
+}
+
+.container .galleryDishes .galleryDish .doubleDish {
+  border-bottom: 1px solid white;
+  height: 50%;
+  width: 100%;
+  background-position: 50%;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .container .galleryDishes .galleryDish .doubleDish {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container .galleryDishes .galleryDish .doubleDish {
+    height: 50%;
+  }
 }
 
