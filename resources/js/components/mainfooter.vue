@@ -71,7 +71,7 @@
 
 
             .imageFooter {
-                width: 75%;
+                width: 60%;
 
                 @media(min-width: 1200px) {
                     width: 100%;
