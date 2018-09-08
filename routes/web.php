@@ -15,3 +15,5 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/remove_dots', ['uses' => 'PizzaController@remove_dots']);
+

@@ -1,7 +1,9 @@
 <template>
     <div>
         <div id="navbar" class="navbar" :class="{boxShadow: !nav_active}">
-            <div class="logo"><img class="logo-image" :src="api_link + '/images/logo.png'"></div>
+            <div class="logo">
+                    <img class="logo-image" :src="api_link + '/images/logo.png'">
+            </div>
             <div class="dropdown-menu">
                 <div class="dropdown-item">
                     Menu
@@ -183,6 +185,7 @@
             width: 100%;
             height: 6px;
             background: #d31f3c;
+            border-radius: 2px;
             box-shadow: 0 2px 4px #b9bbbe;
             -webkit-transition: all 0.4s ease;
             -moz-transition: all 0.4s ease;
@@ -223,7 +226,14 @@
 
         .logo-image {
             max-width: 100%;
-            max-height: 100%;
+
+            @media(min-width: 476px) {
+                max-width: 75%;
+            }
+
+            @media(min-width: 768px){
+                max-width: 55%;
+            }
         }
     }
 
