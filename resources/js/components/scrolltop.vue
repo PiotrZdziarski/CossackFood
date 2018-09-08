@@ -63,6 +63,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 1000;
 
         i {
             border: solid #d31f3c;

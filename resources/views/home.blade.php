@@ -7,12 +7,12 @@
     </div>
     <div style="width: 100%; border-top: 5px solid #f34949">
         <div class="container">
-            <div class="menuTag">
+            <div class="menuTag" data-aos="flip-up" data-aos-duration="600" data-aos-once="true">
                 Pizza
             </div>
 
             <div class="menuList">
-                <div class="menuItem">
+                <div class="menuItem" data-aos="fade-in" data-aos-once="true">
                     <div class="menuFood">
                         Completto Feliciana
                         <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
@@ -21,7 +21,7 @@
                     <div class="menuPrice">27$</div>
                 </div>
 
-                <div class="menuItem">
+                <div class="menuItem" data-aos="fade-in" data-aos-once="true">
                     <div class="menuFood">
                         Completto Feliciana
                         <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
@@ -30,7 +30,7 @@
                     <div class="menuPrice">27$</div>
                 </div>
 
-                <div class="menuItem">
+                <div class="menuItem" data-aos="fade-in" data-aos-once="true">
                     <div class="menuFood">
                         Completto Feliciana
                         <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
@@ -39,7 +39,7 @@
                     <div class="menuPrice">27$</div>
                 </div>
 
-                <div class="menuItem">
+                <div class="menuItem" data-aos="fade-in" data-aos-once="true">
                     <div class="menuFood">
                         Completto Feliciana
                         <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
@@ -48,7 +48,7 @@
                     <div class="menuPrice">27$</div>
                 </div>
 
-                <div class="menuItem">
+                <div class="menuItem" data-aos="fade-in" data-aos-once="true">
                     <div class="menuFood">
                         Completto Feliciana
                         <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
@@ -57,7 +57,7 @@
                     <div class="menuPrice">27$</div>
                 </div>
 
-                <div class="menuItem">
+                <div class="menuItem" data-aos="fade-in" data-aos-once="true">
                     <div class="menuFood">
                         Completto Feliciana
                         <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
@@ -66,7 +66,7 @@
                     <div class="menuPrice">27$</div>
                 </div>
 
-                <div class="menuItem">
+                <div class="menuItem" data-aos="fade-in" data-aos-once="true">
                     <div class="menuFood">
                         Completto Feliciana
                         <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
@@ -75,7 +75,7 @@
                     <div class="menuPrice">27$</div>
                 </div>
 
-                <div class="menuItem">
+                <div class="menuItem" data-aos="fade-in" data-aos-once="true">
                     <div class="menuFood">
                         Completto Feliciana
                         <div class="subText">Cheese, Tomato, Myshrooms, Beef</div>
@@ -104,14 +104,14 @@
         </div>
 
         <div class="galleryDishes">
-            <div class="galleryDish" style="background-image: url('/images/pizza.jpg')"></div>
+            <div class="galleryDish" data-aos="fade-in"data-aos-duration="600"  data-aos-once="true"  style="background-image: url('/images/pizza.jpg')"></div>
             <div class="galleryDish">
-                <div class="doubleDish" style="background-image: url('/images/restaurant.jpg')"></div>
-                <div class="doubleDish" style="background-image: url('/images/restaurant2.jpg')"></div>
+                <div class="doubleDish" data-aos="fade-in" data-aos-duration="600" data-aos-once="true" data-aos-delay="40"  style="background-image: url('/images/restaurant.jpg')"></div>
+                <div class="doubleDish" data-aos="fade-in"data-aos-duration="600"  data-aos-once="true" data-aos-delay="80"  style="background-image: url('/images/restaurant2.jpg')"></div>
             </div>
             <div class="galleryDish">
-                <div class="doubleDish" style="background-image: url('/images/restaurant3.jpg')"></div>
-                <div class="doubleDish" style="background-image: url('/images/restaurant4.jpg')"></div>
+                <div class="doubleDish" data-aos="fade-in" data-aos-duration="600" data-aos-once="true" data-aos-delay="120" style="background-image: url('/images/restaurant3.jpg')"></div>
+                <div class="doubleDish" data-aos="fade-in"data-aos-duration="600"  data-aos-once="true" data-aos-delay="160" style="background-image: url('/images/restaurant4.jpg')"></div>
             </div>
         </div>
     </div>

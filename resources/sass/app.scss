@@ -93,6 +93,7 @@ body {
 
 .container {
   width: 95%;
+  position: relative;
 
   @media(min-width: 476px) {
     width: 92%;
@@ -269,9 +270,11 @@ body {
     @media(min-width: 768px) {
       grid-template-columns: 1fr 1fr;
       height: 500px;
+      margin-bottom: 400px;
     }
     @media(min-width: 1000px) {
       grid-template-columns:1fr 1fr 1fr;
+      margin-bottom: 0;
     }
     padding-top: 30px;
     width: 95%;
