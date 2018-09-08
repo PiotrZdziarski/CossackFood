@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" data-aos="fade-in">
         <div class="featuredDishesTitle">
             <div class="featuredTitle">
                 Featured Dishes

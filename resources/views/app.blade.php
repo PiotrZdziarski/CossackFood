@@ -12,17 +12,23 @@
 
         {{--CSS--}}
          <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         {{--FONTS--}}
     </head>
     <body>
-        <div id="app" style="min-height: 420vh;">
+        <div id="app">
             <navbar id="mainnav" api_link="@php echo getenv('APP_URL') @endphp"></navbar>
             @yield('content')
             <scrolltop></scrolltop>
+            <mainfooter api_link="@php echo getenv('APP_URL') @endphp"></mainfooter>
         </div>
 
         {{--VUE--}}
         <script src="{{asset('js/app.js')}}"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
