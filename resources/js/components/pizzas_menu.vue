@@ -16,7 +16,7 @@
                 </div>
             </div>
 
-            <button v-if="pages < max_pages" @click="nextPage" class="showMore">
+            <button id="show_more_pizza" v-if="pages < max_pages" @click="nextPage" class="showMore">
                 Show More
             </button>
         </div>

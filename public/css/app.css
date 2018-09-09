@@ -237,6 +237,7 @@ body {
           align-items: center;
   margin: 10px 0 50px 0;
   position: relative;
+  width: 100%;
 }
 
 @media (min-width: 1000px) {
@@ -246,7 +247,7 @@ body {
 }
 
 .container .menuList .menuItem .menuFood {
-  width: 55%;
+  width: 45%;
   padding: 15px;
   font-size: 16px;
   color: #555555;
@@ -264,7 +265,7 @@ body {
 }
 
 .container .menuList .menuItem .menuBorder {
-  width: 30%;
+  width: 25%;
   border-top: 1px solid #E3E1E1;
   padding-left: 15px;
   padding-right: 15px;
@@ -277,7 +278,7 @@ body {
 }
 
 .container .menuList .menuItem .menuPrice {
-  width: 15%;
+  width: 30%;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;

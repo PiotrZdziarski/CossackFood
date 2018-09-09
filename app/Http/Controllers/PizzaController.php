@@ -53,7 +53,8 @@ class PizzaController extends Controller
         foreach ($pizzas as $pizza) {
             $pizza->pizza = str_replace('.', '', $pizza->pizza);
             $pizza->ingredients = str_replace('.', '', $pizza->ingredients);
-
+            //$pizza->ingredients = str_replace(',', ', ', $pizza->ingredients);
+            //$pizza->ingredients = substr_replace($pizza->ingredients, "", -1);
             $pizza->save();
         }
 

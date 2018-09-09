@@ -20,7 +20,7 @@
                 <p>Contact</p>
             </div>
             <div class="footerColumn">
-                <img class="imageFooter" data-aos="fade-left" data-aos-once="true" :src="api_link + '/images/logo2.png'">
+                <img class="imageFooter"  :src="api_link + '/images/logo2.png'">
                 <p>No rights reserved</p>
             </div>
         </div>
@@ -61,6 +61,7 @@
         .footerColumn {
             margin-left: auto; margin-right: auto;
             padding: 40px;
+            width: 100%;
             text-align: center;
 
             @media(min-width: 1200px) {

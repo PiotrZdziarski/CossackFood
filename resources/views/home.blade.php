@@ -8,8 +8,7 @@
 
     <pizzas_menu api_link="@php echo getenv('APP_URL') @endphp"></pizzas_menu>
 
-    <featured-dishes></featured-dishes>
-
+    <featured-dishes api_link="@php echo getenv('APP_URL') @endphp"></featured-dishes>
 
     <div class="container">
         <div class="featuredDishesTitle">

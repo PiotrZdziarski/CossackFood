@@ -17,5 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//pizzas
 Route::get('pizza', ['uses' => 'PizzaController@index']);
 Route::get('pizza_pages', ['uses' => 'PizzaController@pages']);
+
+//dishes

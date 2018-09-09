@@ -1,5 +1,5 @@
 <template>
-    <div class="container" data-aos="fade-in">
+    <div class="container" data-aos-once="true" data-aos="fade-in">
         <div class="featuredDishesTitle">
             <div class="featuredTitle">
                 Featured Dishes
@@ -74,7 +74,19 @@
 
 <script>
     export default {
-        name: "featuredDishes"
+        name: "featuredDishes",
+        props: {
+            api_link: {
+                Type: String
+            }
+        },
+        data() {
+            return {
+                records: [],
+                pages: 1,
+                max_pages: 1
+            }
+        },
     }
 </script>
 
