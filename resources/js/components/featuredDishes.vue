@@ -1,5 +1,5 @@
 <template>
-    <div class="container" data-aos-once="true" data-aos="fade-in">
+    <div class="container">
         <div class="featuredDishesTitle">
             <div class="featuredTitle">
                 Featured Dishes
@@ -7,72 +7,36 @@
             <div class="borderDiv"></div>
 
             <div class="pages">
-                <div class="page active">
+                <div @click="page(1)" id="page1" class="page active">
                 </div>
-                <div class="page inactive">
-
+                <div @click="page(2)" id="page2" class="page inactive">
                 </div>
-                <div class="page inactive">
-
+                <div @click="page(3)" id="page3" class="page inactive">
                 </div>
-                <div class="page inactive">
-
+                <div @click="page(4)" id="page4" class="page inactive">
                 </div>
             </div>
         </div>
-        <div class="dishes">
-            <div class="dish">
-                <div class="image"></div>
+        <div id="dishes" class="dishes">
+            <div data-aos-once="true" data-aos="fade-in" class="dish" v-for="record in records">
+                <div class="image" :style="{backgroundImage: 'url(' +'/images/dishes/' + record.image + ')'}"></div>
                 <div class="description">
                     <div class="title">
-                        Traditional Soutzoukakia
+                        {{ record.dish }}
                     </div>
                     <div class="price">
-                        23$
-                    </div>
-                </div>
-            </div>
-
-            <div class="dish">
-                <div class="image"></div>
-                <div class="description">
-                    <div class="title">
-                        Traditional Soutzoukakia
-                    </div>
-                    <div class="price">
-                        23$
-                    </div>
-                </div>
-            </div>
-
-            <div class="dish">
-                <div class="image"></div>
-                <div class="description">
-                    <div class="title">
-                        Traditional Soutzoukakia
-                    </div>
-                    <div class="price">
-                        23$
-                    </div>
-                </div>
-            </div>
-
-            <div class="dish">
-                <div class="image"></div>
-                <div class="description">
-                    <div class="title">
-                        Traditional Soutzoukakiaqweqweqw qw
-                    </div>
-                    <div class="price">
-                        23$
+                        {{ record.price }}$
                     </div>
                 </div>
             </div>
         </div>
+        <div v-if="loading" id="loader" class="lds-dual-ring"></div>
     </div>
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
         name: "featuredDishes",
         props: {
@@ -84,13 +48,89 @@
             return {
                 records: [],
                 pages: 1,
-                max_pages: 1
+                max_pages: 1,
+                loading: true
             }
         },
+        mounted() {
+            const self = this;
+            axios.get(this.api_link + '/api/dishes_page?page=1').then(function (Response) {
+                self.records = Response.data.data;
+                self.loading = false;
+            });
+        },
+        methods : {
+            page(page) {
+
+                this.records = [];
+                const self = this;
+                self.loading = true;
+
+                axios.get(this.api_link + '/api/dishes_page?page=' + page).then(function (Response) {
+                    self.loading = false;
+                    self.records = Response.data.data;
+                });
+
+                for(let i = 1; i <= 4; i++) {
+                    if(i === page) {
+                        document.getElementById('page' + i).classList.add('active');
+                        document.getElementById('page' + i).classList.remove('inactive');
+                    } else {
+                        document.getElementById('page' + i).classList.add('inactive');
+                        document.getElementById('page' + i).classList.remove('active');
+                    }
+                }
+            },
+        }
     }
 </script>
 
 <style lang="scss" scoped>
+
+    .lds-dual-ring {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 1396px;
+
+        @media(min-width: 476px) {
+            height: 1996px
+        }
+
+        @media(min-width: 768px) {
+            height: 628px;
+        }
+
+
+        @media(min-width: 1000px) {
+            height: 239px;
+        }
+
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 56px;
+        height: 56px;
+        margin: 1px;
+        border-radius: 50%;
+        border: 8px solid lightgray;
+        border-color: lightgray transparent lightgray transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+    }
+    @keyframes lds-dual-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
     .featuredDishesTitle {
 
         width: 100%;
@@ -147,6 +187,7 @@
 
     .dishes {
         margin-top: 20px;
+        position: relative;
         display: grid;
         grid-template-columns: 1fr;
 
@@ -154,8 +195,7 @@
             grid-template-columns: 1fr 1fr;
         }
 
-        @media(min-width: 1000px)
-        {
+        @media(min-width: 1000px) {
             grid-auto-flow: row;
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
@@ -169,8 +209,7 @@
                 margin-right: 25px;
                 margin-bottom: 25px;
             }
-            @media(min-width: 1000px)
-            {
+            @media(min-width: 1000px) {
                 margin-bottom: 0;
             }
 
@@ -189,7 +228,6 @@
                 }
                 width: 100%;
                 background-size: cover;
-                background-image: url('/images/dish.jpg');
                 background-position: 50%;
             }
 

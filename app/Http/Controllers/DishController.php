@@ -3,10 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Dish;
+use App\Http\Resources\DishResource;
 use Illuminate\Http\Request;
 
 class DishController extends Controller
 {
+
+    /**
+     * Return number of pages with dishes
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     */
+    public function page()
+    {
+        $dishes = Dish::paginate(4);
+        return DishResource::collection($dishes);
+    }
 
 
     /**

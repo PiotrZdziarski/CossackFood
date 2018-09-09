@@ -23,7 +23,7 @@ class PizzaController extends Controller
 
 
     /**
-     * Retrieving number of pages
+     * Retrieving page with dishes
      * @param Request $request
      * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
