@@ -10,9 +10,7 @@ use Tests\TestCase;
 class pizzaTest extends TestCase
 {
     /**
-     * A basic test example.
-     *
-     * @return void
+     * Testing Pizza pages RestAPI
      */
     public function testGettingPagesOfPizzas()
     {
@@ -29,7 +27,7 @@ class pizzaTest extends TestCase
 
             $response
                 ->assertSee($pizza)
-                //check if response has maximum pages number
+                //check if the response has maximum pages number
                 ->assertJsonFragment(['maxPages' => $maximumPages]);
         }
     }

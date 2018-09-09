@@ -12730,7 +12730,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "featuredDishes"
+    name: "featuredDishes",
+    props: {
+        api_link: {
+            Type: String
+        }
+    },
+    data: function data() {
+        return {
+            records: [],
+            pages: 1,
+            max_pages: 1
+        };
+    }
 });
 
 /***/ }),
@@ -12750,7 +12762,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "container", attrs: { "data-aos": "fade-in" } },
+      {
+        staticClass: "container",
+        attrs: { "data-aos-once": "true", "data-aos": "fade-in" }
+      },
       [
         _c("div", { staticClass: "featuredDishesTitle" }, [
           _c("div", { staticClass: "featuredTitle" }, [
@@ -12934,7 +12949,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.footer[data-v-6d8579c2] {\n  margin-top: 220px;\n  min-height: 317px;\n  width: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  background-color: #3B3B3B;\n  position: relative;\n}\n@media (min-width: 768px) {\n.footer[data-v-6d8579c2] {\n      grid-template-columns: 1fr 1fr;\n}\n}\n@media (min-width: 1200px) {\n.footer[data-v-6d8579c2] {\n      padding-left: 100px;\n      padding-right: 100px;\n      grid-template-columns: 1fr 1fr 1fr 1fr;\n}\n}\n.footer .footerColumn[data-v-6d8579c2] {\n    margin-left: auto;\n    margin-right: auto;\n    padding: 40px;\n    text-align: center;\n    color: white;\n    font-size: 14px;\n}\n@media (min-width: 1200px) {\n.footer .footerColumn[data-v-6d8579c2] {\n        padding: 80px;\n}\n}\n.footer .footerColumn .imageFooter[data-v-6d8579c2] {\n      width: 60%;\n}\n@media (min-width: 1200px) {\n.footer .footerColumn .imageFooter[data-v-6d8579c2] {\n          width: 100%;\n}\n}\n", ""]);
+exports.push([module.i, "\n.footer[data-v-6d8579c2] {\n  margin-top: 220px;\n  min-height: 317px;\n  width: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  background-color: #3B3B3B;\n  position: relative;\n}\n@media (min-width: 768px) {\n.footer[data-v-6d8579c2] {\n      grid-template-columns: 1fr 1fr;\n}\n}\n@media (min-width: 1200px) {\n.footer[data-v-6d8579c2] {\n      padding-left: 100px;\n      padding-right: 100px;\n      grid-template-columns: 1fr 1fr 1fr 1fr;\n}\n}\n.footer .footerColumn[data-v-6d8579c2] {\n    margin-left: auto;\n    margin-right: auto;\n    padding: 40px;\n    width: 100%;\n    text-align: center;\n    color: white;\n    font-size: 14px;\n}\n@media (min-width: 1200px) {\n.footer .footerColumn[data-v-6d8579c2] {\n        padding: 80px;\n}\n}\n.footer .footerColumn .imageFooter[data-v-6d8579c2] {\n      width: 60%;\n}\n@media (min-width: 1200px) {\n.footer .footerColumn .imageFooter[data-v-6d8579c2] {\n          width: 100%;\n}\n}\n", ""]);
 
 // exports
 
@@ -13003,11 +13018,7 @@ var render = function() {
       _c("div", { staticClass: "footerColumn" }, [
         _c("img", {
           staticClass: "imageFooter",
-          attrs: {
-            "data-aos": "fade-left",
-            "data-aos-once": "true",
-            src: _vm.api_link + "/images/logo2.png"
-          }
+          attrs: { src: _vm.api_link + "/images/logo2.png" }
         }),
         _vm._v(" "),
         _c("p", [_vm._v("No rights reserved")])
@@ -13299,7 +13310,11 @@ var render = function() {
       _vm.pages < _vm.max_pages
         ? _c(
             "button",
-            { staticClass: "showMore", on: { click: _vm.nextPage } },
+            {
+              staticClass: "showMore",
+              attrs: { id: "show_more_pizza" },
+              on: { click: _vm.nextPage }
+            },
             [_vm._v("\n            Show More\n        ")]
           )
         : _vm._e()

@@ -165,11 +165,12 @@ body {
       align-items: center;
       margin: 10px 0 50px 0;
       position: relative;
+      width: 100%;
       @media(min-width: 1000px) {
         margin: 10px 20px 50px 20px;
       }
       .menuFood {
-        width: 55%;
+        width: 45%;
         @media(min-width: 1000px) {
           width: 50%;
         }
@@ -183,7 +184,7 @@ body {
         }
       }
       .menuBorder {
-        width: 30%;
+        width: 25%;
         @media(min-width: 1000px) {
           width: 35%;
         }
@@ -192,7 +193,7 @@ body {
         padding-right: 15px;
       }
       .menuPrice {
-        width: 15%;
+        width: 30%;
         padding: 10px;
         display: flex;
         justify-content: center;

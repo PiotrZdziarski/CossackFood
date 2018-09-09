@@ -15,5 +15,8 @@ Route::get('/', function () {
     return view('home');
 });
 
+//pizzax
 Route::get('/remove_dots', ['uses' => 'PizzaController@remove_dots']);
 
+//dishes
+Route::get('/prepare_rows_dish', ['uses' => 'DishController@prepare_rows_from_seeder']);
