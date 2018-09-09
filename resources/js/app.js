@@ -19,6 +19,7 @@ Vue.component('navbar', require('./components/navbar.vue'));
 Vue.component('scrolltop', require('./components/scrolltop.vue'));
 Vue.component('featuredDishes', require('./components/featuredDishes.vue'));
 Vue.component('mainfooter', require('./components/mainfooter.vue'));
+Vue.component('pizzas_menu', require('./components/pizzas_menu.vue'));
 
 const app = new Vue({
     el: '#app'

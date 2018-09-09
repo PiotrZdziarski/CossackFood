@@ -8,4 +8,5 @@ $factory->define(\App\Pizza::class, function (Faker $faker) {
         'ingredients' => $faker->text(10).','.$faker->text(10).','.$faker->text(10).','.$faker->text(10).',',
         'price' => $faker->randomFloat(2,0,40)
     ];
+
 });
