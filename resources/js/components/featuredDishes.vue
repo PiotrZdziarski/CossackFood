@@ -240,14 +240,14 @@
                 position: relative;
 
                 .title {
-                    width: 86%;
+                    width: 75%;
                     font-size: 16px;
                     word-break: break-word;
                 }
 
                 .price {
-                    text-align: center;
-                    width: 14%;
+                    text-align: right;
+                    width: 25%;
                     font-size: 16px;
                 }
             }
