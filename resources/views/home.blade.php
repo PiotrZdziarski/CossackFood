@@ -1,4 +1,5 @@
 @extends('app')
+@section('title') CossackFood @endsection
 @section('content')
     <!-- CLAIM -->
     <div class="claim">
@@ -20,14 +21,19 @@
         </div>
 
         <div class="galleryDishes">
-            <div class="galleryDish" data-aos="fade-in"data-aos-duration="600"  data-aos-once="true"  style="background-image: url('/images/pizza.jpg')"></div>
+            <div class="galleryDish" data-aos="fade-in" data-aos-duration="600" data-aos-once="true"
+                 style="background-image: url('/images/pizza.jpg')"></div>
             <div class="galleryDish">
-                <div class="doubleDish" data-aos="fade-in" data-aos-duration="600" data-aos-once="true" data-aos-delay="40"  style="background-image: url('/images/restaurant.jpg')"></div>
-                <div class="doubleDish" data-aos="fade-in"data-aos-duration="600"  data-aos-once="true" data-aos-delay="80"  style="background-image: url('/images/restaurant2.jpg')"></div>
+                <div class="doubleDish" data-aos="fade-in" data-aos-duration="600" data-aos-once="true"
+                     data-aos-delay="40" style="background-image: url('/images/restaurant.jpg')"></div>
+                <div class="doubleDish" data-aos="fade-in" data-aos-duration="600" data-aos-once="true"
+                     data-aos-delay="80" style="background-image: url('/images/restaurant2.jpg')"></div>
             </div>
             <div class="galleryDish">
-                <div class="doubleDish" data-aos="fade-in" data-aos-duration="600" data-aos-once="true" data-aos-delay="120" style="background-image: url('/images/restaurant3.jpg')"></div>
-                <div class="doubleDish" data-aos="fade-in"data-aos-duration="600"  data-aos-once="true" data-aos-delay="160" style="background-image: url('/images/restaurant4.jpg')"></div>
+                <div class="doubleDish" data-aos="fade-in" data-aos-duration="600" data-aos-once="true"
+                     data-aos-delay="120" style="background-image: url('/images/restaurant3.jpg')"></div>
+                <div class="doubleDish" data-aos="fade-in" data-aos-duration="600" data-aos-once="true"
+                     data-aos-delay="160" style="background-image: url('/images/restaurant4.jpg')"></div>
             </div>
         </div>
     </div>

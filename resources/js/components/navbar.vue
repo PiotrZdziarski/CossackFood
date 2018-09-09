@@ -2,11 +2,11 @@
     <div>
         <div id="navbar" class="navbar" :class="{boxShadow: !nav_active}">
             <div class="logo">
-                    <img class="logo-image" :src="api_link + '/images/logo.png'">
+                <a :href="api_link"><img class="logo-image" :src="api_link + '/images/logo.png'"></a>
             </div>
             <div class="dropdown-menu">
                 <div class="dropdown-item">
-                    Menu
+                    <a class="href" :href="api_link+ '/menu'">Menu</a>
                 </div>
                 <div class="dropdown-item">
                     Story
@@ -125,14 +125,6 @@
             transition: .25s all ease-in-out;
         }
 
-        .logo {
-            display: flex;
-            width: 60%;
-            align-items: center;
-            justify-content: center;
-            float: left;
-            position: relative;
-        }
         .burger {
             display: block;
             position: absolute;
@@ -240,8 +232,6 @@
     @media(min-width: 1000px) {
         .heightvh {
             height: 9vh !important;
-            opacity: 0.95;
-            filter: alpha(opacity=95);
         }
         .heightvh * {
             opacity: 1 !important;
@@ -282,5 +272,23 @@
             font-size: 14px;
             width: 14%;
         }
+    }
+    .logo {
+        display: flex;
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        position: relative;
+    }
+
+    .href {
+        color: black;
+        text-decoration: none;
+        transition: .2s all ease-in-out;
+    }
+
+    .href:hover {
+        color: #b91d19;
     }
 </style>

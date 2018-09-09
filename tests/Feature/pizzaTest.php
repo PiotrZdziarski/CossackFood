@@ -2,13 +2,23 @@
 
 namespace Tests\Feature;
 
-use App\Http\Resources\PizzaResource;
 use App\Pizza;
-use function MongoDB\BSON\toJSON;
 use Tests\TestCase;
 
 class pizzaTest extends TestCase
 {
+    /**
+     * Test getting all pizzas from RestAPI
+     */
+    public function testGettingAllPizzas()
+    {
+        $pizzas = Pizza::all();
+        $this->get('/api/pizza')
+            ->assertSee($pizzas);
+    }
+
+
+
     /**
      * Testing Pizza pages RestAPI
      */

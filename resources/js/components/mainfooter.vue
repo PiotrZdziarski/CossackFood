@@ -20,7 +20,7 @@
                 <p>Contact</p>
             </div>
             <div class="footerColumn">
-                <img class="imageFooter"  :src="api_link + '/images/logo2.png'">
+                <img data-aos="fade-in" data-aos-once="true" class="imageFooter"  :src="api_link + '/images/logo2.png'">
                 <p>No rights reserved</p>
             </div>
         </div>
@@ -45,7 +45,7 @@
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        background-color: #3B3B3B;
+        background-color: #1e1e1e;
         position: relative;
 
         @media(min-width: 768px) {
@@ -66,6 +66,7 @@
 
             @media(min-width: 1200px) {
                 padding: 80px;
+                text-align: left;
             }
             color: white;
             font-size: 14px;

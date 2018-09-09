@@ -22,4 +22,5 @@ Route::get('pizza', ['uses' => 'PizzaController@index']);
 Route::get('pizza_pages', ['uses' => 'PizzaController@pages']);
 
 //dishes
+Route::get('dishes', ['uses' => 'DishController@index']);
 Route::get('dishes_page', ['uses' => 'DishController@page']);
