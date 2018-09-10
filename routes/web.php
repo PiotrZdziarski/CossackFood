@@ -23,3 +23,6 @@ Route::get('/prepare_rows_dish', ['uses' => 'DishController@prepare_rows_from_se
 
 //menu
 Route::get('/menu', ['uses' => 'SitesController@menu']);
+
+//reservations
+Route::get('/reservations', ['uses' => 'SitesController@reservations']);

@@ -258,11 +258,11 @@
         .logo {
             display: flex;
             justify-content: center;
-            width: 30%;
+            width: 25%;
         }
 
         .dropdown-menu {
-            width: 69%;
+            width: 75%;
             display: flex;
             justify-content: center;
         }
@@ -270,7 +270,7 @@
         .dropdown-item {
             text-align: center;
             font-size: 14px;
-            width: 14%;
+            width: 17%;
         }
     }
     .logo {
