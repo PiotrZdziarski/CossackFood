@@ -21,6 +21,7 @@ Vue.component('featuredDishes', require('./components/featuredDishes.vue'));
 Vue.component('mainfooter', require('./components/mainfooter.vue'));
 Vue.component('pizzas_menu', require('./components/pizzas_menu.vue'));
 Vue.component('menuSubpage', require('./components/menuSubpage.vue'));
+Vue.component('reservations', require('./components/reservations.vue'));
 
 const app = new Vue({
     el: '#app'

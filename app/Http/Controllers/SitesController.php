@@ -12,6 +12,6 @@ class SitesController extends Controller
 
     public function reservations()
     {
-
+        return view('reservation');
     }
 }

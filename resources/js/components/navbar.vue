@@ -15,7 +15,7 @@
                     News
                 </div>
                 <div class="dropdown-item">
-                    Reserevations
+                    <a class="href" :href="api_link+ '/reservations'">Reserevations</a>
                 </div>
                 <div class="dropdown-item">
                     Contact
