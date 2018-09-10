@@ -9,4 +9,9 @@ class SitesController extends Controller
     {
         return view('menu');
     }
+
+    public function reservations()
+    {
+
+    }
 }
