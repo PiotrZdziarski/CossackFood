@@ -55,4 +55,4 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-restaurant:before { content: '\e832'; color: #444444; }  /* '' */
+.icon-restaurant:before { content: '\e832'; color: #ff6162;text-shadow:  -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}  /* '' */

@@ -30,10 +30,10 @@
         </div>
         <transition name="slide-fade">
             <div v-if="nav_active" class="menu">
-                <div class="menu-item">Menu</div>
+                <div class="menu-item"><a class="href" :href="api_link+ '/menu'">Menu</a></div>
                 <div class="menu-item">Story</div>
                 <div class="menu-item">News</div>
-                <div class="menu-item">Reservations</div>
+                <div class="menu-item"><a class="href" :href="api_link+ '/reservations'">Reservations</a></div>
                 <div class="menu-item">Contact</div>
             </div>
         </transition>
