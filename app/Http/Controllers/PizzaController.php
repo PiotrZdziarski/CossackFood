@@ -42,6 +42,7 @@ class PizzaController extends Controller
 
 
 
+
     /**
      * Removing dots inserted by factory Faker
      */
