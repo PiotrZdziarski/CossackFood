@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <div :style="{backgroundImage: 'url(' + api_link + '/images/claimMenu.jpg' + ')'}" class="claimImage">
             <div>
                 <div class="title">Choose your table!</div>
@@ -75,6 +76,38 @@
 
 
             </div>
+            <!--<transition name="fade">
+                <div v-if="testForm" class="modal-container">
+                    <div id="modal" class="modal">
+                        <div class="close"></div>
+
+                        <div class="modalGrid notCloseModal">
+                            <div class="form notCloseModal">
+                                <div class="titleModal notCloseModal">Book Table no. {{ tableNumber }}</div>
+                                <form method="post" @submit="submitForm" id="reservationForm" class="notCloseModal">
+
+                                    <label class="notCloseModal" for="name">Fullname:</label>
+                                    <input v-model="fullName" id="name" name="fullName" class="notCloseModal"
+                                           type="text" required>
+
+                                    <label class="notCloseModal" for="email">Email:</label>
+                                    <input v-model="email" id="email" name="email" class="notCloseModal" type="email">
+
+                                    <label class="notCloseModal" for="date">Date:</label>
+                                    <input v-model="date" id="date" name="date" class="notCloseModal" type="date">
+
+                                    <button class="submit notCloseModal" type="submit">Submit</button>
+                                </form>
+                            </div>
+                            <div class="claimModal notCloseModal"
+                                 :style="{backgroundImage: 'url(' + api_link + '/images/waiter.jpg' + ')'}">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </transition>-->
             <transition name="fade">
                 <div v-if="reserving" class="modal-container">
                     <div id="modal" class="modal">
@@ -83,21 +116,29 @@
                         <div class="modalGrid notCloseModal">
                             <div class="form notCloseModal">
                                 <div class="titleModal notCloseModal">Book Table no. {{ tableNumber }}</div>
-                                <form id="reservationForm" class="notCloseModal">
+                                <form method="post" id="reservationForm" class="notCloseModal">
 
-                                    <label class="notCloseModal" for = "name">Fullname:</label>
-                                    <input id="name" class="notCloseModal" type="text">
+                                    <label class="notCloseModal" for="fullName">Fullname:</label>
+                                    <input v-model="fullName" id="fullName" name="fullName" class="notCloseModal"
+                                           type="text">
 
-                                    <label class="notCloseModal" for = "email">Email:</label>
-                                    <input id="email" class="notCloseModal" type="text">
+                                    <label class="notCloseModal" for="number">Contact number:</label>
+                                    <input v-model="number" id="number" name="number" class="notCloseModal" type="text">
 
-                                    <label class="notCloseModal" for = "date">Date:</label>
-                                    <input id="date" class="notCloseModal" type="datetime-local">
+                                    <label class="notCloseModal" for="date">Date:</label>
+                                    <input :min="dateMin" :max="dateMax" v-model="date" id="date" value="2018-09-24"
+                                           name="date" class="notCloseModal" type="date">
 
-                                    <button class="submit" type="submit">Submit</button>
+                                    <label class="notCloseModal" for="time">Hour:</label>
+                                    <input min="8:00" max="22:00" v-model="time" id="time" name="time"
+                                           class="notCloseModal" type="time">
+
+                                    <input @click="submitForm" class="submit notCloseModal" value="Submit"
+                                           type="button">
                                 </form>
                             </div>
-                            <div class="claimModal notCloseModal" :style="{backgroundImage: 'url(' + api_link + '/images/waiter.jpg' + ')'}">
+                            <div class="claimModal notCloseModal"
+                                 :style="{backgroundImage: 'url(' + api_link + '/images/waiter.jpg' + ')'}">
 
 
                             </div>
@@ -110,6 +151,8 @@
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
         name: "reservations",
         props: {
@@ -120,10 +163,83 @@
         data() {
             return {
                 reserving: false,
-                tableNumber: 0
+                tableNumber: 0,
+                fullName: '',
+                date: '',
+                dateMin: '',
+                dateMax: '',
+                time: '14:00',
+                number: '',
+
             }
         },
         methods: {
+            submitForm() {
+                const self = this;
+                let everything_good = true;
+
+                if (this.fullName === '') {
+                    everything_good = false;
+                    document.getElementById('fullName').classList.add('error');
+                    document.getElementsByName("fullName")[0].placeholder = "Fill in this field!";
+                } else {
+                    if (document.getElementById('fullName').classList.contains('error')) {
+                        document.getElementById('fullName').classList.remove('error');
+                    }
+                }
+
+                if (this.number === '') {
+
+                    everything_good = false;
+                    document.getElementById('number').classList.add('error');
+                    document.getElementsByName("number")[0].placeholder = "Fill in this field!";
+                } else if (!this.isNumeric(this.number)) {
+                    everything_good = false;
+                    document.getElementById('number').classList.add('error');
+                    document.getElementById('number').value = '';
+                    document.getElementsByName("number")[0].placeholder = "Enter valid number!";
+                }
+                else {
+                    if (document.getElementById('number').classList.contains('error')) {
+                        document.getElementById('number').classList.remove('error');
+                    }
+                }
+
+
+                if (this.time === '') {
+                    everything_good = false;
+                    document.getElementById('time').classList.add('error');
+                } else {
+                    if (document.getElementById('time').classList.contains('error')) {
+                        document.getElementById('time').classList.remove('error');
+                    }
+                }
+
+                if (this.date === '') {
+                    everything_good = false;
+                    document.getElementById('date').classList.add('error');
+                } else {
+                    if (document.getElementById('date').classList.contains('error')) {
+                        document.getElementById('date').classList.remove('error');
+                    }
+                }
+
+                if (everything_good === true) {
+                    axios.post(this.api_link + '/api/store_reservation', {
+                        'fullname': this.fullName,
+                        'contact_number': this.number,
+                        'table': this.tableNumber,
+                        'date': this.date,
+                        'time': this.time,
+                        'number': this.number
+                    }).then(function (Response) {
+                        alert(Response.data);
+                    });
+                }
+            },
+            isNumeric(value) {
+                return /^\d+$/.test(value);
+            },
 
             reserve_table(table) {
                 //open modal
@@ -140,6 +256,9 @@
 
                 //call function to close modal when not clicking it
                 this.closing_modal_on_click(table);
+
+                //set default time to inputs
+                this.setTime();
             },
 
             closing_modal_on_click(tableNumber) {
@@ -147,13 +266,12 @@
                 //need for right scope
                 const self = this;
 
-                //event listere that closes modal when user didnt clicked it
+                //event listener that closes modal when user didnt clicked it
                 document.addEventListener('click', function closing_modalino(event) {
-                    event.preventDefault();
                     if (self.reserving === true) {
 
                         if (event.target !== document.getElementById('modal') &&
-                                !event.target.classList.contains('notCloseModal')
+                            !event.target.classList.contains('notCloseModal')
                             && event.target !== document.getElementById('table' + tableNumber)
                             && event.target !== document.getElementById('tableicon' + tableNumber)) {
 
@@ -166,12 +284,43 @@
                     }
                 });
 
+            },
+
+            setTime() {
+                let today = new Date();
+                let dd = today.getDate();
+                let mm = today.getMonth() + 1; //January is 0!
+                let yyyy = today.getFullYear();
+
+                let minDay = dd;
+                let maxDay = dd + 14;
+                dd++;
+
+                if (dd < 10) {
+                    dd = '0' + dd
+                }
+
+                if (mm < 10) {
+                    mm = '0' + mm
+                }
+
+                today = yyyy + '-' + mm + '-' + dd;
+                let dateMin = yyyy + '-' + mm + '-' + minDay;
+                let dateMax = yyyy + '-' + mm + '-' + maxDay;
+
+                this.date = today;
+                this.dateMin = dateMin;
+                this.dateMax = dateMax;
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
+    .error {
+        border-bottom: 1px solid #b91d19 !important;
+    }
+
     .claimImage {
         height: 373px;
         background-repeat: no-repeat;
@@ -214,6 +363,7 @@
             color: #b91d19;
         }
     }
+
     .claimReservations {
         display: block;
         color: #b91d19;
@@ -326,11 +476,10 @@
             .modal {
                 position: fixed;
                 background: #f5f5f5;
-                box-shadow: 0 30px 30px - 10px rgba(0,0,0, .3);
+                box-shadow: 0 30px 30px - 10px rgba(0, 0, 0, .3);
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: 95%;
-                height: 60vh;
                 z-index: 400;
                 top: 50%;
 
@@ -345,14 +494,14 @@
                     display: grid;
                     grid-template-columns: 1fr;
                     @media(min-width: 476px) {
-                        grid-template-columns: 1.1fr 0.9fr;
+                        grid-template-columns: 1fr 1fr;
                     }
                     width: 100%;
                     height: 100%;
                     text-align: center;
 
                     .form {
-                        padding: 5%;
+                        padding: 8%;
 
                         .titleModal {
                             font-size: 26px;
@@ -366,11 +515,11 @@
                             .submit {
                                 margin-top: 40px;
                                 background-color: #f54339;
-                                color:white;
+                                color: white;
                                 transition: .2s all ease-in-out;
-                                cursor:pointer;
+                                cursor: pointer;
                                 padding: 10px 20px 10px 20px;
-                                border:0;
+                                border: 0;
                                 border-radius: 3px;
                             }
 

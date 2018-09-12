@@ -15356,7 +15356,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.claimImage[data-v-2e9cfa72] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: 50% 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.claimImage .title[data-v-2e9cfa72] {\n    margin-top: 50px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #b91d19;\n    margin-bottom: 50px;\n}\n@media (min-width: 1000px) {\n.claimImage .title[data-v-2e9cfa72] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.claimImage .subpage[data-v-2e9cfa72] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 30px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.claimImage .subpage[data-v-2e9cfa72]:hover {\n    color: #777777;\n}\n.claimImage .active[data-v-2e9cfa72] {\n    color: #b91d19;\n}\n.claimImage .active[data-v-2e9cfa72]:hover {\n    color: #b91d19;\n}\n.claimReservations[data-v-2e9cfa72] {\n  display: block;\n  color: #b91d19;\n  text-align: center;\n  margin-bottom: 80px;\n}\n.boxShadow[data-v-2e9cfa72] {\n  -webkit-box-shadow: 0 0 2px white;\n          box-shadow: 0 0 2px white;\n}\n.fade-enter-active[data-v-2e9cfa72], .fade-leave-active[data-v-2e9cfa72] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-2e9cfa72], .fade-leave-to[data-v-2e9cfa72] {\n  opacity: 0;\n}\n.container[data-v-2e9cfa72] {\n  margin-top: 50px;\n}\n.container .tables[data-v-2e9cfa72] {\n    margin-left: auto;\n    margin-right: auto;\n    display: grid;\n    position: relative;\n    border: 1px solid #f1f1f1;\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;\n    z-index: 1;\n}\n.container .tables .twoInOne[data-v-2e9cfa72] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .tables .twoInOne .twoInOneTable[data-v-2e9cfa72] {\n        float: left;\n        width: 100%;\n}\n.container .tables .image[data-v-2e9cfa72] {\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      -webkit-filter: brightness(70%);\n              filter: brightness(70%);\n      z-index: -1;\n}\n.container .tables .table[data-v-2e9cfa72] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      font-weight: 700;\n      color: white;\n      padding: 35% 0 35% 0;\n      cursor: pointer;\n      -webkit-transition: .2s all ease-in-out;\n      transition: .2s all ease-in-out;\n      -webkit-box-shadow: 0 0 2px white;\n              box-shadow: 0 0 2px white;\n      font-size: 14px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n        font-size: 16px;\n}\n@media (min-width: 476px) {\n.container .tables .table[data-v-2e9cfa72] {\n          font-size: 20px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n            font-size: 20px;\n}\n}\n@media (min-width: 768px) {\n.container .tables .table[data-v-2e9cfa72] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n            font-size: 24px;\n}\n}\n@media (min-width: 1000px) {\n.container .tables .table[data-v-2e9cfa72] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n            font-size: 28px;\n}\n}\n@media (min-width: 1200px) {\n.container .tables .table[data-v-2e9cfa72] {\n          font-size: 26px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n            font-size: 32px;\n}\n}\n.container .tables .table[data-v-2e9cfa72]:hover {\n      -webkit-box-shadow: 0 0 7px white;\n              box-shadow: 0 0 7px white;\n      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));\n      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));\n}\n.container .modal-container[data-v-2e9cfa72] {\n    position: fixed;\n    z-index: 399;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background: transparent;\n}\n.container .modal-container .modal[data-v-2e9cfa72] {\n      position: fixed;\n      background: #f5f5f5;\n      -webkit-box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n              box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n      left: 50%;\n      -webkit-transform: translate(-50%, -50%);\n              transform: translate(-50%, -50%);\n      width: 95%;\n      height: 60vh;\n      z-index: 400;\n      top: 50%;\n}\n@media (min-width: 768px) {\n.container .modal-container .modal[data-v-2e9cfa72] {\n          width: 70%;\n}\n}\n@media (min-width: 1000px) {\n.container .modal-container .modal[data-v-2e9cfa72] {\n          width: 60%;\n}\n}\n.container .modal-container .modal .modalGrid[data-v-2e9cfa72] {\n        display: grid;\n        grid-template-columns: 1fr;\n        width: 100%;\n        height: 100%;\n        text-align: center;\n}\n@media (min-width: 476px) {\n.container .modal-container .modal .modalGrid[data-v-2e9cfa72] {\n            grid-template-columns: 1.1fr 0.9fr;\n}\n}\n.container .modal-container .modal .modalGrid .form[data-v-2e9cfa72] {\n          padding: 5%;\n}\n.container .modal-container .modal .modalGrid .form .titleModal[data-v-2e9cfa72] {\n            font-size: 26px;\n            font-weight: 500;\n            color: #b91d19;\n            margin-bottom: 30px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-2e9cfa72] {\n            margin-top: 40px;\n            background-color: #f54339;\n            color: white;\n            -webkit-transition: .2s all ease-in-out;\n            transition: .2s all ease-in-out;\n            cursor: pointer;\n            padding: 10px 20px 10px 20px;\n            border: 0;\n            border-radius: 3px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-2e9cfa72]:hover {\n            background-color: #f5543f;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-2e9cfa72]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 3.75px 7.5px #b9bbbe;\n                    box-shadow: 0 3.75px 7.5px #b9bbbe;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm label[data-v-2e9cfa72] {\n            display: block;\n            font-size: 20px;\n            margin-top: 25px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-2e9cfa72] {\n            display: block;\n            margin-left: auto;\n            margin-right: auto;\n            margin-top: 15px;\n            background: none;\n            color: #444444;\n            text-align: center;\n            font-size: 16px;\n            border: 0;\n            border-bottom: 1px solid #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-2e9cfa72]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 8px 16px -8px #777777;\n                    box-shadow: 0 8px 16px -8px #777777;\n}\n.container .modal-container .modal .modalGrid .claimModal[data-v-2e9cfa72] {\n          background-position: 60%;\n          background-repeat: no-repeat;\n          background-size: cover;\n}\n@media (max-width: 476px) {\n.container .modal-container .modal .modalGrid .claimModal[data-v-2e9cfa72] {\n              display: none;\n}\n}\n.container .modal-container .modal .close[data-v-2e9cfa72] {\n        position: absolute;\n        width: 30px;\n        height: 30px;\n        padding: 30px;\n        right: 0;\n        top: 0;\n        cursor: pointer;\n}\n.container .modal-container .modal .close[data-v-2e9cfa72]::before, .container .modal-container .modal .close[data-v-2e9cfa72]::after {\n          position: absolute;\n          top: 30px;\n          right: 20px;\n          content: '';\n          width: 20px;\n          height: 2px;\n          background: black;\n          display: block;\n}\n.container .modal-container .modal .close[data-v-2e9cfa72]::before {\n          -webkit-transform: rotate(45deg);\n                  transform: rotate(45deg);\n}\n.container .modal-container .modal .close[data-v-2e9cfa72]::after {\n          -webkit-transform: rotate(-45deg);\n                  transform: rotate(-45deg);\n}\n.container .modal-container .modal .close[data-v-2e9cfa72]:hover::before, .container .modal-container .modal .close[data-v-2e9cfa72]:hover::after {\n        background: #444444;\n}\n", ""]);
+exports.push([module.i, "\n.error[data-v-2e9cfa72] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.claimImage[data-v-2e9cfa72] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: 50% 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.claimImage .title[data-v-2e9cfa72] {\n    margin-top: 50px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #b91d19;\n    margin-bottom: 50px;\n}\n@media (min-width: 1000px) {\n.claimImage .title[data-v-2e9cfa72] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.claimImage .subpage[data-v-2e9cfa72] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 30px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.claimImage .subpage[data-v-2e9cfa72]:hover {\n    color: #777777;\n}\n.claimImage .active[data-v-2e9cfa72] {\n    color: #b91d19;\n}\n.claimImage .active[data-v-2e9cfa72]:hover {\n    color: #b91d19;\n}\n.claimReservations[data-v-2e9cfa72] {\n  display: block;\n  color: #b91d19;\n  text-align: center;\n  margin-bottom: 80px;\n}\n.boxShadow[data-v-2e9cfa72] {\n  -webkit-box-shadow: 0 0 2px white;\n          box-shadow: 0 0 2px white;\n}\n.fade-enter-active[data-v-2e9cfa72], .fade-leave-active[data-v-2e9cfa72] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-2e9cfa72], .fade-leave-to[data-v-2e9cfa72] {\n  opacity: 0;\n}\n.container[data-v-2e9cfa72] {\n  margin-top: 50px;\n}\n.container .tables[data-v-2e9cfa72] {\n    margin-left: auto;\n    margin-right: auto;\n    display: grid;\n    position: relative;\n    border: 1px solid #f1f1f1;\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;\n    z-index: 1;\n}\n.container .tables .twoInOne[data-v-2e9cfa72] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .tables .twoInOne .twoInOneTable[data-v-2e9cfa72] {\n        float: left;\n        width: 100%;\n}\n.container .tables .image[data-v-2e9cfa72] {\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      -webkit-filter: brightness(70%);\n              filter: brightness(70%);\n      z-index: -1;\n}\n.container .tables .table[data-v-2e9cfa72] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      font-weight: 700;\n      color: white;\n      padding: 35% 0 35% 0;\n      cursor: pointer;\n      -webkit-transition: .2s all ease-in-out;\n      transition: .2s all ease-in-out;\n      -webkit-box-shadow: 0 0 2px white;\n              box-shadow: 0 0 2px white;\n      font-size: 14px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n        font-size: 16px;\n}\n@media (min-width: 476px) {\n.container .tables .table[data-v-2e9cfa72] {\n          font-size: 20px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n            font-size: 20px;\n}\n}\n@media (min-width: 768px) {\n.container .tables .table[data-v-2e9cfa72] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n            font-size: 24px;\n}\n}\n@media (min-width: 1000px) {\n.container .tables .table[data-v-2e9cfa72] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n            font-size: 28px;\n}\n}\n@media (min-width: 1200px) {\n.container .tables .table[data-v-2e9cfa72] {\n          font-size: 26px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n            font-size: 32px;\n}\n}\n.container .tables .table[data-v-2e9cfa72]:hover {\n      -webkit-box-shadow: 0 0 7px white;\n              box-shadow: 0 0 7px white;\n      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));\n      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));\n}\n.container .modal-container[data-v-2e9cfa72] {\n    position: fixed;\n    z-index: 399;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background: transparent;\n}\n.container .modal-container .modal[data-v-2e9cfa72] {\n      position: fixed;\n      background: #f5f5f5;\n      -webkit-box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n              box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n      left: 50%;\n      -webkit-transform: translate(-50%, -50%);\n              transform: translate(-50%, -50%);\n      width: 95%;\n      z-index: 400;\n      top: 50%;\n}\n@media (min-width: 768px) {\n.container .modal-container .modal[data-v-2e9cfa72] {\n          width: 70%;\n}\n}\n@media (min-width: 1000px) {\n.container .modal-container .modal[data-v-2e9cfa72] {\n          width: 60%;\n}\n}\n.container .modal-container .modal .modalGrid[data-v-2e9cfa72] {\n        display: grid;\n        grid-template-columns: 1fr;\n        width: 100%;\n        height: 100%;\n        text-align: center;\n}\n@media (min-width: 476px) {\n.container .modal-container .modal .modalGrid[data-v-2e9cfa72] {\n            grid-template-columns: 1fr 1fr;\n}\n}\n.container .modal-container .modal .modalGrid .form[data-v-2e9cfa72] {\n          padding: 8%;\n}\n.container .modal-container .modal .modalGrid .form .titleModal[data-v-2e9cfa72] {\n            font-size: 26px;\n            font-weight: 500;\n            color: #b91d19;\n            margin-bottom: 30px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-2e9cfa72] {\n            margin-top: 40px;\n            background-color: #f54339;\n            color: white;\n            -webkit-transition: .2s all ease-in-out;\n            transition: .2s all ease-in-out;\n            cursor: pointer;\n            padding: 10px 20px 10px 20px;\n            border: 0;\n            border-radius: 3px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-2e9cfa72]:hover {\n            background-color: #f5543f;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-2e9cfa72]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 3.75px 7.5px #b9bbbe;\n                    box-shadow: 0 3.75px 7.5px #b9bbbe;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm label[data-v-2e9cfa72] {\n            display: block;\n            font-size: 20px;\n            margin-top: 25px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-2e9cfa72] {\n            display: block;\n            margin-left: auto;\n            margin-right: auto;\n            margin-top: 15px;\n            background: none;\n            color: #444444;\n            text-align: center;\n            font-size: 16px;\n            border: 0;\n            border-bottom: 1px solid #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-2e9cfa72]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 8px 16px -8px #777777;\n                    box-shadow: 0 8px 16px -8px #777777;\n}\n.container .modal-container .modal .modalGrid .claimModal[data-v-2e9cfa72] {\n          background-position: 60%;\n          background-repeat: no-repeat;\n          background-size: cover;\n}\n@media (max-width: 476px) {\n.container .modal-container .modal .modalGrid .claimModal[data-v-2e9cfa72] {\n              display: none;\n}\n}\n.container .modal-container .modal .close[data-v-2e9cfa72] {\n        position: absolute;\n        width: 30px;\n        height: 30px;\n        padding: 30px;\n        right: 0;\n        top: 0;\n        cursor: pointer;\n}\n.container .modal-container .modal .close[data-v-2e9cfa72]::before, .container .modal-container .modal .close[data-v-2e9cfa72]::after {\n          position: absolute;\n          top: 30px;\n          right: 20px;\n          content: '';\n          width: 20px;\n          height: 2px;\n          background: black;\n          display: block;\n}\n.container .modal-container .modal .close[data-v-2e9cfa72]::before {\n          -webkit-transform: rotate(45deg);\n                  transform: rotate(45deg);\n}\n.container .modal-container .modal .close[data-v-2e9cfa72]::after {\n          -webkit-transform: rotate(-45deg);\n                  transform: rotate(-45deg);\n}\n.container .modal-container .modal .close[data-v-2e9cfa72]:hover::before, .container .modal-container .modal .close[data-v-2e9cfa72]:hover::after {\n        background: #444444;\n}\n", ""]);
 
 // exports
 
@@ -15367,6 +15367,8 @@ exports.push([module.i, "\n.claimImage[data-v-2e9cfa72] {\n  height: 373px;\n  b
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 //
 //
 //
@@ -15478,6 +15480,49 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "reservations",
@@ -15489,11 +15534,83 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             reserving: false,
-            tableNumber: 0
+            tableNumber: 0,
+            fullName: '',
+            date: '',
+            dateMin: '',
+            dateMax: '',
+            time: '14:00',
+            number: ''
+
         };
     },
 
     methods: {
+        submitForm: function submitForm() {
+            var self = this;
+            var everything_good = true;
+
+            if (this.fullName === '') {
+                everything_good = false;
+                document.getElementById('fullName').classList.add('error');
+                document.getElementsByName("fullName")[0].placeholder = "Fill in this field!";
+            } else {
+                if (document.getElementById('fullName').classList.contains('error')) {
+                    document.getElementById('fullName').classList.remove('error');
+                }
+            }
+
+            if (this.number === '') {
+
+                everything_good = false;
+                document.getElementById('number').classList.add('error');
+                document.getElementsByName("number")[0].placeholder = "Fill in this field!";
+            } else if (!this.isNumeric(this.number)) {
+                everything_good = false;
+                document.getElementById('number').classList.add('error');
+                document.getElementById('number').value = '';
+                document.getElementsByName("number")[0].placeholder = "Enter valid number!";
+            } else {
+                if (document.getElementById('number').classList.contains('error')) {
+                    document.getElementById('number').classList.remove('error');
+                }
+            }
+
+            if (this.time === '') {
+                everything_good = false;
+                document.getElementById('time').classList.add('error');
+            } else {
+                if (document.getElementById('time').classList.contains('error')) {
+                    document.getElementById('time').classList.remove('error');
+                }
+            }
+
+            if (this.date === '') {
+                everything_good = false;
+                document.getElementById('date').classList.add('error');
+            } else {
+                if (document.getElementById('date').classList.contains('error')) {
+                    document.getElementById('date').classList.remove('error');
+                }
+            }
+
+            if (everything_good === true) {
+                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(this.api_link + '/api/store_reservation', {
+                    'fullname': this.fullName,
+                    'contact_number': this.number,
+                    'table': this.tableNumber,
+                    'date': this.date,
+                    'time': this.time,
+                    'number': this.number
+                }).then(function (Response) {
+                    alert(Response.data);
+                });
+            }
+        },
+        isNumeric: function isNumeric(value) {
+            return (/^\d+$/.test(value)
+            );
+        },
         reserve_table: function reserve_table(table) {
             //open modal
             this.reserving = true;
@@ -15509,15 +15626,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             //call function to close modal when not clicking it
             this.closing_modal_on_click(table);
+
+            //set default time to inputs
+            this.setTime();
         },
         closing_modal_on_click: function closing_modal_on_click(tableNumber) {
 
             //need for right scope
             var self = this;
 
-            //event listere that closes modal when user didnt clicked it
+            //event listener that closes modal when user didnt clicked it
             document.addEventListener('click', function closing_modalino(event) {
-                event.preventDefault();
                 if (self.reserving === true) {
 
                     if (event.target !== document.getElementById('modal') && !event.target.classList.contains('notCloseModal') && event.target !== document.getElementById('table' + tableNumber) && event.target !== document.getElementById('tableicon' + tableNumber)) {
@@ -15529,6 +15648,32 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     }
                 }
             });
+        },
+        setTime: function setTime() {
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1; //January is 0!
+            var yyyy = today.getFullYear();
+
+            var minDay = dd;
+            var maxDay = dd + 14;
+            dd++;
+
+            if (dd < 10) {
+                dd = '0' + dd;
+            }
+
+            if (mm < 10) {
+                mm = '0' + mm;
+            }
+
+            today = yyyy + '-' + mm + '-' + dd;
+            var dateMin = yyyy + '-' + mm + '-' + minDay;
+            var dateMax = yyyy + '-' + mm + '-' + maxDay;
+
+            this.date = today;
+            this.dateMin = dateMin;
+            this.dateMax = dateMax;
         }
     }
 });
@@ -15877,35 +16022,77 @@ var render = function() {
                         "form",
                         {
                           staticClass: "notCloseModal",
-                          attrs: { id: "reservationForm" }
+                          attrs: { method: "post", id: "reservationForm" }
                         },
                         [
                           _c(
                             "label",
                             {
                               staticClass: "notCloseModal",
-                              attrs: { for: "name" }
+                              attrs: { for: "fullName" }
                             },
                             [_vm._v("Fullname:")]
                           ),
                           _vm._v(" "),
                           _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.fullName,
+                                expression: "fullName"
+                              }
+                            ],
                             staticClass: "notCloseModal",
-                            attrs: { id: "name", type: "text" }
+                            attrs: {
+                              id: "fullName",
+                              name: "fullName",
+                              type: "text"
+                            },
+                            domProps: { value: _vm.fullName },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.fullName = $event.target.value
+                              }
+                            }
                           }),
                           _vm._v(" "),
                           _c(
                             "label",
                             {
                               staticClass: "notCloseModal",
-                              attrs: { for: "email" }
+                              attrs: { for: "number" }
                             },
-                            [_vm._v("Email:")]
+                            [_vm._v("Contact number:")]
                           ),
                           _vm._v(" "),
                           _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.number,
+                                expression: "number"
+                              }
+                            ],
                             staticClass: "notCloseModal",
-                            attrs: { id: "email", type: "text" }
+                            attrs: {
+                              id: "number",
+                              name: "number",
+                              type: "text"
+                            },
+                            domProps: { value: _vm.number },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.number = $event.target.value
+                              }
+                            }
                           }),
                           _vm._v(" "),
                           _c(
@@ -15918,18 +16105,76 @@ var render = function() {
                           ),
                           _vm._v(" "),
                           _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.date,
+                                expression: "date"
+                              }
+                            ],
                             staticClass: "notCloseModal",
-                            attrs: { id: "date", type: "datetime-local" }
+                            attrs: {
+                              min: _vm.dateMin,
+                              max: _vm.dateMax,
+                              id: "date",
+                              value: "2018-09-24",
+                              name: "date",
+                              type: "date"
+                            },
+                            domProps: { value: _vm.date },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.date = $event.target.value
+                              }
+                            }
                           }),
                           _vm._v(" "),
                           _c(
-                            "button",
+                            "label",
                             {
-                              staticClass: "submit",
-                              attrs: { type: "submit" }
+                              staticClass: "notCloseModal",
+                              attrs: { for: "time" }
                             },
-                            [_vm._v("Submit")]
-                          )
+                            [_vm._v("Hour:")]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.time,
+                                expression: "time"
+                              }
+                            ],
+                            staticClass: "notCloseModal",
+                            attrs: {
+                              min: "8:00",
+                              max: "22:00",
+                              id: "time",
+                              name: "time",
+                              type: "time"
+                            },
+                            domProps: { value: _vm.time },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.time = $event.target.value
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "submit notCloseModal",
+                            attrs: { value: "Submit", type: "button" },
+                            on: { click: _vm.submitForm }
+                          })
                         ]
                       )
                     ]),
