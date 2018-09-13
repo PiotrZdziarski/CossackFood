@@ -15409,7 +15409,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.fade-enter-active[data-v-2c4cd5d5], .fade-leave-active[data-v-2c4cd5d5] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-2c4cd5d5], .fade-leave-to[data-v-2c4cd5d5] {\n  opacity: 0;\n}\n.openHours[data-v-2c4cd5d5] {\n  text-align: center;\n  color: #b91d19;\n  display: block;\n  margin-bottom: 40px;\n  margin-top: 40px;\n}\n.selectTime[data-v-2c4cd5d5] {\n  text-align: center;\n  margin-bottom: 50px;\n  display: grid;\n  grid-template-columns: 1fr;\n}\n@media (min-width: 768px) {\n.selectTime[data-v-2c4cd5d5] {\n      grid-template-columns: 1fr 1fr;\n}\n}\n.selectTime #date[data-v-2c4cd5d5] {\n    margin-bottom: 60px;\n}\n@media (min-width: 768px) {\n.selectTime #date[data-v-2c4cd5d5] {\n        margin-bottom: 20px;\n}\n}\n.selectTime label[data-v-2c4cd5d5] {\n    color: #b91d19;\n    font-size: 26px;\n    font-weight: 700;\n}\n.selectTime input[data-v-2c4cd5d5] {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 15px;\n    background: none;\n    color: #444444;\n    text-align: center;\n    font-size: 22px;\n    border: 0;\n    border-bottom: 1px solid #777777;\n}\n.error[data-v-2c4cd5d5] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.claimImage[data-v-2c4cd5d5] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: 50% 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.claimImage .title[data-v-2c4cd5d5] {\n    margin-top: 50px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #b91d19;\n    margin-bottom: 50px;\n}\n@media (min-width: 1000px) {\n.claimImage .title[data-v-2c4cd5d5] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.claimImage .subpage[data-v-2c4cd5d5] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 30px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.claimImage .subpage[data-v-2c4cd5d5]:hover {\n    color: #777777;\n}\n.claimImage .active[data-v-2c4cd5d5] {\n    color: #b91d19;\n}\n.claimImage .active[data-v-2c4cd5d5]:hover {\n    color: #b91d19;\n}\n.claimReservations[data-v-2c4cd5d5] {\n  display: block;\n  color: #b91d19;\n  text-align: center;\n  margin-bottom: 80px;\n}\n.boxShadow[data-v-2c4cd5d5] {\n  -webkit-box-shadow: 0 0 2px white;\n          box-shadow: 0 0 2px white;\n}\n.container[data-v-2c4cd5d5] {\n  margin-top: 50px;\n}\n.container .tables[data-v-2c4cd5d5] {\n    margin-left: auto;\n    margin-right: auto;\n    display: grid;\n    position: relative;\n    border: 1px solid #f1f1f1;\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;\n    z-index: 1;\n}\n.container .tables .twoInOne[data-v-2c4cd5d5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .tables .twoInOne .twoInOneTable[data-v-2c4cd5d5] {\n        float: left;\n        width: 100%;\n}\n.container .tables .image[data-v-2c4cd5d5] {\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      -webkit-filter: brightness(70%);\n              filter: brightness(70%);\n      z-index: -1;\n}\n.container .tables .table[data-v-2c4cd5d5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      font-weight: 700;\n      color: white;\n      padding: 35% 0 35% 0;\n      cursor: pointer;\n      -webkit-transition: .2s all ease-in-out;\n      transition: .2s all ease-in-out;\n      -webkit-box-shadow: 0 0 2px white;\n              box-shadow: 0 0 2px white;\n      font-size: 14px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n        font-size: 16px;\n}\n@media (min-width: 476px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 20px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 20px;\n}\n}\n@media (min-width: 768px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 24px;\n}\n}\n@media (min-width: 1000px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 28px;\n}\n}\n@media (min-width: 1200px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 26px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 32px;\n}\n}\n.container .tables .table[data-v-2c4cd5d5]:hover {\n      -webkit-box-shadow: 0 0 7px white;\n              box-shadow: 0 0 7px white;\n      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));\n      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));\n}\n", ""]);
+exports.push([module.i, "\n.reservedTable[data-v-2c4cd5d5] {\n  cursor: auto !important;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 67, 57, 0.5)), to(rgba(245, 67, 57, 0.5)));\n  background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5));\n}\n.reservedTable[data-v-2c4cd5d5]:hover {\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 67, 57, 0.5)), to(rgba(245, 67, 57, 0.5))) !important;\n  background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5)) !important;\n  -webkit-box-shadow: 0 0 2px white !important;\n          box-shadow: 0 0 2px white !important;\n}\n@-webkit-keyframes fadeIn-data-v-2c4cd5d5 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes fadeIn-data-v-2c4cd5d5 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n.animationFadeIn[data-v-2c4cd5d5] {\n  display: block;\n  -webkit-animation: fadeIn-data-v-2c4cd5d5 .5s;\n  animation: fadeIn-data-v-2c4cd5d5 .5s;\n}\n.displayNone[data-v-2c4cd5d5] {\n  display: none !important;\n}\n.lds-ring[data-v-2c4cd5d5] {\n  display: block;\n  position: relative;\n  margin-left: auto;\n  margin-top: 100px;\n  margin-bottom: -100px;\n  margin-right: auto;\n  width: 104px;\n  height: 104px;\n}\n.lds-ring div[data-v-2c4cd5d5] {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  display: block;\n  position: absolute;\n  width: 71px;\n  height: 71px;\n  margin: 6px;\n  left: 50%;\n  border: 7px solid #cccccc;\n  border-radius: 50%;\n  -webkit-animation: lds-ring-data-v-2c4cd5d5 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\n          animation: lds-ring-data-v-2c4cd5d5 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\n  border-color: #b9bbbe transparent transparent transparent;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(1) {\n  -webkit-animation-delay: -0.45s;\n          animation-delay: -0.45s;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(2) {\n  -webkit-animation-delay: -0.3s;\n          animation-delay: -0.3s;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(3) {\n  -webkit-animation-delay: -0.15s;\n          animation-delay: -0.15s;\n}\n@-webkit-keyframes lds-ring-data-v-2c4cd5d5 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes lds-ring-data-v-2c4cd5d5 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n.fade-enter-active[data-v-2c4cd5d5], .fade-leave-active[data-v-2c4cd5d5] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-2c4cd5d5], .fade-leave-to[data-v-2c4cd5d5] {\n  opacity: 0;\n}\n.openHours[data-v-2c4cd5d5] {\n  text-align: center;\n  color: #b91d19;\n  display: block;\n  margin-bottom: 40px;\n  margin-top: 40px;\n}\n.selectTime[data-v-2c4cd5d5] {\n  text-align: center;\n  margin-bottom: 50px;\n  display: grid;\n  grid-template-columns: 1fr;\n}\n@media (min-width: 768px) {\n.selectTime[data-v-2c4cd5d5] {\n      grid-template-columns: 1fr 1fr;\n}\n}\n.selectTime #date[data-v-2c4cd5d5] {\n    margin-bottom: 60px;\n}\n@media (min-width: 768px) {\n.selectTime #date[data-v-2c4cd5d5] {\n        margin-bottom: 20px;\n}\n}\n.selectTime label[data-v-2c4cd5d5] {\n    color: #b91d19;\n    font-size: 26px;\n    font-weight: 700;\n}\n.selectTime input[data-v-2c4cd5d5] {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 15px;\n    background: none;\n    color: #444444;\n    text-align: center;\n    font-size: 22px;\n    border: 0;\n    border-bottom: 1px solid #777777;\n}\n.error[data-v-2c4cd5d5] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.claimImage[data-v-2c4cd5d5] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: 50% 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.claimImage .title[data-v-2c4cd5d5] {\n    margin-top: 50px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #b91d19;\n    margin-bottom: 50px;\n}\n@media (min-width: 768px) {\n.claimImage .title[data-v-2c4cd5d5] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.claimImage .subpage[data-v-2c4cd5d5] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 30px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.claimImage .subpage[data-v-2c4cd5d5]:hover {\n    color: #777777;\n}\n.claimImage .active[data-v-2c4cd5d5] {\n    color: #b91d19;\n}\n.claimImage .active[data-v-2c4cd5d5]:hover {\n    color: #b91d19;\n}\n.claimReservations[data-v-2c4cd5d5] {\n  display: block;\n  color: #b91d19;\n  text-align: center;\n  margin-bottom: 80px;\n}\n.boxShadow[data-v-2c4cd5d5] {\n  -webkit-box-shadow: 0 0 2px white;\n          box-shadow: 0 0 2px white;\n}\n.container[data-v-2c4cd5d5] {\n  margin-top: 50px;\n}\n.container .tables[data-v-2c4cd5d5] {\n    margin-left: auto;\n    margin-right: auto;\n    display: grid;\n    position: relative;\n    border: 1px solid #f1f1f1;\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;\n    z-index: 1;\n}\n.container .tables .twoInOne[data-v-2c4cd5d5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .tables .twoInOne .twoInOneTable[data-v-2c4cd5d5] {\n        float: left;\n        width: 100%;\n}\n.container .tables .image[data-v-2c4cd5d5] {\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      -webkit-filter: brightness(70%);\n              filter: brightness(70%);\n      z-index: -1;\n}\n.container .tables .table[data-v-2c4cd5d5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      font-weight: 700;\n      color: white;\n      padding: 35% 0 35% 0;\n      cursor: pointer;\n      -webkit-transition: .2s all ease-in-out;\n      transition: .2s all ease-in-out;\n      -webkit-box-shadow: 0 0 2px white;\n              box-shadow: 0 0 2px white;\n      font-size: 14px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n        font-size: 16px;\n}\n@media (min-width: 476px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 20px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 20px;\n}\n}\n@media (min-width: 768px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 24px;\n}\n}\n@media (min-width: 1000px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 28px;\n}\n}\n@media (min-width: 1200px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 26px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 32px;\n}\n}\n.container .tables .table[data-v-2c4cd5d5]:hover {\n      -webkit-box-shadow: 0 0 7px white;\n              box-shadow: 0 0 7px white;\n      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));\n      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));\n}\n", ""]);
 
 // exports
 
@@ -15428,6 +15428,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reservationModal_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__reservationModal_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -15555,14 +15563,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             date: '',
             dateMin: '',
             dateMax: '',
-            time: '14:00',
-            restaurantClosed: false
+            tableCount: 13,
+            time: '13:59',
+            restaurantClosed: false,
+            loading: true
 
         };
     },
     mounted: function mounted() {
         //set default time to time picker
         this.setTime();
+
+        //get reservations
+        this.getReservations();
     },
 
     methods: {
@@ -15573,13 +15586,50 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             } else {
                 this.restaurantClosed = false;
             }
+
+            this.getReservations();
         }, 400),
 
+        getReservations: function getReservations() {
+
+            //right scope
+            var self = this;
+
+            //get reservations
+            __WEBPACK_IMPORTED_MODULE_3_axios___default.a.get(this.api_link + '/api/reservations/' + this.date + '/' + this.time).then(function (Response) {
+
+                var reservationArray = Response.data.data;
+
+                for (var i = 0; i <= self.tableCount; i++) {
+                    if (reservationArray[i]) {
+
+                        //loop starts at 0 so index need to be incremented
+                        var htmlindex = i + 1;
+
+                        //prevent from reserving and add some styles
+                        document.getElementById('table' + htmlindex).setAttribute('reserved', 'true');
+                        document.getElementById('table' + htmlindex).classList.add('reservedTable');
+                        document.getElementById('infotable' + htmlindex).innerHTML = reservationArray[i].reservation_end;
+                    }
+                }
+
+                self.loading = false;
+                document.getElementById('tables').classList.remove('displayNone');
+                document.getElementById('tables').classList.add('animationFadeIn');
+            });
+        },
         isNumeric: function isNumeric(value) {
             return (/^\d+$/.test(value)
             );
         },
         reserve_table: function reserve_table(table) {
+            //check if table isnt already reserved
+            var reserved = document.getElementById('table' + table).getAttribute('reserved');
+
+            if (reserved === 'true') {
+                return null;
+            }
+
             //open modal
             this.reserving = true;
             document.getElementById('table' + table).style.background = 'linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3))';
@@ -15636,7 +15686,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var dateMin = yyyy + '-' + mm + '-' + minDay;
             var dateMax = yyyy + '-' + mm + '-' + maxDay;
 
-            this.date = today;
+            this.date = '2018-09-13';
             this.dateMin = dateMin;
             this.dateMax = dateMax;
         }
@@ -16214,310 +16264,321 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _vm.restaurantClosed === false
-          ? _c(
-              "div",
-              {
-                staticClass: "tables",
-                attrs: { "data-aos": "fade-in", "data-aos-once": "true" }
-              },
-              [
-                _c("img", {
-                  staticClass: "image",
-                  attrs: { src: _vm.api_link + "/images/view3.jpg" }
-                }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "table",
-                    attrs: { id: "table1" },
-                    on: {
-                      click: function($event) {
-                        _vm.reserve_table(1)
-                      }
-                    }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "demo-icon icon-restaurant",
-                      attrs: { id: "tableicon1" }
-                    }),
-                    _vm._v("1\n            ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "twoInOne" }, [
+        _c("transition", { attrs: { name: "fade" } }, [
+          this.restaurantClosed === false
+            ? _c(
+                "div",
+                { staticClass: "tables displayNone", attrs: { id: "tables" } },
+                [
+                  _c("img", {
+                    staticClass: "image",
+                    attrs: { src: _vm.api_link + "/images/view3.jpg" }
+                  }),
+                  _vm._v(" "),
                   _c(
                     "div",
                     {
-                      staticClass: "table twoInOneTable",
-                      attrs: { id: "table2" },
+                      staticClass: "table",
+                      attrs: { id: "table1" },
                       on: {
                         click: function($event) {
-                          _vm.reserve_table(2)
+                          _vm.reserve_table(1)
                         }
                       }
                     },
                     [
                       _c("i", {
                         staticClass: "demo-icon icon-restaurant",
-                        attrs: { id: "tableicon2" }
+                        attrs: { id: "tableicon1" }
                       }),
-                      _vm._v(" 2\n                ")
+                      _c("span", { attrs: { id: "infotable1" } }, [_vm._v("1")])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "twoInOne" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "table twoInOneTable",
+                        attrs: { id: "table2" },
+                        on: {
+                          click: function($event) {
+                            _vm.reserve_table(2)
+                          }
+                        }
+                      },
+                      [
+                        _c("i", {
+                          staticClass: "demo-icon icon-restaurant",
+                          attrs: { id: "tableicon2" }
+                        }),
+                        _vm._v(" 2\n                    ")
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "table twoInOneTable",
+                        attrs: { id: "table3" },
+                        on: {
+                          click: function($event) {
+                            _vm.reserve_table(3)
+                          }
+                        }
+                      },
+                      [
+                        _c("i", {
+                          staticClass: "demo-icon icon-restaurant",
+                          attrs: { id: "tableicon3" }
+                        }),
+                        _vm._v("3\n                    ")
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "twoInOne" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "table twoInOneTable",
+                        attrs: { id: "table4" },
+                        on: {
+                          click: function($event) {
+                            _vm.reserve_table(4)
+                          }
+                        }
+                      },
+                      [
+                        _c("i", {
+                          staticClass: "demo-icon icon-restaurant",
+                          attrs: { id: "tableicon4" }
+                        }),
+                        _vm._v("4\n                    ")
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "table twoInOneTable",
+                        attrs: { id: "table5" },
+                        on: {
+                          click: function($event) {
+                            _vm.reserve_table(5)
+                          }
+                        }
+                      },
+                      [
+                        _c("i", {
+                          staticClass: "demo-icon icon-restaurant",
+                          attrs: { id: "tableicon5" }
+                        }),
+                        _vm._v("5\n                    ")
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "boxShadow" }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "boxShadow" }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "table",
+                      attrs: { id: "table6" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(6)
+                        }
+                      }
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "demo-icon icon-restaurant",
+                        attrs: { id: "tableicon6" }
+                      }),
+                      _vm._v("6\n                ")
                     ]
                   ),
                   _vm._v(" "),
                   _c(
                     "div",
                     {
-                      staticClass: "table twoInOneTable",
-                      attrs: { id: "table3" },
+                      staticClass: "table",
+                      attrs: { id: "table7" },
                       on: {
                         click: function($event) {
-                          _vm.reserve_table(3)
+                          _vm.reserve_table(7)
                         }
                       }
                     },
                     [
                       _c("i", {
                         staticClass: "demo-icon icon-restaurant",
-                        attrs: { id: "tableicon3" }
+                        attrs: { id: "tableicon7" }
                       }),
-                      _vm._v("3\n                ")
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "twoInOne" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "table twoInOneTable",
-                      attrs: { id: "table4" },
-                      on: {
-                        click: function($event) {
-                          _vm.reserve_table(4)
-                        }
-                      }
-                    },
-                    [
-                      _c("i", {
-                        staticClass: "demo-icon icon-restaurant",
-                        attrs: { id: "tableicon4" }
-                      }),
-                      _vm._v("4\n                ")
+                      _vm._v("7\n                ")
                     ]
                   ),
                   _vm._v(" "),
                   _c(
                     "div",
                     {
-                      staticClass: "table twoInOneTable",
-                      attrs: { id: "table5" },
+                      staticClass: "table",
+                      staticStyle: { width: "200%" },
+                      attrs: { id: "table8" },
                       on: {
                         click: function($event) {
-                          _vm.reserve_table(5)
+                          _vm.reserve_table(8)
                         }
                       }
                     },
                     [
                       _c("i", {
                         staticClass: "demo-icon icon-restaurant",
-                        attrs: { id: "tableicon5" }
+                        attrs: { id: "tableicon8" }
                       }),
-                      _vm._v("5\n                ")
+                      _vm._v("8\n                ")
                     ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "boxShadow" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "boxShadow" }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
+                  ),
+                  _vm._v(" "),
+                  _c("div", {
                     staticClass: "table",
-                    attrs: { id: "table6" },
-                    on: {
-                      click: function($event) {
-                        _vm.reserve_table(6)
-                      }
-                    }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "demo-icon icon-restaurant",
-                      attrs: { id: "tableicon6" }
-                    }),
-                    _vm._v("6\n            ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "table",
-                    attrs: { id: "table7" },
-                    on: {
-                      click: function($event) {
-                        _vm.reserve_table(7)
-                      }
-                    }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "demo-icon icon-restaurant",
-                      attrs: { id: "tableicon7" }
-                    }),
-                    _vm._v("7\n            ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "table",
-                    staticStyle: { width: "200%" },
-                    attrs: { id: "table8" },
+                    staticStyle: { "z-index": "-1000" },
                     on: {
                       click: function($event) {
                         _vm.reserve_table(8)
                       }
                     }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "demo-icon icon-restaurant",
-                      attrs: { id: "tableicon8" }
-                    }),
-                    _vm._v("8\n            ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", {
-                  staticClass: "table",
-                  staticStyle: { "z-index": "-1000" },
-                  on: {
-                    click: function($event) {
-                      _vm.reserve_table(8)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "table",
-                    attrs: { id: "table9" },
-                    on: {
-                      click: function($event) {
-                        _vm.reserve_table(9)
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "table",
+                      attrs: { id: "table9" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(9)
+                        }
                       }
-                    }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "demo-icon icon-restaurant",
-                      attrs: { id: "tableicon9" }
-                    }),
-                    _vm._v("9\n            ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "table",
-                    attrs: { id: "table10" },
-                    on: {
-                      click: function($event) {
-                        _vm.reserve_table(10)
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "demo-icon icon-restaurant",
+                        attrs: { id: "tableicon9" }
+                      }),
+                      _vm._v("9\n                ")
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "table",
+                      attrs: { id: "table10" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(10)
+                        }
                       }
-                    }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "demo-icon icon-restaurant",
-                      attrs: { id: "tableicon10" }
-                    }),
-                    _vm._v("10\n            ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "table",
-                    attrs: { id: "table11" },
-                    on: {
-                      click: function($event) {
-                        _vm.reserve_table(11)
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "demo-icon icon-restaurant",
+                        attrs: { id: "tableicon10" }
+                      }),
+                      _vm._v("10\n                ")
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "table",
+                      attrs: { id: "table11" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(11)
+                        }
                       }
-                    }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "demo-icon icon-restaurant",
-                      attrs: { id: "tableicon11" }
-                    }),
-                    _vm._v("11\n            ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "demo-icon icon-restaurant",
+                        attrs: { id: "tableicon11" }
+                      }),
+                      _vm._v("11\n                ")
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "table",
+                      staticStyle: { width: "200%" },
+                      attrs: { id: "table12" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(12)
+                        }
+                      }
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "demo-icon icon-restaurant",
+                        attrs: { id: "tableicon12" }
+                      }),
+                      _vm._v("12\n                ")
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", {
                     staticClass: "table",
-                    staticStyle: { width: "200%" },
-                    attrs: { id: "table12" },
+                    staticStyle: { "z-index": "-1000" },
                     on: {
                       click: function($event) {
                         _vm.reserve_table(12)
                       }
                     }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "demo-icon icon-restaurant",
-                      attrs: { id: "tableicon12" }
-                    }),
-                    _vm._v("12\n            ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", {
-                  staticClass: "table",
-                  staticStyle: { "z-index": "-1000" },
-                  on: {
-                    click: function($event) {
-                      _vm.reserve_table(12)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "table",
-                    attrs: { id: "table13" },
-                    on: {
-                      click: function($event) {
-                        _vm.reserve_table(13)
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "table",
+                      attrs: { id: "table13" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(13)
+                        }
                       }
-                    }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "demo-icon icon-restaurant",
-                      attrs: { id: "tableicon13" }
-                    }),
-                    _vm._v("13\n            ")
-                  ]
-                )
-              ]
-            )
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "demo-icon icon-restaurant",
+                        attrs: { id: "tableicon13" }
+                      }),
+                      _vm._v("13\n                ")
+                    ]
+                  )
+                ]
+              )
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _vm.loading
+          ? _c("div", { staticClass: "lds-ring" }, [
+              _c("div"),
+              _vm._v(" "),
+              _c("div"),
+              _vm._v(" "),
+              _c("div"),
+              _vm._v(" "),
+              _c("div")
+            ])
           : _vm._e(),
         _vm._v(" "),
         _c("closed", { attrs: { restaurantClosed: _vm.restaurantClosed } }),
