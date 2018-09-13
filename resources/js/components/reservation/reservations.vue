@@ -3,15 +3,28 @@
 
         <div :style="{backgroundImage: 'url(' + api_link + '/images/claimMenu.jpg' + ')'}" class="claimImage">
             <div>
-                <div class="title">Choose your table!</div>
+                <div class="title">Book your table!</div>
             </div>
         </div>
+
         <div class="container">
+            <h3 class="openHours">CossackFood is open from 8am to 9pm</h3>
+
             <div class="selectTime">
-                <input :min="dateMin" :max="dateMax" v-model="date" id="date" value="2018-09-24"
-                       name="date" class="notCloseModal" type="date">
+                <div>
+                    <label class="notCloseModal" for="date">Date:</label>
+                    <input :min="dateMin" :max="dateMax" v-model="date" id="date"
+                           name="date" class="notCloseModal" type="date">
+                </div>
+
+                <div>
+                    <label class="notCloseModal" for="time">Time:</label>
+                    <input id="time" value="14:00" v-model="time" @input="handleTime"
+                           name="date" class="notCloseModal" type="time">
+                </div>
             </div>
-            <div data-aos="fade-in" data-aos-once="true" class="tables">
+
+            <div data-aos="fade-in" data-aos-once="true" class="tables"  v-if="restaurantClosed === false">
                 <img class="image" :src="api_link + '/images/view3.jpg'">
                 <div @click="reserve_table(1)" id="table1" class="table">
                     <i id="tableicon1" class="demo-icon icon-restaurant"></i>1
@@ -78,56 +91,27 @@
                     <i id="tableicon13" class="demo-icon icon-restaurant"></i>13
                 </div>
 
-
             </div>
-            <transition name="fade">
-                <div v-if="reserving" class="modal-container">
-                    <div id="modal" class="modal">
-                        <div class="close"></div>
 
-                        <div class="modalGrid notCloseModal">
-                            <div class="form notCloseModal">
-                                <div class="titleModal notCloseModal">Book Table no. {{ tableNumber }}</div>
-                                <form method="post" id="reservationForm" class="notCloseModal">
+            <closed :restaurantClosed="restaurantClosed"></closed>
 
-                                    <label class="notCloseModal" for="fullName">Fullname:</label>
-                                    <input v-model="fullName" id="fullName" name="fullName" class="notCloseModal"
-                                           type="text">
-
-                                    <label class="notCloseModal" for="number">Contact number:</label>
-                                    <input v-model="number" id="number" name="number" class="notCloseModal" type="text">
-
-                                    <label class="notCloseModal" for="date">Date:</label>
-                                    <input :min="dateMin" :max="dateMax" v-model="date" id="date" value="2018-09-24"
-                                           name="date" class="notCloseModal" type="date">
-
-                                    <label class="notCloseModal" for="hour">Hour:</label>
-                                    <select id="hour" class="notCloseModal">
-                                        <option :value="hour" class="notCloseModal" v-for="hour in openHours">{{ hour }}</option>
-                                    </select>
-
-                                    <input @click="submitForm" class="submit notCloseModal" value="Submit"
-                                           type="button">
-                                </form>
-                            </div>
-                            <div class="claimModal notCloseModal"
-                                 :style="{backgroundImage: 'url(' + api_link + '/images/waiter.jpg' + ')'}">
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </transition>
+            <reservation-modal :api_link="api_link" :reserving="reserving"></reservation-modal>
         </div>
     </div>
 </template>
 
 <script>
+    import debounce from 'lodash.debounce';
+    import closed from './closed.vue';
+    import reservationModal from './reservationModal.vue'
     import axios from 'axios';
 
     export default {
         name: "reservations",
+        components: {
+            closed: closed,
+            reservationModal: reservationModal
+        },
         props: {
             api_link: {
                 Type: String
@@ -138,80 +122,29 @@
                 reserving: false,
                 tableNumber: 0,
                 openHours: [8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],
-                fullName: '',
                 date: '',
                 dateMin: '',
                 dateMax: '',
                 time: '14:00',
-                number: '',
+                restaurantClosed: false
 
             }
         },
+        mounted() {
+            //set default time to time picker
+            this.setTime();
+        },
         methods: {
-            submitForm() {
-                const self = this;
-                let everything_good = true;
-
-                if (this.fullName === '') {
-                    everything_good = false;
-                    document.getElementById('fullName').classList.add('error');
-                    document.getElementsByName("fullName")[0].placeholder = "Fill in this field!";
+            handleTime: debounce(function(e) {
+                let time = e.target.value;
+                if(parseInt(time) < 8 || parseInt(time) > 20) {
+                    this.restaurantClosed = true;
                 } else {
-                    if (document.getElementById('fullName').classList.contains('error')) {
-                        document.getElementById('fullName').classList.remove('error');
-                    }
+                    this.restaurantClosed = false;
                 }
+            }, 400),
 
-                if (this.number === '') {
-
-                    everything_good = false;
-                    document.getElementById('number').classList.add('error');
-                    document.getElementsByName("number")[0].placeholder = "Fill in this field!";
-                } else if (!this.isNumeric(this.number)) {
-                    everything_good = false;
-                    document.getElementById('number').classList.add('error');
-                    document.getElementById('number').value = '';
-                    document.getElementsByName("number")[0].placeholder = "Enter valid number!";
-                }
-                else {
-                    if (document.getElementById('number').classList.contains('error')) {
-                        document.getElementById('number').classList.remove('error');
-                    }
-                }
-
-
-                if (this.time === '') {
-                    everything_good = false;
-                    document.getElementById('time').classList.add('error');
-                } else {
-                    if (document.getElementById('time').classList.contains('error')) {
-                        document.getElementById('time').classList.remove('error');
-                    }
-                }
-
-                if (this.date === '') {
-                    everything_good = false;
-                    document.getElementById('date').classList.add('error');
-                } else {
-                    if (document.getElementById('date').classList.contains('error')) {
-                        document.getElementById('date').classList.remove('error');
-                    }
-                }
-
-                if (everything_good === true) {
-                    axios.post(this.api_link + '/api/store_reservation', {
-                        'name': this.fullName,
-                        'number': this.number,
-                        'table': this.tableNumber,
-                        'date': this.date,
-                        'time': this.time,
-                        'number': this.number
-                    }).then(function (Response) {
-                        alert(Response.data);
-                    });
-                }
-            },
-            isNumeric(value) {
+                isNumeric(value) {
                 return /^\d+$/.test(value);
             },
 
@@ -230,9 +163,6 @@
 
                 //call function to close modal when not clicking it
                 this.closing_modal_on_click(table);
-
-                //set default time to inputs
-                this.setTime();
             },
 
             closing_modal_on_click(tableNumber) {
@@ -291,6 +221,58 @@
 </script>
 
 <style lang="scss" scoped>
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .3s;
+    }
+
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+    {
+        opacity: 0;
+    }
+    .openHours {
+        text-align: center;
+        color: #b91d19;
+        display: block;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    .selectTime {
+        text-align: center;
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        @media(min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #date {
+            margin-bottom:60px;
+            @media(min-width: 768px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        label {
+            color: #b91d19;
+            font-size: 26px;
+            font-weight: 700;
+
+        }
+        input {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15px;
+            background: none;
+            color: #444444;
+            text-align: center;
+            font-size: 22px;
+            border: 0;
+            border-bottom: 1px solid #777777;
+        }
+    }
+
     .error {
         border-bottom: 1px solid #b91d19 !important;
     }
@@ -349,26 +331,9 @@
         box-shadow: 0 0 2px white;
     }
 
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity .3s;
-    }
-
-    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
-    {
-        opacity: 0;
-    }
 
     .container {
         margin-top: 50px;
-
-
-        .selectTime {
-            display: grid;
-            grid-template-columns: 1fr;
-            @media(min-width: 768px) {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
 
         .tables {
 
@@ -446,159 +411,6 @@
                 background: linear-gradient(rgba(0, 0, 0, 0.2),
                         rgba(0, 0, 0, 0.2));
             }
-        }
-
-        .modal-container {
-            position: fixed;
-            z-index: 399;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            .modal {
-                position: fixed;
-                background: #f5f5f5;
-                border-radius: 5px;
-                box-shadow: 0 30px 30px - 10px rgba(0, 0, 0, .3);
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 95%;
-                z-index: 400;
-                top: 50%;
-
-                @media(min-width: 768px) {
-                    width: 70%;
-                }
-                @media(min-width: 1000px) {
-                    width: 60%;
-                }
-
-                .modalGrid {
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    @media(min-width: 476px) {
-                        grid-template-columns: 1fr 1fr;
-                    }
-                    width: 100%;
-                    height: 100%;
-                    text-align: center;
-
-                    .form {
-                        padding: 8%;
-
-                        .titleModal {
-                            font-size: 26px;
-                            font-weight: 500;
-                            color: #b91d19;
-                            margin-bottom: 30px;
-                        }
-
-                        #reservationForm {
-
-                            .submit {
-                                margin-top: 40px;
-                                background-color: #f54339;
-                                color: white;
-                                transition: .2s all ease-in-out;
-                                cursor: pointer;
-                                padding: 10px 20px 10px 20px;
-                                border: 0;
-                                border-radius: 3px;
-                            }
-
-                            .submit:hover {
-                                background-color: #f5543f;
-                            }
-
-                            .submit:focus {
-                                outline: none;
-                                box-shadow: 0 3.75px 7.5px #b9bbbe;
-                            }
-
-                            label {
-                                display: block;
-                                font-size: 20px;
-                                margin-top: 25px;
-                            }
-                            input {
-                                display: block;
-                                margin-left: auto;
-                                margin-right: auto;
-                                margin-top: 15px;
-                                background: none;
-                                color: #444444;
-                                text-align: center;
-                                font-size: 16px;
-                                border: 0;
-                                border-bottom: 1px solid #777777;
-                            }
-
-                            select {
-                                display: block;
-                                margin-left: auto;
-                                margin-right: auto;
-                                margin-top: 15px;
-                                background: none;
-                                color: #444444;
-                                text-align: center;
-                                font-size: 16px;
-                                border: 0;
-                                border-bottom: 1px solid #777777;
-                            }
-
-                            input:focus {
-                                outline: none;
-                                box-shadow: 0 8px 16px -8px #777777;
-                            }
-                        }
-                    }
-
-                    .claimModal {
-                        background-position: 60%;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        @media(max-width: 476px) {
-                            display: none;
-                        }
-                    }
-                }
-
-                .close {
-                    position: absolute;
-                    width: 30px;
-                    height: 30px;
-                    padding: 30px;
-                    right: 0;
-                    top: 0;
-                    cursor: pointer;
-                    &::before,
-                    &::after {
-                        position: absolute;
-                        top: 30px;
-                        right: 20px;
-                        content: '';
-                        width: 20px;
-                        height: 2px;
-                        background: black;
-                        display: block;
-                    }
-                    &::before {
-                        transform: rotate(45deg);
-                    }
-                    &::after {
-                        transform: rotate(-45deg);
-                    }
-                }
-                .close:hover {
-                    &::before,
-                    &::after {
-                        background: #444444;
-                    }
-                }
-
-            }
-
         }
     }
 </style>

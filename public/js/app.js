@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,7 +71,7 @@
 
 
 var bind = __webpack_require__(8);
-var isBuffer = __webpack_require__(37);
+var isBuffer = __webpack_require__(38);
 
 /*global toString:true*/
 
@@ -584,7 +584,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(24)
+var listToStyles = __webpack_require__(25)
 
 /*
 type StyleObject = {
@@ -823,7 +823,7 @@ module.exports = g;
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(36);
+module.exports = __webpack_require__(37);
 
 /***/ }),
 /* 6 */
@@ -833,7 +833,7 @@ module.exports = __webpack_require__(36);
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(0);
-var normalizeHeaderName = __webpack_require__(39);
+var normalizeHeaderName = __webpack_require__(40);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -1145,12 +1145,12 @@ module.exports = function bind(fn, thisArg) {
 
 
 var utils = __webpack_require__(0);
-var settle = __webpack_require__(40);
-var buildURL = __webpack_require__(42);
-var parseHeaders = __webpack_require__(43);
-var isURLSameOrigin = __webpack_require__(44);
+var settle = __webpack_require__(41);
+var buildURL = __webpack_require__(43);
+var parseHeaders = __webpack_require__(44);
+var isURLSameOrigin = __webpack_require__(45);
 var createError = __webpack_require__(10);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(45);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(46);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -1247,7 +1247,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(46);
+      var cookies = __webpack_require__(47);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -1331,7 +1331,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(41);
+var enhanceError = __webpack_require__(42);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -1391,12 +1391,63 @@ module.exports = Cancel;
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(14);
-module.exports = __webpack_require__(75);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(76)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(78)
+/* template */
+var __vue_template__ = __webpack_require__(79)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-ddec01cc"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/reservation/closed.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-ddec01cc", Component.options)
+  } else {
+    hotAPI.reload("data-v-ddec01cc", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
 
 
 /***/ }),
 /* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(15);
+module.exports = __webpack_require__(81);
+
+
+/***/ }),
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1407,7 +1458,7 @@ module.exports = __webpack_require__(75);
  */
 
 // require('./bootstrap');
-window.Vue = __webpack_require__(15);
+window.Vue = __webpack_require__(16);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -1415,21 +1466,23 @@ window.Vue = __webpack_require__(15);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', __webpack_require__(18));
-Vue.component('navbar', __webpack_require__(21));
-Vue.component('scrolltop', __webpack_require__(27));
-Vue.component('featuredDishes', __webpack_require__(32));
-Vue.component('mainfooter', __webpack_require__(55));
-Vue.component('pizzas_menu', __webpack_require__(60));
-Vue.component('menuSubpage', __webpack_require__(65));
-Vue.component('reservations', __webpack_require__(70));
+Vue.component('example-component', __webpack_require__(19));
+Vue.component('navbar', __webpack_require__(22));
+Vue.component('scrolltop', __webpack_require__(28));
+Vue.component('featuredDishes', __webpack_require__(33));
+Vue.component('mainfooter', __webpack_require__(56));
+Vue.component('pizzas_menu', __webpack_require__(61));
+Vue.component('menuSubpage', __webpack_require__(66));
+Vue.component('reservations', __webpack_require__(71));
+Vue.component('reservationModal', __webpack_require__(85));
+Vue.component('closed', __webpack_require__(13));
 
 var app = new Vue({
   el: '#app'
 });
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12392,10 +12445,10 @@ Vue.compile = compileToFunctions;
 
 module.exports = Vue;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(16).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(17).setImmediate))
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -12451,7 +12504,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(17);
+__webpack_require__(18);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -12465,7 +12518,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -12658,15 +12711,15 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(7)))
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(19)
+var __vue_script__ = __webpack_require__(20)
 /* template */
-var __vue_template__ = __webpack_require__(20)
+var __vue_template__ = __webpack_require__(21)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -12705,7 +12758,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12734,7 +12787,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -12777,19 +12830,19 @@ if (false) {
 }
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(22)
+  __webpack_require__(23)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(25)
+var __vue_script__ = __webpack_require__(26)
 /* template */
-var __vue_template__ = __webpack_require__(26)
+var __vue_template__ = __webpack_require__(27)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -12828,13 +12881,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(23);
+var content = __webpack_require__(24);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -12854,7 +12907,7 @@ if(false) {
 }
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -12868,7 +12921,7 @@ exports.push([module.i, "\n.boxShadow[data-v-11e733ca] {\n  -webkit-box-shadow: 
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 /**
@@ -12901,7 +12954,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12986,7 +13039,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -13113,19 +13166,19 @@ if (false) {
 }
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(28)
+  __webpack_require__(29)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(30)
+var __vue_script__ = __webpack_require__(31)
 /* template */
-var __vue_template__ = __webpack_require__(31)
+var __vue_template__ = __webpack_require__(32)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -13164,13 +13217,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(29);
+var content = __webpack_require__(30);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -13190,7 +13243,7 @@ if(false) {
 }
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -13204,7 +13257,7 @@ exports.push([module.i, "\n.slide-fade-enter-active[data-v-7246d1ad] {\n  -webki
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13247,7 +13300,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -13275,19 +13328,19 @@ if (false) {
 }
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(33)
+  __webpack_require__(34)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(35)
+var __vue_script__ = __webpack_require__(36)
 /* template */
-var __vue_template__ = __webpack_require__(54)
+var __vue_template__ = __webpack_require__(55)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -13326,13 +13379,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(34);
+var content = __webpack_require__(35);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -13352,7 +13405,7 @@ if(false) {
 }
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -13366,7 +13419,7 @@ exports.push([module.i, "\n.lds-dual-ring[data-v-3eed85a1] {\n  display: -webkit
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13461,7 +13514,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13469,7 +13522,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var utils = __webpack_require__(0);
 var bind = __webpack_require__(8);
-var Axios = __webpack_require__(38);
+var Axios = __webpack_require__(39);
 var defaults = __webpack_require__(6);
 
 /**
@@ -13504,14 +13557,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(12);
-axios.CancelToken = __webpack_require__(52);
+axios.CancelToken = __webpack_require__(53);
 axios.isCancel = __webpack_require__(11);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(53);
+axios.spread = __webpack_require__(54);
 
 module.exports = axios;
 
@@ -13520,7 +13573,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 /*!
@@ -13547,7 +13600,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13555,8 +13608,8 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(6);
 var utils = __webpack_require__(0);
-var InterceptorManager = __webpack_require__(47);
-var dispatchRequest = __webpack_require__(48);
+var InterceptorManager = __webpack_require__(48);
+var dispatchRequest = __webpack_require__(49);
 
 /**
  * Create a new instance of Axios
@@ -13633,7 +13686,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13652,7 +13705,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13685,7 +13738,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13713,7 +13766,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13786,7 +13839,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13846,7 +13899,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13921,7 +13974,7 @@ module.exports = (
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13964,7 +14017,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14024,7 +14077,7 @@ module.exports = (
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14083,18 +14136,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(0);
-var transformData = __webpack_require__(49);
+var transformData = __webpack_require__(50);
 var isCancel = __webpack_require__(11);
 var defaults = __webpack_require__(6);
-var isAbsoluteURL = __webpack_require__(50);
-var combineURLs = __webpack_require__(51);
+var isAbsoluteURL = __webpack_require__(51);
+var combineURLs = __webpack_require__(52);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -14176,7 +14229,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14203,7 +14256,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14224,7 +14277,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14245,7 +14298,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14309,7 +14362,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14343,7 +14396,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -14457,19 +14510,19 @@ if (false) {
 }
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(56)
+  __webpack_require__(57)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(58)
+var __vue_script__ = __webpack_require__(59)
 /* template */
-var __vue_template__ = __webpack_require__(59)
+var __vue_template__ = __webpack_require__(60)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -14508,13 +14561,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(57);
+var content = __webpack_require__(58);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -14534,7 +14587,7 @@ if(false) {
 }
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -14548,7 +14601,7 @@ exports.push([module.i, "\n.footer[data-v-6d8579c2] {\n  margin-top: 220px;\n  m
 
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14593,7 +14646,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -14677,19 +14730,19 @@ if (false) {
 }
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(61)
+  __webpack_require__(62)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(63)
+var __vue_script__ = __webpack_require__(64)
 /* template */
-var __vue_template__ = __webpack_require__(64)
+var __vue_template__ = __webpack_require__(65)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -14728,13 +14781,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(62);
+var content = __webpack_require__(63);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -14754,7 +14807,7 @@ if(false) {
 }
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -14768,7 +14821,7 @@ exports.push([module.i, "\n.wrapper[data-v-782665b8] {\n    width: 100%;\n    bo
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14841,7 +14894,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -14920,19 +14973,19 @@ if (false) {
 }
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(66)
+  __webpack_require__(67)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(68)
+var __vue_script__ = __webpack_require__(69)
 /* template */
-var __vue_template__ = __webpack_require__(69)
+var __vue_template__ = __webpack_require__(70)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -14971,13 +15024,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(67);
+var content = __webpack_require__(68);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -14997,7 +15050,7 @@ if(false) {
 }
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -15011,7 +15064,7 @@ exports.push([module.i, "\n.lds-dual-ring[data-v-66961575] {\n  display: -webkit
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15127,7 +15180,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -15271,25 +15324,25 @@ if (false) {
 }
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(71)
+  __webpack_require__(72)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(73)
+var __vue_script__ = __webpack_require__(74)
 /* template */
-var __vue_template__ = __webpack_require__(74)
+var __vue_template__ = __webpack_require__(80)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-2e9cfa72"
+var __vue_scopeId__ = "data-v-2c4cd5d5"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -15300,7 +15353,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/js/components/reservations.vue"
+Component.options.__file = "resources/js/components/reservation/reservations.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -15309,9 +15362,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2e9cfa72", Component.options)
+    hotAPI.createRecord("data-v-2c4cd5d5", Component.options)
   } else {
-    hotAPI.reload("data-v-2e9cfa72", Component.options)
+    hotAPI.reload("data-v-2c4cd5d5", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -15322,23 +15375,23 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(72);
+var content = __webpack_require__(73);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("1f4db8cf", content, false, {});
+var update = __webpack_require__(3)("33a83b1c", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2e9cfa72\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./reservations.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2e9cfa72\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./reservations.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2c4cd5d5\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./reservations.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2c4cd5d5\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./reservations.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15348,7 +15401,7 @@ if(false) {
 }
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -15356,19 +15409,25 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.error[data-v-2e9cfa72] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.claimImage[data-v-2e9cfa72] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: 50% 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.claimImage .title[data-v-2e9cfa72] {\n    margin-top: 50px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #b91d19;\n    margin-bottom: 50px;\n}\n@media (min-width: 1000px) {\n.claimImage .title[data-v-2e9cfa72] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.claimImage .subpage[data-v-2e9cfa72] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 30px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.claimImage .subpage[data-v-2e9cfa72]:hover {\n    color: #777777;\n}\n.claimImage .active[data-v-2e9cfa72] {\n    color: #b91d19;\n}\n.claimImage .active[data-v-2e9cfa72]:hover {\n    color: #b91d19;\n}\n.claimReservations[data-v-2e9cfa72] {\n  display: block;\n  color: #b91d19;\n  text-align: center;\n  margin-bottom: 80px;\n}\n.boxShadow[data-v-2e9cfa72] {\n  -webkit-box-shadow: 0 0 2px white;\n          box-shadow: 0 0 2px white;\n}\n.fade-enter-active[data-v-2e9cfa72], .fade-leave-active[data-v-2e9cfa72] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-2e9cfa72], .fade-leave-to[data-v-2e9cfa72] {\n  opacity: 0;\n}\n.container[data-v-2e9cfa72] {\n  margin-top: 50px;\n}\n.container .tables[data-v-2e9cfa72] {\n    margin-left: auto;\n    margin-right: auto;\n    display: grid;\n    position: relative;\n    border: 1px solid #f1f1f1;\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;\n    z-index: 1;\n}\n.container .tables .twoInOne[data-v-2e9cfa72] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .tables .twoInOne .twoInOneTable[data-v-2e9cfa72] {\n        float: left;\n        width: 100%;\n}\n.container .tables .image[data-v-2e9cfa72] {\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      -webkit-filter: brightness(70%);\n              filter: brightness(70%);\n      z-index: -1;\n}\n.container .tables .table[data-v-2e9cfa72] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      font-weight: 700;\n      color: white;\n      padding: 35% 0 35% 0;\n      cursor: pointer;\n      -webkit-transition: .2s all ease-in-out;\n      transition: .2s all ease-in-out;\n      -webkit-box-shadow: 0 0 2px white;\n              box-shadow: 0 0 2px white;\n      font-size: 14px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n        font-size: 16px;\n}\n@media (min-width: 476px) {\n.container .tables .table[data-v-2e9cfa72] {\n          font-size: 20px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n            font-size: 20px;\n}\n}\n@media (min-width: 768px) {\n.container .tables .table[data-v-2e9cfa72] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n            font-size: 24px;\n}\n}\n@media (min-width: 1000px) {\n.container .tables .table[data-v-2e9cfa72] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n            font-size: 28px;\n}\n}\n@media (min-width: 1200px) {\n.container .tables .table[data-v-2e9cfa72] {\n          font-size: 26px;\n}\n.container .tables .table .icon-restaurant[data-v-2e9cfa72] {\n            font-size: 32px;\n}\n}\n.container .tables .table[data-v-2e9cfa72]:hover {\n      -webkit-box-shadow: 0 0 7px white;\n              box-shadow: 0 0 7px white;\n      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));\n      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));\n}\n.container .modal-container[data-v-2e9cfa72] {\n    position: fixed;\n    z-index: 399;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background: transparent;\n}\n.container .modal-container .modal[data-v-2e9cfa72] {\n      position: fixed;\n      background: #f5f5f5;\n      -webkit-box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n              box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n      left: 50%;\n      -webkit-transform: translate(-50%, -50%);\n              transform: translate(-50%, -50%);\n      width: 95%;\n      z-index: 400;\n      top: 50%;\n}\n@media (min-width: 768px) {\n.container .modal-container .modal[data-v-2e9cfa72] {\n          width: 70%;\n}\n}\n@media (min-width: 1000px) {\n.container .modal-container .modal[data-v-2e9cfa72] {\n          width: 60%;\n}\n}\n.container .modal-container .modal .modalGrid[data-v-2e9cfa72] {\n        display: grid;\n        grid-template-columns: 1fr;\n        width: 100%;\n        height: 100%;\n        text-align: center;\n}\n@media (min-width: 476px) {\n.container .modal-container .modal .modalGrid[data-v-2e9cfa72] {\n            grid-template-columns: 1fr 1fr;\n}\n}\n.container .modal-container .modal .modalGrid .form[data-v-2e9cfa72] {\n          padding: 8%;\n}\n.container .modal-container .modal .modalGrid .form .titleModal[data-v-2e9cfa72] {\n            font-size: 26px;\n            font-weight: 500;\n            color: #b91d19;\n            margin-bottom: 30px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-2e9cfa72] {\n            margin-top: 40px;\n            background-color: #f54339;\n            color: white;\n            -webkit-transition: .2s all ease-in-out;\n            transition: .2s all ease-in-out;\n            cursor: pointer;\n            padding: 10px 20px 10px 20px;\n            border: 0;\n            border-radius: 3px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-2e9cfa72]:hover {\n            background-color: #f5543f;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-2e9cfa72]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 3.75px 7.5px #b9bbbe;\n                    box-shadow: 0 3.75px 7.5px #b9bbbe;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm label[data-v-2e9cfa72] {\n            display: block;\n            font-size: 20px;\n            margin-top: 25px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-2e9cfa72] {\n            display: block;\n            margin-left: auto;\n            margin-right: auto;\n            margin-top: 15px;\n            background: none;\n            color: #444444;\n            text-align: center;\n            font-size: 16px;\n            border: 0;\n            border-bottom: 1px solid #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-2e9cfa72]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 8px 16px -8px #777777;\n                    box-shadow: 0 8px 16px -8px #777777;\n}\n.container .modal-container .modal .modalGrid .claimModal[data-v-2e9cfa72] {\n          background-position: 60%;\n          background-repeat: no-repeat;\n          background-size: cover;\n}\n@media (max-width: 476px) {\n.container .modal-container .modal .modalGrid .claimModal[data-v-2e9cfa72] {\n              display: none;\n}\n}\n.container .modal-container .modal .close[data-v-2e9cfa72] {\n        position: absolute;\n        width: 30px;\n        height: 30px;\n        padding: 30px;\n        right: 0;\n        top: 0;\n        cursor: pointer;\n}\n.container .modal-container .modal .close[data-v-2e9cfa72]::before, .container .modal-container .modal .close[data-v-2e9cfa72]::after {\n          position: absolute;\n          top: 30px;\n          right: 20px;\n          content: '';\n          width: 20px;\n          height: 2px;\n          background: black;\n          display: block;\n}\n.container .modal-container .modal .close[data-v-2e9cfa72]::before {\n          -webkit-transform: rotate(45deg);\n                  transform: rotate(45deg);\n}\n.container .modal-container .modal .close[data-v-2e9cfa72]::after {\n          -webkit-transform: rotate(-45deg);\n                  transform: rotate(-45deg);\n}\n.container .modal-container .modal .close[data-v-2e9cfa72]:hover::before, .container .modal-container .modal .close[data-v-2e9cfa72]:hover::after {\n        background: #444444;\n}\n", ""]);
+exports.push([module.i, "\n.fade-enter-active[data-v-2c4cd5d5], .fade-leave-active[data-v-2c4cd5d5] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-2c4cd5d5], .fade-leave-to[data-v-2c4cd5d5] {\n  opacity: 0;\n}\n.openHours[data-v-2c4cd5d5] {\n  text-align: center;\n  color: #b91d19;\n  display: block;\n  margin-bottom: 40px;\n  margin-top: 40px;\n}\n.selectTime[data-v-2c4cd5d5] {\n  text-align: center;\n  margin-bottom: 50px;\n  display: grid;\n  grid-template-columns: 1fr;\n}\n@media (min-width: 768px) {\n.selectTime[data-v-2c4cd5d5] {\n      grid-template-columns: 1fr 1fr;\n}\n}\n.selectTime #date[data-v-2c4cd5d5] {\n    margin-bottom: 60px;\n}\n@media (min-width: 768px) {\n.selectTime #date[data-v-2c4cd5d5] {\n        margin-bottom: 20px;\n}\n}\n.selectTime label[data-v-2c4cd5d5] {\n    color: #b91d19;\n    font-size: 26px;\n    font-weight: 700;\n}\n.selectTime input[data-v-2c4cd5d5] {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 15px;\n    background: none;\n    color: #444444;\n    text-align: center;\n    font-size: 22px;\n    border: 0;\n    border-bottom: 1px solid #777777;\n}\n.error[data-v-2c4cd5d5] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.claimImage[data-v-2c4cd5d5] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: 50% 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.claimImage .title[data-v-2c4cd5d5] {\n    margin-top: 50px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #b91d19;\n    margin-bottom: 50px;\n}\n@media (min-width: 1000px) {\n.claimImage .title[data-v-2c4cd5d5] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.claimImage .subpage[data-v-2c4cd5d5] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 30px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.claimImage .subpage[data-v-2c4cd5d5]:hover {\n    color: #777777;\n}\n.claimImage .active[data-v-2c4cd5d5] {\n    color: #b91d19;\n}\n.claimImage .active[data-v-2c4cd5d5]:hover {\n    color: #b91d19;\n}\n.claimReservations[data-v-2c4cd5d5] {\n  display: block;\n  color: #b91d19;\n  text-align: center;\n  margin-bottom: 80px;\n}\n.boxShadow[data-v-2c4cd5d5] {\n  -webkit-box-shadow: 0 0 2px white;\n          box-shadow: 0 0 2px white;\n}\n.container[data-v-2c4cd5d5] {\n  margin-top: 50px;\n}\n.container .tables[data-v-2c4cd5d5] {\n    margin-left: auto;\n    margin-right: auto;\n    display: grid;\n    position: relative;\n    border: 1px solid #f1f1f1;\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;\n    z-index: 1;\n}\n.container .tables .twoInOne[data-v-2c4cd5d5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .tables .twoInOne .twoInOneTable[data-v-2c4cd5d5] {\n        float: left;\n        width: 100%;\n}\n.container .tables .image[data-v-2c4cd5d5] {\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      -webkit-filter: brightness(70%);\n              filter: brightness(70%);\n      z-index: -1;\n}\n.container .tables .table[data-v-2c4cd5d5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      font-weight: 700;\n      color: white;\n      padding: 35% 0 35% 0;\n      cursor: pointer;\n      -webkit-transition: .2s all ease-in-out;\n      transition: .2s all ease-in-out;\n      -webkit-box-shadow: 0 0 2px white;\n              box-shadow: 0 0 2px white;\n      font-size: 14px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n        font-size: 16px;\n}\n@media (min-width: 476px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 20px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 20px;\n}\n}\n@media (min-width: 768px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 24px;\n}\n}\n@media (min-width: 1000px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 28px;\n}\n}\n@media (min-width: 1200px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 26px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 32px;\n}\n}\n.container .tables .table[data-v-2c4cd5d5]:hover {\n      -webkit-box-shadow: 0 0 7px white;\n              box-shadow: 0 0 7px white;\n      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));\n      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_debounce__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_debounce___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_debounce__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__closed_vue__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__closed_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__closed_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reservationModal_vue__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reservationModal_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__reservationModal_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_axios__);
 //
 //
 //
@@ -15471,61 +15530,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "reservations",
+    components: {
+        closed: __WEBPACK_IMPORTED_MODULE_1__closed_vue___default.a,
+        reservationModal: __WEBPACK_IMPORTED_MODULE_2__reservationModal_vue___default.a
+    },
     props: {
         api_link: {
             Type: String
@@ -15535,78 +15551,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             reserving: false,
             tableNumber: 0,
-            fullName: '',
+            openHours: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
             date: '',
             dateMin: '',
             dateMax: '',
             time: '14:00',
-            number: ''
+            restaurantClosed: false
 
         };
     },
+    mounted: function mounted() {
+        //set default time to time picker
+        this.setTime();
+    },
 
     methods: {
-        submitForm: function submitForm() {
-            var self = this;
-            var everything_good = true;
-
-            if (this.fullName === '') {
-                everything_good = false;
-                document.getElementById('fullName').classList.add('error');
-                document.getElementsByName("fullName")[0].placeholder = "Fill in this field!";
+        handleTime: __WEBPACK_IMPORTED_MODULE_0_lodash_debounce___default()(function (e) {
+            var time = e.target.value;
+            if (parseInt(time) < 8 || parseInt(time) > 20) {
+                this.restaurantClosed = true;
             } else {
-                if (document.getElementById('fullName').classList.contains('error')) {
-                    document.getElementById('fullName').classList.remove('error');
-                }
+                this.restaurantClosed = false;
             }
+        }, 400),
 
-            if (this.number === '') {
-
-                everything_good = false;
-                document.getElementById('number').classList.add('error');
-                document.getElementsByName("number")[0].placeholder = "Fill in this field!";
-            } else if (!this.isNumeric(this.number)) {
-                everything_good = false;
-                document.getElementById('number').classList.add('error');
-                document.getElementById('number').value = '';
-                document.getElementsByName("number")[0].placeholder = "Enter valid number!";
-            } else {
-                if (document.getElementById('number').classList.contains('error')) {
-                    document.getElementById('number').classList.remove('error');
-                }
-            }
-
-            if (this.time === '') {
-                everything_good = false;
-                document.getElementById('time').classList.add('error');
-            } else {
-                if (document.getElementById('time').classList.contains('error')) {
-                    document.getElementById('time').classList.remove('error');
-                }
-            }
-
-            if (this.date === '') {
-                everything_good = false;
-                document.getElementById('date').classList.add('error');
-            } else {
-                if (document.getElementById('date').classList.contains('error')) {
-                    document.getElementById('date').classList.remove('error');
-                }
-            }
-
-            if (everything_good === true) {
-                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(this.api_link + '/api/store_reservation', {
-                    'fullname': this.fullName,
-                    'contact_number': this.number,
-                    'table': this.tableNumber,
-                    'date': this.date,
-                    'time': this.time,
-                    'number': this.number
-                }).then(function (Response) {
-                    alert(Response.data);
-                });
-            }
-        },
         isNumeric: function isNumeric(value) {
             return (/^\d+$/.test(value)
             );
@@ -15626,9 +15594,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             //call function to close modal when not clicking it
             this.closing_modal_on_click(table);
-
-            //set default time to inputs
-            this.setTime();
         },
         closing_modal_on_click: function closing_modal_on_click(tableNumber) {
 
@@ -15679,7 +15644,479 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 74 */
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** Used as the `TypeError` message for "Functions" methods. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/** Used as references for various `Number` constants. */
+var NAN = 0 / 0;
+
+/** `Object#toString` result references. */
+var symbolTag = '[object Symbol]';
+
+/** Used to match leading and trailing whitespace. */
+var reTrim = /^\s+|\s+$/g;
+
+/** Used to detect bad signed hexadecimal string values. */
+var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+
+/** Used to detect binary string values. */
+var reIsBinary = /^0b[01]+$/i;
+
+/** Used to detect octal string values. */
+var reIsOctal = /^0o[0-7]+$/i;
+
+/** Built-in method references without a dependency on `root`. */
+var freeParseInt = parseInt;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max,
+    nativeMin = Math.min;
+
+/**
+ * Gets the timestamp of the number of milliseconds that have elapsed since
+ * the Unix epoch (1 January 1970 00:00:00 UTC).
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Date
+ * @returns {number} Returns the timestamp.
+ * @example
+ *
+ * _.defer(function(stamp) {
+ *   console.log(_.now() - stamp);
+ * }, _.now());
+ * // => Logs the number of milliseconds it took for the deferred invocation.
+ */
+var now = function() {
+  return root.Date.now();
+};
+
+/**
+ * Creates a debounced function that delays invoking `func` until after `wait`
+ * milliseconds have elapsed since the last time the debounced function was
+ * invoked. The debounced function comes with a `cancel` method to cancel
+ * delayed `func` invocations and a `flush` method to immediately invoke them.
+ * Provide `options` to indicate whether `func` should be invoked on the
+ * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+ * with the last arguments provided to the debounced function. Subsequent
+ * calls to the debounced function return the result of the last `func`
+ * invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the debounced function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.debounce` and `_.throttle`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to debounce.
+ * @param {number} [wait=0] The number of milliseconds to delay.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=false]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {number} [options.maxWait]
+ *  The maximum time `func` is allowed to be delayed before it's invoked.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new debounced function.
+ * @example
+ *
+ * // Avoid costly calculations while the window size is in flux.
+ * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+ *
+ * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+ * jQuery(element).on('click', _.debounce(sendMail, 300, {
+ *   'leading': true,
+ *   'trailing': false
+ * }));
+ *
+ * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+ * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+ * var source = new EventSource('/stream');
+ * jQuery(source).on('message', debounced);
+ *
+ * // Cancel the trailing debounced invocation.
+ * jQuery(window).on('popstate', debounced.cancel);
+ */
+function debounce(func, wait, options) {
+  var lastArgs,
+      lastThis,
+      maxWait,
+      result,
+      timerId,
+      lastCallTime,
+      lastInvokeTime = 0,
+      leading = false,
+      maxing = false,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  wait = toNumber(wait) || 0;
+  if (isObject(options)) {
+    leading = !!options.leading;
+    maxing = 'maxWait' in options;
+    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+
+  function invokeFunc(time) {
+    var args = lastArgs,
+        thisArg = lastThis;
+
+    lastArgs = lastThis = undefined;
+    lastInvokeTime = time;
+    result = func.apply(thisArg, args);
+    return result;
+  }
+
+  function leadingEdge(time) {
+    // Reset any `maxWait` timer.
+    lastInvokeTime = time;
+    // Start the timer for the trailing edge.
+    timerId = setTimeout(timerExpired, wait);
+    // Invoke the leading edge.
+    return leading ? invokeFunc(time) : result;
+  }
+
+  function remainingWait(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime,
+        result = wait - timeSinceLastCall;
+
+    return maxing ? nativeMin(result, maxWait - timeSinceLastInvoke) : result;
+  }
+
+  function shouldInvoke(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime;
+
+    // Either this is the first call, activity has stopped and we're at the
+    // trailing edge, the system time has gone backwards and we're treating
+    // it as the trailing edge, or we've hit the `maxWait` limit.
+    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
+      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
+  }
+
+  function timerExpired() {
+    var time = now();
+    if (shouldInvoke(time)) {
+      return trailingEdge(time);
+    }
+    // Restart the timer.
+    timerId = setTimeout(timerExpired, remainingWait(time));
+  }
+
+  function trailingEdge(time) {
+    timerId = undefined;
+
+    // Only invoke if we have `lastArgs` which means `func` has been
+    // debounced at least once.
+    if (trailing && lastArgs) {
+      return invokeFunc(time);
+    }
+    lastArgs = lastThis = undefined;
+    return result;
+  }
+
+  function cancel() {
+    if (timerId !== undefined) {
+      clearTimeout(timerId);
+    }
+    lastInvokeTime = 0;
+    lastArgs = lastCallTime = lastThis = timerId = undefined;
+  }
+
+  function flush() {
+    return timerId === undefined ? result : trailingEdge(now());
+  }
+
+  function debounced() {
+    var time = now(),
+        isInvoking = shouldInvoke(time);
+
+    lastArgs = arguments;
+    lastThis = this;
+    lastCallTime = time;
+
+    if (isInvoking) {
+      if (timerId === undefined) {
+        return leadingEdge(lastCallTime);
+      }
+      if (maxing) {
+        // Handle invocations in a tight loop.
+        timerId = setTimeout(timerExpired, wait);
+        return invokeFunc(lastCallTime);
+      }
+    }
+    if (timerId === undefined) {
+      timerId = setTimeout(timerExpired, wait);
+    }
+    return result;
+  }
+  debounced.cancel = cancel;
+  debounced.flush = flush;
+  return debounced;
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return !!value && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && typeof value == 'object';
+}
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+}
+
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */
+function toNumber(value) {
+  if (typeof value == 'number') {
+    return value;
+  }
+  if (isSymbol(value)) {
+    return NAN;
+  }
+  if (isObject(value)) {
+    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+    value = isObject(other) ? (other + '') : other;
+  }
+  if (typeof value != 'string') {
+    return value === 0 ? value : +value;
+  }
+  value = value.replace(reTrim, '');
+  var isBinary = reIsBinary.test(value);
+  return (isBinary || reIsOctal.test(value))
+    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+    : (reIsBadHex.test(value) ? NAN : +value);
+}
+
+module.exports = debounce;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(77);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("4248db9f", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ddec01cc\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./closed.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ddec01cc\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./closed.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.closed[data-v-ddec01cc] {\n  text-align: center;\n  margin-top: 150px;\n}\n.fade-enter-active[data-v-ddec01cc], .fade-leave-active[data-v-ddec01cc] {\n  -webkit-transition: opacity 2s;\n  transition: opacity 2s;\n}\n.fade-enter[data-v-ddec01cc], .fade-leave-to[data-v-ddec01cc] {\n  opacity: 0;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "closed",
+    props: {
+        restaurantClosed: {
+            type: Boolean
+        }
+    }
+});
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("transition", { attrs: { name: "fade" } }, [
+    _vm.restaurantClosed === true
+      ? _c("h1", { staticClass: "closed" }, [
+          _vm._v("CossackFood is closed! :(")
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-ddec01cc", module.exports)
+  }
+}
+
+/***/ }),
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -15702,495 +16139,392 @@ var render = function() {
       "div",
       { staticClass: "container" },
       [
-        _c(
-          "div",
-          {
-            staticClass: "tables",
-            attrs: { "data-aos": "fade-in", "data-aos-once": "true" }
-          },
-          [
-            _c("img", {
-              staticClass: "image",
-              attrs: { src: _vm.api_link + "/images/view3.jpg" }
-            }),
-            _vm._v(" "),
+        _c("h3", { staticClass: "openHours" }, [
+          _vm._v("CossackFood is open from 8am to 9pm")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "selectTime" }, [
+          _c("div", [
             _c(
-              "div",
-              {
-                staticClass: "table",
-                attrs: { id: "table1" },
-                on: {
-                  click: function($event) {
-                    _vm.reserve_table(1)
-                  }
-                }
-              },
-              [
-                _c("i", {
-                  staticClass: "demo-icon icon-restaurant",
-                  attrs: { id: "tableicon1" }
-                }),
-                _vm._v("1\n            ")
-              ]
+              "label",
+              { staticClass: "notCloseModal", attrs: { for: "date" } },
+              [_vm._v("Date:")]
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "twoInOne" }, [
-              _c(
-                "div",
+            _c("input", {
+              directives: [
                 {
-                  staticClass: "table twoInOneTable",
-                  attrs: { id: "table2" },
-                  on: {
-                    click: function($event) {
-                      _vm.reserve_table(2)
-                    }
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass: "demo-icon icon-restaurant",
-                    attrs: { id: "tableicon2" }
-                  }),
-                  _vm._v(" 2\n                ")
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "table twoInOneTable",
-                  attrs: { id: "table3" },
-                  on: {
-                    click: function($event) {
-                      _vm.reserve_table(3)
-                    }
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass: "demo-icon icon-restaurant",
-                    attrs: { id: "tableicon3" }
-                  }),
-                  _vm._v("3\n                ")
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "twoInOne" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "table twoInOneTable",
-                  attrs: { id: "table4" },
-                  on: {
-                    click: function($event) {
-                      _vm.reserve_table(4)
-                    }
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass: "demo-icon icon-restaurant",
-                    attrs: { id: "tableicon4" }
-                  }),
-                  _vm._v("4\n                ")
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "table twoInOneTable",
-                  attrs: { id: "table5" },
-                  on: {
-                    click: function($event) {
-                      _vm.reserve_table(5)
-                    }
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass: "demo-icon icon-restaurant",
-                    attrs: { id: "tableicon5" }
-                  }),
-                  _vm._v("5\n                ")
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "boxShadow" }),
-            _vm._v(" "),
-            _c("div", { staticClass: "boxShadow" }),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "table",
-                attrs: { id: "table6" },
-                on: {
-                  click: function($event) {
-                    _vm.reserve_table(6)
-                  }
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.date,
+                  expression: "date"
                 }
+              ],
+              staticClass: "notCloseModal",
+              attrs: {
+                min: _vm.dateMin,
+                max: _vm.dateMax,
+                id: "date",
+                name: "date",
+                type: "date"
               },
-              [
-                _c("i", {
-                  staticClass: "demo-icon icon-restaurant",
-                  attrs: { id: "tableicon6" }
-                }),
-                _vm._v("6\n            ")
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "table",
-                attrs: { id: "table7" },
-                on: {
-                  click: function($event) {
-                    _vm.reserve_table(7)
-                  }
-                }
-              },
-              [
-                _c("i", {
-                  staticClass: "demo-icon icon-restaurant",
-                  attrs: { id: "tableicon7" }
-                }),
-                _vm._v("7\n            ")
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "table",
-                staticStyle: { width: "200%" },
-                attrs: { id: "table8" },
-                on: {
-                  click: function($event) {
-                    _vm.reserve_table(8)
-                  }
-                }
-              },
-              [
-                _c("i", {
-                  staticClass: "demo-icon icon-restaurant",
-                  attrs: { id: "tableicon8" }
-                }),
-                _vm._v("8\n            ")
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", {
-              staticClass: "table",
-              staticStyle: { "z-index": "-1000" },
+              domProps: { value: _vm.date },
               on: {
-                click: function($event) {
-                  _vm.reserve_table(8)
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.date = $event.target.value
                 }
               }
-            }),
-            _vm._v(" "),
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", [
             _c(
-              "div",
-              {
-                staticClass: "table",
-                attrs: { id: "table9" },
-                on: {
-                  click: function($event) {
-                    _vm.reserve_table(9)
-                  }
-                }
-              },
-              [
-                _c("i", {
-                  staticClass: "demo-icon icon-restaurant",
-                  attrs: { id: "tableicon9" }
-                }),
-                _vm._v("9\n            ")
-              ]
+              "label",
+              { staticClass: "notCloseModal", attrs: { for: "time" } },
+              [_vm._v("Time:")]
             ),
             _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "table",
-                attrs: { id: "table10" },
-                on: {
-                  click: function($event) {
-                    _vm.reserve_table(10)
-                  }
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.time,
+                  expression: "time"
                 }
-              },
-              [
-                _c("i", {
-                  staticClass: "demo-icon icon-restaurant",
-                  attrs: { id: "tableicon10" }
-                }),
-                _vm._v("10\n            ")
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "table",
-                attrs: { id: "table11" },
-                on: {
-                  click: function($event) {
-                    _vm.reserve_table(11)
-                  }
-                }
-              },
-              [
-                _c("i", {
-                  staticClass: "demo-icon icon-restaurant",
-                  attrs: { id: "tableicon11" }
-                }),
-                _vm._v("11\n            ")
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "table",
-                staticStyle: { width: "200%" },
-                attrs: { id: "table12" },
-                on: {
-                  click: function($event) {
-                    _vm.reserve_table(12)
-                  }
-                }
-              },
-              [
-                _c("i", {
-                  staticClass: "demo-icon icon-restaurant",
-                  attrs: { id: "tableicon12" }
-                }),
-                _vm._v("12\n            ")
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", {
-              staticClass: "table",
-              staticStyle: { "z-index": "-1000" },
+              ],
+              staticClass: "notCloseModal",
+              attrs: { id: "time", value: "14:00", name: "date", type: "time" },
+              domProps: { value: _vm.time },
               on: {
-                click: function($event) {
-                  _vm.reserve_table(12)
-                }
+                input: [
+                  function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.time = $event.target.value
+                  },
+                  _vm.handleTime
+                ]
               }
-            }),
-            _vm._v(" "),
-            _c(
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _vm.restaurantClosed === false
+          ? _c(
               "div",
               {
-                staticClass: "table",
-                attrs: { id: "table13" },
-                on: {
-                  click: function($event) {
-                    _vm.reserve_table(13)
-                  }
-                }
+                staticClass: "tables",
+                attrs: { "data-aos": "fade-in", "data-aos-once": "true" }
               },
               [
-                _c("i", {
-                  staticClass: "demo-icon icon-restaurant",
-                  attrs: { id: "tableicon13" }
+                _c("img", {
+                  staticClass: "image",
+                  attrs: { src: _vm.api_link + "/images/view3.jpg" }
                 }),
-                _vm._v("13\n            ")
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "table",
+                    attrs: { id: "table1" },
+                    on: {
+                      click: function($event) {
+                        _vm.reserve_table(1)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "demo-icon icon-restaurant",
+                      attrs: { id: "tableicon1" }
+                    }),
+                    _vm._v("1\n            ")
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "twoInOne" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "table twoInOneTable",
+                      attrs: { id: "table2" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(2)
+                        }
+                      }
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "demo-icon icon-restaurant",
+                        attrs: { id: "tableicon2" }
+                      }),
+                      _vm._v(" 2\n                ")
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "table twoInOneTable",
+                      attrs: { id: "table3" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(3)
+                        }
+                      }
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "demo-icon icon-restaurant",
+                        attrs: { id: "tableicon3" }
+                      }),
+                      _vm._v("3\n                ")
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "twoInOne" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "table twoInOneTable",
+                      attrs: { id: "table4" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(4)
+                        }
+                      }
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "demo-icon icon-restaurant",
+                        attrs: { id: "tableicon4" }
+                      }),
+                      _vm._v("4\n                ")
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "table twoInOneTable",
+                      attrs: { id: "table5" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(5)
+                        }
+                      }
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "demo-icon icon-restaurant",
+                        attrs: { id: "tableicon5" }
+                      }),
+                      _vm._v("5\n                ")
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "boxShadow" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "boxShadow" }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "table",
+                    attrs: { id: "table6" },
+                    on: {
+                      click: function($event) {
+                        _vm.reserve_table(6)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "demo-icon icon-restaurant",
+                      attrs: { id: "tableicon6" }
+                    }),
+                    _vm._v("6\n            ")
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "table",
+                    attrs: { id: "table7" },
+                    on: {
+                      click: function($event) {
+                        _vm.reserve_table(7)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "demo-icon icon-restaurant",
+                      attrs: { id: "tableicon7" }
+                    }),
+                    _vm._v("7\n            ")
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "table",
+                    staticStyle: { width: "200%" },
+                    attrs: { id: "table8" },
+                    on: {
+                      click: function($event) {
+                        _vm.reserve_table(8)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "demo-icon icon-restaurant",
+                      attrs: { id: "tableicon8" }
+                    }),
+                    _vm._v("8\n            ")
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "table",
+                  staticStyle: { "z-index": "-1000" },
+                  on: {
+                    click: function($event) {
+                      _vm.reserve_table(8)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "table",
+                    attrs: { id: "table9" },
+                    on: {
+                      click: function($event) {
+                        _vm.reserve_table(9)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "demo-icon icon-restaurant",
+                      attrs: { id: "tableicon9" }
+                    }),
+                    _vm._v("9\n            ")
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "table",
+                    attrs: { id: "table10" },
+                    on: {
+                      click: function($event) {
+                        _vm.reserve_table(10)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "demo-icon icon-restaurant",
+                      attrs: { id: "tableicon10" }
+                    }),
+                    _vm._v("10\n            ")
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "table",
+                    attrs: { id: "table11" },
+                    on: {
+                      click: function($event) {
+                        _vm.reserve_table(11)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "demo-icon icon-restaurant",
+                      attrs: { id: "tableicon11" }
+                    }),
+                    _vm._v("11\n            ")
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "table",
+                    staticStyle: { width: "200%" },
+                    attrs: { id: "table12" },
+                    on: {
+                      click: function($event) {
+                        _vm.reserve_table(12)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "demo-icon icon-restaurant",
+                      attrs: { id: "tableicon12" }
+                    }),
+                    _vm._v("12\n            ")
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "table",
+                  staticStyle: { "z-index": "-1000" },
+                  on: {
+                    click: function($event) {
+                      _vm.reserve_table(12)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "table",
+                    attrs: { id: "table13" },
+                    on: {
+                      click: function($event) {
+                        _vm.reserve_table(13)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "demo-icon icon-restaurant",
+                      attrs: { id: "tableicon13" }
+                    }),
+                    _vm._v("13\n            ")
+                  ]
+                )
               ]
             )
-          ]
-        ),
+          : _vm._e(),
         _vm._v(" "),
-        _c("transition", { attrs: { name: "fade" } }, [
-          _vm.reserving
-            ? _c("div", { staticClass: "modal-container" }, [
-                _c("div", { staticClass: "modal", attrs: { id: "modal" } }, [
-                  _c("div", { staticClass: "close" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "modalGrid notCloseModal" }, [
-                    _c("div", { staticClass: "form notCloseModal" }, [
-                      _c("div", { staticClass: "titleModal notCloseModal" }, [
-                        _vm._v("Book Table no. " + _vm._s(_vm.tableNumber))
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "form",
-                        {
-                          staticClass: "notCloseModal",
-                          attrs: { method: "post", id: "reservationForm" }
-                        },
-                        [
-                          _c(
-                            "label",
-                            {
-                              staticClass: "notCloseModal",
-                              attrs: { for: "fullName" }
-                            },
-                            [_vm._v("Fullname:")]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.fullName,
-                                expression: "fullName"
-                              }
-                            ],
-                            staticClass: "notCloseModal",
-                            attrs: {
-                              id: "fullName",
-                              name: "fullName",
-                              type: "text"
-                            },
-                            domProps: { value: _vm.fullName },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.fullName = $event.target.value
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "label",
-                            {
-                              staticClass: "notCloseModal",
-                              attrs: { for: "number" }
-                            },
-                            [_vm._v("Contact number:")]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.number,
-                                expression: "number"
-                              }
-                            ],
-                            staticClass: "notCloseModal",
-                            attrs: {
-                              id: "number",
-                              name: "number",
-                              type: "text"
-                            },
-                            domProps: { value: _vm.number },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.number = $event.target.value
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "label",
-                            {
-                              staticClass: "notCloseModal",
-                              attrs: { for: "date" }
-                            },
-                            [_vm._v("Date:")]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.date,
-                                expression: "date"
-                              }
-                            ],
-                            staticClass: "notCloseModal",
-                            attrs: {
-                              min: _vm.dateMin,
-                              max: _vm.dateMax,
-                              id: "date",
-                              value: "2018-09-24",
-                              name: "date",
-                              type: "date"
-                            },
-                            domProps: { value: _vm.date },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.date = $event.target.value
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "label",
-                            {
-                              staticClass: "notCloseModal",
-                              attrs: { for: "time" }
-                            },
-                            [_vm._v("Hour:")]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.time,
-                                expression: "time"
-                              }
-                            ],
-                            staticClass: "notCloseModal",
-                            attrs: {
-                              min: "8:00",
-                              max: "22:00",
-                              id: "time",
-                              name: "time",
-                              type: "time"
-                            },
-                            domProps: { value: _vm.time },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.time = $event.target.value
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "submit notCloseModal",
-                            attrs: { value: "Submit", type: "button" },
-                            on: { click: _vm.submitForm }
-                          })
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", {
-                      staticClass: "claimModal notCloseModal",
-                      style: {
-                        backgroundImage:
-                          "url(" + _vm.api_link + "/images/waiter.jpg" + ")"
-                      }
-                    })
-                  ])
-                ])
-              ])
-            : _vm._e()
-        ])
+        _c("closed", { attrs: { restaurantClosed: _vm.restaurantClosed } }),
+        _vm._v(" "),
+        _c("reservation-modal", {
+          attrs: { api_link: _vm.api_link, reserving: _vm.reserving }
+        })
       ],
       1
     )
@@ -16202,7 +16536,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("div", { staticClass: "title" }, [_vm._v("Choose your table!")])
+      _c("div", { staticClass: "title" }, [_vm._v("Book your table!")])
     ])
   }
 ]
@@ -16211,15 +16545,341 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-2e9cfa72", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-2c4cd5d5", module.exports)
   }
 }
 
 /***/ }),
-/* 75 */
+/* 81 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(86)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(88)
+/* template */
+var __vue_template__ = __webpack_require__(89)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-6fc00def"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/reservation/reservationModal.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6fc00def", Component.options)
+  } else {
+    hotAPI.reload("data-v-6fc00def", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(87);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("4249a3a8", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6fc00def\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./reservationModal.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6fc00def\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./reservationModal.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.fade-enter-active[data-v-6fc00def], .fade-leave-active[data-v-6fc00def] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-6fc00def], .fade-leave-to[data-v-6fc00def] {\n  opacity: 0;\n}\n.error[data-v-6fc00def] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.container[data-v-6fc00def] {\n  margin-top: 50px;\n}\n.container .modal-container[data-v-6fc00def] {\n    position: fixed;\n    z-index: 399;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background: transparent;\n}\n.container .modal-container .modal[data-v-6fc00def] {\n      position: fixed;\n      background: #f5f5f5;\n      border-radius: 5px;\n      -webkit-box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n              box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n      left: 50%;\n      -webkit-transform: translate(-50%, -50%);\n              transform: translate(-50%, -50%);\n      width: 95%;\n      z-index: 400;\n      top: 50%;\n}\n@media (min-width: 768px) {\n.container .modal-container .modal[data-v-6fc00def] {\n          width: 70%;\n}\n}\n@media (min-width: 1000px) {\n.container .modal-container .modal[data-v-6fc00def] {\n          width: 60%;\n}\n}\n.container .modal-container .modal .modalGrid[data-v-6fc00def] {\n        display: grid;\n        grid-template-columns: 1fr;\n        width: 100%;\n        height: 100%;\n        text-align: center;\n}\n@media (min-width: 476px) {\n.container .modal-container .modal .modalGrid[data-v-6fc00def] {\n            grid-template-columns: 1fr 1fr;\n}\n}\n.container .modal-container .modal .modalGrid .form[data-v-6fc00def] {\n          padding: 8%;\n}\n.container .modal-container .modal .modalGrid .form .titleModal[data-v-6fc00def] {\n            font-size: 26px;\n            font-weight: 500;\n            color: #b91d19;\n            margin-bottom: 30px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def] {\n            margin-top: 40px;\n            background-color: #f54339;\n            color: white;\n            -webkit-transition: .2s all ease-in-out;\n            transition: .2s all ease-in-out;\n            cursor: pointer;\n            padding: 10px 20px 10px 20px;\n            border: 0;\n            border-radius: 3px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def]:hover {\n            background-color: #f5543f;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 3.75px 7.5px #b9bbbe;\n                    box-shadow: 0 3.75px 7.5px #b9bbbe;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm label[data-v-6fc00def] {\n            display: block;\n            font-size: 20px;\n            margin-top: 25px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-6fc00def] {\n            display: block;\n            margin-left: auto;\n            margin-right: auto;\n            margin-top: 15px;\n            background: none;\n            color: #444444;\n            text-align: center;\n            font-size: 16px;\n            border: 0;\n            border-bottom: 1px solid #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm select[data-v-6fc00def] {\n            display: block;\n            margin-left: auto;\n            margin-right: auto;\n            margin-top: 15px;\n            background: none;\n            color: #444444;\n            text-align: center;\n            font-size: 16px;\n            border: 0;\n            border-bottom: 1px solid #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 8px 16px -8px #777777;\n                    box-shadow: 0 8px 16px -8px #777777;\n}\n.container .modal-container .modal .modalGrid .claimModal[data-v-6fc00def] {\n          background-position: 60%;\n          background-repeat: no-repeat;\n          background-size: cover;\n}\n@media (max-width: 476px) {\n.container .modal-container .modal .modalGrid .claimModal[data-v-6fc00def] {\n              display: none;\n}\n}\n.container .modal-container .modal .close[data-v-6fc00def] {\n        position: absolute;\n        width: 30px;\n        height: 30px;\n        padding: 30px;\n        right: 0;\n        top: 0;\n        cursor: pointer;\n}\n.container .modal-container .modal .close[data-v-6fc00def]::before, .container .modal-container .modal .close[data-v-6fc00def]::after {\n          position: absolute;\n          top: 30px;\n          right: 20px;\n          content: '';\n          width: 20px;\n          height: 2px;\n          background: black;\n          display: block;\n}\n.container .modal-container .modal .close[data-v-6fc00def]::before {\n          -webkit-transform: rotate(45deg);\n                  transform: rotate(45deg);\n}\n.container .modal-container .modal .close[data-v-6fc00def]::after {\n          -webkit-transform: rotate(-45deg);\n                  transform: rotate(-45deg);\n}\n.container .modal-container .modal .close[data-v-6fc00def]:hover::before, .container .modal-container .modal .close[data-v-6fc00def]:hover::after {\n        background: #444444;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 88 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "reservationModal",
+    props: {
+        api_link: {
+            Type: String
+        },
+        tableNumber: {
+            Type: String
+        },
+        reserving: {
+            Type: Boolean
+        }
+    },
+    data: function data() {
+        return {
+            fullName: '',
+            date: '',
+            time: '14:00',
+            number: ''
+        };
+    },
+
+    methods: {
+        submitForm: function submitForm() {
+            var everything_good = true;
+
+            if (this.fullName === '') {
+                everything_good = false;
+                document.getElementById('fullName').classList.add('error');
+                document.getElementsByName("fullName")[0].placeholder = "Fill in this field!";
+            } else {
+                if (document.getElementById('fullName').classList.contains('error')) {
+                    document.getElementById('fullName').classList.remove('error');
+                }
+            }
+
+            if (this.number === '') {
+
+                everything_good = false;
+                document.getElementById('number').classList.add('error');
+                document.getElementsByName("number")[0].placeholder = "Fill in this field!";
+            } else if (!this.isNumeric(this.number)) {
+                everything_good = false;
+                document.getElementById('number').classList.add('error');
+                document.getElementById('number').value = '';
+                document.getElementsByName("number")[0].placeholder = "Enter valid number!";
+            } else {
+                if (document.getElementById('number').classList.contains('error')) {
+                    document.getElementById('number').classList.remove('error');
+                }
+            }
+
+            if (everything_good === true) {
+                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(this.api_link + '/api/store_reservation', {
+                    'name': this.fullName,
+                    'number': this.number,
+                    'table': this.tableNumber,
+                    'date': this.date,
+                    'time': this.time
+                }).then(function (Response) {
+                    alert(Response.data);
+                });
+            }
+        }
+    }
+});
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("transition", { attrs: { name: "fade" } }, [
+    _vm.reserving
+      ? _c("div", { staticClass: "modal-container" }, [
+          _c("div", { staticClass: "modal", attrs: { id: "modal" } }, [
+            _c("div", { staticClass: "close" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "modalGrid notCloseModal" }, [
+              _c("div", { staticClass: "form notCloseModal" }, [
+                _c("div", { staticClass: "titleModal notCloseModal" }, [
+                  _vm._v("Book Table no. " + _vm._s(_vm.tableNumber))
+                ]),
+                _vm._v(" "),
+                _c(
+                  "form",
+                  {
+                    staticClass: "notCloseModal",
+                    attrs: { method: "post", id: "reservationForm" }
+                  },
+                  [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "notCloseModal",
+                        attrs: { for: "fullName" }
+                      },
+                      [_vm._v("Fullname:")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.fullName,
+                          expression: "fullName"
+                        }
+                      ],
+                      staticClass: "notCloseModal",
+                      attrs: { id: "fullName", name: "fullName", type: "text" },
+                      domProps: { value: _vm.fullName },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.fullName = $event.target.value
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      {
+                        staticClass: "notCloseModal",
+                        attrs: { for: "number" }
+                      },
+                      [_vm._v("Contact number:")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.number,
+                          expression: "number"
+                        }
+                      ],
+                      staticClass: "notCloseModal",
+                      attrs: { id: "number", name: "number", type: "text" },
+                      domProps: { value: _vm.number },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.number = $event.target.value
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "submit notCloseModal",
+                      attrs: { value: "Submit", type: "button" },
+                      on: { click: _vm.submitForm }
+                    })
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", {
+                staticClass: "claimModal notCloseModal",
+                style: {
+                  backgroundImage:
+                    "url(" + _vm.api_link + "/images/waiter.jpg" + ")"
+                }
+              })
+            ])
+          ])
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6fc00def", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
