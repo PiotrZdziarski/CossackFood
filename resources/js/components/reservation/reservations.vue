@@ -7,6 +7,10 @@
             </div>
         </div>
         <div class="container">
+            <div class="selectTime">
+                <input :min="dateMin" :max="dateMax" v-model="date" id="date" value="2018-09-24"
+                       name="date" class="notCloseModal" type="date">
+            </div>
             <div data-aos="fade-in" data-aos-once="true" class="tables">
                 <img class="image" :src="api_link + '/images/view3.jpg'">
                 <div @click="reserve_table(1)" id="table1" class="table">
@@ -76,38 +80,6 @@
 
 
             </div>
-            <!--<transition name="fade">
-                <div v-if="testForm" class="modal-container">
-                    <div id="modal" class="modal">
-                        <div class="close"></div>
-
-                        <div class="modalGrid notCloseModal">
-                            <div class="form notCloseModal">
-                                <div class="titleModal notCloseModal">Book Table no. {{ tableNumber }}</div>
-                                <form method="post" @submit="submitForm" id="reservationForm" class="notCloseModal">
-
-                                    <label class="notCloseModal" for="name">Fullname:</label>
-                                    <input v-model="fullName" id="name" name="fullName" class="notCloseModal"
-                                           type="text" required>
-
-                                    <label class="notCloseModal" for="email">Email:</label>
-                                    <input v-model="email" id="email" name="email" class="notCloseModal" type="email">
-
-                                    <label class="notCloseModal" for="date">Date:</label>
-                                    <input v-model="date" id="date" name="date" class="notCloseModal" type="date">
-
-                                    <button class="submit notCloseModal" type="submit">Submit</button>
-                                </form>
-                            </div>
-                            <div class="claimModal notCloseModal"
-                                 :style="{backgroundImage: 'url(' + api_link + '/images/waiter.jpg' + ')'}">
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </transition>-->
             <transition name="fade">
                 <div v-if="reserving" class="modal-container">
                     <div id="modal" class="modal">
@@ -129,9 +101,10 @@
                                     <input :min="dateMin" :max="dateMax" v-model="date" id="date" value="2018-09-24"
                                            name="date" class="notCloseModal" type="date">
 
-                                    <label class="notCloseModal" for="time">Hour:</label>
-                                    <input min="8:00" max="22:00" v-model="time" id="time" name="time"
-                                           class="notCloseModal" type="time">
+                                    <label class="notCloseModal" for="hour">Hour:</label>
+                                    <select id="hour" class="notCloseModal">
+                                        <option :value="hour" class="notCloseModal" v-for="hour in openHours">{{ hour }}</option>
+                                    </select>
 
                                     <input @click="submitForm" class="submit notCloseModal" value="Submit"
                                            type="button">
@@ -164,6 +137,7 @@
             return {
                 reserving: false,
                 tableNumber: 0,
+                openHours: [8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],
                 fullName: '',
                 date: '',
                 dateMin: '',
@@ -226,8 +200,8 @@
 
                 if (everything_good === true) {
                     axios.post(this.api_link + '/api/store_reservation', {
-                        'fullname': this.fullName,
-                        'contact_number': this.number,
+                        'name': this.fullName,
+                        'number': this.number,
                         'table': this.tableNumber,
                         'date': this.date,
                         'time': this.time,
@@ -387,6 +361,15 @@
     .container {
         margin-top: 50px;
 
+
+        .selectTime {
+            display: grid;
+            grid-template-columns: 1fr;
+            @media(min-width: 768px) {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
         .tables {
 
             .twoInOne {
@@ -476,6 +459,7 @@
             .modal {
                 position: fixed;
                 background: #f5f5f5;
+                border-radius: 5px;
                 box-shadow: 0 30px 30px - 10px rgba(0, 0, 0, .3);
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -538,6 +522,19 @@
                                 margin-top: 25px;
                             }
                             input {
+                                display: block;
+                                margin-left: auto;
+                                margin-right: auto;
+                                margin-top: 15px;
+                                background: none;
+                                color: #444444;
+                                text-align: center;
+                                font-size: 16px;
+                                border: 0;
+                                border-bottom: 1px solid #777777;
+                            }
+
+                            select {
                                 display: block;
                                 margin-left: auto;
                                 margin-right: auto;
