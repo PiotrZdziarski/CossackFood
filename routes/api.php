@@ -26,4 +26,5 @@ Route::get('dishes', ['uses' => 'DishController@index']);
 Route::get('dishes_page', ['uses' => 'DishController@page']);
 
 //reservations
+Route::get('reservations/{date}/{time}', ['uses' => 'ReservationController@index']);
 Route::post('store_reservation', ['uses' => 'ReservationController@store']);

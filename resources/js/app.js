@@ -21,7 +21,9 @@ Vue.component('featuredDishes', require('./components/featuredDishes.vue'));
 Vue.component('mainfooter', require('./components/mainfooter.vue'));
 Vue.component('pizzas_menu', require('./components/pizzas_menu.vue'));
 Vue.component('menuSubpage', require('./components/menuSubpage.vue'));
-Vue.component('reservations', require('./components/reservations.vue'));
+Vue.component('reservations', require('./components/reservation/reservations.vue'));
+Vue.component('reservationModal', require('./components/reservation/reservationModal.vue'));
+Vue.component('closed', require('./components/reservation/closed.vue'));
 
 const app = new Vue({
     el: '#app'
