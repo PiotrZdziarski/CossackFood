@@ -23,74 +23,82 @@
                            name="date" class="notCloseModal" type="time">
                 </div>
             </div>
-
-            <div data-aos="fade-in" data-aos-once="true" class="tables"  v-if="restaurantClosed === false">
-                <img class="image" :src="api_link + '/images/view3.jpg'">
-                <div @click="reserve_table(1)" id="table1" class="table">
-                    <i id="tableicon1" class="demo-icon icon-restaurant"></i>1
-                </div>
-                <div class="twoInOne">
-                    <div @click="reserve_table(2)" id="table2" class="table twoInOneTable"><i
-                            id="tableicon2" class="demo-icon icon-restaurant"></i> 2
+            <transition name="fade">
+                <div id="tables" class="tables displayNone" v-if="this.restaurantClosed === false">
+                    <img class="image" :src="api_link + '/images/view3.jpg'">
+                    <div @click="reserve_table(1)" id="table1" class="table">
+                        <i id="tableicon1" class="demo-icon icon-restaurant"></i><span id="infotable1">1</span>
                     </div>
-                    <div @click="reserve_table(3)" id="table3" class="table twoInOneTable"><i id="tableicon3"
-                                                                                              class="demo-icon icon-restaurant"></i>3
+                    <div class="twoInOne">
+                        <div @click="reserve_table(2)" id="table2" class="table twoInOneTable"><i
+                                id="tableicon2" class="demo-icon icon-restaurant"></i> 2
+                        </div>
+                        <div @click="reserve_table(3)" id="table3" class="table twoInOneTable"><i id="tableicon3"
+                                                                                                  class="demo-icon icon-restaurant"></i>3
+                        </div>
                     </div>
-                </div>
-                <div class="twoInOne">
-                    <div @click="reserve_table(4)" id="table4" class="table twoInOneTable"><i
-                            id="tableicon4" class="demo-icon icon-restaurant"></i>4
+                    <div class="twoInOne">
+                        <div @click="reserve_table(4)" id="table4" class="table twoInOneTable"><i
+                                id="tableicon4" class="demo-icon icon-restaurant"></i>4
+                        </div>
+                        <div @click="reserve_table(5)" id="table5" class="table twoInOneTable"><i id="tableicon5"
+                                                                                                  class="demo-icon icon-restaurant"></i>5
+                        </div>
                     </div>
-                    <div @click="reserve_table(5)" id="table5" class="table twoInOneTable"><i id="tableicon5"
-                                                                                              class="demo-icon icon-restaurant"></i>5
+
+                    <div class="boxShadow"></div>
+
+                    <div class="boxShadow"></div>
+
+                    <div @click="reserve_table(6)" id="table6" class="table">
+                        <i id="tableicon6" class="demo-icon icon-restaurant"></i>6
                     </div>
+
+                    <div @click="reserve_table(7)" id="table7" class="table">
+                        <i id="tableicon7" class="demo-icon icon-restaurant"></i>7
+                    </div>
+
+                    <div @click="reserve_table(8)" id="table8" style="width: 200%;" class="table">
+                        <i id="tableicon8" class="demo-icon icon-restaurant"></i>8
+                    </div>
+
+
+                    <div @click="reserve_table(8)" style="z-index: -1000;" class="table">
+                    </div>
+
+
+                    <div @click="reserve_table(9)" id="table9" class="table">
+                        <i id="tableicon9" class="demo-icon icon-restaurant"></i>9
+                    </div>
+
+                    <div @click="reserve_table(10)" id="table10" class="table">
+                        <i id="tableicon10" class="demo-icon icon-restaurant"></i>10
+                    </div>
+
+                    <div @click="reserve_table(11)" id="table11" class="table">
+                        <i id="tableicon11" class="demo-icon icon-restaurant"></i>11
+                    </div>
+
+
+                    <div @click="reserve_table(12)" id="table12" style="width: 200%;" class="table">
+                        <i id="tableicon12" class="demo-icon icon-restaurant"></i>12
+                    </div>
+
+                    <div @click="reserve_table(12)" style="z-index: -1000;" class="table">
+                    </div>
+
+                    <div @click="reserve_table(13)" id="table13" class="table">
+                        <i id="tableicon13" class="demo-icon icon-restaurant"></i>13
+                    </div>
+
                 </div>
+            </transition>
 
-                <div class="boxShadow"></div>
-
-                <div class="boxShadow"></div>
-
-                <div @click="reserve_table(6)" id="table6" class="table">
-                    <i id="tableicon6" class="demo-icon icon-restaurant"></i>6
-                </div>
-
-                <div @click="reserve_table(7)" id="table7" class="table">
-                    <i id="tableicon7" class="demo-icon icon-restaurant"></i>7
-                </div>
-
-                <div @click="reserve_table(8)" id="table8" style="width: 200%;" class="table">
-                    <i id="tableicon8" class="demo-icon icon-restaurant"></i>8
-                </div>
-
-
-                <div @click="reserve_table(8)" style="z-index: -1000;" class="table">
-                </div>
-
-
-                <div @click="reserve_table(9)" id="table9" class="table">
-                    <i id="tableicon9" class="demo-icon icon-restaurant"></i>9
-                </div>
-
-                <div @click="reserve_table(10)" id="table10" class="table">
-                    <i id="tableicon10" class="demo-icon icon-restaurant"></i>10
-                </div>
-
-                <div @click="reserve_table(11)" id="table11" class="table">
-                    <i id="tableicon11" class="demo-icon icon-restaurant"></i>11
-                </div>
-
-
-                <div @click="reserve_table(12)" id="table12" style="width: 200%;" class="table">
-                    <i id="tableicon12" class="demo-icon icon-restaurant"></i>12
-                </div>
-
-                <div @click="reserve_table(12)" style="z-index: -1000;" class="table">
-                </div>
-
-                <div @click="reserve_table(13)" id="table13" class="table">
-                    <i id="tableicon13" class="demo-icon icon-restaurant"></i>13
-                </div>
-
+            <div v-if="loading" class="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
 
             <closed :restaurantClosed="restaurantClosed"></closed>
@@ -121,34 +129,82 @@
             return {
                 reserving: false,
                 tableNumber: 0,
-                openHours: [8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],
+                openHours: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
                 date: '',
                 dateMin: '',
                 dateMax: '',
-                time: '14:00',
-                restaurantClosed: false
+                tableCount: 13,
+                time: '13:59',
+                restaurantClosed: false,
+                loading: true
 
             }
         },
         mounted() {
             //set default time to time picker
             this.setTime();
+
+            //get reservations
+            this.getReservations();
+
         },
         methods: {
-            handleTime: debounce(function(e) {
+            handleTime: debounce(function (e) {
                 let time = e.target.value;
-                if(parseInt(time) < 8 || parseInt(time) > 20) {
+                if (parseInt(time) < 8 || parseInt(time) > 20) {
                     this.restaurantClosed = true;
                 } else {
                     this.restaurantClosed = false;
                 }
+
+                this.getReservations();
             }, 400),
 
-                isNumeric(value) {
+
+            getReservations() {
+
+                //right scope
+                const self = this;
+
+                //get reservations
+                axios.get(this.api_link + '/api/reservations/' + this.date + '/' + this.time).then(function (Response) {
+
+                    let reservationArray = Response.data.data;
+
+                    for (let i = 0; i <= self.tableCount; i++) {
+                        if (reservationArray[i]) {
+
+                            //loop starts at 0 so index need to be incremented
+                            let htmlindex = i + 1;
+
+                            //prevent from reserving and add some styles
+                            document.getElementById('table' + htmlindex).setAttribute('reserved', 'true');
+                            document.getElementById('table' + htmlindex).classList.add('reservedTable');
+                            document.getElementById('infotable' + htmlindex).innerHTML = reservationArray[i].reservation_end;
+                        }
+                    }
+
+                    self.loading = false;
+                    document.getElementById('tables').classList.remove('displayNone');
+                    document.getElementById('tables').classList.add('animationFadeIn');
+                });
+            },
+
+
+            isNumeric(value) {
                 return /^\d+$/.test(value);
             },
 
+
             reserve_table(table) {
+                //check if table isnt already reserved
+                let reserved = document.getElementById('table' + table).getAttribute('reserved');
+
+                if (reserved === 'true') {
+                    return null;
+                }
+
+
                 //open modal
                 this.reserving = true;
                 document.getElementById('table' + table).style.background = 'linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3))';
@@ -212,7 +268,7 @@
                 let dateMin = yyyy + '-' + mm + '-' + minDay;
                 let dateMax = yyyy + '-' + mm + '-' + maxDay;
 
-                this.date = today;
+                this.date = '2018-09-13';
                 this.dateMin = dateMin;
                 this.dateMax = dateMax;
             }
@@ -221,6 +277,95 @@
 </script>
 
 <style lang="scss" scoped>
+    .reservedTable {
+        cursor: auto !important;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5));
+    }
+    .reservedTable:hover {
+        background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5)) !important;
+        box-shadow: 0 0 2px white !important;
+    }
+
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .animationFadeIn {
+        display: block;
+        -webkit-animation: fadeIn .5s;
+        animation: fadeIn .5s;
+    }
+
+    .displayNone {
+        display: none !important;
+    }
+
+    .lds-ring {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-top: 100px;
+        margin-bottom: -100px;
+        margin-right: auto;
+        width: 104px;
+        height: 104px;
+    }
+
+    .lds-ring div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 71px;
+        height: 71px;
+        margin: 6px;
+        left: 50%;
+        border: 7px solid #cccccc;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: #b9bbbe transparent transparent transparent;
+    }
+
+    .lds-ring div:nth-child(1) {
+        animation-delay: -0.45s;
+    }
+
+    .lds-ring div:nth-child(2) {
+        animation-delay: -0.3s;
+    }
+
+    .lds-ring div:nth-child(3) {
+        animation-delay: -0.15s;
+    }
+
+    @keyframes lds-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
     .fade-enter-active, .fade-leave-active {
         transition: opacity .3s;
     }
@@ -229,6 +374,7 @@
     {
         opacity: 0;
     }
+
     .openHours {
         text-align: center;
         color: #b91d19;
@@ -247,7 +393,7 @@
         }
 
         #date {
-            margin-bottom:60px;
+            margin-bottom: 60px;
             @media(min-width: 768px) {
                 margin-bottom: 20px;
             }
@@ -290,7 +436,7 @@
 
         .title {
             margin-top: 50px;
-            @media(min-width: 1000px) {
+            @media(min-width: 768px) {
                 margin-top: 140px;
                 font-size: 62px;
             }
@@ -330,7 +476,6 @@
     .boxShadow {
         box-shadow: 0 0 2px white;
     }
-
 
     .container {
         margin-top: 50px;
