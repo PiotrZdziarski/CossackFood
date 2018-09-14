@@ -1,44 +1,48 @@
 <template>
-    <transition name="fade">
-        <div v-if="reserving" class="modal-container">
-            <div id="modal" class="modal">
-                <div class="close"></div>
+    <div>
+        <transition name="fade">
+            <div v-if="reserving" class="modal-container">
+                <div id="modal" class="modal">
+                    <div class="close"></div>
 
-                <div class="modalGrid notCloseModal">
-                    <div class="form notCloseModal">
-                        <div class="titleModal notCloseModal">Book Table no. {{ tableNumber }}</div>
-                        <form method="post" id="reservationForm" class="notCloseModal">
+                    <div class="modalGrid notCloseModal">
+                        <div class="form notCloseModal">
+                            <div class="titleModal notCloseModal">Book Table no. {{ tableNumber }}</div>
+                            <form method="post" id="reservationForm" class="notCloseModal">
 
-                            <label class="notCloseModal" for="fullName">Fullname:</label>
-                            <input v-model="fullName" id="fullName" name="fullName" class="notCloseModal"
-                                   type="text">
+                                <label class="notCloseModal" for="fullName">Fullname:</label>
+                                <input v-model="fullName" id="fullName" name="fullName" class="notCloseModal"
+                                       type="text">
 
-                            <label class="notCloseModal" for="number">Contact number:</label>
-                            <input v-model="number" id="number" name="number" class="notCloseModal" type="text">
+                                <label class="notCloseModal" for="number">Contact number:</label>
+                                <input v-model="number" id="number" name="number" class="notCloseModal" type="text">
 
-                            <label class="notCloseModal" for="duration">Duration:</label>
-                            <select v-model="duration" id="duration" name="duration" class="notCloseModal" type="text">
-                                <option value="0.5">0.5 h</option>
-                                <option value="1">1 h</option>
-                                <option value="1.5">1.5 h</option>
-                                <option value="2">2 h</option>
-                                <option value="2.5">2.5 h</option>
-                                <option value="3">3 h</option>
-                            </select>
+                                <label class="notCloseModal" for="duration">Duration:</label>
+                                <select v-model="duration" id="duration" name="duration" class="notCloseModal" type="text">
+                                    <option value="0.5">0.5 h</option>
+                                    <option value="1">1 h</option>
+                                    <option value="1.5">1.5 h</option>
+                                    <option value="2">2 h</option>
+                                    <option value="2.5">2.5 h</option>
+                                    <option value="3">3 h</option>
+                                </select>
 
-                            <input @click="submitForm" class="submit notCloseModal" value="Submit"
-                                   type="button">
-                        </form>
-                    </div>
-                    <div class="claimModal notCloseModal"
-                         :style="{backgroundImage: 'url(' + api_link + '/images/waiter.jpg' + ')'}">
+                                <input @click="submitForm" class="submit notCloseModal" value="Submit"
+                                       type="button">
+                            </form>
+                        </div>
+                        <div class="claimModal notCloseModal"
+                             :style="{backgroundImage: 'url(' + api_link + '/images/waiter.jpg' + ')'}">
 
 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </transition>
+        </transition>
+
+        <flash-message v-if="showFlash" :messageFlash="messageFlash"></flash-message>
+    </div>
 </template>
 
 <script>
@@ -67,11 +71,14 @@
             return {
                 fullName: '',
                 number: '',
-                duration: '1'
+                duration: '1',
+                showFlash: false,
+                messageFlash: '',
             }
         },
         methods: {
             submitForm() {
+                const self = this;
                 let everything_good = true;
 
                 if (this.fullName === '') {
@@ -89,7 +96,7 @@
                     everything_good = false;
                     document.getElementById('number').classList.add('error');
                     document.getElementsByName("number")[0].placeholder = "Fill in this field!";
-                } else if (!this.isNumeric(this.number)) {
+                } else if (!this.isNumeric(this.number) || this.number.length > 10) {
                     everything_good = false;
                     document.getElementById('number').classList.add('error');
                     document.getElementById('number').value = '';
@@ -110,7 +117,9 @@
                         'duration': this.duration,
                         'date': this.date,
                     }).then(function (Response) {
-                        alert(Response.data);
+
+                        self.showFlash = true;
+                        self.messageFlash = Response.data.data;
                     });
                 }
             },

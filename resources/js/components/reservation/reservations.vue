@@ -27,22 +27,27 @@
                 <div id="tables" class="tables displayNone">
                     <img class="image" :src="api_link + '/images/view3.jpg'">
                     <div @click="reserve_table(1)" id="table1" class="table">
-                        <i id="tableicon1" class="demo-icon icon-restaurant"></i><span id="infotable1">1</span>
+                        <i id="tableicon1" class="demo-icon icon-restaurant"></i><span class="infotable"
+                                                                                       id="infotable1">1</span>
                     </div>
                     <div class="twoInOne">
-                        <div @click="reserve_table(2)" id="table2" class="table twoInOneTable"><i
-                                id="tableicon2" class="demo-icon icon-restaurant"></i> 2
+                        <div @click="reserve_table(2)" id="table2" class="table twoInOneTable">
+                            <i id="tableicon2" class="demo-icon icon-restaurant"></i>
+                            <span class="infotable" id="infotable2">2</span>
                         </div>
                         <div @click="reserve_table(3)" id="table3" class="table twoInOneTable"><i id="tableicon3"
-                                                                                                  class="demo-icon icon-restaurant"></i>3
+                                                                                                  class="demo-icon icon-restaurant"></i>
+                            <span class="infotable" id="infotable3">3</span>
                         </div>
                     </div>
                     <div class="twoInOne">
                         <div @click="reserve_table(4)" id="table4" class="table twoInOneTable"><i
-                                id="tableicon4" class="demo-icon icon-restaurant"></i>4
+                                id="tableicon4" class="demo-icon icon-restaurant"></i><span class="infotable"
+                                                                                            id="infotable4">4</span>
                         </div>
                         <div @click="reserve_table(5)" id="table5" class="table twoInOneTable"><i id="tableicon5"
-                                                                                                  class="demo-icon icon-restaurant"></i>5
+                                                                                                  class="demo-icon icon-restaurant"></i><span
+                                class="infotable" id="infotable5">5</span>
                         </div>
                     </div>
 
@@ -51,15 +56,18 @@
                     <div class="boxShadow"></div>
 
                     <div @click="reserve_table(6)" id="table6" class="table">
-                        <i id="tableicon6" class="demo-icon icon-restaurant"></i>6
+                        <i id="tableicon6" class="demo-icon icon-restaurant"></i>
+                        <span class="infotable" id="infotable6">6</span>
                     </div>
 
                     <div @click="reserve_table(7)" id="table7" class="table">
-                        <i id="tableicon7" class="demo-icon icon-restaurant"></i>7
+                        <i id="tableicon7" class="demo-icon icon-restaurant"></i>
+                        <span class="infotable" id="infotable7">7</span>
                     </div>
 
                     <div @click="reserve_table(8)" id="table8" style="width: 200%;" class="table">
-                        <i id="tableicon8" class="demo-icon icon-restaurant"></i>8
+                        <i id="tableicon8" class="demo-icon icon-restaurant"></i>
+                        <span class="infotable" id="infotable8">8</span>
                     </div>
 
 
@@ -68,27 +76,32 @@
 
 
                     <div @click="reserve_table(9)" id="table9" class="table">
-                        <i id="tableicon9" class="demo-icon icon-restaurant"></i>9
+                        <i id="tableicon9" class="demo-icon icon-restaurant"></i>
+                        <span class="infotable" id="infotable9">9</span>
                     </div>
 
                     <div @click="reserve_table(10)" id="table10" class="table">
-                        <i id="tableicon10" class="demo-icon icon-restaurant"></i>10
+                        <i id="tableicon10" class="demo-icon icon-restaurant"></i>
+                        <span class="infotable" id="infotable10">10</span>
                     </div>
 
                     <div @click="reserve_table(11)" id="table11" class="table">
-                        <i id="tableicon11" class="demo-icon icon-restaurant"></i>11
+                        <i id="tableicon11" class="demo-icon icon-restaurant"></i>
+                        <span class="infotable" id="infotable11">11</span>
                     </div>
 
 
                     <div @click="reserve_table(12)" id="table12" style="width: 200%;" class="table">
-                        <i id="tableicon12" class="demo-icon icon-restaurant"></i>12
+                        <i id="tableicon12" class="demo-icon icon-restaurant"></i>
+                        <span class="infotable" id="infotable12">12</span>
                     </div>
 
                     <div @click="reserve_table(12)" style="z-index: -1000;" class="table">
                     </div>
 
                     <div @click="reserve_table(13)" id="table13" class="table">
-                        <i id="tableicon13" class="demo-icon icon-restaurant"></i>13
+                        <i id="tableicon13" class="demo-icon icon-restaurant"></i>
+                        <span class="infotable" id="infotable13">13</span>
                     </div>
 
                 </div>
@@ -103,7 +116,8 @@
 
             <closed :restaurantClosed="restaurantClosed"></closed>
 
-            <reservation-modal :time-start="time" :date="date" :table-number="tableNumber" :api_link="api_link" :reserving="reserving"></reservation-modal>
+            <reservation-modal :time-start="time" :date="date" :table-number="tableNumber" :api_link="api_link"
+                               :reserving="reserving"></reservation-modal>
         </div>
     </div>
 </template>
@@ -196,12 +210,15 @@
                         if (reservationArray[i]) {
 
                             //loop starts at 0 so index need to be incremented
-                            let htmlindex = i + 1;
+                            let htmlindex = reservationArray[i].table;
 
                             //prevent from reserving and add some styles
                             document.getElementById('table' + htmlindex).setAttribute('reserved', 'true');
                             document.getElementById('table' + htmlindex).classList.add('reservedTable');
-                            document.getElementById('infotable' + htmlindex).innerHTML = reservationArray[i].reservation_end;
+
+                            // display reservation  ending time and cut seconds they are always 0
+                            let reservationTime = reservationArray[i].reservation_end;
+                            document.getElementById('infotable' + htmlindex).innerHTML = reservationTime.substring(0, reservationTime.length - 3);
                         }
                     }
 
@@ -210,8 +227,6 @@
                     document.getElementById('tables').classList.add('animationFadeIn');
                 });
             },
-
-
 
 
             reserve_table(table) {
@@ -305,6 +320,7 @@
         user-select: none;
         background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5));
     }
+
     .reservedTable:hover {
         background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5)) !important;
         box-shadow: 0 0 2px white !important;
@@ -387,8 +403,7 @@
         transition: opacity .3s;
     }
 
-    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
-    {
+    .fade-enter, .fade-leave-to {
         opacity: 0;
     }
 
@@ -511,7 +526,7 @@
 
                 .twoInOneTable {
                     float: left;
-                    width: 100%;
+                    width: 50%;
                 }
             }
             margin-left: auto;
@@ -540,6 +555,11 @@
                 transition: .2s all ease-in-out;
                 box-shadow: 0 0 2px white;
                 font-size: 10px;
+
+                .infotable {
+                    word-wrap: break-word;
+                }
+
                 .icon-restaurant {
                     font-size: 12px;
                 }

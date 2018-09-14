@@ -57,7 +57,7 @@ class ReservationController extends Controller
         $reservation->reservation_end = $endReservation;
 
         if($reservation->save()) {
-            return new ReservationResource($reservation);
+            return 'Reservation successfully added!';
         } else {
             return 'There was a problem with adding reservation';
         }
