@@ -16,6 +16,16 @@
                             <label class="notCloseModal" for="number">Contact number:</label>
                             <input v-model="number" id="number" name="number" class="notCloseModal" type="text">
 
+                            <label class="notCloseModal" for="duration">Duration:</label>
+                            <select v-model="duration" id="duration" name="duration" class="notCloseModal" type="text">
+                                <option value="0.5">0.5 h</option>
+                                <option value="1">1 h</option>
+                                <option value="1.5">1.5 h</option>
+                                <option value="2">2 h</option>
+                                <option value="2.5">2.5 h</option>
+                                <option value="3">3 h</option>
+                            </select>
+
                             <input @click="submitForm" class="submit notCloseModal" value="Submit"
                                    type="button">
                         </form>
@@ -45,14 +55,19 @@
             },
             reserving: {
                 Type: Boolean
+            },
+            timeStart: {
+                Type: String
+            },
+            date: {
+                Type: String
             }
         },
         data() {
             return {
                 fullName: '',
-                date: '',
-                time: '14:00',
                 number: '',
+                duration: '1'
             }
         },
         methods: {
@@ -91,13 +106,19 @@
                         'name': this.fullName,
                         'number': this.number,
                         'table': this.tableNumber,
+                        'timeStart': this.timeStart,
+                        'duration': this.duration,
                         'date': this.date,
-                        'time': this.time,
                     }).then(function (Response) {
                         alert(Response.data);
                     });
                 }
             },
+
+
+            isNumeric(value) {
+                return /^\d+$/.test(value);
+            }
         }
     }
 </script>
@@ -130,11 +151,11 @@
             .modal {
                 position: fixed;
                 background: #f5f5f5;
-                border-radius: 5px;
                 box-shadow: 0 30px 30px - 10px rgba(0, 0, 0, .3);
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: 95%;
+                border-radius: 5px;
                 z-index: 400;
                 top: 50%;
 
@@ -205,6 +226,7 @@
                                 border-bottom: 1px solid #777777;
                             }
 
+
                             select {
                                 display: block;
                                 margin-left: auto;
@@ -222,11 +244,17 @@
                                 outline: none;
                                 box-shadow: 0 8px 16px -8px #777777;
                             }
+
+                            select:focus {
+                                outline: none;
+                                box-shadow: 0 8px 16px -8px #777777;
+                            }
                         }
                     }
 
                     .claimModal {
                         background-position: 60%;
+                        border-radius: 5px;
                         background-repeat: no-repeat;
                         background-size: cover;
                         @media(max-width: 476px) {

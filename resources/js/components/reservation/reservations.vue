@@ -13,7 +13,7 @@
             <div class="selectTime">
                 <div>
                     <label class="notCloseModal" for="date">Date:</label>
-                    <input :min="dateMin" :max="dateMax" v-model="date" id="date"
+                    <input :min="dateMin" :max="dateMax" v-model="date" @input="handleTime" id="date"
                            name="date" class="notCloseModal" type="date">
                 </div>
 
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <transition name="fade">
-                <div id="tables" class="tables displayNone" v-if="this.restaurantClosed === false">
+                <div id="tables" class="tables displayNone">
                     <img class="image" :src="api_link + '/images/view3.jpg'">
                     <div @click="reserve_table(1)" id="table1" class="table">
                         <i id="tableicon1" class="demo-icon icon-restaurant"></i><span id="infotable1">1</span>
@@ -103,7 +103,7 @@
 
             <closed :restaurantClosed="restaurantClosed"></closed>
 
-            <reservation-modal :api_link="api_link" :reserving="reserving"></reservation-modal>
+            <reservation-modal :time-start="time" :date="date" :table-number="tableNumber" :api_link="api_link" :reserving="reserving"></reservation-modal>
         </div>
     </div>
 </template>
@@ -129,7 +129,6 @@
             return {
                 reserving: false,
                 tableNumber: 0,
-                openHours: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
                 date: '',
                 dateMin: '',
                 dateMax: '',
@@ -149,15 +148,37 @@
 
         },
         methods: {
-            handleTime: debounce(function (e) {
-                let time = e.target.value;
+            handleTime: debounce(function () {
+                let time = document.getElementById('time').value;
                 if (parseInt(time) < 8 || parseInt(time) > 20) {
+
+                    document.getElementById('tables').classList.add('displayNone');
                     this.restaurantClosed = true;
+
                 } else {
+
                     this.restaurantClosed = false;
+                    this.loading = true;
+
+                    //reservations need to exist to edit them
+                    if (this.restaurantClosed === false) {
+                        //reset all previous reservations
+                        for (let i = 1; i <= this.tableCount; i++) {
+                            if (document.getElementById('table' + i).hasAttribute('reserved')) {
+                                document.getElementById('table' + i).removeAttribute('reserved');
+                                document.getElementById('table' + i).classList.remove('reservedTable');
+                                document.getElementById('infotable' + i).innerHTML = i;
+                            }
+                        }
+                    }
+
+                    document.getElementById('tables').classList.remove('animationFadeIn');
+                    document.getElementById('tables').classList.add('displayNone');
+
+                    this.getReservations();
                 }
 
-                this.getReservations();
+
             }, 400),
 
 
@@ -191,9 +212,6 @@
             },
 
 
-            isNumeric(value) {
-                return /^\d+$/.test(value);
-            },
 
 
             reserve_table(table) {
@@ -324,9 +342,9 @@
         display: block;
         position: relative;
         margin-left: auto;
-        margin-top: 100px;
-        margin-bottom: -100px;
+        margin-top: 200px;
         margin-right: auto;
+        transform: translateX(15%);
         width: 104px;
         height: 104px;
     }
@@ -338,7 +356,6 @@
         width: 71px;
         height: 71px;
         margin: 6px;
-        left: 50%;
         border: 7px solid #cccccc;
         border-radius: 50%;
         animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
@@ -416,6 +433,11 @@
             font-size: 22px;
             border: 0;
             border-bottom: 1px solid #777777;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 8px 16px -8px #777777;
         }
     }
 
@@ -517,38 +539,38 @@
                 cursor: pointer;
                 transition: .2s all ease-in-out;
                 box-shadow: 0 0 2px white;
-                font-size: 14px;
+                font-size: 10px;
                 .icon-restaurant {
-                    font-size: 16px;
+                    font-size: 12px;
                 }
 
                 @media(min-width: 476px) {
                     .icon-restaurant {
-                        font-size: 20px;
+                        font-size: 16px;
                     }
 
-                    font-size: 20px;
+                    font-size: 14px;
                 }
 
                 @media(min-width: 768px) {
                     .icon-restaurant {
-                        font-size: 24px;
+                        font-size: 20px;
                     }
-                    font-size: 22px;
+                    font-size: 16px;
                 }
 
                 @media(min-width: 1000px) {
                     .icon-restaurant {
                         font-size: 28px;
                     }
-                    font-size: 22px;
+                    font-size: 18px;
                 }
 
                 @media(min-width: 1200px) {
                     .icon-restaurant {
                         font-size: 32px;
                     }
-                    font-size: 26px;
+                    font-size: 22px;
                 }
             }
             .table:hover {

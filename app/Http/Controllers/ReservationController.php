@@ -18,7 +18,7 @@ class ReservationController extends Controller
     {
         $reservations = Reservation::
             where('date', $date)
-            ->where('reservation_start', '<', $time)
+            ->where('reservation_start', '<=', $time)
             ->where('reservation_end', '>', $time)
             ->get();
 
@@ -30,30 +30,36 @@ class ReservationController extends Controller
     public function store(Request $request)
     {
         $name = $request->input('name');
-        $table = $request->input('table');
-        $date = $request->input('date');
-        $time = $request->input('time');
         $number = $request->input('number');
+        $table = $request->input('table');
+        $timeStart = $request->input('timeStart');
+        $duration = $request->input('duration');
+        $date = $request->input('date');
 
-        $everythingGood = true;
 
-        $reservations = Reservation::all();
+        //hours to seconds
+        $duration = $duration * 3600;
 
-        //check if reservation exists
-        foreach($reservations as $reservation) {
+        //to unix
+        $endReservation =  strtotime($timeStart) + $duration;
 
-            if($reservation->date == $date) {
-                $everythingGood = false;
+        //to standard time
+        $endReservation = date('H:i:s', $endReservation);
 
-            }
+
+
+        $reservation = new Reservation;
+        $reservation->name = $name;
+        $reservation->table = $table;
+        $reservation->date = $date;
+        $reservation->number = $number;
+        $reservation->reservation_start = $timeStart;
+        $reservation->reservation_end = $endReservation;
+
+        if($reservation->save()) {
+            return new ReservationResource($reservation);
+        } else {
+            return 'There was a problem with adding reservation';
         }
-//        $reservation = new Reservation;
-//        $reservation->name = $name;
-//        $reservation->table = $table;
-//        $reservation->number = $number;
-//        $reservation->date = $date;
-//        $reservation->time = $time;
-//        $reservation->save();
-
     }
 }
