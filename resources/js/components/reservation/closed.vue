@@ -1,5 +1,5 @@
 <template>
-    <transition name="fade">
+    <transition name="fadeClosed">
         <h1 class="closed" v-if="restaurantClosed === true">CossackFood is closed! :(</h1>
     </transition>
 </template>
@@ -20,11 +20,11 @@
         text-align: center;
         margin-top: 150px;
     }
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity 2s;
+    .fadeClosed-enter-active {
+        transition: opacity .5s;
     }
 
-    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+    .fadeClosed-enter, .fadeClosed-leave-to
     {
         opacity: 0;
     }
