@@ -116,8 +116,11 @@
 
             <closed :restaurantClosed="restaurantClosed"></closed>
 
-            <reservation-modal :time-start="time" :date="date" :table-number="tableNumber" :api_link="api_link"
+            <reservation-modal @showFlashMessage="showFlashMethod($event)" :time-start="time" :date="date"
+                               :table-number="tableNumber" :api_link="api_link"
                                :reserving="reserving"></reservation-modal>
+
+            <flash-message :showFlash="showFlash" :messageFlash="messageFlash"></flash-message>
         </div>
     </div>
 </template>
@@ -149,7 +152,10 @@
                 tableCount: 13,
                 time: '13:59',
                 restaurantClosed: false,
-                loading: true
+                loading: true,
+                showFlash: false,
+                messageFlash: '',
+                removeClosingModal: false
 
             }
         },
@@ -194,6 +200,39 @@
 
 
             }, 400),
+
+            showFlashMethod(message) {
+                this.messageFlash = message;
+                this.showFlash = true;
+
+                this.loading = true;
+
+                document.getElementById('tables').classList.remove('animationFadeIn');
+                document.getElementById('tables').classList.add('displayNone');
+
+                this.restaurantClosed = false;
+                this.loading = true;
+
+                //reservations need to exist to edit them
+                if (this.restaurantClosed === false) {
+                    //reset all previous reservations
+                    for (let i = 1; i <= this.tableCount; i++) {
+                        if (document.getElementById('table' + i).hasAttribute('reserved')) {
+                            document.getElementById('table' + i).removeAttribute('reserved');
+                            document.getElementById('table' + i).classList.remove('reservedTable');
+                            document.getElementById('infotable' + i).innerHTML = i;
+                        }
+                    }
+                }
+
+
+                document.getElementById('table' + this.tableNumber).style.background = '';
+                window.onscroll = null;
+                this.reserving = false;
+                document.removeEventListener('click', this.closing_modalino);
+
+                this.getReservations();
+            },
 
 
             getReservations() {
@@ -251,17 +290,18 @@
                 };
 
                 //call function to close modal when not clicking it
-                this.closing_modal_on_click(table);
+                this.closing_modal_on_click();
             },
 
-            closing_modal_on_click(tableNumber) {
+            closing_modal_on_click() {
 
                 //need for right scope
                 const self = this;
 
                 //event listener that closes modal when user didnt clicked it
-                document.addEventListener('click', function closing_modalino(event) {
+                document.addEventListener('click',  self.closing_modalino/*function closing_modalino(event) {
                     if (self.reserving === true) {
+
 
                         if (event.target !== document.getElementById('modal') &&
                             !event.target.classList.contains('notCloseModal')
@@ -275,8 +315,27 @@
 
                         }
                     }
-                });
+                }*/);
 
+            },
+            closing_modalino(event) {
+                const self = this;
+                let tableNumber = this.tableNumber;
+
+                if (self.reserving === true) {
+
+                    if (event.target !== document.getElementById('modal') &&
+                        !event.target.classList.contains('notCloseModal')
+                        && event.target !== document.getElementById('table' + tableNumber)
+                        && event.target !== document.getElementById('tableicon' + tableNumber)) {
+
+                        document.getElementById('table' + tableNumber).style.background = '';
+                        window.onscroll = null;
+                        self.reserving = false;
+                        document.removeEventListener('click', self.closing_modalino);
+
+                    }
+                }
             },
 
             setTime() {
@@ -307,6 +366,7 @@
             }
         }
     }
+
 </script>
 
 <style lang="scss" scoped>

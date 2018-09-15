@@ -41,7 +41,6 @@
             </div>
         </transition>
 
-        <flash-message v-if="showFlash" :messageFlash="messageFlash"></flash-message>
     </div>
 </template>
 
@@ -72,8 +71,6 @@
                 fullName: '',
                 number: '',
                 duration: '1',
-                showFlash: false,
-                messageFlash: '',
             }
         },
         methods: {
@@ -117,9 +114,9 @@
                         'duration': this.duration,
                         'date': this.date,
                     }).then(function (Response) {
-
-                        self.showFlash = true;
-                        self.messageFlash = Response.data.data;
+                        self.$emit(
+                            'showFlashMessage', Response.data
+                        );
                     });
                 }
             },
