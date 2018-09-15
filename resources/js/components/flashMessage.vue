@@ -1,8 +1,7 @@
 <template>
     <transition name="fade">
-        <div v-if="messageVisible" class="message">
-            <!--{{ message }}-->
-            Reservation successfully added!
+        <div v-if="showFlash" class="message">
+            {{ messageFlash }}
         </div>
     </transition>
 </template>
@@ -13,6 +12,9 @@
         props: {
             messageFlash: {
                 type: String
+            },
+            showFlash: {
+                type: Boolean
             }
         },
         data() {
@@ -21,6 +23,7 @@
             }
         },
         mounted() {
+            this.messageVisible = true;
             const self = this;
             setTimeout(function(){
                 self.messageVisible = false;

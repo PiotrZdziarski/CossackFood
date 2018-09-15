@@ -22,7 +22,7 @@ class ReservationTest extends TestCase
         //test raw query
         $DBcheck = DB::table('reservations')
             ->where('date', $exampleDate)
-            ->where('reservation_start', '<', $exampleTime)
+            ->where('reservation_start', '<=', $exampleTime)
             ->where('reservation_end', '>', $exampleTime)
             ->get();
 
@@ -32,14 +32,22 @@ class ReservationTest extends TestCase
             $this->get('/api/reservations/2018-09-13/13:00')
                 ->assertSee($DBcheck);
         } else {
-            $this->assertTrue(false, 'No test reservation row in database');
+            DB::table('reservations')->insert([
+                'name' => 'testname' ,
+                'table' => '1',
+                'date' => $exampleDate,
+                'number' => '111222333',
+                'reservation_start' => $exampleTime,
+                'reservation_end' => '14:00'
+            ]);
+            $this->assertTrue(true, 'Test row added');
         }
 
 
         //test eloquent
         $reservations = Reservation::
             where('date', $exampleDate)
-            ->where('reservation_start', '<', $exampleTime)
+            ->where('reservation_start', '<=', $exampleTime)
             ->where('reservation_end', '>', $exampleTime)
             ->get();
 

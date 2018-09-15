@@ -1494,7 +1494,7 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(16);
-module.exports = __webpack_require__(86);
+module.exports = __webpack_require__(91);
 
 
 /***/ }),
@@ -1527,7 +1527,7 @@ Vue.component('menuSubpage', __webpack_require__(67));
 Vue.component('reservations', __webpack_require__(72));
 Vue.component('reservationModal', __webpack_require__(14));
 Vue.component('closed', __webpack_require__(13));
-Vue.component('flashMessage', __webpack_require__(90));
+Vue.component('flashMessage', __webpack_require__(86));
 
 var app = new Vue({
   el: '#app'
@@ -15604,6 +15604,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -15631,7 +15634,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             tableCount: 13,
             time: '13:59',
             restaurantClosed: false,
-            loading: true
+            loading: true,
+            showFlash: false,
+            messageFlash: '',
+            removeClosingModal: false
 
         };
     },
@@ -15674,6 +15680,37 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
         }, 400),
 
+        showFlashMethod: function showFlashMethod(message) {
+            this.messageFlash = message;
+            this.showFlash = true;
+
+            this.loading = true;
+
+            document.getElementById('tables').classList.remove('animationFadeIn');
+            document.getElementById('tables').classList.add('displayNone');
+
+            this.restaurantClosed = false;
+            this.loading = true;
+
+            //reservations need to exist to edit them
+            if (this.restaurantClosed === false) {
+                //reset all previous reservations
+                for (var i = 1; i <= this.tableCount; i++) {
+                    if (document.getElementById('table' + i).hasAttribute('reserved')) {
+                        document.getElementById('table' + i).removeAttribute('reserved');
+                        document.getElementById('table' + i).classList.remove('reservedTable');
+                        document.getElementById('infotable' + i).innerHTML = i;
+                    }
+                }
+            }
+
+            document.getElementById('table' + this.tableNumber).style.background = '';
+            window.onscroll = null;
+            this.reserving = false;
+            document.removeEventListener('click', this.closing_modalino);
+
+            this.getReservations();
+        },
         getReservations: function getReservations() {
 
             //right scope
@@ -15726,26 +15763,42 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             };
 
             //call function to close modal when not clicking it
-            this.closing_modal_on_click(table);
+            this.closing_modal_on_click();
         },
-        closing_modal_on_click: function closing_modal_on_click(tableNumber) {
+        closing_modal_on_click: function closing_modal_on_click() {
 
             //need for right scope
             var self = this;
 
             //event listener that closes modal when user didnt clicked it
-            document.addEventListener('click', function closing_modalino(event) {
-                if (self.reserving === true) {
+            document.addEventListener('click', self.closing_modalino /*function closing_modalino(event) {
+                                                                     if (self.reserving === true) {
+                                                                     if (event.target !== document.getElementById('modal') &&
+                                                                     !event.target.classList.contains('notCloseModal')
+                                                                     && event.target !== document.getElementById('table' + tableNumber)
+                                                                     && event.target !== document.getElementById('tableicon' + tableNumber)) {
+                                                                     document.getElementById('table' + tableNumber).style.background = '';
+                                                                     window.onscroll = null;
+                                                                     self.reserving = false;
+                                                                     document.removeEventListener('click', closing_modalino);
+                                                                     }
+                                                                     }
+                                                                     }*/);
+        },
+        closing_modalino: function closing_modalino(event) {
+            var self = this;
+            var tableNumber = this.tableNumber;
 
-                    if (event.target !== document.getElementById('modal') && !event.target.classList.contains('notCloseModal') && event.target !== document.getElementById('table' + tableNumber) && event.target !== document.getElementById('tableicon' + tableNumber)) {
+            if (self.reserving === true) {
 
-                        document.getElementById('table' + tableNumber).style.background = '';
-                        window.onscroll = null;
-                        self.reserving = false;
-                        document.removeEventListener('click', closing_modalino);
-                    }
+                if (event.target !== document.getElementById('modal') && !event.target.classList.contains('notCloseModal') && event.target !== document.getElementById('table' + tableNumber) && event.target !== document.getElementById('tableicon' + tableNumber)) {
+
+                    document.getElementById('table' + tableNumber).style.background = '';
+                    window.onscroll = null;
+                    self.reserving = false;
+                    document.removeEventListener('click', self.closing_modalino);
                 }
-            });
+            }
         },
         setTime: function setTime() {
             var today = new Date();
@@ -16342,7 +16395,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -16369,9 +16421,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             fullName: '',
             number: '',
-            duration: '1',
-            showFlash: false,
-            messageFlash: ''
+            duration: '1'
         };
     },
 
@@ -16415,9 +16465,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     'duration': this.duration,
                     'date': this.date
                 }).then(function (Response) {
-
-                    self.showFlash = true;
-                    self.messageFlash = Response.data.data;
+                    self.$emit('showFlashMessage', Response.data);
                 });
             }
         },
@@ -16613,11 +16661,7 @@ var render = function() {
               ])
             ])
           : _vm._e()
-      ]),
-      _vm._v(" "),
-      _vm.showFlash
-        ? _c("flash-message", { attrs: { messageFlash: _vm.messageFlash } })
-        : _vm._e()
+      ])
     ],
     1
   )
@@ -17120,7 +17164,16 @@ var render = function() {
             "table-number": _vm.tableNumber,
             api_link: _vm.api_link,
             reserving: _vm.reserving
+          },
+          on: {
+            showFlashMessage: function($event) {
+              _vm.showFlashMethod($event)
+            }
           }
+        }),
+        _vm._v(" "),
+        _c("flash-message", {
+          attrs: { showFlash: _vm.showFlash, messageFlash: _vm.messageFlash }
         })
       ],
       1
@@ -17148,27 +17201,18 @@ if (false) {
 
 /***/ }),
 /* 86 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 87 */,
-/* 88 */,
-/* 89 */,
-/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(95)
+  __webpack_require__(87)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(93)
+var __vue_script__ = __webpack_require__(89)
 /* template */
-var __vue_template__ = __webpack_require__(94)
+var __vue_template__ = __webpack_require__(90)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -17207,77 +17251,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 91 */,
-/* 92 */,
-/* 93 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    name: "flashMessage",
-    props: {
-        messageFlash: {
-            type: String
-        }
-    },
-    data: function data() {
-        return {
-            messageVisible: true
-        };
-    },
-    mounted: function mounted() {
-        var self = this;
-        setTimeout(function () {
-            self.messageVisible = false;
-        }, 3000);
-    }
-});
-
-/***/ }),
-/* 94 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("transition", { attrs: { name: "fade" } }, [
-    _vm.messageVisible
-      ? _c("div", { staticClass: "message" }, [
-          _vm._v("\n        Reservation successfully added!\n    ")
-        ])
-      : _vm._e()
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-6f263642", module.exports)
-  }
-}
-
-/***/ }),
-/* 95 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(96);
+var content = __webpack_require__(88);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -17297,7 +17277,7 @@ if(false) {
 }
 
 /***/ }),
-/* 96 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -17309,6 +17289,77 @@ exports.push([module.i, "\n.fade-enter-active[data-v-6f263642], .fade-leave-acti
 
 // exports
 
+
+/***/ }),
+/* 89 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "flashMessage",
+    props: {
+        messageFlash: {
+            type: String
+        },
+        showFlash: {
+            type: Boolean
+        }
+    },
+    data: function data() {
+        return {
+            messageVisible: true
+        };
+    },
+    mounted: function mounted() {
+        this.messageVisible = true;
+        var self = this;
+        setTimeout(function () {
+            self.messageVisible = false;
+        }, 3000);
+    }
+});
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("transition", { attrs: { name: "fade" } }, [
+    _vm.showFlash
+      ? _c("div", { staticClass: "message" }, [
+          _vm._v("\n        " + _vm._s(_vm.messageFlash) + "\n    ")
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6f263642", module.exports)
+  }
+}
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
