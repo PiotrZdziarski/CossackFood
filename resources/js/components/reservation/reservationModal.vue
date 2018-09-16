@@ -8,7 +8,9 @@
                     <div class="modalGrid notCloseModal">
                         <div class="form notCloseModal">
                             <div class="titleModal notCloseModal">Book Table no. {{ tableNumber }}</div>
-                            <form method="post" id="reservationForm" class="notCloseModal">
+
+
+                            <form v-if="availableReservation >= 1" method="post" id="reservationForm" class="notCloseModal">
 
                                 <label class="notCloseModal" for="fullName">Fullname:</label>
                                 <input v-model="fullName" id="fullName" name="fullName" class="notCloseModal"
@@ -17,19 +19,22 @@
                                 <label class="notCloseModal" for="number">Contact number:</label>
                                 <input v-model="number" id="number" name="number" class="notCloseModal" type="text">
 
-                                <label class="notCloseModal" for="duration">Duration:</label>
+                                <label class="notCloseModal" for="duration">Duration of booking:</label>
                                 <select v-model="duration" id="duration" name="duration" class="notCloseModal" type="text">
-                                    <option value="0.5">0.5 h</option>
-                                    <option value="1">1 h</option>
-                                    <option value="1.5">1.5 h</option>
-                                    <option value="2">2 h</option>
-                                    <option value="2.5">2.5 h</option>
-                                    <option value="3">3 h</option>
+                                    <option v-if="availableReservation >= 1" value="0.5">0.5 h</option>
+                                    <option v-if="availableReservation >= 2" value="1">1 h</option>
+                                    <option v-if="availableReservation >= 3" value="1.5">1.5 h</option>
+                                    <option v-if="availableReservation >= 4" value="2">2 h</option>
+                                    <option v-if="availableReservation >= 5" value="2.5">2.5 h</option>
+                                    <option v-if="availableReservation >= 6" value="3">3 h</option>
                                 </select>
 
                                 <input @click="submitForm" class="submit notCloseModal" value="Submit"
                                        type="button">
                             </form>
+                            <div class="notCloseModal" v-if="availableReservation === 0">
+                                Reservation unvailable next one begins in less than 30 minutes :(
+                            </div>
                         </div>
                         <div class="claimModal notCloseModal"
                              :style="{backgroundImage: 'url(' + api_link + '/images/waiter.jpg' + ')'}">
@@ -64,13 +69,16 @@
             },
             date: {
                 Type: String
+            },
+            availableReservation: {
+                Type: String
             }
         },
         data() {
             return {
                 fullName: '',
                 number: '',
-                duration: '1',
+                duration: '0.5',
             }
         },
         methods: {
@@ -115,7 +123,7 @@
                         'date': this.date,
                     }).then(function (Response) {
                         self.$emit(
-                            'showFlashMessage', Response.data
+                            'reservationAdd', Response.data
                         );
                     });
                 }
@@ -166,7 +174,7 @@
                 top: 50%;
 
                 @media(min-width: 768px) {
-                    width: 70%;
+                    width: 75%;
                 }
                 @media(min-width: 1000px) {
                     width: 60%;
@@ -182,8 +190,9 @@
                     height: 100%;
                     text-align: center;
 
+
                     .form {
-                        padding: 8%;
+                        padding: 10%;
 
                         .titleModal {
                             font-size: 26px;
