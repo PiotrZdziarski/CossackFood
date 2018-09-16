@@ -38,8 +38,8 @@ class ReservationController extends Controller
         for ($i = 1; $i <= 13; $i++) {
             $closestReservation = Reservation::
                 where('date', $date)
-                ->where('reservation_start', '>', $time)
-                ->where('reservation_end', '<', $closestReservationTime)
+                ->where('reservation_start','>', $time)
+                ->where('reservation_start', '<', $closestReservationTime)
                 ->where('table', $i)
                 ->get();
 
@@ -51,13 +51,15 @@ class ReservationController extends Controller
                 $closestReservationDuration = strtotime($closestReservation->first()->reservation_start);
                 $closestReservationDuration = $closestReservationDuration - $searchingTimeUnix;
 
+
+                //available time 1 - 30min 2 - 60min .... 6 - 3h
                 $duration = floor($closestReservationDuration / 1800);
 
+                //merge it boi
                 $reservations[$lastItem - 1] = collect($reservations[$lastItem - 1])
                     ->merge([["t$i" => $duration]]);
             }
         }
-
 
         return ReservationResource::collection($reservations);
     }

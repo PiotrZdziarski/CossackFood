@@ -15461,7 +15461,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.reservedTable[data-v-2c4cd5d5] {\n  cursor: auto !important;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 67, 57, 0.5)), to(rgba(245, 67, 57, 0.5)));\n  background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5));\n}\n.reservedTable[data-v-2c4cd5d5]:hover {\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 67, 57, 0.5)), to(rgba(245, 67, 57, 0.5))) !important;\n  background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5)) !important;\n  -webkit-box-shadow: 0 0 2px white !important;\n          box-shadow: 0 0 2px white !important;\n}\n@-webkit-keyframes fadeIn-data-v-2c4cd5d5 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes fadeIn-data-v-2c4cd5d5 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n.animationFadeIn[data-v-2c4cd5d5] {\n  display: block;\n  -webkit-animation: fadeIn-data-v-2c4cd5d5 .5s;\n  animation: fadeIn-data-v-2c4cd5d5 .5s;\n}\n.displayNone[data-v-2c4cd5d5] {\n  display: none !important;\n}\n.lds-ring[data-v-2c4cd5d5] {\n  display: block;\n  position: relative;\n  margin-left: auto;\n  margin-top: 200px;\n  margin-right: auto;\n  -webkit-transform: translateX(15%);\n          transform: translateX(15%);\n  width: 104px;\n  height: 104px;\n}\n.lds-ring div[data-v-2c4cd5d5] {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  display: block;\n  position: absolute;\n  width: 71px;\n  height: 71px;\n  margin: 6px;\n  border: 7px solid #cccccc;\n  border-radius: 50%;\n  -webkit-animation: lds-ring-data-v-2c4cd5d5 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\n          animation: lds-ring-data-v-2c4cd5d5 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\n  border-color: #b9bbbe transparent transparent transparent;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(1) {\n  -webkit-animation-delay: -0.45s;\n          animation-delay: -0.45s;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(2) {\n  -webkit-animation-delay: -0.3s;\n          animation-delay: -0.3s;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(3) {\n  -webkit-animation-delay: -0.15s;\n          animation-delay: -0.15s;\n}\n@-webkit-keyframes lds-ring-data-v-2c4cd5d5 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes lds-ring-data-v-2c4cd5d5 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n.fade-enter-active[data-v-2c4cd5d5], .fade-leave-active[data-v-2c4cd5d5] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-2c4cd5d5], .fade-leave-to[data-v-2c4cd5d5] {\n  opacity: 0;\n}\n.openHours[data-v-2c4cd5d5] {\n  text-align: center;\n  color: #b91d19;\n  display: block;\n  margin-bottom: 40px;\n  margin-top: 40px;\n}\n.selectTime[data-v-2c4cd5d5] {\n  text-align: center;\n  margin-bottom: 50px;\n  display: grid;\n  grid-template-columns: 1fr;\n}\n@media (min-width: 768px) {\n.selectTime[data-v-2c4cd5d5] {\n      grid-template-columns: 1fr 1fr;\n}\n}\n.selectTime #date[data-v-2c4cd5d5] {\n    margin-bottom: 60px;\n}\n@media (min-width: 768px) {\n.selectTime #date[data-v-2c4cd5d5] {\n        margin-bottom: 20px;\n}\n}\n.selectTime label[data-v-2c4cd5d5] {\n    color: #b91d19;\n    font-size: 26px;\n    font-weight: 700;\n}\n.selectTime input[data-v-2c4cd5d5] {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 15px;\n    background: none;\n    color: #444444;\n    text-align: center;\n    font-size: 22px;\n    border: 0;\n    border-bottom: 1px solid #777777;\n}\n.selectTime input[data-v-2c4cd5d5]:focus {\n    outline: none;\n    -webkit-box-shadow: 0 8px 16px -8px #777777;\n            box-shadow: 0 8px 16px -8px #777777;\n}\n.error[data-v-2c4cd5d5] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.claimImage[data-v-2c4cd5d5] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: 50% 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.claimImage .title[data-v-2c4cd5d5] {\n    margin-top: 50px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #b91d19;\n    margin-bottom: 50px;\n}\n@media (min-width: 768px) {\n.claimImage .title[data-v-2c4cd5d5] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.claimImage .subpage[data-v-2c4cd5d5] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 30px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.claimImage .subpage[data-v-2c4cd5d5]:hover {\n    color: #777777;\n}\n.claimImage .active[data-v-2c4cd5d5] {\n    color: #b91d19;\n}\n.claimImage .active[data-v-2c4cd5d5]:hover {\n    color: #b91d19;\n}\n.claimReservations[data-v-2c4cd5d5] {\n  display: block;\n  color: #b91d19;\n  text-align: center;\n  margin-bottom: 80px;\n}\n.boxShadow[data-v-2c4cd5d5] {\n  -webkit-box-shadow: 0 0 2px white;\n          box-shadow: 0 0 2px white;\n}\n.container[data-v-2c4cd5d5] {\n  margin-top: 50px;\n}\n.container .tables[data-v-2c4cd5d5] {\n    margin-left: auto;\n    margin-right: auto;\n    display: grid;\n    position: relative;\n    border: 1px solid #f1f1f1;\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;\n    z-index: 1;\n}\n.container .tables .twoInOne[data-v-2c4cd5d5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .tables .twoInOne .twoInOneTable[data-v-2c4cd5d5] {\n        float: left;\n        width: 50%;\n}\n.container .tables .image[data-v-2c4cd5d5] {\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      -webkit-filter: brightness(70%);\n              filter: brightness(70%);\n      z-index: -1;\n}\n.container .tables .table[data-v-2c4cd5d5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      font-weight: 700;\n      color: white;\n      padding: 35% 0 35% 0;\n      cursor: pointer;\n      -webkit-transition: .2s all ease-in-out;\n      transition: .2s all ease-in-out;\n      -webkit-box-shadow: 0 0 2px white;\n              box-shadow: 0 0 2px white;\n      font-size: 10px;\n}\n.container .tables .table .infotable[data-v-2c4cd5d5] {\n        word-wrap: break-word;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n        font-size: 12px;\n}\n@media (min-width: 476px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 14px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 16px;\n}\n}\n@media (min-width: 768px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 16px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 20px;\n}\n}\n@media (min-width: 1000px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 18px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 28px;\n}\n}\n@media (min-width: 1200px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 32px;\n}\n}\n.container .tables .table[data-v-2c4cd5d5]:hover {\n      -webkit-box-shadow: 0 0 7px white;\n              box-shadow: 0 0 7px white;\n      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));\n      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));\n}\n", ""]);
+exports.push([module.i, "\n.reservedTable[data-v-2c4cd5d5] {\n  cursor: auto !important;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 67, 57, 0.5)), to(rgba(245, 67, 57, 0.5)));\n  background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5));\n}\n.reservedTable[data-v-2c4cd5d5]:hover {\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 67, 57, 0.5)), to(rgba(245, 67, 57, 0.5))) !important;\n  background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5)) !important;\n  -webkit-box-shadow: 0 0 2px white !important;\n          box-shadow: 0 0 2px white !important;\n}\n@-webkit-keyframes fadeIn-data-v-2c4cd5d5 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes fadeIn-data-v-2c4cd5d5 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n.animationFadeIn[data-v-2c4cd5d5] {\n  display: block;\n  -webkit-animation: fadeIn-data-v-2c4cd5d5 .5s;\n  animation: fadeIn-data-v-2c4cd5d5 .5s;\n}\n.displayNone[data-v-2c4cd5d5] {\n  display: none !important;\n}\n.lds-ring[data-v-2c4cd5d5] {\n  display: block;\n  position: relative;\n  margin-left: auto;\n  margin-top: 200px;\n  margin-right: auto;\n  -webkit-transform: translateX(15%);\n          transform: translateX(15%);\n  width: 104px;\n  height: 104px;\n}\n.lds-ring div[data-v-2c4cd5d5] {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  display: block;\n  position: absolute;\n  width: 71px;\n  height: 71px;\n  margin: 6px;\n  border: 7px solid #cccccc;\n  border-radius: 50%;\n  -webkit-animation: lds-ring-data-v-2c4cd5d5 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\n          animation: lds-ring-data-v-2c4cd5d5 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\n  border-color: #b9bbbe transparent transparent transparent;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(1) {\n  -webkit-animation-delay: -0.45s;\n          animation-delay: -0.45s;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(2) {\n  -webkit-animation-delay: -0.3s;\n          animation-delay: -0.3s;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(3) {\n  -webkit-animation-delay: -0.15s;\n          animation-delay: -0.15s;\n}\n@-webkit-keyframes lds-ring-data-v-2c4cd5d5 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes lds-ring-data-v-2c4cd5d5 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n.fade-enter-active[data-v-2c4cd5d5], .fade-leave-active[data-v-2c4cd5d5] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-2c4cd5d5], .fade-leave-to[data-v-2c4cd5d5] {\n  opacity: 0;\n}\n.openHours[data-v-2c4cd5d5] {\n  text-align: center;\n  color: #b91d19;\n  display: block;\n  margin-bottom: 40px;\n  margin-top: 40px;\n}\n.selectTime[data-v-2c4cd5d5] {\n  text-align: center;\n  margin-bottom: 50px;\n  display: grid;\n  grid-template-columns: 1fr;\n}\n@media (min-width: 768px) {\n.selectTime[data-v-2c4cd5d5] {\n      grid-template-columns: 1fr 1fr;\n}\n}\n.selectTime #date[data-v-2c4cd5d5] {\n    margin-bottom: 60px;\n}\n@media (min-width: 768px) {\n.selectTime #date[data-v-2c4cd5d5] {\n        margin-bottom: 20px;\n}\n}\n.selectTime label[data-v-2c4cd5d5] {\n    color: #b91d19;\n    font-size: 26px;\n    font-weight: 700;\n}\n.selectTime input[data-v-2c4cd5d5] {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 15px;\n    background: none;\n    color: #444444;\n    text-align: center;\n    font-size: 22px;\n    border: 0;\n    border-bottom: 1px solid #777777;\n}\n.selectTime input[data-v-2c4cd5d5]:focus {\n    outline: none;\n    -webkit-box-shadow: 0 8px 16px -8px #777777;\n            box-shadow: 0 8px 16px -8px #777777;\n}\n.error[data-v-2c4cd5d5] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.claimImage[data-v-2c4cd5d5] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: 50% 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.claimImage .title[data-v-2c4cd5d5] {\n    margin-top: 50px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #b91d19;\n    margin-bottom: 50px;\n}\n@media (min-width: 768px) {\n.claimImage .title[data-v-2c4cd5d5] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.claimImage .subpage[data-v-2c4cd5d5] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 30px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.claimImage .subpage[data-v-2c4cd5d5]:hover {\n    color: #777777;\n}\n.claimImage .active[data-v-2c4cd5d5] {\n    color: #b91d19;\n}\n.claimImage .active[data-v-2c4cd5d5]:hover {\n    color: #b91d19;\n}\n.claimReservations[data-v-2c4cd5d5] {\n  display: block;\n  color: #b91d19;\n  text-align: center;\n  margin-bottom: 80px;\n}\n.boxShadow[data-v-2c4cd5d5] {\n  -webkit-box-shadow: 0 0 2px white;\n          box-shadow: 0 0 2px white;\n}\n.container[data-v-2c4cd5d5] {\n  margin-top: 50px;\n}\n.container .tables[data-v-2c4cd5d5] {\n    margin-left: auto;\n    margin-right: auto;\n    display: grid;\n    position: relative;\n    border: 1px solid #f1f1f1;\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;\n    z-index: 1;\n}\n.container .tables .twoInOne[data-v-2c4cd5d5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .tables .twoInOne .twoInOneTable[data-v-2c4cd5d5] {\n        float: left;\n        width: 50%;\n}\n.container .tables .image[data-v-2c4cd5d5] {\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      -webkit-filter: brightness(70%);\n              filter: brightness(70%);\n      z-index: -1;\n}\n.container .tables .table[data-v-2c4cd5d5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      font-weight: 700;\n      color: white;\n      padding: 35% 0 35% 0;\n      cursor: pointer;\n      -webkit-transition: .2s all ease-in-out;\n      transition: .2s all ease-in-out;\n      -webkit-box-shadow: 0 0 2px white;\n              box-shadow: 0 0 2px white;\n      font-size: 10px;\n}\n.container .tables .table .infotable[data-v-2c4cd5d5] {\n        word-wrap: break-word;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n        font-size: 12px;\n}\n@media (min-width: 476px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 13px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 16px;\n}\n}\n@media (min-width: 768px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 16px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 20px;\n}\n}\n@media (min-width: 1000px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 18px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 28px;\n}\n}\n@media (min-width: 1200px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 32px;\n}\n}\n.container .tables .table[data-v-2c4cd5d5]:hover {\n      -webkit-box-shadow: 0 0 7px white;\n              box-shadow: 0 0 7px white;\n      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));\n      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));\n}\n", ""]);
 
 // exports
 
@@ -15685,7 +15685,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
         }, 400),
 
-        showFlashMethod: function showFlashMethod(message) {
+        reservationAdd: function reservationAdd(message) {
+            //show communicat
             this.messageFlash = message;
             this.showFlash = true;
 
@@ -15712,6 +15713,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             //right scope
             var self = this;
+            this.availableHoursAtTable = [];
 
             //get reservations
             __WEBPACK_IMPORTED_MODULE_3_axios___default.a.get(this.api_link + '/api/reservations/' + this.date + '/' + this.time).then(function (Response) {
@@ -15721,6 +15723,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 var arraylength = reservationArray.length - 1;
 
                 for (var i = 0; i <= arraylength; i++) {
+
+                    //from RestAPI last item is list of available reservations
+
+                    //normal reservation
                     if (reservationArray[i] !== 'undefined' && i !== arraylength) {
 
                         //loop starts at 0 so index need to be incremented
@@ -15735,6 +15741,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                         document.getElementById('infotable' + htmlindex).innerHTML = reservationTime.substring(0, reservationTime.length - 3);
                     }
 
+                    //list of available reservation
                     if (reservationArray[i] !== 'undefined' && i === arraylength) {
 
                         reservationArray[i].forEach(function (table) {
@@ -16343,7 +16350,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.fade-enter-active[data-v-6fc00def], .fade-leave-active[data-v-6fc00def] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-6fc00def], .fade-leave-to[data-v-6fc00def] {\n  opacity: 0;\n}\n.error[data-v-6fc00def] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.container[data-v-6fc00def] {\n  margin-top: 50px;\n}\n.container .modal-container[data-v-6fc00def] {\n    position: fixed;\n    z-index: 399;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background: transparent;\n}\n.container .modal-container .modal[data-v-6fc00def] {\n      position: fixed;\n      background: #f5f5f5;\n      -webkit-box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n              box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n      left: 50%;\n      -webkit-transform: translate(-50%, -50%);\n              transform: translate(-50%, -50%);\n      width: 95%;\n      border-radius: 5px;\n      z-index: 400;\n      top: 50%;\n}\n@media (min-width: 768px) {\n.container .modal-container .modal[data-v-6fc00def] {\n          width: 70%;\n}\n}\n@media (min-width: 1000px) {\n.container .modal-container .modal[data-v-6fc00def] {\n          width: 60%;\n}\n}\n.container .modal-container .modal .modalGrid[data-v-6fc00def] {\n        display: grid;\n        grid-template-columns: 1fr;\n        width: 100%;\n        height: 100%;\n        text-align: center;\n}\n@media (min-width: 476px) {\n.container .modal-container .modal .modalGrid[data-v-6fc00def] {\n            grid-template-columns: 1fr 1fr;\n}\n}\n.container .modal-container .modal .modalGrid .form[data-v-6fc00def] {\n          padding: 8%;\n}\n.container .modal-container .modal .modalGrid .form .titleModal[data-v-6fc00def] {\n            font-size: 26px;\n            font-weight: 500;\n            color: #b91d19;\n            margin-bottom: 30px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def] {\n            margin-top: 40px;\n            background-color: #f54339;\n            color: white;\n            -webkit-transition: .2s all ease-in-out;\n            transition: .2s all ease-in-out;\n            cursor: pointer;\n            padding: 10px 20px 10px 20px;\n            border: 0;\n            border-radius: 3px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def]:hover {\n            background-color: #f5543f;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 3.75px 7.5px #b9bbbe;\n                    box-shadow: 0 3.75px 7.5px #b9bbbe;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm label[data-v-6fc00def] {\n            display: block;\n            font-size: 20px;\n            margin-top: 25px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-6fc00def] {\n            display: block;\n            margin-left: auto;\n            margin-right: auto;\n            margin-top: 15px;\n            background: none;\n            color: #444444;\n            text-align: center;\n            font-size: 16px;\n            border: 0;\n            border-bottom: 1px solid #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm select[data-v-6fc00def] {\n            display: block;\n            margin-left: auto;\n            margin-right: auto;\n            margin-top: 15px;\n            background: none;\n            color: #444444;\n            text-align: center;\n            font-size: 16px;\n            border: 0;\n            border-bottom: 1px solid #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 8px 16px -8px #777777;\n                    box-shadow: 0 8px 16px -8px #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm select[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 8px 16px -8px #777777;\n                    box-shadow: 0 8px 16px -8px #777777;\n}\n.container .modal-container .modal .modalGrid .claimModal[data-v-6fc00def] {\n          background-position: 60%;\n          border-radius: 5px;\n          background-repeat: no-repeat;\n          background-size: cover;\n}\n@media (max-width: 476px) {\n.container .modal-container .modal .modalGrid .claimModal[data-v-6fc00def] {\n              display: none;\n}\n}\n.container .modal-container .modal .close[data-v-6fc00def] {\n        position: absolute;\n        width: 30px;\n        height: 30px;\n        padding: 30px;\n        right: 0;\n        top: 0;\n        cursor: pointer;\n}\n.container .modal-container .modal .close[data-v-6fc00def]::before, .container .modal-container .modal .close[data-v-6fc00def]::after {\n          position: absolute;\n          top: 30px;\n          right: 20px;\n          content: '';\n          width: 20px;\n          height: 2px;\n          background: black;\n          display: block;\n}\n.container .modal-container .modal .close[data-v-6fc00def]::before {\n          -webkit-transform: rotate(45deg);\n                  transform: rotate(45deg);\n}\n.container .modal-container .modal .close[data-v-6fc00def]::after {\n          -webkit-transform: rotate(-45deg);\n                  transform: rotate(-45deg);\n}\n.container .modal-container .modal .close[data-v-6fc00def]:hover::before, .container .modal-container .modal .close[data-v-6fc00def]:hover::after {\n        background: #444444;\n}\n", ""]);
+exports.push([module.i, "\n.fade-enter-active[data-v-6fc00def], .fade-leave-active[data-v-6fc00def] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-6fc00def], .fade-leave-to[data-v-6fc00def] {\n  opacity: 0;\n}\n.error[data-v-6fc00def] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.container[data-v-6fc00def] {\n  margin-top: 50px;\n}\n.container .modal-container[data-v-6fc00def] {\n    position: fixed;\n    z-index: 399;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background: transparent;\n}\n.container .modal-container .modal[data-v-6fc00def] {\n      position: fixed;\n      background: #f5f5f5;\n      -webkit-box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n              box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n      left: 50%;\n      -webkit-transform: translate(-50%, -50%);\n              transform: translate(-50%, -50%);\n      width: 95%;\n      border-radius: 5px;\n      z-index: 400;\n      top: 50%;\n}\n@media (min-width: 768px) {\n.container .modal-container .modal[data-v-6fc00def] {\n          width: 75%;\n}\n}\n@media (min-width: 1000px) {\n.container .modal-container .modal[data-v-6fc00def] {\n          width: 60%;\n}\n}\n.container .modal-container .modal .modalGrid[data-v-6fc00def] {\n        display: grid;\n        grid-template-columns: 1fr;\n        width: 100%;\n        height: 100%;\n        text-align: center;\n}\n@media (min-width: 476px) {\n.container .modal-container .modal .modalGrid[data-v-6fc00def] {\n            grid-template-columns: 1fr 1fr;\n}\n}\n.container .modal-container .modal .modalGrid .form[data-v-6fc00def] {\n          padding: 10%;\n}\n.container .modal-container .modal .modalGrid .form .titleModal[data-v-6fc00def] {\n            font-size: 26px;\n            font-weight: 500;\n            color: #b91d19;\n            margin-bottom: 30px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def] {\n            margin-top: 40px;\n            background-color: #f54339;\n            color: white;\n            -webkit-transition: .2s all ease-in-out;\n            transition: .2s all ease-in-out;\n            cursor: pointer;\n            padding: 10px 20px 10px 20px;\n            border: 0;\n            border-radius: 3px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def]:hover {\n            background-color: #f5543f;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 3.75px 7.5px #b9bbbe;\n                    box-shadow: 0 3.75px 7.5px #b9bbbe;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm label[data-v-6fc00def] {\n            display: block;\n            font-size: 20px;\n            margin-top: 25px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-6fc00def] {\n            display: block;\n            margin-left: auto;\n            margin-right: auto;\n            margin-top: 15px;\n            background: none;\n            color: #444444;\n            text-align: center;\n            font-size: 16px;\n            border: 0;\n            border-bottom: 1px solid #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm select[data-v-6fc00def] {\n            display: block;\n            margin-left: auto;\n            margin-right: auto;\n            margin-top: 15px;\n            background: none;\n            color: #444444;\n            text-align: center;\n            font-size: 16px;\n            border: 0;\n            border-bottom: 1px solid #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 8px 16px -8px #777777;\n                    box-shadow: 0 8px 16px -8px #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm select[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 8px 16px -8px #777777;\n                    box-shadow: 0 8px 16px -8px #777777;\n}\n.container .modal-container .modal .modalGrid .claimModal[data-v-6fc00def] {\n          background-position: 60%;\n          border-radius: 5px;\n          background-repeat: no-repeat;\n          background-size: cover;\n}\n@media (max-width: 476px) {\n.container .modal-container .modal .modalGrid .claimModal[data-v-6fc00def] {\n              display: none;\n}\n}\n.container .modal-container .modal .close[data-v-6fc00def] {\n        position: absolute;\n        width: 30px;\n        height: 30px;\n        padding: 30px;\n        right: 0;\n        top: 0;\n        cursor: pointer;\n}\n.container .modal-container .modal .close[data-v-6fc00def]::before, .container .modal-container .modal .close[data-v-6fc00def]::after {\n          position: absolute;\n          top: 30px;\n          right: 20px;\n          content: '';\n          width: 20px;\n          height: 2px;\n          background: black;\n          display: block;\n}\n.container .modal-container .modal .close[data-v-6fc00def]::before {\n          -webkit-transform: rotate(45deg);\n                  transform: rotate(45deg);\n}\n.container .modal-container .modal .close[data-v-6fc00def]::after {\n          -webkit-transform: rotate(-45deg);\n                  transform: rotate(-45deg);\n}\n.container .modal-container .modal .close[data-v-6fc00def]:hover::before, .container .modal-container .modal .close[data-v-6fc00def]:hover::after {\n        background: #444444;\n}\n", ""]);
 
 // exports
 
@@ -16356,6 +16363,11 @@ exports.push([module.i, "\n.fade-enter-active[data-v-6fc00def], .fade-leave-acti
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -16422,13 +16434,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         date: {
             Type: String
+        },
+        availableReservation: {
+            Type: String
         }
     },
     data: function data() {
         return {
             fullName: '',
             number: '',
-            duration: '1'
+            duration: '0.5'
         };
     },
 
@@ -16472,7 +16487,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     'duration': this.duration,
                     'date': this.date
                 }).then(function (Response) {
-                    self.$emit('showFlashMessage', Response.data);
+                    self.$emit('reservationAdd', Response.data);
                 });
             }
         },
@@ -16506,155 +16521,182 @@ var render = function() {
                       _vm._v("Book Table no. " + _vm._s(_vm.tableNumber))
                     ]),
                     _vm._v(" "),
-                    _c(
-                      "form",
-                      {
-                        staticClass: "notCloseModal",
-                        attrs: { method: "post", id: "reservationForm" }
-                      },
-                      [
-                        _c(
-                          "label",
+                    _vm.availableReservation >= 1
+                      ? _c(
+                          "form",
                           {
                             staticClass: "notCloseModal",
-                            attrs: { for: "fullName" }
-                          },
-                          [_vm._v("Fullname:")]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.fullName,
-                              expression: "fullName"
-                            }
-                          ],
-                          staticClass: "notCloseModal",
-                          attrs: {
-                            id: "fullName",
-                            name: "fullName",
-                            type: "text"
-                          },
-                          domProps: { value: _vm.fullName },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.fullName = $event.target.value
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "label",
-                          {
-                            staticClass: "notCloseModal",
-                            attrs: { for: "number" }
-                          },
-                          [_vm._v("Contact number:")]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.number,
-                              expression: "number"
-                            }
-                          ],
-                          staticClass: "notCloseModal",
-                          attrs: { id: "number", name: "number", type: "text" },
-                          domProps: { value: _vm.number },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.number = $event.target.value
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "label",
-                          {
-                            staticClass: "notCloseModal",
-                            attrs: { for: "duration" }
-                          },
-                          [_vm._v("Duration:")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.duration,
-                                expression: "duration"
-                              }
-                            ],
-                            staticClass: "notCloseModal",
-                            attrs: {
-                              id: "duration",
-                              name: "duration",
-                              type: "text"
-                            },
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.duration = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
-                            }
+                            attrs: { method: "post", id: "reservationForm" }
                           },
                           [
-                            _c("option", { attrs: { value: "0.5" } }, [
-                              _vm._v("0.5 h")
-                            ]),
+                            _c(
+                              "label",
+                              {
+                                staticClass: "notCloseModal",
+                                attrs: { for: "fullName" }
+                              },
+                              [_vm._v("Fullname:")]
+                            ),
                             _vm._v(" "),
-                            _c("option", { attrs: { value: "1" } }, [
-                              _vm._v("1 h")
-                            ]),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.fullName,
+                                  expression: "fullName"
+                                }
+                              ],
+                              staticClass: "notCloseModal",
+                              attrs: {
+                                id: "fullName",
+                                name: "fullName",
+                                type: "text"
+                              },
+                              domProps: { value: _vm.fullName },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.fullName = $event.target.value
+                                }
+                              }
+                            }),
                             _vm._v(" "),
-                            _c("option", { attrs: { value: "1.5" } }, [
-                              _vm._v("1.5 h")
-                            ]),
+                            _c(
+                              "label",
+                              {
+                                staticClass: "notCloseModal",
+                                attrs: { for: "number" }
+                              },
+                              [_vm._v("Contact number:")]
+                            ),
                             _vm._v(" "),
-                            _c("option", { attrs: { value: "2" } }, [
-                              _vm._v("2 h")
-                            ]),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.number,
+                                  expression: "number"
+                                }
+                              ],
+                              staticClass: "notCloseModal",
+                              attrs: {
+                                id: "number",
+                                name: "number",
+                                type: "text"
+                              },
+                              domProps: { value: _vm.number },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.number = $event.target.value
+                                }
+                              }
+                            }),
                             _vm._v(" "),
-                            _c("option", { attrs: { value: "2.5" } }, [
-                              _vm._v("2.5 h")
-                            ]),
+                            _c(
+                              "label",
+                              {
+                                staticClass: "notCloseModal",
+                                attrs: { for: "duration" }
+                              },
+                              [_vm._v("Duration of booking:")]
+                            ),
                             _vm._v(" "),
-                            _c("option", { attrs: { value: "3" } }, [
-                              _vm._v("3 h")
-                            ])
+                            _c(
+                              "select",
+                              {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.duration,
+                                    expression: "duration"
+                                  }
+                                ],
+                                staticClass: "notCloseModal",
+                                attrs: {
+                                  id: "duration",
+                                  name: "duration",
+                                  type: "text"
+                                },
+                                on: {
+                                  change: function($event) {
+                                    var $$selectedVal = Array.prototype.filter
+                                      .call($event.target.options, function(o) {
+                                        return o.selected
+                                      })
+                                      .map(function(o) {
+                                        var val =
+                                          "_value" in o ? o._value : o.value
+                                        return val
+                                      })
+                                    _vm.duration = $event.target.multiple
+                                      ? $$selectedVal
+                                      : $$selectedVal[0]
+                                  }
+                                }
+                              },
+                              [
+                                _vm.availableReservation >= 1
+                                  ? _c("option", { attrs: { value: "0.5" } }, [
+                                      _vm._v("0.5 h")
+                                    ])
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.availableReservation >= 2
+                                  ? _c("option", { attrs: { value: "1" } }, [
+                                      _vm._v("1 h")
+                                    ])
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.availableReservation >= 3
+                                  ? _c("option", { attrs: { value: "1.5" } }, [
+                                      _vm._v("1.5 h")
+                                    ])
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.availableReservation >= 4
+                                  ? _c("option", { attrs: { value: "2" } }, [
+                                      _vm._v("2 h")
+                                    ])
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.availableReservation >= 5
+                                  ? _c("option", { attrs: { value: "2.5" } }, [
+                                      _vm._v("2.5 h")
+                                    ])
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.availableReservation >= 6
+                                  ? _c("option", { attrs: { value: "3" } }, [
+                                      _vm._v("3 h")
+                                    ])
+                                  : _vm._e()
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("input", {
+                              staticClass: "submit notCloseModal",
+                              attrs: { value: "Submit", type: "button" },
+                              on: { click: _vm.submitForm }
+                            })
                           ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "submit notCloseModal",
-                          attrs: { value: "Submit", type: "button" },
-                          on: { click: _vm.submitForm }
-                        })
-                      ]
-                    )
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.availableReservation === 0
+                      ? _c("div", { staticClass: "notCloseModal" }, [
+                          _vm._v(
+                            "\n                            Reservation unvailable next one begins in less than 30 minutes :(\n                        "
+                          )
+                        ])
+                      : _vm._e()
                   ]),
                   _vm._v(" "),
                   _c("div", {
@@ -17271,8 +17313,8 @@ var render = function() {
             availableReservation: _vm.availableReservation
           },
           on: {
-            showFlashMessage: function($event) {
-              _vm.showFlashMethod($event)
+            reservationAdd: function($event) {
+              _vm.reservationAdd($event)
             }
           }
         }),

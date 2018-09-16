@@ -119,7 +119,7 @@
 
             <closed :restaurantClosed="restaurantClosed"></closed>
 
-            <reservation-modal @showFlashMessage="showFlashMethod($event)" :time-start="time" :date="date"
+            <reservation-modal @reservationAdd="reservationAdd($event)" :time-start="time" :date="date"
                                :table-number="tableNumber" :api_link="api_link"
                                :reserving="reserving" :availableReservation="availableReservation"></reservation-modal>
 
@@ -206,7 +206,8 @@
 
             }, 400),
 
-            showFlashMethod(message) {
+            reservationAdd(message) {
+                //show communicat
                 this.messageFlash = message;
                 this.showFlash = true;
 
@@ -236,6 +237,7 @@
 
                 //right scope
                 const self = this;
+                this.availableHoursAtTable = [];
 
                 //get reservations
                 axios.get(this.api_link + '/api/reservations/' + this.date + '/' + this.time).then(function (Response) {
@@ -245,6 +247,10 @@
                     let arraylength = reservationArray.length - 1;
 
                     for (let i = 0; i <= arraylength; i++) {
+
+                        //from RestAPI last item is list of available reservations
+
+                        //normal reservation
                         if (reservationArray[i] !== 'undefined' &&  i !== arraylength) {
 
                             //loop starts at 0 so index need to be incremented
@@ -259,6 +265,7 @@
                             document.getElementById('infotable' + htmlindex).innerHTML = reservationTime.substring(0, reservationTime.length - 3);
                         }
 
+                        //list of available reservation
                         if(reservationArray[i] !== 'undefined' && i === arraylength) {
 
                             reservationArray[i].forEach(function(table) {
@@ -634,7 +641,7 @@
                         font-size: 16px;
                     }
 
-                    font-size: 14px;
+                    font-size: 13px;
                 }
 
                 @media(min-width: 768px) {
