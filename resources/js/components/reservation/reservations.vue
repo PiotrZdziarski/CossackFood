@@ -28,29 +28,29 @@
                     <img class="image" :src="api_link + '/images/view3.jpg'">
                     <div @click="reserve_table(1)" id="table1" class="table">
                         <i id="tableicon1" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" @click="reserve_table(1)"
+                        <span class="infotable"
                               id="infotable1">1</span>
                     </div>
                     <div class="twoInOne">
                         <div @click="reserve_table(2)" id="table2" class="table twoInOneTable">
                             <i id="tableicon2" class="demo-icon icon-restaurant"></i>
-                            <span class="infotable" @click="reserve_table(2)" id="infotable2">2</span>
+                            <span class="infotable" id="infotable2">2</span>
                         </div>
                         <div @click="reserve_table(3)" id="table3" class="table twoInOneTable"><i id="tableicon3"
                                                                                                   class="demo-icon icon-restaurant"></i>
-                            <span class="infotable" @click="reserve_table(3)" id="infotable3">3</span>
+                            <span class="infotable" id="infotable3">3</span>
                         </div>
                     </div>
                     <div class="twoInOne">
                         <div @click="reserve_table(4)" id="table4" class="table twoInOneTable"><i
                                 id="tableicon4" class="demo-icon icon-restaurant"></i>
-                            <span class="infotable" @click="reserve_table(4)"
-                                                                                            id="infotable4">4</span>
+                            <span class="infotable"
+                                  id="infotable4">4</span>
                         </div>
                         <div @click="reserve_table(5)" id="table5" class="table twoInOneTable"><i id="tableicon5"
                                                                                                   class="demo-icon icon-restaurant"></i>
                             <span @click="reserve_table(5)"
-                                class="infotable" id="infotable5">5</span>
+                                  class="infotable" id="infotable5">5</span>
                         </div>
                     </div>
 
@@ -60,17 +60,17 @@
 
                     <div @click="reserve_table(6)" id="table6" class="table">
                         <i id="tableicon6" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" @click="reserve_table(6)" id="infotable6">6</span>
+                        <span class="infotable" id="infotable6">6</span>
                     </div>
 
                     <div @click="reserve_table(7)" id="table7" class="table">
                         <i id="tableicon7" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" @click="reserve_table(7)" id="infotable7">7</span>
+                        <span class="infotable" id="infotable7">7</span>
                     </div>
 
                     <div @click="reserve_table(8)" id="table8" style="width: 200%;" class="table">
                         <i id="tableicon8" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" @click="reserve_table(8)" id="infotable8">8</span>
+                        <span class="infotable" id="infotable8">8</span>
                     </div>
 
 
@@ -80,31 +80,31 @@
 
                     <div @click="reserve_table(9)" id="table9" class="table">
                         <i id="tableicon9" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" @click="reserve_table(9)" id="infotable9">9</span>
+                        <span class="infotable" id="infotable9">9</span>
                     </div>
 
                     <div @click="reserve_table(10)" id="table10" class="table">
                         <i id="tableicon10" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" @click="reserve_table(10)" id="infotable10">10</span>
+                        <span class="infotable" id="infotable10">10</span>
                     </div>
 
                     <div @click="reserve_table(11)" id="table11" class="table">
                         <i id="tableicon11" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" @click="reserve_table(11)" id="infotable11">11</span>
+                        <span class="infotable" id="infotable11">11</span>
                     </div>
 
 
                     <div @click="reserve_table(12)" id="table12" style="width: 200%;" class="table">
                         <i id="tableicon12" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" @click="reserve_table(12)" id="infotable12">12</span>
+                        <span class="infotable" id="infotable12">12</span>
                     </div>
 
-                    <div  style="z-index: -1000;" class="table">
+                    <div style="z-index: -1000;" class="table">
                     </div>
 
                     <div @click="reserve_table(13)" id="table13" class="table">
                         <i id="tableicon13" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" @click="reserve_table(13)" id="infotable13">13</span>
+                        <span class="infotable" id="infotable13">13</span>
                     </div>
 
                 </div>
@@ -119,9 +119,14 @@
 
             <closed :restaurantClosed="restaurantClosed"></closed>
 
-            <reservation-modal @reservationAdd="reservationAdd($event)" :time-start="time" :date="date"
-                               :table-number="tableNumber" :api_link="api_link"
-                               :reserving="reserving" :availableReservation="availableReservation"></reservation-modal>
+
+            <reservation-modal @reservationAdd="reservationAdd($event)"
+                               :time-start="time"
+                               :date="date"
+                               :table-number="tableNumber"
+                               :api_link="api_link"
+                               :reserving="reserving"
+                               :availableReservation="availableReservation"></reservation-modal>
 
             <flash-message :showFlash="showFlash" :messageFlash="messageFlash"></flash-message>
         </div>
@@ -227,7 +232,7 @@
                 window.onscroll = null;
                 this.reserving = false;
                 document.removeEventListener('click', this.closing_modalino);
-                this.availableReservation =  6;
+                this.availableReservation = 6;
 
                 this.getReservations();
             },
@@ -238,6 +243,7 @@
                 //right scope
                 const self = this;
                 this.availableHoursAtTable = [];
+                this.availableReservation = 6;
 
                 //get reservations
                 axios.get(this.api_link + '/api/reservations/' + this.date + '/' + this.time).then(function (Response) {
@@ -251,7 +257,7 @@
                         //from RestAPI last item is list of available reservations
 
                         //normal reservation
-                        if (reservationArray[i] !== 'undefined' &&  i !== arraylength) {
+                        if (reservationArray[i] !== 'undefined' && i !== arraylength) {
 
                             //loop starts at 0 so index need to be incremented
                             let htmlindex = reservationArray[i].table;
@@ -266,9 +272,9 @@
                         }
 
                         //list of available reservation
-                        if(reservationArray[i] !== 'undefined' && i === arraylength) {
+                        if (reservationArray[i] !== 'undefined' && i === arraylength) {
 
-                            reservationArray[i].forEach(function(table) {
+                            reservationArray[i].forEach(function (table) {
                                 self.availableHoursAtTable.push(table)
                             });
                         }
@@ -281,7 +287,7 @@
             },
 
 
-            reserve_table(table) {
+            reserve_table: function (table) {
                 const self = this;
                 //check if table isnt already reserved
                 let reserved = document.getElementById('table' + table).getAttribute('reserved');
@@ -292,7 +298,7 @@
 
 
                 //set max availble reservation time if it needed
-                this.availableHoursAtTable.forEach(function(tableAvailableHours) {
+                this.availableHoursAtTable.forEach(function (tableAvailableHours) {
 
                     for (let tableIndex in tableAvailableHours) {
                         let tableNumber = tableIndex.substring(1);
@@ -316,7 +322,6 @@
                 };
 
                 //call function to close modal when not clicking it
-                console.log(this.availableReservation);
                 this.closing_modal_on_click();
             },
 
@@ -339,7 +344,8 @@
                     if (event.target !== document.getElementById('modal') &&
                         !event.target.classList.contains('notCloseModal')
                         && event.target !== document.getElementById('table' + tableNumber)
-                        && event.target !== document.getElementById('tableicon' + tableNumber)) {
+                        && event.target !== document.getElementById('tableicon' + tableNumber)
+                        && event.target !== document.getElementById('infotable' + tableNumber)) {
 
                         document.getElementById('table' + tableNumber).style.background = '';
                         window.onscroll = null;
@@ -372,7 +378,7 @@
                 let dateMin = yyyy + '-' + mm + '-' + minDay;
                 let dateMax = yyyy + '-' + mm + '-' + maxDay;
 
-                this.date = '2018-09-15';
+                this.date = today;
                 this.dateMin = dateMin;
                 this.dateMax = dateMax;
             }
@@ -390,11 +396,17 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5));
+        background: linear-gradient(
+                        rgba(245, 67, 57, 0.5),
+                        rgba(245, 67, 57, 0.5)
+        );
     }
 
     .reservedTable:hover {
-        background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5)) !important;
+        background: linear-gradient(
+                        rgba(245, 67, 57, 0.5),
+                        rgba(245, 67, 57, 0.5)
+        ) !important;
         box-shadow: 0 0 2px white !important;
     }
 

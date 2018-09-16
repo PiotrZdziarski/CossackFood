@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ReservationController extends Controller
 {
     /**
-     * Retrieve all reservations for given date and time
+     * Retrieve all reservations for given date and time and add table with available reservation time
      * @param $date
      * @param $time
      * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
@@ -32,13 +32,14 @@ class ReservationController extends Controller
         $closestReservationTime = $searchingTimeUnix + $threeHours;
         $closestReservationTime = date('H:i', $closestReservationTime);
 
+        //add index that contains max reservation time if needed
         $reservations = collect($reservations)->push([]);
 
         //for each table(13)
         for ($i = 1; $i <= 13; $i++) {
             $closestReservation = Reservation::
-                where('date', $date)
-                ->where('reservation_start','>', $time)
+            where('date', $date)
+                ->where('reservation_start', '>', $time)
                 ->where('reservation_start', '<', $closestReservationTime)
                 ->where('table', $i)
                 ->get();
@@ -47,17 +48,35 @@ class ReservationController extends Controller
 
             if ($closestReservation->first()) {
 
-                //calcualate max reservation time
+                //calculate max reservation time
                 $closestReservationDuration = strtotime($closestReservation->first()->reservation_start);
                 $closestReservationDuration = $closestReservationDuration - $searchingTimeUnix;
 
 
-                //available time 1 - 30min 2 - 60min .... 6 - 3h
-                $duration = floor($closestReservationDuration / 1800);
+                //available time 1 - 30min, 2 - 60min, ...., 6 - 3h
+                $leftTimeToReservation = floor($closestReservationDuration / 1800);
 
                 //merge it boi
                 $reservations[$lastItem - 1] = collect($reservations[$lastItem - 1])
-                    ->merge([["t$i" => $duration]]);
+                    ->merge([["t$i" => $leftTimeToReservation]]);
+            }
+
+
+            //if restaurant is closing soon add left time to reservation too
+            else if($searchingTimeUnix > strtotime('18:00')) {
+                $restarationCloseTime = strtotime('21:00');
+
+
+                $closestReservationDuration = $restarationCloseTime - $searchingTimeUnix;
+
+
+                //available time 1 - 30min, 2 - 60min, ...., 6 - 3h
+                $leftTime = floor($closestReservationDuration / 1800);
+
+
+                //check if $leftTimeToReservation isnt above 18:00 or just if it isnt set
+                    $reservations[$lastItem - 1] = collect($reservations[$lastItem - 1])
+                        ->merge([["t$i" => $leftTime]]);
             }
         }
 
