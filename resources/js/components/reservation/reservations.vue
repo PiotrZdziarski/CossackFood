@@ -27,26 +27,29 @@
                 <div id="tables" class="tables displayNone">
                     <img class="image" :src="api_link + '/images/view3.jpg'">
                     <div @click="reserve_table(1)" id="table1" class="table">
-                        <i id="tableicon1" class="demo-icon icon-restaurant"></i><span class="infotable"
-                                                                                       id="infotable1">1</span>
+                        <i id="tableicon1" class="demo-icon icon-restaurant"></i>
+                        <span class="infotable" @click="reserve_table(1)"
+                              id="infotable1">1</span>
                     </div>
                     <div class="twoInOne">
                         <div @click="reserve_table(2)" id="table2" class="table twoInOneTable">
                             <i id="tableicon2" class="demo-icon icon-restaurant"></i>
-                            <span class="infotable" id="infotable2">2</span>
+                            <span class="infotable" @click="reserve_table(2)" id="infotable2">2</span>
                         </div>
                         <div @click="reserve_table(3)" id="table3" class="table twoInOneTable"><i id="tableicon3"
                                                                                                   class="demo-icon icon-restaurant"></i>
-                            <span class="infotable" id="infotable3">3</span>
+                            <span class="infotable" @click="reserve_table(3)" id="infotable3">3</span>
                         </div>
                     </div>
                     <div class="twoInOne">
                         <div @click="reserve_table(4)" id="table4" class="table twoInOneTable"><i
-                                id="tableicon4" class="demo-icon icon-restaurant"></i><span class="infotable"
+                                id="tableicon4" class="demo-icon icon-restaurant"></i>
+                            <span class="infotable" @click="reserve_table(4)"
                                                                                             id="infotable4">4</span>
                         </div>
                         <div @click="reserve_table(5)" id="table5" class="table twoInOneTable"><i id="tableicon5"
-                                                                                                  class="demo-icon icon-restaurant"></i><span
+                                                                                                  class="demo-icon icon-restaurant"></i>
+                            <span @click="reserve_table(5)"
                                 class="infotable" id="infotable5">5</span>
                         </div>
                     </div>
@@ -57,51 +60,51 @@
 
                     <div @click="reserve_table(6)" id="table6" class="table">
                         <i id="tableicon6" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" id="infotable6">6</span>
+                        <span class="infotable" @click="reserve_table(6)" id="infotable6">6</span>
                     </div>
 
                     <div @click="reserve_table(7)" id="table7" class="table">
                         <i id="tableicon7" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" id="infotable7">7</span>
+                        <span class="infotable" @click="reserve_table(7)" id="infotable7">7</span>
                     </div>
 
                     <div @click="reserve_table(8)" id="table8" style="width: 200%;" class="table">
                         <i id="tableicon8" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" id="infotable8">8</span>
+                        <span class="infotable" @click="reserve_table(8)" id="infotable8">8</span>
                     </div>
 
 
-                    <div @click="reserve_table(8)" style="z-index: -1000;" class="table">
+                    <div style="z-index: -1000;" class="table">
                     </div>
 
 
                     <div @click="reserve_table(9)" id="table9" class="table">
                         <i id="tableicon9" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" id="infotable9">9</span>
+                        <span class="infotable" @click="reserve_table(9)" id="infotable9">9</span>
                     </div>
 
                     <div @click="reserve_table(10)" id="table10" class="table">
                         <i id="tableicon10" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" id="infotable10">10</span>
+                        <span class="infotable" @click="reserve_table(10)" id="infotable10">10</span>
                     </div>
 
                     <div @click="reserve_table(11)" id="table11" class="table">
                         <i id="tableicon11" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" id="infotable11">11</span>
+                        <span class="infotable" @click="reserve_table(11)" id="infotable11">11</span>
                     </div>
 
 
                     <div @click="reserve_table(12)" id="table12" style="width: 200%;" class="table">
                         <i id="tableicon12" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" id="infotable12">12</span>
+                        <span class="infotable" @click="reserve_table(12)" id="infotable12">12</span>
                     </div>
 
-                    <div @click="reserve_table(12)" style="z-index: -1000;" class="table">
+                    <div  style="z-index: -1000;" class="table">
                     </div>
 
                     <div @click="reserve_table(13)" id="table13" class="table">
                         <i id="tableicon13" class="demo-icon icon-restaurant"></i>
-                        <span class="infotable" id="infotable13">13</span>
+                        <span class="infotable" @click="reserve_table(13)" id="infotable13">13</span>
                     </div>
 
                 </div>
@@ -118,7 +121,7 @@
 
             <reservation-modal @showFlashMessage="showFlashMethod($event)" :time-start="time" :date="date"
                                :table-number="tableNumber" :api_link="api_link"
-                               :reserving="reserving"></reservation-modal>
+                               :reserving="reserving" :availableReservation="availableReservation"></reservation-modal>
 
             <flash-message :showFlash="showFlash" :messageFlash="messageFlash"></flash-message>
         </div>
@@ -150,8 +153,10 @@
                 dateMin: '',
                 dateMax: '',
                 tableCount: 13,
-                time: '13:59',
+                time: '14:00',
                 restaurantClosed: false,
+                availableHoursAtTable: [],
+                availableReservation: 6,
                 loading: true,
                 showFlash: false,
                 messageFlash: '',
@@ -205,31 +210,23 @@
                 this.messageFlash = message;
                 this.showFlash = true;
 
+                const self = this;
+                //close flash after a while
+                setTimeout(function () {
+                    self.showFlash = false;
+                }, 3500);
+
                 this.loading = true;
 
                 document.getElementById('tables').classList.remove('animationFadeIn');
                 document.getElementById('tables').classList.add('displayNone');
-
-                this.restaurantClosed = false;
-                this.loading = true;
-
-                //reservations need to exist to edit them
-                if (this.restaurantClosed === false) {
-                    //reset all previous reservations
-                    for (let i = 1; i <= this.tableCount; i++) {
-                        if (document.getElementById('table' + i).hasAttribute('reserved')) {
-                            document.getElementById('table' + i).removeAttribute('reserved');
-                            document.getElementById('table' + i).classList.remove('reservedTable');
-                            document.getElementById('infotable' + i).innerHTML = i;
-                        }
-                    }
-                }
 
 
                 document.getElementById('table' + this.tableNumber).style.background = '';
                 window.onscroll = null;
                 this.reserving = false;
                 document.removeEventListener('click', this.closing_modalino);
+                this.availableReservation =  6;
 
                 this.getReservations();
             },
@@ -245,8 +242,10 @@
 
                     let reservationArray = Response.data.data;
 
-                    for (let i = 0; i <= self.tableCount; i++) {
-                        if (reservationArray[i]) {
+                    let arraylength = reservationArray.length - 1;
+
+                    for (let i = 0; i <= arraylength; i++) {
+                        if (reservationArray[i] !== 'undefined' &&  i !== arraylength) {
 
                             //loop starts at 0 so index need to be incremented
                             let htmlindex = reservationArray[i].table;
@@ -259,6 +258,13 @@
                             let reservationTime = reservationArray[i].reservation_end;
                             document.getElementById('infotable' + htmlindex).innerHTML = reservationTime.substring(0, reservationTime.length - 3);
                         }
+
+                        if(reservationArray[i] !== 'undefined' && i === arraylength) {
+
+                            reservationArray[i].forEach(function(table) {
+                                self.availableHoursAtTable.push(table)
+                            });
+                        }
                     }
 
                     self.loading = false;
@@ -269,12 +275,25 @@
 
 
             reserve_table(table) {
+                const self = this;
                 //check if table isnt already reserved
                 let reserved = document.getElementById('table' + table).getAttribute('reserved');
 
                 if (reserved === 'true') {
                     return null;
                 }
+
+
+                //set max availble reservation time if it needed
+                this.availableHoursAtTable.forEach(function(tableAvailableHours) {
+
+                    for (let tableIndex in tableAvailableHours) {
+                        let tableNumber = tableIndex.substring(1);
+                        if (tableNumber.toString() === table.toString()) {
+                            self.availableReservation = tableAvailableHours[tableIndex];
+                        }
+                    }
+                });
 
 
                 //open modal
@@ -290,6 +309,7 @@
                 };
 
                 //call function to close modal when not clicking it
+                console.log(this.availableReservation);
                 this.closing_modal_on_click();
             },
 
@@ -298,26 +318,11 @@
                 //need for right scope
                 const self = this;
 
-                //event listener that closes modal when user didnt clicked it
-                document.addEventListener('click',  self.closing_modalino/*function closing_modalino(event) {
-                    if (self.reserving === true) {
-
-
-                        if (event.target !== document.getElementById('modal') &&
-                            !event.target.classList.contains('notCloseModal')
-                            && event.target !== document.getElementById('table' + tableNumber)
-                            && event.target !== document.getElementById('tableicon' + tableNumber)) {
-
-                            document.getElementById('table' + tableNumber).style.background = '';
-                            window.onscroll = null;
-                            self.reserving = false;
-                            document.removeEventListener('click', closing_modalino);
-
-                        }
-                    }
-                }*/);
+                //event listener that closes modal when user didnt clicked on it
+                document.addEventListener('click', self.closing_modalino);
 
             },
+
             closing_modalino(event) {
                 const self = this;
                 let tableNumber = this.tableNumber;
@@ -332,6 +337,7 @@
                         document.getElementById('table' + tableNumber).style.background = '';
                         window.onscroll = null;
                         self.reserving = false;
+                        self.availableReservation = 6;
                         document.removeEventListener('click', self.closing_modalino);
 
                     }
@@ -346,7 +352,6 @@
 
                 let minDay = dd;
                 let maxDay = dd + 14;
-                dd++;
 
                 if (dd < 10) {
                     dd = '0' + dd
@@ -360,7 +365,7 @@
                 let dateMin = yyyy + '-' + mm + '-' + minDay;
                 let dateMax = yyyy + '-' + mm + '-' + maxDay;
 
-                this.date = '2018-09-13';
+                this.date = '2018-09-15';
                 this.dateMin = dateMin;
                 this.dateMax = dateMax;
             }
