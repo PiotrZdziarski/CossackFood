@@ -15607,6 +15607,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -15632,8 +15635,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             dateMin: '',
             dateMax: '',
             tableCount: 13,
-            time: '13:59',
+            time: '14:00',
             restaurantClosed: false,
+            availableHoursAtTable: [],
+            availableReservation: 6,
             loading: true,
             showFlash: false,
             messageFlash: '',
@@ -15684,30 +15689,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.messageFlash = message;
             this.showFlash = true;
 
+            var self = this;
+            //close flash after a while
+            setTimeout(function () {
+                self.showFlash = false;
+            }, 3500);
+
             this.loading = true;
 
             document.getElementById('tables').classList.remove('animationFadeIn');
             document.getElementById('tables').classList.add('displayNone');
 
-            this.restaurantClosed = false;
-            this.loading = true;
-
-            //reservations need to exist to edit them
-            if (this.restaurantClosed === false) {
-                //reset all previous reservations
-                for (var i = 1; i <= this.tableCount; i++) {
-                    if (document.getElementById('table' + i).hasAttribute('reserved')) {
-                        document.getElementById('table' + i).removeAttribute('reserved');
-                        document.getElementById('table' + i).classList.remove('reservedTable');
-                        document.getElementById('infotable' + i).innerHTML = i;
-                    }
-                }
-            }
-
             document.getElementById('table' + this.tableNumber).style.background = '';
             window.onscroll = null;
             this.reserving = false;
             document.removeEventListener('click', this.closing_modalino);
+            this.availableReservation = 6;
 
             this.getReservations();
         },
@@ -15721,8 +15718,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
                 var reservationArray = Response.data.data;
 
-                for (var i = 0; i <= self.tableCount; i++) {
-                    if (reservationArray[i]) {
+                var arraylength = reservationArray.length - 1;
+
+                for (var i = 0; i <= arraylength; i++) {
+                    if (reservationArray[i] !== 'undefined' && i !== arraylength) {
 
                         //loop starts at 0 so index need to be incremented
                         var htmlindex = reservationArray[i].table;
@@ -15735,6 +15734,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                         var reservationTime = reservationArray[i].reservation_end;
                         document.getElementById('infotable' + htmlindex).innerHTML = reservationTime.substring(0, reservationTime.length - 3);
                     }
+
+                    if (reservationArray[i] !== 'undefined' && i === arraylength) {
+
+                        reservationArray[i].forEach(function (table) {
+                            self.availableHoursAtTable.push(table);
+                        });
+                    }
                 }
 
                 self.loading = false;
@@ -15743,12 +15749,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
         },
         reserve_table: function reserve_table(table) {
+            var self = this;
             //check if table isnt already reserved
             var reserved = document.getElementById('table' + table).getAttribute('reserved');
 
             if (reserved === 'true') {
                 return null;
             }
+
+            //set max availble reservation time if it needed
+            this.availableHoursAtTable.forEach(function (tableAvailableHours) {
+
+                for (var tableIndex in tableAvailableHours) {
+                    var tableNumber = tableIndex.substring(1);
+                    if (tableNumber.toString() === table.toString()) {
+                        self.availableReservation = tableAvailableHours[tableIndex];
+                    }
+                }
+            });
 
             //open modal
             this.reserving = true;
@@ -15763,6 +15781,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             };
 
             //call function to close modal when not clicking it
+            console.log(this.availableReservation);
             this.closing_modal_on_click();
         },
         closing_modal_on_click: function closing_modal_on_click() {
@@ -15770,20 +15789,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             //need for right scope
             var self = this;
 
-            //event listener that closes modal when user didnt clicked it
-            document.addEventListener('click', self.closing_modalino /*function closing_modalino(event) {
-                                                                     if (self.reserving === true) {
-                                                                     if (event.target !== document.getElementById('modal') &&
-                                                                     !event.target.classList.contains('notCloseModal')
-                                                                     && event.target !== document.getElementById('table' + tableNumber)
-                                                                     && event.target !== document.getElementById('tableicon' + tableNumber)) {
-                                                                     document.getElementById('table' + tableNumber).style.background = '';
-                                                                     window.onscroll = null;
-                                                                     self.reserving = false;
-                                                                     document.removeEventListener('click', closing_modalino);
-                                                                     }
-                                                                     }
-                                                                     }*/);
+            //event listener that closes modal when user didnt clicked on it
+            document.addEventListener('click', self.closing_modalino);
         },
         closing_modalino: function closing_modalino(event) {
             var self = this;
@@ -15796,6 +15803,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     document.getElementById('table' + tableNumber).style.background = '';
                     window.onscroll = null;
                     self.reserving = false;
+                    self.availableReservation = 6;
                     document.removeEventListener('click', self.closing_modalino);
                 }
             }
@@ -15808,7 +15816,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             var minDay = dd;
             var maxDay = dd + 14;
-            dd++;
 
             if (dd < 10) {
                 dd = '0' + dd;
@@ -15822,7 +15829,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var dateMin = yyyy + '-' + mm + '-' + minDay;
             var dateMax = yyyy + '-' + mm + '-' + maxDay;
 
-            this.date = '2018-09-13';
+            this.date = '2018-09-15';
             this.dateMin = dateMin;
             this.dateMax = dateMax;
         }
@@ -16804,9 +16811,18 @@ var render = function() {
                     staticClass: "demo-icon icon-restaurant",
                     attrs: { id: "tableicon1" }
                   }),
+                  _vm._v(" "),
                   _c(
                     "span",
-                    { staticClass: "infotable", attrs: { id: "infotable1" } },
+                    {
+                      staticClass: "infotable",
+                      attrs: { id: "infotable1" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(1)
+                        }
+                      }
+                    },
                     [_vm._v("1")]
                   )
                 ]
@@ -16832,7 +16848,15 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "span",
-                      { staticClass: "infotable", attrs: { id: "infotable2" } },
+                      {
+                        staticClass: "infotable",
+                        attrs: { id: "infotable2" },
+                        on: {
+                          click: function($event) {
+                            _vm.reserve_table(2)
+                          }
+                        }
+                      },
                       [_vm._v("2")]
                     )
                   ]
@@ -16857,7 +16881,15 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "span",
-                      { staticClass: "infotable", attrs: { id: "infotable3" } },
+                      {
+                        staticClass: "infotable",
+                        attrs: { id: "infotable3" },
+                        on: {
+                          click: function($event) {
+                            _vm.reserve_table(3)
+                          }
+                        }
+                      },
                       [_vm._v("3")]
                     )
                   ]
@@ -16881,9 +16913,18 @@ var render = function() {
                       staticClass: "demo-icon icon-restaurant",
                       attrs: { id: "tableicon4" }
                     }),
+                    _vm._v(" "),
                     _c(
                       "span",
-                      { staticClass: "infotable", attrs: { id: "infotable4" } },
+                      {
+                        staticClass: "infotable",
+                        attrs: { id: "infotable4" },
+                        on: {
+                          click: function($event) {
+                            _vm.reserve_table(4)
+                          }
+                        }
+                      },
                       [_vm._v("4")]
                     )
                   ]
@@ -16905,9 +16946,18 @@ var render = function() {
                       staticClass: "demo-icon icon-restaurant",
                       attrs: { id: "tableicon5" }
                     }),
+                    _vm._v(" "),
                     _c(
                       "span",
-                      { staticClass: "infotable", attrs: { id: "infotable5" } },
+                      {
+                        staticClass: "infotable",
+                        attrs: { id: "infotable5" },
+                        on: {
+                          click: function($event) {
+                            _vm.reserve_table(5)
+                          }
+                        }
+                      },
                       [_vm._v("5")]
                     )
                   ]
@@ -16937,7 +16987,15 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    { staticClass: "infotable", attrs: { id: "infotable6" } },
+                    {
+                      staticClass: "infotable",
+                      attrs: { id: "infotable6" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(6)
+                        }
+                      }
+                    },
                     [_vm._v("6")]
                   )
                 ]
@@ -16962,7 +17020,15 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    { staticClass: "infotable", attrs: { id: "infotable7" } },
+                    {
+                      staticClass: "infotable",
+                      attrs: { id: "infotable7" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(7)
+                        }
+                      }
+                    },
                     [_vm._v("7")]
                   )
                 ]
@@ -16988,7 +17054,15 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    { staticClass: "infotable", attrs: { id: "infotable8" } },
+                    {
+                      staticClass: "infotable",
+                      attrs: { id: "infotable8" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(8)
+                        }
+                      }
+                    },
                     [_vm._v("8")]
                   )
                 ]
@@ -16996,12 +17070,7 @@ var render = function() {
               _vm._v(" "),
               _c("div", {
                 staticClass: "table",
-                staticStyle: { "z-index": "-1000" },
-                on: {
-                  click: function($event) {
-                    _vm.reserve_table(8)
-                  }
-                }
+                staticStyle: { "z-index": "-1000" }
               }),
               _vm._v(" "),
               _c(
@@ -17023,7 +17092,15 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    { staticClass: "infotable", attrs: { id: "infotable9" } },
+                    {
+                      staticClass: "infotable",
+                      attrs: { id: "infotable9" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(9)
+                        }
+                      }
+                    },
                     [_vm._v("9")]
                   )
                 ]
@@ -17048,7 +17125,15 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    { staticClass: "infotable", attrs: { id: "infotable10" } },
+                    {
+                      staticClass: "infotable",
+                      attrs: { id: "infotable10" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(10)
+                        }
+                      }
+                    },
                     [_vm._v("10")]
                   )
                 ]
@@ -17073,7 +17158,15 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    { staticClass: "infotable", attrs: { id: "infotable11" } },
+                    {
+                      staticClass: "infotable",
+                      attrs: { id: "infotable11" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(11)
+                        }
+                      }
+                    },
                     [_vm._v("11")]
                   )
                 ]
@@ -17099,7 +17192,15 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    { staticClass: "infotable", attrs: { id: "infotable12" } },
+                    {
+                      staticClass: "infotable",
+                      attrs: { id: "infotable12" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(12)
+                        }
+                      }
+                    },
                     [_vm._v("12")]
                   )
                 ]
@@ -17107,12 +17208,7 @@ var render = function() {
               _vm._v(" "),
               _c("div", {
                 staticClass: "table",
-                staticStyle: { "z-index": "-1000" },
-                on: {
-                  click: function($event) {
-                    _vm.reserve_table(12)
-                  }
-                }
+                staticStyle: { "z-index": "-1000" }
               }),
               _vm._v(" "),
               _c(
@@ -17134,7 +17230,15 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    { staticClass: "infotable", attrs: { id: "infotable13" } },
+                    {
+                      staticClass: "infotable",
+                      attrs: { id: "infotable13" },
+                      on: {
+                        click: function($event) {
+                          _vm.reserve_table(13)
+                        }
+                      }
+                    },
                     [_vm._v("13")]
                   )
                 ]
@@ -17163,7 +17267,8 @@ var render = function() {
             date: _vm.date,
             "table-number": _vm.tableNumber,
             api_link: _vm.api_link,
-            reserving: _vm.reserving
+            reserving: _vm.reserving,
+            availableReservation: _vm.availableReservation
           },
           on: {
             showFlashMessage: function($event) {
@@ -17314,18 +17419,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         showFlash: {
             type: Boolean
         }
-    },
-    data: function data() {
-        return {
-            messageVisible: true
-        };
-    },
-    mounted: function mounted() {
-        this.messageVisible = true;
-        var self = this;
-        setTimeout(function () {
-            self.messageVisible = false;
-        }, 3000);
     }
 });
 

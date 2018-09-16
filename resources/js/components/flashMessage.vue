@@ -16,18 +16,6 @@
             showFlash: {
                 type: Boolean
             }
-        },
-        data() {
-            return {
-                messageVisible: true
-            }
-        },
-        mounted() {
-            this.messageVisible = true;
-            const self = this;
-            setTimeout(function(){
-                self.messageVisible = false;
-            },3000);
         }
     }
 </script>
