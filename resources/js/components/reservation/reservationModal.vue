@@ -1,7 +1,7 @@
 <template>
     <div>
         <transition name="fade">
-            <div v-if="reserving" class="modal-container">
+            <div  v-if="reserving"  class="modal-container">
                 <div id="modal" class="modal">
                     <div class="close"></div>
 
@@ -20,7 +20,7 @@
                                 <input v-model="number" id="number" name="number" class="notCloseModal" type="text">
 
                                 <label class="notCloseModal" for="duration">Duration of booking:</label>
-                                <select v-model="duration" id="duration" name="duration" class="notCloseModal" type="text">
+                                <select v-model="duration" id="duration" name="duration" class="notCloseModal">
                                     <option v-if="availableReservation >= 1" value="0.5">0.5 h</option>
                                     <option v-if="availableReservation >= 2" value="1">1 h</option>
                                     <option v-if="availableReservation >= 3" value="1.5">1.5 h</option>
@@ -33,7 +33,7 @@
                                        type="button">
                             </form>
                             <div class="notCloseModal" v-if="availableReservation === 0">
-                                Reservation unvailable next one begins in less than 30 minutes :(
+                                Reservation unavailable - next one begins in less than 30 minutes :(
                             </div>
                         </div>
                         <div class="claimModal notCloseModal"
@@ -72,7 +72,7 @@
             },
             availableReservation: {
                 Type: String
-            }
+            },
         },
         data() {
             return {
@@ -81,8 +81,14 @@
                 duration: '0.5',
             }
         },
+        watch: {
+            reserving: function () {
+                //change book duration to 0.5 hour after load component
+                this.duration = '0.5';
+            }
+        },
         methods: {
-            submitForm() {
+            submitForm(event) {
                 const self = this;
                 let everything_good = true;
 
@@ -114,6 +120,10 @@
                 }
 
                 if (everything_good === true) {
+                    //disable button
+                    event.target.setAttribute('disabled', true);
+
+
                     axios.post(this.api_link + '/api/store_reservation', {
                         'name': this.fullName,
                         'number': this.number,

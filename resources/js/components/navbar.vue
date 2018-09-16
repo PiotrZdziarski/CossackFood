@@ -269,7 +269,7 @@
 
         .dropdown-item {
             text-align: center;
-            font-size: 14px;
+            font-size: 15px;
             width: 17%;
         }
     }
@@ -285,6 +285,7 @@
     .href {
         color: black;
         text-decoration: none;
+        font-size: 15px;
         transition: .2s all ease-in-out;
     }
 

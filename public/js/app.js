@@ -12967,7 +12967,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.boxShadow[data-v-11e733ca] {\n  -webkit-box-shadow: 0 2px 4px #f1f1f1;\n          box-shadow: 0 2px 4px #f1f1f1;\n}\n.slide-fade-enter-active[data-v-11e733ca] {\n  -webkit-transition: all .3s ease;\n  transition: all .3s ease;\n  position: absolute;\n}\n.slide-fade-leave-active[data-v-11e733ca] {\n  -webkit-transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n  opacity: 0;\n}\n.slide-fade-enter[data-v-11e733ca], .slide-fade-leave-to[data-v-11e733ca] {\n  -webkit-transform: translateX(1000px);\n          transform: translateX(1000px);\n  opacity: 0;\n}\n@media (max-width: 999.99px) {\n.menu[data-v-11e733ca] {\n    width: 100%;\n    top: 10vh;\n    position: fixed;\n    background: white;\n    padding-top: 20px;\n    z-index: 1000;\n}\n.menu-item[data-v-11e733ca] {\n    text-align: center;\n    width: 100%;\n    min-height: 50px;\n}\n.navbar[data-v-11e733ca] {\n    width: 100%;\n    height: 10vh;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding: 15px;\n    z-index: 1000;\n    position: fixed;\n    background: white;\n    -webkit-transition: .25s all ease-in-out;\n    transition: .25s all ease-in-out;\n}\n.burger[data-v-11e733ca] {\n    display: block;\n    position: absolute;\n    right: 20%;\n    width: 40px;\n    height: 45px;\n    cursor: pointer;\n}\n.burger.open div[data-v-11e733ca] {\n    background: none;\n    -webkit-box-shadow: none !important;\n            box-shadow: none !important;\n}\n.burger.open div[data-v-11e733ca]:before, .burger.open div[data-v-11e733ca]:after {\n    top: 0;\n}\n.burger.open div[data-v-11e733ca]:before {\n    -webkit-transform: rotate(-45deg);\n    transform: rotate(-45deg);\n}\n.burger.open div[data-v-11e733ca]:after {\n    -webkit-transform: rotate(45deg);\n    transform: rotate(45deg);\n}\n.burger.open:hover div[data-v-11e733ca]:before {\n    -webkit-transform: rotate(-45deg);\n    transform: rotate(-45deg);\n}\n.burger.open:hover div[data-v-11e733ca]:after {\n    -webkit-transform: rotate(45deg);\n    transform: rotate(45deg);\n}\n.burger:hover:not(.open) div[data-v-11e733ca]:before {\n    top: -15px;\n}\n.burger:hover:not(.open) div[data-v-11e733ca]:after {\n    top: 15px;\n}\n.burger div[data-v-11e733ca],\n  .burger div[data-v-11e733ca]:before,\n  .burger div[data-v-11e733ca]:after {\n    width: 100%;\n    height: 6px;\n    background: #d31f3c;\n    border-radius: 2px;\n    -webkit-box-shadow: 0 2px 4px #b9bbbe;\n            box-shadow: 0 2px 4px #b9bbbe;\n    -webkit-transition: all 0.4s ease;\n    transition: all 0.4s ease;\n}\n.burger div[data-v-11e733ca] {\n    position: relative;\n    margin: 20px auto 0;\n}\n.burger div[data-v-11e733ca]:before, div[data-v-11e733ca]:after {\n    content: \"\";\n    position: absolute;\n}\n.burger div[data-v-11e733ca]:before {\n    top: -15px;\n}\n.burger div[data-v-11e733ca]:after {\n    top: 15px;\n}\n.hamburger-div[data-v-11e733ca] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: right;\n        -ms-flex-pack: right;\n            justify-content: right;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    float: left;\n    position: relative;\n    width: 40%;\n}\n.dropdown-menu[data-v-11e733ca] {\n    display: none;\n}\n.logo-image[data-v-11e733ca] {\n    max-width: 100%;\n}\n}\n@media (max-width: 999.99px) and (min-width: 476px) {\n.logo-image[data-v-11e733ca] {\n      max-width: 75%;\n}\n}\n@media (max-width: 999.99px) and (min-width: 768px) {\n.logo-image[data-v-11e733ca] {\n      max-width: 55%;\n}\n}\n@media (min-width: 1000px) {\n.heightvh[data-v-11e733ca] {\n    height: 9vh !important;\n}\n.heightvh *[data-v-11e733ca] {\n    opacity: 1 !important;\n}\n.logo-image[data-v-11e733ca] {\n    width: 60%;\n    height: 60%;\n}\n.navbar[data-v-11e733ca] {\n    margin-left: auto;\n    margin-right: auto;\n    height: 14vh;\n    position: fixed;\n    width: 100%;\n    -webkit-box-shadow: 0 1.5px 3px #b9bbbe;\n            box-shadow: 0 1.5px 3px #b9bbbe;\n    background: white;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    z-index: 1000;\n    -webkit-transition: .3s all ease-in-out;\n    transition: .3s all ease-in-out;\n}\n.logo[data-v-11e733ca] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    width: 25%;\n}\n.dropdown-menu[data-v-11e733ca] {\n    width: 75%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.dropdown-item[data-v-11e733ca] {\n    text-align: center;\n    font-size: 14px;\n    width: 17%;\n}\n}\n.logo[data-v-11e733ca] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 60%;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  float: left;\n  position: relative;\n}\n.href[data-v-11e733ca] {\n  color: black;\n  text-decoration: none;\n  -webkit-transition: .2s all ease-in-out;\n  transition: .2s all ease-in-out;\n}\n.href[data-v-11e733ca]:hover {\n  color: #b91d19;\n}\n", ""]);
+exports.push([module.i, "\n.boxShadow[data-v-11e733ca] {\n  -webkit-box-shadow: 0 2px 4px #f1f1f1;\n          box-shadow: 0 2px 4px #f1f1f1;\n}\n.slide-fade-enter-active[data-v-11e733ca] {\n  -webkit-transition: all .3s ease;\n  transition: all .3s ease;\n  position: absolute;\n}\n.slide-fade-leave-active[data-v-11e733ca] {\n  -webkit-transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n  opacity: 0;\n}\n.slide-fade-enter[data-v-11e733ca], .slide-fade-leave-to[data-v-11e733ca] {\n  -webkit-transform: translateX(1000px);\n          transform: translateX(1000px);\n  opacity: 0;\n}\n@media (max-width: 999.99px) {\n.menu[data-v-11e733ca] {\n    width: 100%;\n    top: 10vh;\n    position: fixed;\n    background: white;\n    padding-top: 20px;\n    z-index: 1000;\n}\n.menu-item[data-v-11e733ca] {\n    text-align: center;\n    width: 100%;\n    min-height: 50px;\n}\n.navbar[data-v-11e733ca] {\n    width: 100%;\n    height: 10vh;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding: 15px;\n    z-index: 1000;\n    position: fixed;\n    background: white;\n    -webkit-transition: .25s all ease-in-out;\n    transition: .25s all ease-in-out;\n}\n.burger[data-v-11e733ca] {\n    display: block;\n    position: absolute;\n    right: 20%;\n    width: 40px;\n    height: 45px;\n    cursor: pointer;\n}\n.burger.open div[data-v-11e733ca] {\n    background: none;\n    -webkit-box-shadow: none !important;\n            box-shadow: none !important;\n}\n.burger.open div[data-v-11e733ca]:before, .burger.open div[data-v-11e733ca]:after {\n    top: 0;\n}\n.burger.open div[data-v-11e733ca]:before {\n    -webkit-transform: rotate(-45deg);\n    transform: rotate(-45deg);\n}\n.burger.open div[data-v-11e733ca]:after {\n    -webkit-transform: rotate(45deg);\n    transform: rotate(45deg);\n}\n.burger.open:hover div[data-v-11e733ca]:before {\n    -webkit-transform: rotate(-45deg);\n    transform: rotate(-45deg);\n}\n.burger.open:hover div[data-v-11e733ca]:after {\n    -webkit-transform: rotate(45deg);\n    transform: rotate(45deg);\n}\n.burger:hover:not(.open) div[data-v-11e733ca]:before {\n    top: -15px;\n}\n.burger:hover:not(.open) div[data-v-11e733ca]:after {\n    top: 15px;\n}\n.burger div[data-v-11e733ca],\n  .burger div[data-v-11e733ca]:before,\n  .burger div[data-v-11e733ca]:after {\n    width: 100%;\n    height: 6px;\n    background: #d31f3c;\n    border-radius: 2px;\n    -webkit-box-shadow: 0 2px 4px #b9bbbe;\n            box-shadow: 0 2px 4px #b9bbbe;\n    -webkit-transition: all 0.4s ease;\n    transition: all 0.4s ease;\n}\n.burger div[data-v-11e733ca] {\n    position: relative;\n    margin: 20px auto 0;\n}\n.burger div[data-v-11e733ca]:before, div[data-v-11e733ca]:after {\n    content: \"\";\n    position: absolute;\n}\n.burger div[data-v-11e733ca]:before {\n    top: -15px;\n}\n.burger div[data-v-11e733ca]:after {\n    top: 15px;\n}\n.hamburger-div[data-v-11e733ca] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: right;\n        -ms-flex-pack: right;\n            justify-content: right;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    float: left;\n    position: relative;\n    width: 40%;\n}\n.dropdown-menu[data-v-11e733ca] {\n    display: none;\n}\n.logo-image[data-v-11e733ca] {\n    max-width: 100%;\n}\n}\n@media (max-width: 999.99px) and (min-width: 476px) {\n.logo-image[data-v-11e733ca] {\n      max-width: 75%;\n}\n}\n@media (max-width: 999.99px) and (min-width: 768px) {\n.logo-image[data-v-11e733ca] {\n      max-width: 55%;\n}\n}\n@media (min-width: 1000px) {\n.heightvh[data-v-11e733ca] {\n    height: 9vh !important;\n}\n.heightvh *[data-v-11e733ca] {\n    opacity: 1 !important;\n}\n.logo-image[data-v-11e733ca] {\n    width: 60%;\n    height: 60%;\n}\n.navbar[data-v-11e733ca] {\n    margin-left: auto;\n    margin-right: auto;\n    height: 14vh;\n    position: fixed;\n    width: 100%;\n    -webkit-box-shadow: 0 1.5px 3px #b9bbbe;\n            box-shadow: 0 1.5px 3px #b9bbbe;\n    background: white;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    z-index: 1000;\n    -webkit-transition: .3s all ease-in-out;\n    transition: .3s all ease-in-out;\n}\n.logo[data-v-11e733ca] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    width: 25%;\n}\n.dropdown-menu[data-v-11e733ca] {\n    width: 75%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.dropdown-item[data-v-11e733ca] {\n    text-align: center;\n    font-size: 15px;\n    width: 17%;\n}\n}\n.logo[data-v-11e733ca] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 60%;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  float: left;\n  position: relative;\n}\n.href[data-v-11e733ca] {\n  color: black;\n  text-decoration: none;\n  font-size: 15px;\n  -webkit-transition: .2s all ease-in-out;\n  transition: .2s all ease-in-out;\n}\n.href[data-v-11e733ca]:hover {\n  color: #b91d19;\n}\n", ""]);
 
 // exports
 
@@ -15610,6 +15610,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -15714,6 +15719,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             //right scope
             var self = this;
             this.availableHoursAtTable = [];
+            this.availableReservation = 6;
 
             //get reservations
             __WEBPACK_IMPORTED_MODULE_3_axios___default.a.get(this.api_link + '/api/reservations/' + this.date + '/' + this.time).then(function (Response) {
@@ -15755,6 +15761,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 document.getElementById('tables').classList.add('animationFadeIn');
             });
         },
+
+
         reserve_table: function reserve_table(table) {
             var self = this;
             //check if table isnt already reserved
@@ -15788,9 +15796,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             };
 
             //call function to close modal when not clicking it
-            console.log(this.availableReservation);
             this.closing_modal_on_click();
         },
+
         closing_modal_on_click: function closing_modal_on_click() {
 
             //need for right scope
@@ -15805,7 +15813,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             if (self.reserving === true) {
 
-                if (event.target !== document.getElementById('modal') && !event.target.classList.contains('notCloseModal') && event.target !== document.getElementById('table' + tableNumber) && event.target !== document.getElementById('tableicon' + tableNumber)) {
+                if (event.target !== document.getElementById('modal') && !event.target.classList.contains('notCloseModal') && event.target !== document.getElementById('table' + tableNumber) && event.target !== document.getElementById('tableicon' + tableNumber) && event.target !== document.getElementById('infotable' + tableNumber)) {
 
                     document.getElementById('table' + tableNumber).style.background = '';
                     window.onscroll = null;
@@ -15836,7 +15844,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var dateMin = yyyy + '-' + mm + '-' + minDay;
             var dateMax = yyyy + '-' + mm + '-' + maxDay;
 
-            this.date = '2018-09-15';
+            this.date = today;
             this.dateMin = dateMin;
             this.dateMax = dateMax;
         }
@@ -16447,8 +16455,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
 
+    watch: {
+        reserving: function reserving() {
+            //change book duration to 0.5 hour after load component
+            this.duration = '0.5';
+        }
+    },
     methods: {
-        submitForm: function submitForm() {
+        submitForm: function submitForm(event) {
             var self = this;
             var everything_good = true;
 
@@ -16479,6 +16493,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
 
             if (everything_good === true) {
+                //disable button
+                event.target.setAttribute('disabled', true);
+
                 __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(this.api_link + '/api/store_reservation', {
                     'name': this.fullName,
                     'number': this.number,
@@ -16620,11 +16637,7 @@ var render = function() {
                                   }
                                 ],
                                 staticClass: "notCloseModal",
-                                attrs: {
-                                  id: "duration",
-                                  name: "duration",
-                                  type: "text"
-                                },
+                                attrs: { id: "duration", name: "duration" },
                                 on: {
                                   change: function($event) {
                                     var $$selectedVal = Array.prototype.filter
@@ -16693,7 +16706,7 @@ var render = function() {
                     _vm.availableReservation === 0
                       ? _c("div", { staticClass: "notCloseModal" }, [
                           _vm._v(
-                            "\n                            Reservation unvailable next one begins in less than 30 minutes :(\n                        "
+                            "\n                            Reservation unavailable - next one begins in less than 30 minutes :(\n                        "
                           )
                         ])
                       : _vm._e()
@@ -16856,15 +16869,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    {
-                      staticClass: "infotable",
-                      attrs: { id: "infotable1" },
-                      on: {
-                        click: function($event) {
-                          _vm.reserve_table(1)
-                        }
-                      }
-                    },
+                    { staticClass: "infotable", attrs: { id: "infotable1" } },
                     [_vm._v("1")]
                   )
                 ]
@@ -16890,15 +16895,7 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "span",
-                      {
-                        staticClass: "infotable",
-                        attrs: { id: "infotable2" },
-                        on: {
-                          click: function($event) {
-                            _vm.reserve_table(2)
-                          }
-                        }
-                      },
+                      { staticClass: "infotable", attrs: { id: "infotable2" } },
                       [_vm._v("2")]
                     )
                   ]
@@ -16923,15 +16920,7 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "span",
-                      {
-                        staticClass: "infotable",
-                        attrs: { id: "infotable3" },
-                        on: {
-                          click: function($event) {
-                            _vm.reserve_table(3)
-                          }
-                        }
-                      },
+                      { staticClass: "infotable", attrs: { id: "infotable3" } },
                       [_vm._v("3")]
                     )
                   ]
@@ -16958,15 +16947,7 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "span",
-                      {
-                        staticClass: "infotable",
-                        attrs: { id: "infotable4" },
-                        on: {
-                          click: function($event) {
-                            _vm.reserve_table(4)
-                          }
-                        }
-                      },
+                      { staticClass: "infotable", attrs: { id: "infotable4" } },
                       [_vm._v("4")]
                     )
                   ]
@@ -17029,15 +17010,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    {
-                      staticClass: "infotable",
-                      attrs: { id: "infotable6" },
-                      on: {
-                        click: function($event) {
-                          _vm.reserve_table(6)
-                        }
-                      }
-                    },
+                    { staticClass: "infotable", attrs: { id: "infotable6" } },
                     [_vm._v("6")]
                   )
                 ]
@@ -17062,15 +17035,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    {
-                      staticClass: "infotable",
-                      attrs: { id: "infotable7" },
-                      on: {
-                        click: function($event) {
-                          _vm.reserve_table(7)
-                        }
-                      }
-                    },
+                    { staticClass: "infotable", attrs: { id: "infotable7" } },
                     [_vm._v("7")]
                   )
                 ]
@@ -17096,15 +17061,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    {
-                      staticClass: "infotable",
-                      attrs: { id: "infotable8" },
-                      on: {
-                        click: function($event) {
-                          _vm.reserve_table(8)
-                        }
-                      }
-                    },
+                    { staticClass: "infotable", attrs: { id: "infotable8" } },
                     [_vm._v("8")]
                   )
                 ]
@@ -17134,15 +17091,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    {
-                      staticClass: "infotable",
-                      attrs: { id: "infotable9" },
-                      on: {
-                        click: function($event) {
-                          _vm.reserve_table(9)
-                        }
-                      }
-                    },
+                    { staticClass: "infotable", attrs: { id: "infotable9" } },
                     [_vm._v("9")]
                   )
                 ]
@@ -17167,15 +17116,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    {
-                      staticClass: "infotable",
-                      attrs: { id: "infotable10" },
-                      on: {
-                        click: function($event) {
-                          _vm.reserve_table(10)
-                        }
-                      }
-                    },
+                    { staticClass: "infotable", attrs: { id: "infotable10" } },
                     [_vm._v("10")]
                   )
                 ]
@@ -17200,15 +17141,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    {
-                      staticClass: "infotable",
-                      attrs: { id: "infotable11" },
-                      on: {
-                        click: function($event) {
-                          _vm.reserve_table(11)
-                        }
-                      }
-                    },
+                    { staticClass: "infotable", attrs: { id: "infotable11" } },
                     [_vm._v("11")]
                   )
                 ]
@@ -17234,15 +17167,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    {
-                      staticClass: "infotable",
-                      attrs: { id: "infotable12" },
-                      on: {
-                        click: function($event) {
-                          _vm.reserve_table(12)
-                        }
-                      }
-                    },
+                    { staticClass: "infotable", attrs: { id: "infotable12" } },
                     [_vm._v("12")]
                   )
                 ]
@@ -17272,15 +17197,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "span",
-                    {
-                      staticClass: "infotable",
-                      attrs: { id: "infotable13" },
-                      on: {
-                        click: function($event) {
-                          _vm.reserve_table(13)
-                        }
-                      }
-                    },
+                    { staticClass: "infotable", attrs: { id: "infotable13" } },
                     [_vm._v("13")]
                   )
                 ]
@@ -17432,7 +17349,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.fade-enter-active[data-v-6f263642], .fade-leave-active[data-v-6f263642] {\n  -webkit-transition: opacity .5s;\n  transition: opacity .5s;\n}\n.fade-enter[data-v-6f263642], .fade-leave-to[data-v-6f263642] {\n  opacity: 0;\n}\n.message[data-v-6f263642] {\n  position: fixed;\n  width: 500px;\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  padding: 20px;\n  background: #353a3e;\n  bottom: 20px;\n  text-align: center;\n  border-radius: 5px;\n  color: white;\n  z-index: 999999;\n}\n", ""]);
+exports.push([module.i, "\n.fade-enter-active[data-v-6f263642], .fade-leave-active[data-v-6f263642] {\n  -webkit-transition: opacity .5s;\n  transition: opacity .5s;\n}\n.fade-enter[data-v-6f263642], .fade-leave-to[data-v-6f263642] {\n  opacity: 0;\n}\n.message[data-v-6f263642] {\n  position: fixed;\n  width: 90%;\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  padding: 20px;\n  background: #353a3e;\n  bottom: 20px;\n  text-align: center;\n  border-radius: 5px;\n  color: white;\n  z-index: 999999;\n}\n@media (min-width: 476px) {\n.message[data-v-6f263642] {\n      width: 80%;\n}\n}\n@media (min-width: 768px) {\n.message[data-v-6f263642] {\n      width: 70%;\n}\n}\n@media (min-width: 1000px) {\n.message[data-v-6f263642] {\n      width: 40%;\n}\n}\n", ""]);
 
 // exports
 

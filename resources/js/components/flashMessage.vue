@@ -33,7 +33,7 @@
 
     .message {
         position: fixed;
-        width: 500px;
+        width: 90%;
         left: 50%;
         transform: translateX(-50%);
         padding: 20px;
@@ -43,5 +43,19 @@
         border-radius: 5px;
         color: white;
         z-index: 999999;
+
+        @media(min-width: 476px) {
+            width: 80%;
+        }
+
+        @media(min-width: 768px) {
+            width: 70%;
+        }
+
+        @media(min-width: 1000px) {
+            width: 40%;
+        }
+
+
     }
 </style>
