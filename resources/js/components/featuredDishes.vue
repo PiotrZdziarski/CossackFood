@@ -18,7 +18,7 @@
             </div>
         </div>
         <div id="dishes" class="dishes">
-            <div data-aos-once="true" data-aos="fade-in" class="dish" v-for="record in records">
+            <div class="dish" v-for="record in records">
                 <div class="image" :style="{backgroundImage: 'url(' +'/images/dishes/' + record.image + ')'}"></div>
                 <div class="description">
                     <div class="title">

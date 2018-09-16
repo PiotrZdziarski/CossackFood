@@ -61,8 +61,7 @@ class ReservationController extends Controller
                     ->merge([["t$i" => $leftTimeToReservation]]);
             }
 
-
-            //if restaurant is closing soon add left time to reservation too
+            //if restaurant is closing soon
             else if($searchingTimeUnix > strtotime('18:00')) {
                 $restarationCloseTime = strtotime('21:00');
 
@@ -82,6 +81,7 @@ class ReservationController extends Controller
 
         return ReservationResource::collection($reservations);
     }
+
 
 
     /**

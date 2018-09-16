@@ -12967,7 +12967,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.boxShadow[data-v-11e733ca] {\n  -webkit-box-shadow: 0 2px 4px #f1f1f1;\n          box-shadow: 0 2px 4px #f1f1f1;\n}\n.slide-fade-enter-active[data-v-11e733ca] {\n  -webkit-transition: all .3s ease;\n  transition: all .3s ease;\n  position: absolute;\n}\n.slide-fade-leave-active[data-v-11e733ca] {\n  -webkit-transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n  opacity: 0;\n}\n.slide-fade-enter[data-v-11e733ca], .slide-fade-leave-to[data-v-11e733ca] {\n  -webkit-transform: translateX(1000px);\n          transform: translateX(1000px);\n  opacity: 0;\n}\n@media (max-width: 999.99px) {\n.menu[data-v-11e733ca] {\n    width: 100%;\n    top: 10vh;\n    position: fixed;\n    background: white;\n    padding-top: 20px;\n    z-index: 1000;\n}\n.menu-item[data-v-11e733ca] {\n    text-align: center;\n    width: 100%;\n    min-height: 50px;\n}\n.navbar[data-v-11e733ca] {\n    width: 100%;\n    height: 10vh;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding: 15px;\n    z-index: 1000;\n    position: fixed;\n    background: white;\n    -webkit-transition: .25s all ease-in-out;\n    transition: .25s all ease-in-out;\n}\n.burger[data-v-11e733ca] {\n    display: block;\n    position: absolute;\n    right: 20%;\n    width: 40px;\n    height: 45px;\n    cursor: pointer;\n}\n.burger.open div[data-v-11e733ca] {\n    background: none;\n    -webkit-box-shadow: none !important;\n            box-shadow: none !important;\n}\n.burger.open div[data-v-11e733ca]:before, .burger.open div[data-v-11e733ca]:after {\n    top: 0;\n}\n.burger.open div[data-v-11e733ca]:before {\n    -webkit-transform: rotate(-45deg);\n    transform: rotate(-45deg);\n}\n.burger.open div[data-v-11e733ca]:after {\n    -webkit-transform: rotate(45deg);\n    transform: rotate(45deg);\n}\n.burger.open:hover div[data-v-11e733ca]:before {\n    -webkit-transform: rotate(-45deg);\n    transform: rotate(-45deg);\n}\n.burger.open:hover div[data-v-11e733ca]:after {\n    -webkit-transform: rotate(45deg);\n    transform: rotate(45deg);\n}\n.burger:hover:not(.open) div[data-v-11e733ca]:before {\n    top: -15px;\n}\n.burger:hover:not(.open) div[data-v-11e733ca]:after {\n    top: 15px;\n}\n.burger div[data-v-11e733ca],\n  .burger div[data-v-11e733ca]:before,\n  .burger div[data-v-11e733ca]:after {\n    width: 100%;\n    height: 6px;\n    background: #d31f3c;\n    border-radius: 2px;\n    -webkit-box-shadow: 0 2px 4px #b9bbbe;\n            box-shadow: 0 2px 4px #b9bbbe;\n    -webkit-transition: all 0.4s ease;\n    transition: all 0.4s ease;\n}\n.burger div[data-v-11e733ca] {\n    position: relative;\n    margin: 20px auto 0;\n}\n.burger div[data-v-11e733ca]:before, div[data-v-11e733ca]:after {\n    content: \"\";\n    position: absolute;\n}\n.burger div[data-v-11e733ca]:before {\n    top: -15px;\n}\n.burger div[data-v-11e733ca]:after {\n    top: 15px;\n}\n.hamburger-div[data-v-11e733ca] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: right;\n        -ms-flex-pack: right;\n            justify-content: right;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    float: left;\n    position: relative;\n    width: 40%;\n}\n.dropdown-menu[data-v-11e733ca] {\n    display: none;\n}\n.logo-image[data-v-11e733ca] {\n    max-width: 100%;\n}\n}\n@media (max-width: 999.99px) and (min-width: 476px) {\n.logo-image[data-v-11e733ca] {\n      max-width: 75%;\n}\n}\n@media (max-width: 999.99px) and (min-width: 768px) {\n.logo-image[data-v-11e733ca] {\n      max-width: 55%;\n}\n}\n@media (min-width: 1000px) {\n.heightvh[data-v-11e733ca] {\n    height: 9vh !important;\n}\n.heightvh *[data-v-11e733ca] {\n    opacity: 1 !important;\n}\n.logo-image[data-v-11e733ca] {\n    width: 60%;\n    height: 60%;\n}\n.navbar[data-v-11e733ca] {\n    margin-left: auto;\n    margin-right: auto;\n    height: 14vh;\n    position: fixed;\n    width: 100%;\n    -webkit-box-shadow: 0 1.5px 3px #b9bbbe;\n            box-shadow: 0 1.5px 3px #b9bbbe;\n    background: white;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    z-index: 1000;\n    -webkit-transition: .3s all ease-in-out;\n    transition: .3s all ease-in-out;\n}\n.logo[data-v-11e733ca] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    width: 25%;\n}\n.dropdown-menu[data-v-11e733ca] {\n    width: 75%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.dropdown-item[data-v-11e733ca] {\n    text-align: center;\n    font-size: 15px;\n    width: 17%;\n}\n}\n.logo[data-v-11e733ca] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 60%;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  float: left;\n  position: relative;\n}\n.href[data-v-11e733ca] {\n  color: black;\n  text-decoration: none;\n  font-size: 15px;\n  -webkit-transition: .2s all ease-in-out;\n  transition: .2s all ease-in-out;\n}\n.href[data-v-11e733ca]:hover {\n  color: #b91d19;\n}\n", ""]);
+exports.push([module.i, "\n.boxShadow[data-v-11e733ca] {\n  -webkit-box-shadow: 0 2px 4px #f1f1f1;\n          box-shadow: 0 2px 4px #f1f1f1;\n}\n.slide-fade-enter-active[data-v-11e733ca] {\n  -webkit-transition: all .3s ease;\n  transition: all .3s ease;\n  position: absolute;\n}\n.slide-fade-leave-active[data-v-11e733ca] {\n  -webkit-transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n  opacity: 0;\n}\n.slide-fade-enter[data-v-11e733ca], .slide-fade-leave-to[data-v-11e733ca] {\n  -webkit-transform: translateX(1000px);\n          transform: translateX(1000px);\n  opacity: 0;\n}\n@media (max-width: 999.99px) {\n.menu[data-v-11e733ca] {\n    width: 100%;\n    top: 10vh;\n    position: fixed;\n    background: white;\n    padding-top: 20px;\n    z-index: 1000;\n}\n.menu-item[data-v-11e733ca] {\n    text-align: center;\n    width: 100%;\n    min-height: 50px;\n}\n.navbar[data-v-11e733ca] {\n    width: 100%;\n    height: 10vh;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding: 15px;\n    z-index: 1000;\n    position: fixed;\n    background: white;\n    -webkit-transition: .25s all ease-in-out;\n    transition: .25s all ease-in-out;\n}\n.burger[data-v-11e733ca] {\n    display: block;\n    position: absolute;\n    right: 20%;\n    width: 40px;\n    height: 45px;\n    cursor: pointer;\n}\n.burger.open div[data-v-11e733ca] {\n    background: none;\n    -webkit-box-shadow: none !important;\n            box-shadow: none !important;\n}\n.burger.open div[data-v-11e733ca]:before, .burger.open div[data-v-11e733ca]:after {\n    top: 0;\n}\n.burger.open div[data-v-11e733ca]:before {\n    -webkit-transform: rotate(-45deg);\n    transform: rotate(-45deg);\n}\n.burger.open div[data-v-11e733ca]:after {\n    -webkit-transform: rotate(45deg);\n    transform: rotate(45deg);\n}\n.burger.open:hover div[data-v-11e733ca]:before {\n    -webkit-transform: rotate(-45deg);\n    transform: rotate(-45deg);\n}\n.burger.open:hover div[data-v-11e733ca]:after {\n    -webkit-transform: rotate(45deg);\n    transform: rotate(45deg);\n}\n.burger:hover:not(.open) div[data-v-11e733ca]:before {\n    top: -15px;\n}\n.burger:hover:not(.open) div[data-v-11e733ca]:after {\n    top: 15px;\n}\n.burger div[data-v-11e733ca],\n  .burger div[data-v-11e733ca]:before,\n  .burger div[data-v-11e733ca]:after {\n    width: 100%;\n    height: 6px;\n    background: #d31f3c;\n    border-radius: 2px;\n    -webkit-box-shadow: 0 2px 4px #b9bbbe;\n            box-shadow: 0 2px 4px #b9bbbe;\n    -webkit-transition: all 0.4s ease;\n    transition: all 0.4s ease;\n}\n.burger div[data-v-11e733ca] {\n    position: relative;\n    margin: 20px auto 0;\n}\n.burger div[data-v-11e733ca]:before, div[data-v-11e733ca]:after {\n    content: \"\";\n    position: absolute;\n}\n.burger div[data-v-11e733ca]:before {\n    top: -15px;\n}\n.burger div[data-v-11e733ca]:after {\n    top: 15px;\n}\n.hamburger-div[data-v-11e733ca] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: right;\n        -ms-flex-pack: right;\n            justify-content: right;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    float: left;\n    position: relative;\n    width: 40%;\n}\n.dropdown-menu[data-v-11e733ca] {\n    display: none;\n}\n.logo-image[data-v-11e733ca] {\n    max-width: 100%;\n}\n}\n@media (max-width: 999.99px) and (min-width: 476px) {\n.logo-image[data-v-11e733ca] {\n      max-width: 75%;\n}\n}\n@media (max-width: 999.99px) and (min-width: 768px) {\n.logo-image[data-v-11e733ca] {\n      max-width: 55%;\n}\n}\n@media (min-width: 1000px) {\n.heightvh[data-v-11e733ca] {\n    height: 9vh !important;\n}\n.heightvh *[data-v-11e733ca] {\n    opacity: 1 !important;\n}\n.logo-image[data-v-11e733ca] {\n    width: 60%;\n    height: 60%;\n}\n.navbar[data-v-11e733ca] {\n    margin-left: auto;\n    margin-right: auto;\n    height: 14vh;\n    position: fixed;\n    width: 100%;\n    -webkit-box-shadow: 0 1.5px 3px #b9bbbe;\n            box-shadow: 0 1.5px 3px #b9bbbe;\n    background: white;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    z-index: 1000;\n    -webkit-transition: .3s all ease-in-out;\n    transition: .3s all ease-in-out;\n}\n.logo[data-v-11e733ca] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    width: 25%;\n}\n.dropdown-menu[data-v-11e733ca] {\n    width: 75%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: left;\n        -ms-flex-pack: left;\n            justify-content: left;\n}\n.dropdown-item[data-v-11e733ca] {\n    text-align: center;\n    font-size: 15px;\n    font-weight: 500;\n    color: #555555;\n    width: 18%;\n}\n}\n.logo[data-v-11e733ca] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 60%;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  float: left;\n  position: relative;\n}\n.href[data-v-11e733ca] {\n  text-decoration: none;\n  font-size: 15px;\n  font-weight: 500;\n  color: #555555;\n  -webkit-transition: .2s all ease-in-out;\n  transition: .2s all ease-in-out;\n}\n.href[data-v-11e733ca]:hover {\n  color: #b91d19;\n}\n", ""]);
 
 // exports
 
@@ -14510,39 +14510,32 @@ var render = function() {
       "div",
       { staticClass: "dishes", attrs: { id: "dishes" } },
       _vm._l(_vm.records, function(record) {
-        return _c(
-          "div",
-          {
-            staticClass: "dish",
-            attrs: { "data-aos-once": "true", "data-aos": "fade-in" }
-          },
-          [
-            _c("div", {
-              staticClass: "image",
-              style: {
-                backgroundImage: "url(" + "/images/dishes/" + record.image + ")"
-              }
-            }),
+        return _c("div", { staticClass: "dish" }, [
+          _c("div", {
+            staticClass: "image",
+            style: {
+              backgroundImage: "url(" + "/images/dishes/" + record.image + ")"
+            }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "description" }, [
+            _c("div", { staticClass: "title" }, [
+              _vm._v(
+                "\n                    " +
+                  _vm._s(record.dish) +
+                  "\n                "
+              )
+            ]),
             _vm._v(" "),
-            _c("div", { staticClass: "description" }, [
-              _c("div", { staticClass: "title" }, [
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(record.dish) +
-                    "\n                "
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "price" }, [
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(record.price) +
-                    "$\n                "
-                )
-              ])
+            _c("div", { staticClass: "price" }, [
+              _vm._v(
+                "\n                    " +
+                  _vm._s(record.price) +
+                  "$\n                "
+              )
             ])
-          ]
-        )
+          ])
+        ])
       })
     ),
     _vm._v(" "),
