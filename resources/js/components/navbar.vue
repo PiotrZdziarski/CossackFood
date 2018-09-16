@@ -264,13 +264,15 @@
         .dropdown-menu {
             width: 75%;
             display: flex;
-            justify-content: center;
+            justify-content: left;
         }
 
         .dropdown-item {
             text-align: center;
             font-size: 15px;
-            width: 17%;
+            font-weight: 500;
+            color: #555555;
+            width: 18%;
         }
     }
     .logo {
@@ -283,9 +285,10 @@
     }
 
     .href {
-        color: black;
         text-decoration: none;
         font-size: 15px;
+        font-weight: 500;
+        color: #555555;
         transition: .2s all ease-in-out;
     }
 
