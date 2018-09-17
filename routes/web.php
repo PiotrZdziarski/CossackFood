@@ -26,3 +26,6 @@ Route::get('/menu', ['uses' => 'SitesController@menu']);
 
 //reservations
 Route::get('/reservations', ['uses' => 'SitesController@reservations']);
+
+//order
+Route::get('/order', ['uses' => 'SitesController@order']);

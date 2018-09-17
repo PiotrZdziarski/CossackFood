@@ -1,4 +1,5 @@
-## Developing food website from scratch using .psd design
+
+#Developing responsive food website from scratch without Bootstrap using .psd design.
 
 Technologies: 
 - Vue.js
