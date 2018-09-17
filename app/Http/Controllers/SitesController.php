@@ -14,4 +14,9 @@ class SitesController extends Controller
     {
         return view('reservation');
     }
+
+    public function order()
+    {
+        return view('order');
+    }
 }

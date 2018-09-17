@@ -9,7 +9,7 @@
                     <a class="href" :href="api_link+ '/menu'">Menu</a>
                 </div>
                 <div class="dropdown-item">
-                    Story
+                    <a class="href" :href="api_link+ '/order'">Order</a>
                 </div>
                 <div class="dropdown-item">
                     News
@@ -31,7 +31,7 @@
         <transition name="slide-fade">
             <div v-if="nav_active" class="menu">
                 <div class="menu-item"><a class="href" :href="api_link+ '/menu'">Menu</a></div>
-                <div class="menu-item">Story</div>
+                <div class="menu-item"><a class="href" :href="api_link+ '/order'">Order</a></div>
                 <div class="menu-item">News</div>
                 <div class="menu-item"><a class="href" :href="api_link+ '/reservations'">Reservations</a></div>
                 <div class="menu-item">Contact</div>
@@ -105,7 +105,6 @@
             top: 10vh;
             position: fixed;
             background: white;
-            padding-top: 20px;
             z-index: 1000;
         }
 
@@ -113,6 +112,15 @@
             text-align: center;
             width: 100%;
             min-height: 50px;
+            font-size: 15px;
+            border-bottom: 1px solid #f1f1f1;
+            font-family: 'Open Sans', sans-serif;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        .menu-item:first-child {
+            border-top: 1px solid #f1f1f1;
         }
         .navbar {
             width: 100%;
@@ -270,9 +278,9 @@
         .dropdown-item {
             text-align: center;
             font-size: 15px;
-            font-weight: 500;
-            color: #555555;
+            color: #111111;
             width: 18%;
+            font-family: 'Open Sans', sans-serif;
         }
     }
     .logo {
@@ -287,9 +295,9 @@
     .href {
         text-decoration: none;
         font-size: 15px;
-        font-weight: 500;
-        color: #555555;
+        color: #111111;
         transition: .2s all ease-in-out;
+        font-family: 'Open Sans', sans-serif;
     }
 
     .href:hover {

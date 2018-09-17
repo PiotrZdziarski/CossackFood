@@ -7,9 +7,12 @@
         <meta name="csrf-token" content="{{csrf_token()}}">
         <title>@yield('title')</title>
 
+        <link rel="icon" href="{{asset('images/icon.gif')}}">
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Great+Vibes&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
         {{--CSS--}}
          <link rel="stylesheet" href="{{asset('css/app.css')}}">
