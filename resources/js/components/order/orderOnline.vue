@@ -8,17 +8,27 @@
         <div class="container">
             <div class="products">
                 <div class="subpages">
-                    <div @click="dishes" id="pizza" class="subpage active">
+                    <div @click="dishes" id="dishes" class="subpage active">
                         Dishes
                     </div>
-                    <div @click="pizza" id="dishes" class="subpage" style="margin-left: 100px;">
+                    <div @click="pizza" id="pizza" class="subpage" style="margin-left: 100px;">
                         Pizza
                     </div>
                 </div>
 
-                <div v-if="food === 'dishes'" class="product" v-for="record in records">
+                <div data-aos="fade-in" data-aos-offset="-100" data-aos-once="true" v-if="food === 'dishes'" class="product" v-for="record in dishes_data.slice(0,dishes_count)">
                     <div class="productTitle">
                         {{ record.dish }}
+                    </div>
+
+                    <div class="price">
+                        ${{ record.price }}
+                    </div>
+                </div>
+
+                <div data-aos="fade-in" data-aos-offset="-100" data-aos-once="true" v-if="food === 'pizza'" class="product" v-for="record in records">
+                    <div class="productTitle">
+                        {{ record.pizza }}
                     </div>
 
                     <div class="price">
@@ -45,17 +55,23 @@
         props: {
             api_link: {
                 Type: String
+            },
+            dishes_data: {
+                Type: Object
+            },
+            dishes_count: {
+                Type: Number
             }
         },
         data() {
             return {
                 food: 'dishes',
                 records: [],
-                loading: true
+                loading: true,
             }
         },
         mounted() {
-
+            console.log(typeof this.dishes_data);
             axios.get(this.api_link + '/api/dishes').then((Response) => {
                 this.records = Response.data.data;
                 this.loading = false;
@@ -108,6 +124,7 @@
             align-items: center;
             grid-column-start: 1;
             grid-column-end: 3;
+            height: 90px;
 
             .subpage {
                 font-family: 'Great Vibes', cursive;
@@ -158,14 +175,15 @@
 
             @media(min-width: 768px) {
                 display: flex;
+                align-items: flex-start;
             }
             .products {
-                width: 100%;
+                position: relative;
 
                 @media(min-width: 768px) {
                     width: 70%;
                     display: grid;
-                    grid-template-columns: 50% 50%;
+                    grid-template-columns: 1fr 1fr;
                 }
 
                 .product {
@@ -184,11 +202,11 @@
 
 
                     @media(min-width: 768px) and (max-width: 1000px){
-                        padding: 0 15px 0 15px;
+                        padding: 15px;
                     }
 
                     @media(min-width: 1000px) {
-                        padding: 15px 30px 15px 30px;
+                        padding: 30px;
                     }
 
 
@@ -235,31 +253,28 @@
             }
         }
 
+        fade-enter-active, .fade-leave-active {
+            transition: opacity .3s;
+        }
+
+        .fade-enter, .fade-leave-to
+        {
+            opacity: 0;
+        }
+
 
 
         .lds-dual-ring {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 80px;
-            height: 80px;
-
-            @media(min-width: 476px) {
-                height: 1996px
-            }
-
-            @media(min-width: 768px) {
-                height: 628px;
-            }
-
-
-            @media(min-width: 1000px) {
-                height: 239px;
-            }
-
-
             margin-left: auto;
+            height: 100px;
+            width: 100px;
             margin-right: auto;
+            margin-top: 150px;
+            grid-column-start: 1;
+            grid-column-end: 3;
         }
         .lds-dual-ring:after {
             content: " ";

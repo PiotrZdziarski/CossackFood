@@ -17503,7 +17503,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.wrapper .subpages[data-v-8f025976] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  grid-column-start: 1;\n  grid-column-end: 3;\n}\n.wrapper .subpages .subpage[data-v-8f025976] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 35px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.wrapper .subpages .subpage[data-v-8f025976]:hover {\n    color: #777777;\n}\n.wrapper .subpages .active[data-v-8f025976] {\n    color: #b91d19;\n}\n.wrapper .subpages .active[data-v-8f025976]:hover {\n    color: #b91d19;\n}\n.wrapper .claimImage[data-v-8f025976] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.wrapper .claimImage .title[data-v-8f025976] {\n    margin-top: 120px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #ff5d65;\n    margin-bottom: 50px;\n}\n@media (min-width: 768px) {\n.wrapper .claimImage .title[data-v-8f025976] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.wrapper .container[data-v-8f025976] {\n  margin-top: 30px;\n}\n@media (min-width: 768px) {\n.wrapper .container[data-v-8f025976] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n}\n}\n.wrapper .container .products[data-v-8f025976] {\n    width: 100%;\n}\n@media (min-width: 768px) {\n.wrapper .container .products[data-v-8f025976] {\n        width: 70%;\n        display: grid;\n        grid-template-columns: 50% 50%;\n}\n}\n.wrapper .container .products .product[data-v-8f025976] {\n      margin: 4%;\n      padding: 50px 30px 50px 30px;\n      -webkit-transition: all ease-in-out .3s;\n      transition: all ease-in-out .3s;\n      border-radius: 4px;\n      cursor: pointer;\n      display: grid;\n      grid-template-columns: 75%  25%;\n      position: relative;\n      border: 1px solid #f1f1f1;\n      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(\"/images/dishes/1.jpg\");\n      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(\"/images/dishes/1.jpg\");\n      background-size: cover;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          padding: 0 15px 0 15px;\n}\n}\n@media (min-width: 1000px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          padding: 15px 30px 15px 30px;\n}\n}\n.wrapper .container .products .product .productTitle[data-v-8f025976] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: left;\n            -ms-flex-pack: left;\n                justify-content: left;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        position: relative;\n        color: white;\n        word-wrap: break-word;\n        width: 100%;\n}\n.wrapper .container .products .product .price[data-v-8f025976] {\n        position: relative;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        color: #fe404f;\n        font-size: 22px;\n        font-weight: 500;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        margin-left: 5px;\n}\n@media (min-width: 768px) {\n.wrapper .container .products .product .price[data-v-8f025976] {\n            font-size: 16px;\n}\n}\n@media (min-width: 1000px) {\n.wrapper .container .products .product .price[data-v-8f025976] {\n            font-size: 20px;\n}\n}\n@media (min-width: 768px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          margin: 5%;\n}\n}\n.wrapper .container .products .product[data-v-8f025976]:hover {\n      -webkit-box-shadow: 0 1px 12px black;\n              box-shadow: 0 1px 12px black;\n}\n.wrapper .lds-dual-ring[data-v-8f025976] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  width: 80px;\n  height: 80px;\n  margin-left: auto;\n  margin-right: auto;\n}\n@media (min-width: 476px) {\n.wrapper .lds-dual-ring[data-v-8f025976] {\n      height: 1996px;\n}\n}\n@media (min-width: 768px) {\n.wrapper .lds-dual-ring[data-v-8f025976] {\n      height: 628px;\n}\n}\n@media (min-width: 1000px) {\n.wrapper .lds-dual-ring[data-v-8f025976] {\n      height: 239px;\n}\n}\n.wrapper .lds-dual-ring[data-v-8f025976]:after {\n  content: \" \";\n  display: block;\n  width: 56px;\n  height: 56px;\n  margin: 1px;\n  border-radius: 50%;\n  border: 8px solid lightgray;\n  border-color: lightgray transparent lightgray transparent;\n  -webkit-animation: lds-dual-ring-data-v-8f025976 1.2s linear infinite;\n          animation: lds-dual-ring-data-v-8f025976 1.2s linear infinite;\n}\n@-webkit-keyframes lds-dual-ring-data-v-8f025976 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes lds-dual-ring-data-v-8f025976 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n", ""]);
+exports.push([module.i, "\n.wrapper .subpages[data-v-8f025976] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  grid-column-start: 1;\n  grid-column-end: 3;\n  height: 90px;\n}\n.wrapper .subpages .subpage[data-v-8f025976] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 35px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.wrapper .subpages .subpage[data-v-8f025976]:hover {\n    color: #777777;\n}\n.wrapper .subpages .active[data-v-8f025976] {\n    color: #b91d19;\n}\n.wrapper .subpages .active[data-v-8f025976]:hover {\n    color: #b91d19;\n}\n.wrapper .claimImage[data-v-8f025976] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.wrapper .claimImage .title[data-v-8f025976] {\n    margin-top: 120px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #ff5d65;\n    margin-bottom: 50px;\n}\n@media (min-width: 768px) {\n.wrapper .claimImage .title[data-v-8f025976] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.wrapper .container[data-v-8f025976] {\n  margin-top: 30px;\n}\n@media (min-width: 768px) {\n.wrapper .container[data-v-8f025976] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: start;\n          -ms-flex-align: start;\n              align-items: flex-start;\n}\n}\n.wrapper .container .products[data-v-8f025976] {\n    position: relative;\n}\n@media (min-width: 768px) {\n.wrapper .container .products[data-v-8f025976] {\n        width: 70%;\n        display: grid;\n        grid-template-columns: 1fr 1fr;\n}\n}\n.wrapper .container .products .product[data-v-8f025976] {\n      margin: 4%;\n      padding: 50px 30px 50px 30px;\n      -webkit-transition: all ease-in-out .3s;\n      transition: all ease-in-out .3s;\n      border-radius: 4px;\n      cursor: pointer;\n      display: grid;\n      grid-template-columns: 75%  25%;\n      position: relative;\n      border: 1px solid #f1f1f1;\n      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(\"/images/dishes/1.jpg\");\n      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(\"/images/dishes/1.jpg\");\n      background-size: cover;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          padding: 15px;\n}\n}\n@media (min-width: 1000px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          padding: 30px;\n}\n}\n.wrapper .container .products .product .productTitle[data-v-8f025976] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: left;\n            -ms-flex-pack: left;\n                justify-content: left;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        position: relative;\n        color: white;\n        word-wrap: break-word;\n        width: 100%;\n}\n.wrapper .container .products .product .price[data-v-8f025976] {\n        position: relative;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        color: #fe404f;\n        font-size: 22px;\n        font-weight: 500;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        margin-left: 5px;\n}\n@media (min-width: 768px) {\n.wrapper .container .products .product .price[data-v-8f025976] {\n            font-size: 16px;\n}\n}\n@media (min-width: 1000px) {\n.wrapper .container .products .product .price[data-v-8f025976] {\n            font-size: 20px;\n}\n}\n@media (min-width: 768px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          margin: 5%;\n}\n}\n.wrapper .container .products .product[data-v-8f025976]:hover {\n      -webkit-box-shadow: 0 1px 12px black;\n              box-shadow: 0 1px 12px black;\n}\n.wrapper fade-enter-active[data-v-8f025976], .wrapper .fade-leave-active[data-v-8f025976] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.wrapper .fade-enter[data-v-8f025976], .wrapper .fade-leave-to[data-v-8f025976] {\n  opacity: 0;\n}\n.wrapper .lds-dual-ring[data-v-8f025976] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin-left: auto;\n  height: 100px;\n  width: 100px;\n  margin-right: auto;\n  margin-top: 150px;\n  grid-column-start: 1;\n  grid-column-end: 3;\n}\n.wrapper .lds-dual-ring[data-v-8f025976]:after {\n  content: \" \";\n  display: block;\n  width: 56px;\n  height: 56px;\n  margin: 1px;\n  border-radius: 50%;\n  border: 8px solid lightgray;\n  border-color: lightgray transparent lightgray transparent;\n  -webkit-animation: lds-dual-ring-data-v-8f025976 1.2s linear infinite;\n          animation: lds-dual-ring-data-v-8f025976 1.2s linear infinite;\n}\n@-webkit-keyframes lds-dual-ring-data-v-8f025976 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes lds-dual-ring-data-v-8f025976 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n", ""]);
 
 // exports
 
@@ -17518,6 +17518,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__orderMenu_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__orderMenu_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios__);
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -17565,6 +17577,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     props: {
         api_link: {
             Type: String
+        },
+        dishes_data: {
+            Type: Object
+        },
+        dishes_count: {
+            Type: Number
         }
     },
     data: function data() {
@@ -17577,6 +17595,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         var _this = this;
 
+        console.log(_typeof(this.dishes_data));
         __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get(this.api_link + '/api/dishes').then(function (Response) {
             _this.records = Response.data.data;
             _this.loading = false;
@@ -17654,7 +17673,7 @@ var render = function() {
                 "div",
                 {
                   staticClass: "subpage active",
-                  attrs: { id: "pizza" },
+                  attrs: { id: "dishes" },
                   on: { click: _vm.dishes }
                 },
                 [_vm._v("\n                    Dishes\n                ")]
@@ -17665,32 +17684,78 @@ var render = function() {
                 {
                   staticClass: "subpage",
                   staticStyle: { "margin-left": "100px" },
-                  attrs: { id: "dishes" },
+                  attrs: { id: "pizza" },
                   on: { click: _vm.pizza }
                 },
                 [_vm._v("\n                    Pizza\n                ")]
               )
             ]),
             _vm._v(" "),
-            _vm._l(_vm.records, function(record) {
+            _vm._l(_vm.dishes_data.slice(0, _vm.dishes_count), function(
+              record
+            ) {
               return _vm.food === "dishes"
-                ? _c("div", { staticClass: "product" }, [
-                    _c("div", { staticClass: "productTitle" }, [
-                      _vm._v(
-                        "\n                    " +
-                          _vm._s(record.dish) +
-                          "\n                "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "price" }, [
-                      _vm._v(
-                        "\n                    $" +
-                          _vm._s(record.price) +
-                          "\n                "
-                      )
-                    ])
-                  ])
+                ? _c(
+                    "div",
+                    {
+                      staticClass: "product",
+                      attrs: {
+                        "data-aos": "fade-in",
+                        "data-aos-offset": "-100",
+                        "data-aos-once": "true"
+                      }
+                    },
+                    [
+                      _c("div", { staticClass: "productTitle" }, [
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(record.dish) +
+                            "\n                "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "price" }, [
+                        _vm._v(
+                          "\n                    $" +
+                            _vm._s(record.price) +
+                            "\n                "
+                        )
+                      ])
+                    ]
+                  )
+                : _vm._e()
+            }),
+            _vm._v(" "),
+            _vm._l(_vm.records, function(record) {
+              return _vm.food === "pizza"
+                ? _c(
+                    "div",
+                    {
+                      staticClass: "product",
+                      attrs: {
+                        "data-aos": "fade-in",
+                        "data-aos-offset": "-100",
+                        "data-aos-once": "true"
+                      }
+                    },
+                    [
+                      _c("div", { staticClass: "productTitle" }, [
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(record.pizza) +
+                            "\n                "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "price" }, [
+                        _vm._v(
+                          "\n                    $" +
+                            _vm._s(record.price) +
+                            "\n                "
+                        )
+                      ])
+                    ]
+                  )
                 : _vm._e()
             }),
             _vm._v(" "),
@@ -17816,52 +17881,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "orderMenu"
@@ -17897,71 +17916,7 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "orderProducts" }, [
-        _c("div", { staticClass: "product" }, [
-          _c("div", { staticClass: "productName" }, [
-            _vm._v(
-              "\n                Id placeat sedeo rhweuirhwiue hriwue hriweu hrwuie\n            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "productPrice" }, [
-            _vm._v("\n                47.65$\n            ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "deleteProduct" }, [
-            _c("div", { staticClass: "close" })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "product" }, [
-          _c("div", { staticClass: "productName" }, [
-            _vm._v(
-              "\n                Id placeat sedeo rhweuirhwiue hriwue hriweu hrwuie\n            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "productPrice" }, [
-            _vm._v("\n                47.65$\n            ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "deleteProduct" }, [
-            _c("div", { staticClass: "close" })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "product" }, [
-          _c("div", { staticClass: "productName" }, [
-            _vm._v(
-              "\n                Id placeat sedeo rhweuirhwiue hriwue hriweu hrwuie\n            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "productPrice" }, [
-            _vm._v("\n                47.65$\n            ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "deleteProduct" }, [
-            _c("div", { staticClass: "close" })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "product" }, [
-          _c("div", { staticClass: "productName" }, [
-            _vm._v(
-              "\n                Id placeat sedeo rhweuirhwiue hriwue hriweu hrwuie\n            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "productPrice" }, [
-            _vm._v("\n                47.65$\n            ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "deleteProduct" }, [
-            _c("div", { staticClass: "close" })
-          ])
-        ])
-      ])
+      _c("div", { staticClass: "orderProducts" })
     ])
   }
 ]

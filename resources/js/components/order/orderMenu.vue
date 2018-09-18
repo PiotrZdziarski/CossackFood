@@ -12,53 +12,7 @@
             </div>
         </div>
         <div class="orderProducts">
-            <div class="product">
-                <div class="productName">
-                    Id placeat sedeo rhweuirhwiue hriwue hriweu hrwuie
-                </div>
-                <div class="productPrice">
-                    47.65$
-                </div>
-                <div class="deleteProduct">
-                    <div class="close"></div>
-                </div>
-            </div>
 
-            <div class="product">
-                <div class="productName">
-                    Id placeat sedeo rhweuirhwiue hriwue hriweu hrwuie
-                </div>
-                <div class="productPrice">
-                    47.65$
-                </div>
-                <div class="deleteProduct">
-                    <div class="close"></div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="productName">
-                    Id placeat sedeo rhweuirhwiue hriwue hriweu hrwuie
-                </div>
-                <div class="productPrice">
-                    47.65$
-                </div>
-                <div class="deleteProduct">
-                    <div class="close"></div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="productName">
-                    Id placeat sedeo rhweuirhwiue hriwue hriweu hrwuie
-                </div>
-                <div class="productPrice">
-                    47.65$
-                </div>
-                <div class="deleteProduct">
-                    <div class="close"></div>
-                </div>
-            </div>
         </div>
     </div>
 </template>
