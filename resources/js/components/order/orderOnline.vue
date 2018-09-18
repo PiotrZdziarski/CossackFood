@@ -16,7 +16,6 @@
                     </div>
                 </div>
 
-                
                 <div v-if="food === 'dishes'" class="product" v-for="record in records">
                     <div class="productTitle">
                         {{ record.dish }}
