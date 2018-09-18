@@ -566,25 +566,6 @@
             color: #b91d19;
             margin-bottom: 50px;
         }
-
-        .subpage {
-            font-family: 'Great Vibes', cursive;
-            font-size: 30px;
-            float: left;
-            cursor: pointer;
-            transition: all .2s ease-in-out;
-        }
-
-        .subpage:hover {
-            color: #777777;
-        }
-
-        .active {
-            color: #b91d19;
-        }
-        .active:hover {
-            color: #b91d19;
-        }
     }
 
     .claimReservations {

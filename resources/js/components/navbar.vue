@@ -106,6 +106,7 @@
             position: fixed;
             background: white;
             z-index: 1000;
+            box-shadow: 0 1px 2px #b9bbbe;
         }
 
         .menu-item {
