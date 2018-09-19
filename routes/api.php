@@ -30,4 +30,4 @@ Route::get('reservations/{date}/{time}', ['uses' => 'ReservationController@index
 Route::post('store_reservation', ['uses' => 'ReservationController@store']);
 
 //ordering
-Route::post('basket_dish', ['uses' => 'BasketProductController@store_dish']);
+    Route::post('basket_dish', ['uses' => 'BasketProductController@store_dish']);
