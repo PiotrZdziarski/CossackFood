@@ -6,6 +6,5 @@
     <order-online
             dishes_data="{{$dishes}}"
             api_link="@php echo getenv('APP_URL') @endphp"
-            dishes_count="{{$dishesCount}}"
     ></order-online>
 @endsection
