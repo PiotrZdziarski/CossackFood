@@ -37,10 +37,11 @@
         left: 50%;
         transform: translateX(-50%);
         padding: 20px;
-        background: #353a3e;
+        background: #d64243;
+        border: 1px solid white;
         bottom: 20px;
         text-align: center;
-        border-radius: 5px;
+        border-radius: 3px;
         color: white;
         z-index: 999999;
 

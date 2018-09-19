@@ -1,6 +1,7 @@
 <template>
     <div class="wrapper">
-        <div :style="{background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)) ,url(' + api_link + '/images/orderClaim.jpg' + ')'}" class="claimImage">
+        <div :style="{background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)) ,url(' + api_link + '/images/orderClaim.jpg' + ')'}"
+             class="claimImage">
             <div>
                 <div class="title">Order Online!</div>
             </div>
@@ -16,7 +17,10 @@
                     </div>
                 </div>
 
-                <div data-aos="fade-in" data-aos-offset="-100" data-aos-once="true" v-if="food === 'dishes'" class="product" v-for="record in dishesJSON" v-cloak>
+                <div data-aos="fade-in"
+                     :style="{background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(' + api_link + '/images/dishes/' + record.image + ')'}"
+                     data-aos-offset="-100" data-aos-once="true" v-if="food === 'dishes'" class="product"
+                     v-for="record in records" v-cloak @click="addDish(record.id)">
                     <div class="productTitle">
                         {{ record.dish }}
                     </div>
@@ -26,8 +30,9 @@
                     </div>
                 </div>
 
-                <div data-aos="fade-in" data-aos-offset="-100" data-aos-once="true" v-if="food === 'pizza'" class="product" v-for="record in records">
-                    <div class="productTitle">
+                <div data-aos="fade-in" data-aos-offset="-100" data-aos-once="true" v-if="food === 'pizza'"
+                     class="product" v-for="record in records" @click="addPizza(record.id)">
+                    <div class="productTitle pizzaTitle">
                         {{ record.pizza }}
                     </div>
 
@@ -38,7 +43,7 @@
 
                 <div v-if="loading" id="loader" class="lds-dual-ring"></div>
             </div>
-            <order-menu></order-menu>
+            <order-menu :addingProduct="addingProduct" :productType="productType"></order-menu>
         </div>
     </div>
 </template>
@@ -57,12 +62,18 @@
                 Type: String
             },
             dishes_data: {
-                Type:Object
+                Type: Object
+            },
+            pizzas_data: {
+                Type: Object
             }
         },
         computed: {
-            dishesCompute: function(){
+            dishesCompute: function () {
                 return JSON.parse(this.dishes_data);
+            },
+            pizzaCompute: function () {
+                return JSON.parse(this.pizzas_data);
             }
         },
         data() {
@@ -70,12 +81,13 @@
                 food: 'dishes',
                 records: [],
                 loading: false,
-                dishesJSON: ''
+                addingProduct: 0,
+                productType: '',
             }
         },
         mounted() {
             //convert data from controller to json
-            this.dishesJSON = this.dishesCompute;
+            this.records = this.dishesCompute;
 
         },
         methods: {
@@ -85,15 +97,7 @@
                 document.getElementById('dishes').classList.remove('active');
 
                 this.food = 'pizza';
-                this.records = [];
-                this.loading = true;
-
-                const self = this;
-
-                axios.get(this.api_link + '/api/pizza').then(function (Response) {
-                    self.records = Response.data.data;
-                    self.loading = false;
-                });
+                this.records = this.pizzaCompute;
             },
 
             dishes() {
@@ -101,13 +105,16 @@
                 document.getElementById('pizza').classList.remove('active');
 
                 this.food = 'dishes';
-                this.records = [];
-                this.loading = true;
+                this.records = this.dishesCompute;
+            },
 
-                axios.get(this.api_link + '/api/dishes').then((Response) => {
-                    this.records = Response.data.data;
-                    this.loading = false;
-                });
+            addDish(id) {
+                this.addingProduct = id;
+                this.productType = 'dish';
+            },
+
+            addPizza(id) {
+
             }
         }
     }
@@ -194,24 +201,15 @@
                     border-radius: 4px;
                     cursor: pointer;
                     display: grid;
-                    grid-template-columns: 75%  25%;
+                    grid-template-columns: 75% 25%;
                     position: relative;
                     border: 1px solid #f1f1f1;
-                    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/images/dishes/1.jpg");
                     background-size: cover;
+                    background-position: 50%;
 
-
-
-                    @media(min-width: 768px) and (max-width: 1000px){
+                    @media(min-width: 768px) and (max-width: 1000px) {
                         padding: 15px;
                     }
-
-                    @media(min-width: 1000px) {
-                        padding: 30px;
-                    }
-
-
-
                     .productTitle {
                         display: flex;
                         justify-content: left;
@@ -220,6 +218,10 @@
                         color: white;
                         word-wrap: break-word;
                         width: 100%;
+                    }
+
+                    .pizzaTitle {
+                        color: black;
                     }
 
                     .price {
@@ -231,7 +233,6 @@
                         font-weight: 500;
                         align-items: center;
                         margin-left: 5px;
-
 
                         @media(min-width: 768px) {
                             font-size: 16px;
@@ -258,12 +259,9 @@
             transition: opacity .3s;
         }
 
-        .fade-enter, .fade-leave-to
-        {
+        .fade-enter, .fade-leave-to {
             opacity: 0;
         }
-
-
 
         .lds-dual-ring {
             display: flex;

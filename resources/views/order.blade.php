@@ -5,6 +5,7 @@
 
     <order-online
             dishes_data="{{$dishes}}"
+            pizzas_data="{{$pizzas}}"
             api_link="@php echo getenv('APP_URL') @endphp"
     ></order-online>
 @endsection
