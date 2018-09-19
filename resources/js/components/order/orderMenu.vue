@@ -35,6 +35,8 @@
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
         name: "orderMenu",
         props: {
@@ -43,6 +45,9 @@
             },
             addingProduct: {
                 Type: Number
+            },
+            api_link: {
+                Type: String
             }
         },
         data() {
@@ -68,7 +73,13 @@
             },
 
             addToOrder(id, type) {
-                alert(id);
+                if(type === 'dish') {
+                    axios.post(this.api_link + '/api/basket_dish', {
+                        'id': id,
+                    }).then((Response) => {
+                        
+                    });
+                }
             }
         }
     }

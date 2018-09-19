@@ -28,4 +28,6 @@ Route::get('/menu', ['uses' => 'SitesController@menu']);
 Route::get('/reservations', ['uses' => 'SitesController@reservations']);
 
 //order
-Route::get('/order', ['uses' => 'SitesController@order']);
+Route::group(['middleware' => ['web']], function() {
+    Route::get('/order', ['uses' => 'SitesController@order']);
+});

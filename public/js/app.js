@@ -17730,6 +17730,8 @@ exports.push([module.i, "\n.order[data-v-5f7dfad1] {\n  font-size: 24px;\n}\n@me
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 //
 //
 //
@@ -17767,6 +17769,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "orderMenu",
     props: {
@@ -17775,6 +17779,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         addingProduct: {
             Type: Number
+        },
+        api_link: {
+            Type: String
         }
     },
     data: function data() {
@@ -17799,7 +17806,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
         },
         addToOrder: function addToOrder(id, type) {
-            alert(id);
+            if (type === 'dish') {
+                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(this.api_link + '/api/basket_dish', {
+                    'id': id
+                }).then(function (Response) {});
+            }
         }
     }
 });
@@ -18029,6 +18040,7 @@ var render = function() {
         _vm._v(" "),
         _c("order-menu", {
           attrs: {
+            api_link: _vm.api_link,
             addingProduct: _vm.addingProduct,
             productType: _vm.productType
           }

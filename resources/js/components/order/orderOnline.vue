@@ -43,7 +43,7 @@
 
                 <div v-if="loading" id="loader" class="lds-dual-ring"></div>
             </div>
-            <order-menu :addingProduct="addingProduct" :productType="productType"></order-menu>
+            <order-menu :api_link="api_link" :addingProduct="addingProduct" :productType="productType"></order-menu>
         </div>
     </div>
 </template>
@@ -111,6 +111,7 @@
             addDish(id) {
                 this.addingProduct = id;
                 this.productType = 'dish';
+
             },
 
             addPizza(id) {
