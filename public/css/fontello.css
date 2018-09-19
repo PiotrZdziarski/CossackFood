@@ -41,7 +41,6 @@
   line-height: 1em;
  
   /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
   margin-left: .2em;
  
   /* you can be more comfortable with increased icons size */
@@ -56,3 +55,4 @@
 }
  
 .icon-restaurant:before { content: '\e832'; color: #ff6162;text-shadow:  -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}  /* '' */
+.icon-shopping-basket:before { content: '\f291'; color: #b91d19; } /* '' */

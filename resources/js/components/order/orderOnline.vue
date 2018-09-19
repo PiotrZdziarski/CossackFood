@@ -16,7 +16,7 @@
                     </div>
                 </div>
 
-                <div data-aos="fade-in" data-aos-offset="-100" data-aos-once="true" v-if="food === 'dishes'" class="product" v-for="record in dishes_data.slice(0,dishes_count)">
+                <div data-aos="fade-in" data-aos-offset="-100" data-aos-once="true" v-if="food === 'dishes'" class="product" v-for="record in dishesJSON" v-cloak>
                     <div class="productTitle">
                         {{ record.dish }}
                     </div>
@@ -57,25 +57,26 @@
                 Type: String
             },
             dishes_data: {
-                Type: Object
-            },
-            dishes_count: {
-                Type: Number
+                Type:Object
+            }
+        },
+        computed: {
+            dishesCompute: function(){
+                return JSON.parse(this.dishes_data);
             }
         },
         data() {
             return {
                 food: 'dishes',
                 records: [],
-                loading: true,
+                loading: false,
+                dishesJSON: ''
             }
         },
         mounted() {
-            console.log(typeof this.dishes_data);
-            axios.get(this.api_link + '/api/dishes').then((Response) => {
-                this.records = Response.data.data;
-                this.loading = false;
-            });
+            //convert data from controller to json
+            this.dishesJSON = this.dishesCompute;
+
         },
         methods: {
 

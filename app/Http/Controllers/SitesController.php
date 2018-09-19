@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 
 use App\Dish;
-use App\Http\Resources\DishResource;
 
 class SitesController extends Controller
 {
@@ -34,14 +33,10 @@ class SitesController extends Controller
      */
     public function order()
     {
-        $dishes = Dish::take(15)->get();
-        $dishes = collect($dishes);
-        $dishesCount = count($dishes);
-
+        $dishes = Dish::all();
 
         return view('order', [
             'dishes' => $dishes,
-            'dishesCount' => $dishesCount
         ]);
     }
 }
