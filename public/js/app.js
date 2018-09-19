@@ -17359,7 +17359,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.fade-enter-active[data-v-6f263642], .fade-leave-active[data-v-6f263642] {\n  -webkit-transition: opacity .5s;\n  transition: opacity .5s;\n}\n.fade-enter[data-v-6f263642], .fade-leave-to[data-v-6f263642] {\n  opacity: 0;\n}\n.message[data-v-6f263642] {\n  position: fixed;\n  width: 90%;\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  padding: 20px;\n  background: #353a3e;\n  bottom: 20px;\n  text-align: center;\n  border-radius: 5px;\n  color: white;\n  z-index: 999999;\n}\n@media (min-width: 476px) {\n.message[data-v-6f263642] {\n      width: 80%;\n}\n}\n@media (min-width: 768px) {\n.message[data-v-6f263642] {\n      width: 70%;\n}\n}\n@media (min-width: 1000px) {\n.message[data-v-6f263642] {\n      width: 40%;\n}\n}\n", ""]);
+exports.push([module.i, "\n.fade-enter-active[data-v-6f263642], .fade-leave-active[data-v-6f263642] {\n  -webkit-transition: opacity .5s;\n  transition: opacity .5s;\n}\n.fade-enter[data-v-6f263642], .fade-leave-to[data-v-6f263642] {\n  opacity: 0;\n}\n.message[data-v-6f263642] {\n  position: fixed;\n  width: 90%;\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  padding: 20px;\n  background: #d64243;\n  border: 1px solid white;\n  bottom: 20px;\n  text-align: center;\n  border-radius: 3px;\n  color: white;\n  z-index: 999999;\n}\n@media (min-width: 476px) {\n.message[data-v-6f263642] {\n      width: 80%;\n}\n}\n@media (min-width: 768px) {\n.message[data-v-6f263642] {\n      width: 70%;\n}\n}\n@media (min-width: 1000px) {\n.message[data-v-6f263642] {\n      width: 40%;\n}\n}\n", ""]);
 
 // exports
 
@@ -17503,7 +17503,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.wrapper .subpages[data-v-8f025976] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  grid-column-start: 1;\n  grid-column-end: 3;\n  height: 90px;\n}\n.wrapper .subpages .subpage[data-v-8f025976] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 35px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.wrapper .subpages .subpage[data-v-8f025976]:hover {\n    color: #777777;\n}\n.wrapper .subpages .active[data-v-8f025976] {\n    color: #b91d19;\n}\n.wrapper .subpages .active[data-v-8f025976]:hover {\n    color: #b91d19;\n}\n.wrapper .claimImage[data-v-8f025976] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.wrapper .claimImage .title[data-v-8f025976] {\n    margin-top: 120px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #ff5d65;\n    margin-bottom: 50px;\n}\n@media (min-width: 768px) {\n.wrapper .claimImage .title[data-v-8f025976] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.wrapper .container[data-v-8f025976] {\n  margin-top: 30px;\n}\n@media (min-width: 768px) {\n.wrapper .container[data-v-8f025976] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: start;\n          -ms-flex-align: start;\n              align-items: flex-start;\n}\n}\n.wrapper .container .products[data-v-8f025976] {\n    position: relative;\n}\n@media (min-width: 768px) {\n.wrapper .container .products[data-v-8f025976] {\n        width: 70%;\n        display: grid;\n        grid-template-columns: 1fr 1fr;\n}\n}\n.wrapper .container .products .product[data-v-8f025976] {\n      margin: 4%;\n      padding: 50px 30px 50px 30px;\n      -webkit-transition: all ease-in-out .3s;\n      transition: all ease-in-out .3s;\n      border-radius: 4px;\n      cursor: pointer;\n      display: grid;\n      grid-template-columns: 75%  25%;\n      position: relative;\n      border: 1px solid #f1f1f1;\n      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(\"/images/dishes/1.jpg\");\n      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(\"/images/dishes/1.jpg\");\n      background-size: cover;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          padding: 15px;\n}\n}\n@media (min-width: 1000px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          padding: 30px;\n}\n}\n.wrapper .container .products .product .productTitle[data-v-8f025976] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: left;\n            -ms-flex-pack: left;\n                justify-content: left;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        position: relative;\n        color: white;\n        word-wrap: break-word;\n        width: 100%;\n}\n.wrapper .container .products .product .price[data-v-8f025976] {\n        position: relative;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        color: #fe404f;\n        font-size: 22px;\n        font-weight: 500;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        margin-left: 5px;\n}\n@media (min-width: 768px) {\n.wrapper .container .products .product .price[data-v-8f025976] {\n            font-size: 16px;\n}\n}\n@media (min-width: 1000px) {\n.wrapper .container .products .product .price[data-v-8f025976] {\n            font-size: 20px;\n}\n}\n@media (min-width: 768px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          margin: 5%;\n}\n}\n.wrapper .container .products .product[data-v-8f025976]:hover {\n      -webkit-box-shadow: 0 1px 12px black;\n              box-shadow: 0 1px 12px black;\n}\n.wrapper fade-enter-active[data-v-8f025976], .wrapper .fade-leave-active[data-v-8f025976] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.wrapper .fade-enter[data-v-8f025976], .wrapper .fade-leave-to[data-v-8f025976] {\n  opacity: 0;\n}\n.wrapper .lds-dual-ring[data-v-8f025976] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin-left: auto;\n  height: 100px;\n  width: 100px;\n  margin-right: auto;\n  margin-top: 150px;\n  grid-column-start: 1;\n  grid-column-end: 3;\n}\n.wrapper .lds-dual-ring[data-v-8f025976]:after {\n  content: \" \";\n  display: block;\n  width: 56px;\n  height: 56px;\n  margin: 1px;\n  border-radius: 50%;\n  border: 8px solid lightgray;\n  border-color: lightgray transparent lightgray transparent;\n  -webkit-animation: lds-dual-ring-data-v-8f025976 1.2s linear infinite;\n          animation: lds-dual-ring-data-v-8f025976 1.2s linear infinite;\n}\n@-webkit-keyframes lds-dual-ring-data-v-8f025976 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes lds-dual-ring-data-v-8f025976 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n", ""]);
+exports.push([module.i, "\n.wrapper .subpages[data-v-8f025976] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  grid-column-start: 1;\n  grid-column-end: 3;\n  height: 90px;\n}\n.wrapper .subpages .subpage[data-v-8f025976] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 35px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.wrapper .subpages .subpage[data-v-8f025976]:hover {\n    color: #777777;\n}\n.wrapper .subpages .active[data-v-8f025976] {\n    color: #b91d19;\n}\n.wrapper .subpages .active[data-v-8f025976]:hover {\n    color: #b91d19;\n}\n.wrapper .claimImage[data-v-8f025976] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.wrapper .claimImage .title[data-v-8f025976] {\n    margin-top: 120px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #ff5d65;\n    margin-bottom: 50px;\n}\n@media (min-width: 768px) {\n.wrapper .claimImage .title[data-v-8f025976] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.wrapper .container[data-v-8f025976] {\n  margin-top: 30px;\n}\n@media (min-width: 768px) {\n.wrapper .container[data-v-8f025976] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: start;\n          -ms-flex-align: start;\n              align-items: flex-start;\n}\n}\n.wrapper .container .products[data-v-8f025976] {\n    position: relative;\n}\n@media (min-width: 768px) {\n.wrapper .container .products[data-v-8f025976] {\n        width: 70%;\n        display: grid;\n        grid-template-columns: 1fr 1fr;\n}\n}\n.wrapper .container .products .product[data-v-8f025976] {\n      margin: 4%;\n      padding: 50px 30px 50px 30px;\n      -webkit-transition: all ease-in-out .3s;\n      transition: all ease-in-out .3s;\n      border-radius: 4px;\n      cursor: pointer;\n      display: grid;\n      grid-template-columns: 75% 25%;\n      position: relative;\n      border: 1px solid #f1f1f1;\n      background-size: cover;\n      background-position: 50%;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          padding: 15px;\n}\n}\n.wrapper .container .products .product .productTitle[data-v-8f025976] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: left;\n            -ms-flex-pack: left;\n                justify-content: left;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        position: relative;\n        color: white;\n        word-wrap: break-word;\n        width: 100%;\n}\n.wrapper .container .products .product .pizzaTitle[data-v-8f025976] {\n        color: black;\n}\n.wrapper .container .products .product .price[data-v-8f025976] {\n        position: relative;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        color: #fe404f;\n        font-size: 22px;\n        font-weight: 500;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        margin-left: 5px;\n}\n@media (min-width: 768px) {\n.wrapper .container .products .product .price[data-v-8f025976] {\n            font-size: 16px;\n}\n}\n@media (min-width: 1000px) {\n.wrapper .container .products .product .price[data-v-8f025976] {\n            font-size: 20px;\n}\n}\n@media (min-width: 768px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          margin: 5%;\n}\n}\n.wrapper .container .products .product[data-v-8f025976]:hover {\n      -webkit-box-shadow: 0 1px 12px black;\n              box-shadow: 0 1px 12px black;\n}\n.wrapper fade-enter-active[data-v-8f025976], .wrapper .fade-leave-active[data-v-8f025976] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.wrapper .fade-enter[data-v-8f025976], .wrapper .fade-leave-to[data-v-8f025976] {\n  opacity: 0;\n}\n.wrapper .lds-dual-ring[data-v-8f025976] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin-left: auto;\n  height: 100px;\n  width: 100px;\n  margin-right: auto;\n  margin-top: 150px;\n  grid-column-start: 1;\n  grid-column-end: 3;\n}\n.wrapper .lds-dual-ring[data-v-8f025976]:after {\n  content: \" \";\n  display: block;\n  width: 56px;\n  height: 56px;\n  margin: 1px;\n  border-radius: 50%;\n  border: 8px solid lightgray;\n  border-color: lightgray transparent lightgray transparent;\n  -webkit-animation: lds-dual-ring-data-v-8f025976 1.2s linear infinite;\n          animation: lds-dual-ring-data-v-8f025976 1.2s linear infinite;\n}\n@-webkit-keyframes lds-dual-ring-data-v-8f025976 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes lds-dual-ring-data-v-8f025976 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n", ""]);
 
 // exports
 
@@ -17518,6 +17518,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__orderMenu_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__orderMenu_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -17578,11 +17583,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         dishes_data: {
             Type: Object
+        },
+        pizzas_data: {
+            Type: Object
         }
     },
     computed: {
         dishesCompute: function dishesCompute() {
             return JSON.parse(this.dishes_data);
+        },
+        pizzaCompute: function pizzaCompute() {
+            return JSON.parse(this.pizzas_data);
         }
     },
     data: function data() {
@@ -17590,12 +17601,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             food: 'dishes',
             records: [],
             loading: false,
-            dishesJSON: ''
+            addingProduct: 0,
+            productType: ''
         };
     },
     mounted: function mounted() {
         //convert data from controller to json
-        this.dishesJSON = this.dishesCompute;
+        this.records = this.dishesCompute;
     },
 
     methods: {
@@ -17604,31 +17616,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             document.getElementById('dishes').classList.remove('active');
 
             this.food = 'pizza';
-            this.records = [];
-            this.loading = true;
-
-            var self = this;
-
-            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get(this.api_link + '/api/pizza').then(function (Response) {
-                self.records = Response.data.data;
-                self.loading = false;
-            });
+            this.records = this.pizzaCompute;
         },
         dishes: function dishes() {
-            var _this = this;
-
             document.getElementById('dishes').classList.add('active');
             document.getElementById('pizza').classList.remove('active');
 
             this.food = 'dishes';
-            this.records = [];
-            this.loading = true;
-
-            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get(this.api_link + '/api/dishes').then(function (Response) {
-                _this.records = Response.data.data;
-                _this.loading = false;
-            });
-        }
+            this.records = this.dishesCompute;
+        },
+        addDish: function addDish(id) {
+            this.addingProduct = id;
+            this.productType = 'dish';
+        },
+        addPizza: function addPizza(id) {}
     }
 });
 
@@ -17718,7 +17719,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.order[data-v-5f7dfad1] {\n  font-size: 24px;\n}\n@media (max-width: 768px) {\n.order[data-v-5f7dfad1] {\n      position: fixed;\n      right: -70%;\n      top: 50%;\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%);\n      width: 70%;\n      z-index: 999999;\n      background: white;\n      padding: 15px;\n      border-radius: 4px;\n      -webkit-transition: right .3s ease-in-out;\n      transition: right .3s ease-in-out;\n}\n}\n@media (min-width: 768px) {\n.order[data-v-5f7dfad1] {\n      width: 30%;\n      margin: 20px;\n      padding: 20px;\n      -webkit-box-shadow: 0 1px 2px #cfcfcf;\n              box-shadow: 0 1px 2px #cfcfcf;\n}\n}\n.order .orderTitle[data-v-5f7dfad1] {\n    border-bottom: 1px solid #f1f1f1;\n    padding-bottom: 10px;\n}\n.order .summary[data-v-5f7dfad1] {\n    margin-top: 20px;\n    padding-bottom: 15px;\n    display: grid;\n    grid-template-columns: 1.4fr 0.6fr;\n    border-bottom: 1px solid #eeeeee;\n}\n.order .summary .summaryTitle[data-v-5f7dfad1] {\n      font-size: 16px;\n}\n.order .summary .summaryPrice[data-v-5f7dfad1] {\n      color: #b91d19;\n      font-weight: 500;\n      font-size: 20px;\n      margin-left: 10px;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.order .summary .summaryPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts[data-v-5f7dfad1] {\n      overflow-y: scroll;\n      z-index: -1000;\n      height: 40vh;\n}\n}\n.order .orderProducts .product[data-v-5f7dfad1] {\n    display: grid;\n    grid-template-columns: 1fr 0.7fr 0.3fr;\n    position: relative;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom: 1px solid #f1f1f1;\n}\n.order .orderProducts .product .productName[data-v-5f7dfad1] {\n      font-size: 16px;\n      position: relative;\n      padding: 10px 0 10px 0;\n}\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n      font-weight: 500;\n      font-size: 18px;\n      color: #b91d19;\n      text-align: right;\n}\n@media (min-width: 768px) and (max-width: 1200px) {\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1] {\n      width: 10px;\n      height: 10px;\n      padding: 30px 5px 30px 5px;\n      cursor: pointer;\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n        position: absolute;\n        top: 50%;\n        right: 5px;\n        content: '';\n        width: 15px;\n        height: 2px;\n        background: black;\n        display: block;\n}\n@media (min-width: 768px) and (max-width: 1200px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n            right: 0;\n            top: 15%;\n}\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before {\n        -webkit-transform: rotate(45deg);\n                transform: rotate(45deg);\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n        -webkit-transform: rotate(-45deg);\n                transform: rotate(-45deg);\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]:hover::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]:hover::after {\n      background: #444444;\n}\n.order .orderLowWidthButton[data-v-5f7dfad1] {\n    font-size: 22px;\n    cursor: pointer;\n    position: fixed;\n    right: 100%;\n    top: 50%;\n    padding: 8px 12px 8px 12px;\n    background: white;\n    border-radius: 3px;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    -webkit-touch-callout: none;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    -webkit-box-shadow: 0 1px 2px #b9bbbe;\n            box-shadow: 0 1px 2px #b9bbbe;\n    z-index: 999999;\n}\n@media (min-width: 768px) {\n.order .orderLowWidthButton[data-v-5f7dfad1] {\n        display: none;\n}\n}\n.order .orderLowWidthButton .orderButtonTitle[data-v-5f7dfad1] {\n      font-size: 12px;\n      text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n.order[data-v-5f7dfad1] {\n  font-size: 24px;\n}\n@media (max-width: 768px) {\n.order[data-v-5f7dfad1] {\n      position: fixed;\n      right: -70%;\n      top: 50%;\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%);\n      width: 70%;\n      z-index: 999;\n      background: white;\n      padding: 15px;\n      border-radius: 4px;\n      -webkit-transition: right .3s ease-in-out;\n      transition: right .3s ease-in-out;\n}\n}\n@media (min-width: 768px) {\n.order[data-v-5f7dfad1] {\n      width: 30%;\n      margin: 20px;\n      padding: 20px;\n      -webkit-box-shadow: 0 1px 2px #cfcfcf;\n              box-shadow: 0 1px 2px #cfcfcf;\n}\n}\n.order .orderTitle[data-v-5f7dfad1] {\n    border-bottom: 1px solid #f1f1f1;\n    padding-bottom: 10px;\n}\n.order .summary[data-v-5f7dfad1] {\n    margin-top: 20px;\n    padding-bottom: 15px;\n    display: grid;\n    grid-template-columns: 1.4fr 0.6fr;\n    border-bottom: 1px solid #eeeeee;\n}\n.order .summary .summaryTitle[data-v-5f7dfad1] {\n      font-size: 16px;\n}\n.order .summary .summaryPrice[data-v-5f7dfad1] {\n      color: #b91d19;\n      font-weight: 500;\n      font-size: 20px;\n      margin-left: 10px;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.order .summary .summaryPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts[data-v-5f7dfad1] {\n      overflow-y: scroll;\n      height: 40vh;\n}\n}\n.order .orderProducts .product[data-v-5f7dfad1] {\n    display: grid;\n    grid-template-columns: 1fr 0.7fr 0.3fr;\n    position: relative;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom: 1px solid #f1f1f1;\n}\n.order .orderProducts .product .productName[data-v-5f7dfad1] {\n      font-size: 16px;\n      position: relative;\n      padding: 10px 0 10px 0;\n}\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n      font-weight: 500;\n      font-size: 18px;\n      color: #b91d19;\n      text-align: right;\n}\n@media (min-width: 768px) and (max-width: 1200px) {\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1] {\n      width: 10px;\n      height: 10px;\n      padding: 30px 5px 30px 5px;\n      cursor: pointer;\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n        position: absolute;\n        top: 50%;\n        right: 5px;\n        content: '';\n        width: 15px;\n        height: 2px;\n        background: black;\n        display: block;\n}\n@media (min-width: 768px) and (max-width: 1200px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n            right: 0;\n            top: 15%;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n            right: 10px;\n}\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before {\n        -webkit-transform: rotate(45deg);\n                transform: rotate(45deg);\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n        -webkit-transform: rotate(-45deg);\n                transform: rotate(-45deg);\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]:hover::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]:hover::after {\n      background: #444444;\n}\n.order .orderLowWidthButton[data-v-5f7dfad1] {\n    font-size: 22px;\n    cursor: pointer;\n    position: fixed;\n    right: 100%;\n    top: 50%;\n    padding: 8px 12px 8px 12px;\n    background: white;\n    border-radius: 3px;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    -webkit-touch-callout: none;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    -webkit-box-shadow: 0 1px 2px #b9bbbe;\n            box-shadow: 0 1px 2px #b9bbbe;\n    z-index: 999999;\n}\n@media (min-width: 768px) {\n.order .orderLowWidthButton[data-v-5f7dfad1] {\n        display: none;\n}\n}\n.order .orderLowWidthButton .orderButtonTitle[data-v-5f7dfad1] {\n      font-size: 12px;\n      text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -17765,75 +17766,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "orderMenu",
+    props: {
+        productType: {
+            Type: String
+        },
+        addingProduct: {
+            Type: Number
+        }
+    },
     data: function data() {
         return {
             showBasket: false
         };
     },
 
+    watch: {
+        addingProduct: function addingProduct(id) {
+            this.addToOrder(id, this.productType);
+        }
+    },
     methods: {
         showBasketMethod: function showBasketMethod() {
             if (this.showBasket === false) {
@@ -17843,6 +17797,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 this.showBasket = false;
                 document.getElementById('order').style.right = '-70%';
             }
+        },
+        addToOrder: function addToOrder(id, type) {
+            alert(id);
         }
     }
 });
@@ -17896,76 +17853,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "orderProducts" }, [
-      _c("div", { staticClass: "product" }, [
-        _c("div", { staticClass: "productName" }, [
-          _vm._v("\n                Id placeat sedeo\n            ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "productPrice" }, [
-          _vm._v("\n                47.65$\n            ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "deleteProduct" }, [
-          _c("div", { staticClass: "close" })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "product" }, [
-        _c("div", { staticClass: "productName" }, [
-          _vm._v("\n                Id placeat sedeo\n            ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "productPrice" }, [
-          _vm._v("\n                47.65$\n            ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "deleteProduct" }, [
-          _c("div", { staticClass: "close" })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "product" }, [
-        _c("div", { staticClass: "productName" }, [
-          _vm._v("\n                Id placeat sedeo\n            ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "productPrice" }, [
-          _vm._v("\n                47.65$\n            ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "deleteProduct" }, [
-          _c("div", { staticClass: "close" })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "product" }, [
-        _c("div", { staticClass: "productName" }, [
-          _vm._v("\n                Id placeat sedeo\n            ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "productPrice" }, [
-          _vm._v("\n                47.65$\n            ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "deleteProduct" }, [
-          _c("div", { staticClass: "close" })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "product" }, [
-        _c("div", { staticClass: "productName" }, [
-          _vm._v("\n                Id placeat sedeo\n            ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "productPrice" }, [
-          _vm._v("\n                47.65$\n            ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "deleteProduct" }, [
-          _c("div", { staticClass: "close" })
-        ])
-      ]),
-      _vm._v(" "),
       _c("div", { staticClass: "product" }, [
         _c("div", { staticClass: "productName" }, [
           _vm._v("\n                Id placeat sedeo\n            ")
@@ -18046,16 +17933,29 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._l(_vm.dishesJSON, function(record) {
+            _vm._l(_vm.records, function(record) {
               return _vm.food === "dishes"
                 ? _c(
                     "div",
                     {
                       staticClass: "product",
+                      style: {
+                        background:
+                          "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(" +
+                          _vm.api_link +
+                          "/images/dishes/" +
+                          record.image +
+                          ")"
+                      },
                       attrs: {
                         "data-aos": "fade-in",
                         "data-aos-offset": "-100",
                         "data-aos-once": "true"
+                      },
+                      on: {
+                        click: function($event) {
+                          _vm.addDish(record.id)
+                        }
                       }
                     },
                     [
@@ -18089,10 +17989,15 @@ var render = function() {
                         "data-aos": "fade-in",
                         "data-aos-offset": "-100",
                         "data-aos-once": "true"
+                      },
+                      on: {
+                        click: function($event) {
+                          _vm.addPizza(record.id)
+                        }
                       }
                     },
                     [
-                      _c("div", { staticClass: "productTitle" }, [
+                      _c("div", { staticClass: "productTitle pizzaTitle" }, [
                         _vm._v(
                           "\n                    " +
                             _vm._s(record.pizza) +
@@ -18122,7 +18027,12 @@ var render = function() {
           2
         ),
         _vm._v(" "),
-        _c("order-menu")
+        _c("order-menu", {
+          attrs: {
+            addingProduct: _vm.addingProduct,
+            productType: _vm.productType
+          }
+        })
       ],
       1
     )

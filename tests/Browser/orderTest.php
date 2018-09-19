@@ -12,11 +12,12 @@ class orderTest extends DuskTestCase
      * test Order Page
      * @throws \Throwable
      */
-    public function testExample()
+    public function testOrderSubpage()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/order')
-                    ->assertSee('Laravel');
+                    ->assertSee('Order Online!')
+                    ->assertSee('Summary');
         });
     }
 }

@@ -25,66 +25,6 @@
                 </div>
             </div>
 
-            <div class="product">
-                <div class="productName">
-                    Id placeat sedeo
-                </div>
-                <div class="productPrice">
-                    47.65$
-                </div>
-                <div class="deleteProduct">
-                    <div class="close"></div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="productName">
-                    Id placeat sedeo
-                </div>
-                <div class="productPrice">
-                    47.65$
-                </div>
-                <div class="deleteProduct">
-                    <div class="close"></div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="productName">
-                    Id placeat sedeo
-                </div>
-                <div class="productPrice">
-                    47.65$
-                </div>
-                <div class="deleteProduct">
-                    <div class="close"></div>
-                </div>
-            </div>
-
-
-            <div class="product">
-                <div class="productName">
-                    Id placeat sedeo
-                </div>
-                <div class="productPrice">
-                    47.65$
-                </div>
-                <div class="deleteProduct">
-                    <div class="close"></div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="productName">
-                    Id placeat sedeo
-                </div>
-                <div class="productPrice">
-                    47.65$
-                </div>
-                <div class="deleteProduct">
-                    <div class="close"></div>
-                </div>
-            </div>
 
         </div>
         <div class="orderLowWidthButton" @click="showBasketMethod">
@@ -97,9 +37,22 @@
 <script>
     export default {
         name: "orderMenu",
+        props: {
+            productType: {
+                Type: String
+            },
+            addingProduct: {
+                Type: Number
+            }
+        },
         data() {
             return {
                 showBasket: false,
+            }
+        },
+        watch: {
+            addingProduct: function(id) {
+                this.addToOrder(id, this.productType);
             }
         },
         methods: {
@@ -112,6 +65,10 @@
                     this.showBasket = false;
                     document.getElementById('order').style.right = '-70%';
                 }
+            },
+
+            addToOrder(id, type) {
+                alert(id);
             }
         }
     }
@@ -127,7 +84,7 @@
             top: 50%;
             transform: translateY(-50%);
             width: 70%;
-            z-index: 999999;
+            z-index: 999;
             background: white;
             padding: 15px;
             border-radius: 4px;
@@ -174,7 +131,6 @@
 
             @media(max-width: 768px) {
                 overflow-y: scroll;
-                z-index: -1000;
                 height: 40vh;
             }
             .product {
@@ -225,6 +181,10 @@
                             @media(min-width: 768px) and (max-width: 1200px) {
                                 right: 0;
                                 top: 15%;
+                            }
+
+                            @media(max-width: 768px) {
+                                right: 10px;
                             }
                         }
                         &::before {
