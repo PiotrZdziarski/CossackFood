@@ -43,7 +43,13 @@
 
                 <div v-if="loading" id="loader" class="lds-dual-ring"></div>
             </div>
-            <order-menu :api_link="api_link" :addingProduct="addingProduct" :productType="productType"></order-menu>
+            <order-menu
+                    :api_link="api_link"
+                    :productID="productID"
+                    :productType="productType"
+                    :addingProduct="addingProduct"
+                    @productAdded="productAdded">
+            </order-menu>
         </div>
     </div>
 </template>
@@ -81,8 +87,9 @@
                 food: 'dishes',
                 records: [],
                 loading: false,
-                addingProduct: 0,
+                productID: 0,
                 productType: '',
+                addingProduct: false,
             }
         },
         mounted() {
@@ -109,14 +116,20 @@
             },
 
             addDish(id) {
-                this.addingProduct = id;
+                this.productID = id;
                 this.productType = 'dish';
 
+                this.addingProduct = true;
             },
 
             addPizza(id) {
 
+            },
+
+            productAdded() {
+                this.addingProduct = false;
             }
+
         }
     }
 </script>

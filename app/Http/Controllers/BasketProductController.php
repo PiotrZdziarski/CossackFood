@@ -13,17 +13,43 @@ class BasketProductController extends Controller
 {
 
     /**
-     * Addind dish to basket
+     * Return all basket products
+     * @return mixed
+     */
+    private function all_basket_products()
+    {
+        $all_basket_products = BasketProduct::where('basket_id', $_SESSION['basket_id'])
+            ->get();
+
+        return BasketResource::collection($all_basket_products);
+    }
+
+
+
+    /**
+     * initial basket load when basket_id exists
+     * @return mixed
+     */
+    public function index()
+    {
+        if(isset($_SESSION['basket_id'])) {
+            return $this->all_basket_products();
+        } else {
+            return null;
+        }
+    }
+
+
+    /**
+     * Adding dish to basket
      * @param Request $request
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection|string
+     * @return mixed|string
      */
     public function store_dish(Request $request)
     {
         $id = $request->input('id');
         $dish = Dish::where('id', $id)->first();
-        //echo $_SESSION['basket_id'];
 
-        //if basket isset
         if(isset($_SESSION['basket_id'])) {
             $basket_id = $_SESSION['basket_id'];
 
@@ -35,14 +61,11 @@ class BasketProductController extends Controller
 
 
             if($basket_product->save()) {
-                $all_basket_products = BasketProduct::where('basket_id', $basket_id)->get();
-
-                return BasketResource::collection($all_basket_products);
+                return $this->all_basket_products();
             } else {
                 return $error = "Couldn't add product!";
             }
 
-            //if basket isnt set
         } else {
             $basket = new Basket;
             $basket->save();
@@ -56,9 +79,7 @@ class BasketProductController extends Controller
             $basket_product->price = $dish->price;
 
             if($basket_product->save()) {
-                $all_basket_products = BasketProduct::where('basket_id', $basket_id)->get();
-
-                return BasketResource::collection($all_basket_products);
+                return $this->all_basket_products();
             } else {
                 return $error = "Couldn't add product!";
             }

@@ -13,18 +13,21 @@
         </div>
         <div class="orderProducts">
 
-            <div class="product">
+            <div class="product" v-for="record in records">
                 <div class="productName">
-                    Id placeat sedeo
+                    {{ record.product }}
                 </div>
                 <div class="productPrice">
-                    47.65$
+                    ${{ record.price }}
                 </div>
                 <div class="deleteProduct">
-                    <div class="close"></div>
+                    <div @click="deleteProduct" class="close"></div>
                 </div>
             </div>
 
+            <div v-if="loading" class="loaderContainer">
+                <div class="lds-dual-ring"></div>
+            </div>
 
         </div>
         <div class="orderLowWidthButton" @click="showBasketMethod">
@@ -43,22 +46,36 @@
             productType: {
                 Type: String
             },
-            addingProduct: {
+            productID: {
                 Type: Number
             },
             api_link: {
                 Type: String
+            },
+            addingProduct: {
+                Type:Boolean
             }
         },
         data() {
             return {
                 showBasket: false,
+                records: [],
+                loading: true,
             }
         },
         watch: {
-            addingProduct: function(id) {
-                this.addToOrder(id, this.productType);
+            addingProduct: function(productAdding) {
+                if(productAdding === true) {
+                    this.addToOrder(this.productID, this.productType);
+                    this.$emit('productAdded');
+                }
             }
+        },
+        mounted() {
+            axios.get(this.api_link + '/api/basket_products').then((Response) => {
+                this.records = Response.data.data;
+                this.loading = false;
+            });
         },
         methods: {
 
@@ -73,13 +90,20 @@
             },
 
             addToOrder(id, type) {
+                this.loading = true;
+
                 if(type === 'dish') {
                     axios.post(this.api_link + '/api/basket_dish', {
                         'id': id,
                     }).then((Response) => {
-                        
+                        this.records = Response.data.data;
+                        this.loading = false;
                     });
                 }
+            },
+
+            deleteProduct(){
+                alert('jd');
             }
         }
     }
@@ -150,6 +174,7 @@
                 position: relative;
                 align-items: center;
                 border-bottom: 1px solid #f1f1f1;
+                padding: 5px 0 5px 0;
 
                 .productName {
                     font-size: 16px;
@@ -173,10 +198,13 @@
                 }
 
                 .deleteProduct {
+                    position: relative;
                     .close {
-                        width: 10px;
-                        height: 10px;
-                        padding: 30px 5px 30px 5px;
+                        width: 80%;
+                        height: 40px;
+                        //padding: 30px 5px 30px 5px;
+
+                        margin-left: 20%;
                         cursor: pointer;
                         &::before,
                         &::after {
@@ -186,15 +214,20 @@
                             content: '';
                             width: 15px;
                             height: 2px;
-                            background: black;
+                            background: #434343;
                             display: block;
+                            cursor: pointer;
 
-                            @media(min-width: 768px) and (max-width: 1200px) {
+                            @media(min-width: 768px) and (max-width: 1000px) {
                                 right: 0;
                                 top: 15%;
                             }
 
                             @media(max-width: 768px) {
+                                right: 15px;
+                            }
+
+                            @media(max-width: 476px) {
                                 right: 10px;
                             }
                         }
@@ -208,7 +241,7 @@
                     .close:hover {
                         &::before,
                         &::after {
-                            background: #444444;
+                            background: #727272;
                         }
                     }
                 }
@@ -241,6 +274,43 @@
             .orderButtonTitle {
                 font-size: 12px;
                 text-align: center;
+            }
+        }
+
+        .loaderContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-top: 30px;
+            padding-bottom: 5px;
+        }
+
+        .lds-dual-ring {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 46px;
+            height: 46px;
+            margin: 1px;
+            border-radius: 50%;
+            border: 5px solid #b9bbbe;
+            border-color: #b9bbbe transparent #b9bbbe transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+
+        @keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
             }
         }
     }
