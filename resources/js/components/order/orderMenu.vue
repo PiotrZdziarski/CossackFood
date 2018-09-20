@@ -7,28 +7,26 @@
             <div class="summaryTitle">
                 Summary
             </div>
-            <div class="summaryPrice">
-                9123.48$
-            </div>
+            <transition name="fade">
+                <div class="summaryPrice" v-if="loading === false">
+                    0$
+                </div>
+            </transition>
         </div>
         <div class="orderProducts">
-
-            <div class="product" v-for="record in records">
-                <div class="productName">
-                    {{ record.product }}
+            <transition-group name="fade">
+                <div class="product" :key="record.id" v-for="record in records" v-if="loading === false">
+                    <div class="productName">
+                        {{ record.product }}
+                    </div>
+                    <div class="productPrice">
+                        ${{ record.price }}
+                    </div>
+                    <div class="deleteProduct">
+                        <div @click="deleteProduct" class="close"></div>
+                    </div>
                 </div>
-                <div class="productPrice">
-                    ${{ record.price }}
-                </div>
-                <div class="deleteProduct">
-                    <div @click="deleteProduct" class="close"></div>
-                </div>
-            </div>
-
-            <div v-if="loading" class="loaderContainer">
-                <div class="lds-dual-ring"></div>
-            </div>
-
+            </transition-group>
         </div>
         <div class="orderLowWidthButton" @click="showBasketMethod">
             <i class="demo-icon icon-shopping-basket"></i>
@@ -53,7 +51,7 @@
                 Type: String
             },
             addingProduct: {
-                Type:Boolean
+                Type: Boolean
             }
         },
         data() {
@@ -61,11 +59,12 @@
                 showBasket: false,
                 records: [],
                 loading: true,
+                summary: 0,
             }
         },
         watch: {
-            addingProduct: function(productAdding) {
-                if(productAdding === true) {
+            addingProduct: function (productAdding) {
+                if (productAdding === true) {
                     this.addToOrder(this.productID, this.productType);
                     this.$emit('productAdded');
                 }
@@ -92,7 +91,7 @@
             addToOrder(id, type) {
                 this.loading = true;
 
-                if(type === 'dish') {
+                if (type === 'dish') {
                     axios.post(this.api_link + '/api/basket_dish', {
                         'id': id,
                     }).then((Response) => {
@@ -102,7 +101,7 @@
                 }
             },
 
-            deleteProduct(){
+            deleteProduct() {
                 alert('jd');
             }
         }
@@ -154,6 +153,7 @@
                 font-weight: 500;
                 font-size: 20px;
                 margin-left: 10px;
+                text-align: right;
 
                 @media(min-width: 768px) and (max-width: 1000px) {
                     font-size: 16px;
@@ -162,7 +162,6 @@
             }
         }
         .orderProducts {
-
 
             @media(max-width: 768px) {
                 overflow-y: scroll;
@@ -192,7 +191,7 @@
                         font-size: 16px;
                     }
 
-                    @media(max-width: 768px){
+                    @media(max-width: 768px) {
                         font-size: 16px;
                     }
                 }
@@ -286,32 +285,12 @@
             padding-bottom: 5px;
         }
 
-        .lds-dual-ring {
-            display: inline-block;
-            width: 64px;
-            height: 64px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .lds-dual-ring:after {
-            content: " ";
-            display: block;
-            width: 46px;
-            height: 46px;
-            margin: 1px;
-            border-radius: 50%;
-            border: 5px solid #b9bbbe;
-            border-color: #b9bbbe transparent #b9bbbe transparent;
-            animation: lds-dual-ring 1.2s linear infinite;
+        .fade-enter-active, .fade-leave-active {
+            transition: opacity .5s;
         }
 
-        @keyframes lds-dual-ring {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+        .fade-enter, .fade-leave-to {
+            opacity: 0;
         }
     }
 </style>
