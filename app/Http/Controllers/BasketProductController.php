@@ -16,10 +16,9 @@ class BasketProductController extends Controller
      * Return all basket products
      * @return mixed
      */
-    private function all_basket_products()
+    public function all_basket_products()
     {
-        $all_basket_products = BasketProduct::where('basket_id', $_SESSION['basket_id'])
-            ->get();
+        $all_basket_products = Basket::find($_SESSION['basket_id'])->basket_products;
 
         return BasketResource::collection($all_basket_products);
     }

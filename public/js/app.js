@@ -17732,7 +17732,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.order[data-v-5f7dfad1] {\n  font-size: 24px;\n}\n@media (max-width: 768px) {\n.order[data-v-5f7dfad1] {\n      position: fixed;\n      right: -70%;\n      top: 50%;\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%);\n      width: 70%;\n      z-index: 999;\n      background: white;\n      padding: 15px;\n      border-radius: 4px;\n      -webkit-transition: right .3s ease-in-out;\n      transition: right .3s ease-in-out;\n}\n}\n@media (min-width: 768px) {\n.order[data-v-5f7dfad1] {\n      width: 30%;\n      margin: 20px;\n      padding: 20px;\n      -webkit-box-shadow: 0 1px 2px #cfcfcf;\n              box-shadow: 0 1px 2px #cfcfcf;\n}\n}\n.order .orderTitle[data-v-5f7dfad1] {\n    border-bottom: 1px solid #f1f1f1;\n    padding-bottom: 10px;\n}\n.order .summary[data-v-5f7dfad1] {\n    margin-top: 20px;\n    padding-bottom: 15px;\n    display: grid;\n    grid-template-columns: 1.4fr 0.6fr;\n    border-bottom: 1px solid #eeeeee;\n}\n.order .summary .summaryTitle[data-v-5f7dfad1] {\n      font-size: 16px;\n}\n.order .summary .summaryPrice[data-v-5f7dfad1] {\n      color: #b91d19;\n      font-weight: 500;\n      font-size: 20px;\n      margin-left: 10px;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.order .summary .summaryPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts[data-v-5f7dfad1] {\n      overflow-y: scroll;\n      height: 40vh;\n}\n}\n.order .orderProducts .product[data-v-5f7dfad1] {\n    display: grid;\n    grid-template-columns: 1fr 0.7fr 0.3fr;\n    position: relative;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom: 1px solid #f1f1f1;\n    padding: 5px 0 5px 0;\n}\n.order .orderProducts .product .productName[data-v-5f7dfad1] {\n      font-size: 16px;\n      position: relative;\n      padding: 10px 0 10px 0;\n}\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n      font-weight: 500;\n      font-size: 18px;\n      color: #b91d19;\n      text-align: right;\n}\n@media (min-width: 768px) and (max-width: 1200px) {\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n.order .orderProducts .product .deleteProduct[data-v-5f7dfad1] {\n      position: relative;\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1] {\n        width: 80%;\n        height: 40px;\n        margin-left: 20%;\n        cursor: pointer;\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n          position: absolute;\n          top: 50%;\n          right: 5px;\n          content: '';\n          width: 15px;\n          height: 2px;\n          background: #434343;\n          display: block;\n          cursor: pointer;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n              right: 0;\n              top: 15%;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n              right: 15px;\n}\n}\n@media (max-width: 476px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n              right: 10px;\n}\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before {\n          -webkit-transform: rotate(45deg);\n                  transform: rotate(45deg);\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n          -webkit-transform: rotate(-45deg);\n                  transform: rotate(-45deg);\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]:hover::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]:hover::after {\n        background: #727272;\n}\n.order .orderLowWidthButton[data-v-5f7dfad1] {\n    font-size: 22px;\n    cursor: pointer;\n    position: fixed;\n    right: 100%;\n    top: 50%;\n    padding: 8px 12px 8px 12px;\n    background: white;\n    border-radius: 3px;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    -webkit-touch-callout: none;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    -webkit-box-shadow: 0 1px 2px #b9bbbe;\n            box-shadow: 0 1px 2px #b9bbbe;\n    z-index: 999999;\n}\n@media (min-width: 768px) {\n.order .orderLowWidthButton[data-v-5f7dfad1] {\n        display: none;\n}\n}\n.order .orderLowWidthButton .orderButtonTitle[data-v-5f7dfad1] {\n      font-size: 12px;\n      text-align: center;\n}\n.order .loaderContainer[data-v-5f7dfad1] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    width: 100%;\n    padding-top: 30px;\n    padding-bottom: 5px;\n}\n.order .lds-dual-ring[data-v-5f7dfad1] {\n    display: inline-block;\n    width: 64px;\n    height: 64px;\n    margin-left: auto;\n    margin-right: auto;\n}\n.order .lds-dual-ring[data-v-5f7dfad1]:after {\n    content: \" \";\n    display: block;\n    width: 46px;\n    height: 46px;\n    margin: 1px;\n    border-radius: 50%;\n    border: 5px solid #b9bbbe;\n    border-color: #b9bbbe transparent #b9bbbe transparent;\n    -webkit-animation: lds-dual-ring-data-v-5f7dfad1 1.2s linear infinite;\n            animation: lds-dual-ring-data-v-5f7dfad1 1.2s linear infinite;\n}\n@-webkit-keyframes lds-dual-ring-data-v-5f7dfad1 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes lds-dual-ring-data-v-5f7dfad1 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n", ""]);
+exports.push([module.i, "\n.order[data-v-5f7dfad1] {\n  font-size: 24px;\n}\n@media (max-width: 768px) {\n.order[data-v-5f7dfad1] {\n      position: fixed;\n      right: -70%;\n      top: 50%;\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%);\n      width: 70%;\n      z-index: 999;\n      background: white;\n      padding: 15px;\n      border-radius: 4px;\n      -webkit-transition: right .3s ease-in-out;\n      transition: right .3s ease-in-out;\n}\n}\n@media (min-width: 768px) {\n.order[data-v-5f7dfad1] {\n      width: 30%;\n      margin: 20px;\n      padding: 20px;\n      -webkit-box-shadow: 0 1px 2px #cfcfcf;\n              box-shadow: 0 1px 2px #cfcfcf;\n}\n}\n.order .orderTitle[data-v-5f7dfad1] {\n    border-bottom: 1px solid #f1f1f1;\n    padding-bottom: 10px;\n}\n.order .summary[data-v-5f7dfad1] {\n    margin-top: 20px;\n    padding-bottom: 15px;\n    display: grid;\n    grid-template-columns: 1.4fr 0.6fr;\n    border-bottom: 1px solid #eeeeee;\n}\n.order .summary .summaryTitle[data-v-5f7dfad1] {\n      font-size: 16px;\n}\n.order .summary .summaryPrice[data-v-5f7dfad1] {\n      color: #b91d19;\n      font-weight: 500;\n      font-size: 20px;\n      margin-left: 10px;\n      text-align: right;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.order .summary .summaryPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts[data-v-5f7dfad1] {\n      overflow-y: scroll;\n      height: 40vh;\n}\n}\n.order .orderProducts .product[data-v-5f7dfad1] {\n    display: grid;\n    grid-template-columns: 1fr 0.7fr 0.3fr;\n    position: relative;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom: 1px solid #f1f1f1;\n    padding: 5px 0 5px 0;\n}\n.order .orderProducts .product .productName[data-v-5f7dfad1] {\n      font-size: 16px;\n      position: relative;\n      padding: 10px 0 10px 0;\n}\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n      font-weight: 500;\n      font-size: 18px;\n      color: #b91d19;\n      text-align: right;\n}\n@media (min-width: 768px) and (max-width: 1200px) {\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n.order .orderProducts .product .deleteProduct[data-v-5f7dfad1] {\n      position: relative;\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1] {\n        width: 80%;\n        height: 40px;\n        margin-left: 20%;\n        cursor: pointer;\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n          position: absolute;\n          top: 50%;\n          right: 5px;\n          content: '';\n          width: 15px;\n          height: 2px;\n          background: #434343;\n          display: block;\n          cursor: pointer;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n              right: 0;\n              top: 15%;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n              right: 15px;\n}\n}\n@media (max-width: 476px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n              right: 10px;\n}\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before {\n          -webkit-transform: rotate(45deg);\n                  transform: rotate(45deg);\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n          -webkit-transform: rotate(-45deg);\n                  transform: rotate(-45deg);\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]:hover::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]:hover::after {\n        background: #727272;\n}\n.order .orderLowWidthButton[data-v-5f7dfad1] {\n    font-size: 22px;\n    cursor: pointer;\n    position: fixed;\n    right: 100%;\n    top: 50%;\n    padding: 8px 12px 8px 12px;\n    background: white;\n    border-radius: 3px;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    -webkit-touch-callout: none;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    -webkit-box-shadow: 0 1px 2px #b9bbbe;\n            box-shadow: 0 1px 2px #b9bbbe;\n    z-index: 999999;\n}\n@media (min-width: 768px) {\n.order .orderLowWidthButton[data-v-5f7dfad1] {\n        display: none;\n}\n}\n.order .orderLowWidthButton .orderButtonTitle[data-v-5f7dfad1] {\n      font-size: 12px;\n      text-align: center;\n}\n.order .loaderContainer[data-v-5f7dfad1] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    width: 100%;\n    padding-top: 30px;\n    padding-bottom: 5px;\n}\n.order .fade-enter-active[data-v-5f7dfad1], .order .fade-leave-active[data-v-5f7dfad1] {\n    -webkit-transition: opacity .5s;\n    transition: opacity .5s;\n}\n.order .fade-enter[data-v-5f7dfad1], .order .fade-leave-to[data-v-5f7dfad1] {\n    opacity: 0;\n}\n", ""]);
 
 // exports
 
@@ -17745,8 +17745,6 @@ exports.push([module.i, "\n.order[data-v-5f7dfad1] {\n  font-size: 24px;\n}\n@me
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-//
-//
 //
 //
 //
@@ -17807,7 +17805,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             showBasket: false,
             records: [],
-            loading: true
+            loading: true,
+            summary: 0
         };
     },
 
@@ -17869,42 +17868,63 @@ var render = function() {
   return _c("div", { staticClass: "order", attrs: { id: "order" } }, [
     _c("div", { staticClass: "orderTitle" }, [_vm._v("\n        Order\n    ")]),
     _vm._v(" "),
-    _vm._m(0),
+    _c(
+      "div",
+      { staticClass: "summary" },
+      [
+        _c("div", { staticClass: "summaryTitle" }, [
+          _vm._v("\n            Summary\n        ")
+        ]),
+        _vm._v(" "),
+        _c("transition", { attrs: { name: "fade" } }, [
+          _vm.loading === false
+            ? _c("div", { staticClass: "summaryPrice" }, [
+                _vm._v("\n                0$\n            ")
+              ])
+            : _vm._e()
+        ])
+      ],
+      1
+    ),
     _vm._v(" "),
     _c(
       "div",
       { staticClass: "orderProducts" },
       [
-        _vm._l(_vm.records, function(record) {
-          return _c("div", { staticClass: "product" }, [
-            _c("div", { staticClass: "productName" }, [
-              _vm._v(
-                "\n                " + _vm._s(record.product) + "\n            "
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "productPrice" }, [
-              _vm._v(
-                "\n                $" + _vm._s(record.price) + "\n            "
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "deleteProduct" }, [
-              _c("div", {
-                staticClass: "close",
-                on: { click: _vm.deleteProduct }
-              })
-            ])
-          ])
-        }),
-        _vm._v(" "),
-        _vm.loading
-          ? _c("div", { staticClass: "loaderContainer" }, [
-              _c("div", { staticClass: "lds-dual-ring" })
-            ])
-          : _vm._e()
+        _c(
+          "transition-group",
+          { attrs: { name: "fade" } },
+          _vm._l(_vm.records, function(record) {
+            return _vm.loading === false
+              ? _c("div", { key: record.id, staticClass: "product" }, [
+                  _c("div", { staticClass: "productName" }, [
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(record.product) +
+                        "\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "productPrice" }, [
+                    _vm._v(
+                      "\n                    $" +
+                        _vm._s(record.price) +
+                        "\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "deleteProduct" }, [
+                    _c("div", {
+                      staticClass: "close",
+                      on: { click: _vm.deleteProduct }
+                    })
+                  ])
+                ])
+              : _vm._e()
+          })
+        )
       ],
-      2
+      1
     ),
     _vm._v(" "),
     _c(
@@ -17921,22 +17941,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "summary" }, [
-      _c("div", { staticClass: "summaryTitle" }, [
-        _vm._v("\n            Summary\n        ")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "summaryPrice" }, [
-        _vm._v("\n            9123.48$\n        ")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
