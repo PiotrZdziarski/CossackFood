@@ -20,7 +20,7 @@
                 <p>Contact</p>
             </div>
             <div class="footerColumn">
-                <img data-aos="fade-in" data-aos-once="true" class="imageFooter"  :src="api_link + '/images/logo2.png'">
+                <img data-aos="fade-in" data-aos-once="true" data-aos-offset="-300" class="imageFooter"  :src="api_link + '/images/logo2.png'">
                 <p>No rights reserved</p>
             </div>
         </div>
