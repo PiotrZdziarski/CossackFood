@@ -31,5 +31,5 @@ Route::post('store_reservation', ['uses' => 'ReservationController@store']);
 
 //ordering
 Route::get('basket_products', ['uses' => 'BasketProductController@index']);
-Route::post('basket_dish', ['uses' => 'BasketProductController@store_dish']);
+Route::post('basket_store', ['uses' => 'BasketProductController@store']);
 
