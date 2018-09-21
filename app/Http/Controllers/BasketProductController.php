@@ -35,7 +35,11 @@ class BasketProductController extends Controller
         if(isset($_SESSION['basket_id'])) {
             return $this->all_basket_products();
         } else {
-            return null;
+            $basket = new Basket;
+            $basket->save();
+
+            $_SESSION['basket_id'] = $basket->id;
+            return $this->all_basket_products();
         }
     }
 
@@ -80,7 +84,13 @@ class BasketProductController extends Controller
     }
 
 
-
+    /**
+     * Create instance of BasketProduct
+     * @param $type
+     * @param $product
+     * @param $basket_id
+     * @return mixed|string
+     */
     public function newBasketProduct($type, $product, $basket_id)
     {
         $basket_product = new BasketProduct;
@@ -105,5 +115,32 @@ class BasketProductController extends Controller
         } else {
             return $error = "Couldn't add product!";
         }
+    }
+
+
+
+    /**
+     * Delete single basket product
+     * @param Request $request
+     * @return mixed
+     */
+    public function delete(Request $request)
+    {
+        $id = $request->input('id');
+
+        BasketProduct::where('id', $id)->delete();
+
+        return $this->all_basket_products();
+    }
+
+
+    /**
+     * Delete all products of certain basket
+     * @return null
+     */
+    public function delete_all()
+    {
+        BasketProduct::where('basket_id', $_SESSION['basket_id'])->delete();
+        return null;
     }
 }

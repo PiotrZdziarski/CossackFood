@@ -48,7 +48,7 @@
                     :productID="productID"
                     :productType="productType"
                     :addingProduct="addingProduct"
-                    @productAdded="productAdded">
+                    @showFlash="showFlash($event)">
             </order-menu>
 
             <flash-message :messageFlash="messageFlash" :flashCount="flashCount"></flash-message>
@@ -127,9 +127,9 @@
                 this.addingProduct = true;
             },
 
-            productAdded() {
+            showFlash(message) {
                 this.addingProduct = false;
-                this.messageFlash = 'Product added!';
+                this.messageFlash = message;
                 this.flashCount += 1;
             }
 
