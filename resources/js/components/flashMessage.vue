@@ -76,7 +76,7 @@
         }
 
         @media(min-width: 1000px) {
-            width: 25%;
+            width: 40%;
         }
 
     }

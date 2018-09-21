@@ -17352,7 +17352,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.fade-enter-active[data-v-6f263642], .fade-leave-active[data-v-6f263642] {\n  -webkit-transition: opacity .5s;\n  transition: opacity .5s;\n}\n.fade-enter[data-v-6f263642], .fade-leave-to[data-v-6f263642] {\n  opacity: 0;\n}\n.message[data-v-6f263642] {\n  position: fixed;\n  width: 90%;\n  padding: 20px;\n  right: 0;\n  left: 0;\n  margin-right: auto;\n  margin-left: auto;\n  background: #fafafa;\n  bottom: 20px;\n  text-align: center;\n  border-radius: 5px;\n  border: 1px solid #e8ede2;\n  color: #e75949;\n  z-index: 999999;\n  font-weight: 700;\n  font-size: 18px;\n  font-family: 'Open Sans', sans-serif;\n}\n@media (min-width: 476px) {\n.message[data-v-6f263642] {\n      width: 80%;\n}\n}\n@media (min-width: 768px) {\n.message[data-v-6f263642] {\n      width: 50%;\n}\n}\n@media (min-width: 1000px) {\n.message[data-v-6f263642] {\n      width: 25%;\n}\n}\n", ""]);
+exports.push([module.i, "\n.fade-enter-active[data-v-6f263642], .fade-leave-active[data-v-6f263642] {\n  -webkit-transition: opacity .5s;\n  transition: opacity .5s;\n}\n.fade-enter[data-v-6f263642], .fade-leave-to[data-v-6f263642] {\n  opacity: 0;\n}\n.message[data-v-6f263642] {\n  position: fixed;\n  width: 90%;\n  padding: 20px;\n  right: 0;\n  left: 0;\n  margin-right: auto;\n  margin-left: auto;\n  background: #fafafa;\n  bottom: 20px;\n  text-align: center;\n  border-radius: 5px;\n  border: 1px solid #e8ede2;\n  color: #e75949;\n  z-index: 999999;\n  font-weight: 700;\n  font-size: 18px;\n  font-family: 'Open Sans', sans-serif;\n}\n@media (min-width: 476px) {\n.message[data-v-6f263642] {\n      width: 80%;\n}\n}\n@media (min-width: 768px) {\n.message[data-v-6f263642] {\n      width: 50%;\n}\n}\n@media (min-width: 1000px) {\n.message[data-v-6f263642] {\n      width: 40%;\n}\n}\n", ""]);
 
 // exports
 
@@ -17658,9 +17658,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             this.addingProduct = true;
         },
-        productAdded: function productAdded() {
+        showFlash: function showFlash(message) {
             this.addingProduct = false;
-            this.messageFlash = 'Product added!';
+            this.messageFlash = message;
             this.flashCount += 1;
         }
     }
@@ -17752,7 +17752,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.order[data-v-5f7dfad1] {\n  font-size: 24px;\n}\n@media (max-width: 768px) {\n.order[data-v-5f7dfad1] {\n      position: fixed;\n      right: -70%;\n      top: 50%;\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%);\n      width: 70%;\n      z-index: 999;\n      background: white;\n      padding: 15px;\n      border-radius: 4px;\n      -webkit-transition: right .3s ease-in-out;\n      transition: right .3s ease-in-out;\n}\n}\n@media (min-width: 768px) {\n.order[data-v-5f7dfad1] {\n      width: 30%;\n      margin: 20px;\n      padding: 20px;\n      -webkit-box-shadow: 0 1px 2px #cfcfcf;\n              box-shadow: 0 1px 2px #cfcfcf;\n}\n}\n.order .orderTitle[data-v-5f7dfad1] {\n    border-bottom: 1px solid #f1f1f1;\n    padding-bottom: 10px;\n}\n.order .summary[data-v-5f7dfad1] {\n    margin-top: 20px;\n    padding-bottom: 15px;\n    display: grid;\n    grid-template-columns: 1.4fr 0.6fr;\n    border-bottom: 1px solid #eeeeee;\n}\n.order .summary .summaryTitle[data-v-5f7dfad1] {\n      font-size: 16px;\n}\n.order .summary .summaryPrice[data-v-5f7dfad1] {\n      color: #b91d19;\n      font-weight: 500;\n      font-size: 20px;\n      margin-left: 10px;\n      text-align: right;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.order .summary .summaryPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts[data-v-5f7dfad1] {\n      overflow-y: scroll;\n      height: 40vh;\n}\n}\n.order .orderProducts .product[data-v-5f7dfad1] {\n    display: grid;\n    grid-template-columns: 1fr 0.7fr 0.3fr;\n    position: relative;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom: 1px solid #f1f1f1;\n    padding: 5px 0 5px 0;\n}\n.order .orderProducts .product .productName[data-v-5f7dfad1] {\n      font-size: 16px;\n      position: relative;\n      padding: 10px 0 10px 0;\n}\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n      font-weight: 500;\n      font-size: 18px;\n      color: #b91d19;\n      text-align: right;\n}\n@media (min-width: 768px) and (max-width: 1200px) {\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n.order .orderProducts .product .deleteProduct[data-v-5f7dfad1] {\n      position: relative;\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1] {\n        width: 80%;\n        height: 40px;\n        margin-left: 20%;\n        cursor: pointer;\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n          position: absolute;\n          top: 50%;\n          right: 5px;\n          content: '';\n          width: 15px;\n          height: 2px;\n          background: #434343;\n          display: block;\n          cursor: pointer;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n              right: 0;\n              top: 15%;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n              right: 15px;\n}\n}\n@media (max-width: 476px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n              right: 10px;\n}\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before {\n          -webkit-transform: rotate(45deg);\n                  transform: rotate(45deg);\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n          -webkit-transform: rotate(-45deg);\n                  transform: rotate(-45deg);\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]:hover::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]:hover::after {\n        background: #727272;\n}\n.order .orderLowWidthButton[data-v-5f7dfad1] {\n    font-size: 22px;\n    cursor: pointer;\n    position: fixed;\n    right: 100%;\n    top: 50%;\n    padding: 8px 12px 8px 12px;\n    background: white;\n    border-radius: 3px;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    -webkit-touch-callout: none;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    -webkit-box-shadow: 0 1px 2px #b9bbbe;\n            box-shadow: 0 1px 2px #b9bbbe;\n    z-index: 999999;\n}\n@media (min-width: 768px) {\n.order .orderLowWidthButton[data-v-5f7dfad1] {\n        display: none;\n}\n}\n.order .orderLowWidthButton .orderButtonTitle[data-v-5f7dfad1] {\n      font-size: 12px;\n      text-align: center;\n}\n.order .loaderContainer[data-v-5f7dfad1] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    width: 100%;\n    padding-top: 30px;\n    padding-bottom: 5px;\n}\n.order .fade-enter-active[data-v-5f7dfad1], .order .fade-leave-active[data-v-5f7dfad1] {\n    -webkit-transition: opacity .5s;\n    transition: opacity .5s;\n}\n.order .fade-enter[data-v-5f7dfad1], .order .fade-leave-to[data-v-5f7dfad1] {\n    opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n.order[data-v-5f7dfad1] {\n  font-size: 24px;\n}\n@media (max-width: 768px) {\n.order[data-v-5f7dfad1] {\n      position: fixed;\n      right: -70%;\n      top: 50%;\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%);\n      width: 70%;\n      z-index: 999;\n      background: white;\n      padding: 15px;\n      border-radius: 4px;\n      -webkit-transition: right .3s ease-in-out;\n      transition: right .3s ease-in-out;\n}\n}\n@media (min-width: 768px) {\n.order[data-v-5f7dfad1] {\n      width: 30%;\n      margin: 20px;\n      padding: 20px;\n      -webkit-box-shadow: 0 1px 2px #cfcfcf;\n              box-shadow: 0 1px 2px #cfcfcf;\n}\n}\n.order .orderTitle[data-v-5f7dfad1] {\n    border-bottom: 1px solid #f1f1f1;\n    padding-bottom: 10px;\n}\n.order .summary[data-v-5f7dfad1] {\n    margin-top: 20px;\n    padding-bottom: 15px;\n    display: grid;\n    grid-template-columns: 1.4fr 0.6fr;\n    border-bottom: 1px solid #eeeeee;\n}\n.order .summary .summaryTitle[data-v-5f7dfad1] {\n      font-size: 16px;\n}\n.order .summary .summaryPrice[data-v-5f7dfad1] {\n      color: #b91d19;\n      font-weight: 500;\n      font-size: 20px;\n      margin-left: 10px;\n      text-align: right;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.order .summary .summaryPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts[data-v-5f7dfad1] {\n      overflow-y: scroll;\n      height: 40vh;\n}\n}\n.order .orderProducts .product[data-v-5f7dfad1] {\n    display: grid;\n    grid-template-columns: 1fr 0.7fr 0.3fr;\n    position: relative;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom: 1px solid #f1f1f1;\n    padding: 5px 0 5px 0;\n}\n.order .orderProducts .product .productName[data-v-5f7dfad1] {\n      font-size: 16px;\n      position: relative;\n      padding: 10px 0 10px 0;\n}\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n      font-weight: 500;\n      font-size: 18px;\n      color: #b91d19;\n      text-align: right;\n}\n@media (min-width: 768px) and (max-width: 1200px) {\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts .product .productPrice[data-v-5f7dfad1] {\n          font-size: 16px;\n}\n}\n.order .orderProducts .product .deleteProduct[data-v-5f7dfad1] {\n      position: relative;\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1] {\n        width: 80%;\n        height: 40px;\n        margin-left: 20%;\n        cursor: pointer;\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n          position: absolute;\n          top: 50%;\n          right: 5px;\n          content: '';\n          width: 15px;\n          height: 2px;\n          background: #434343;\n          display: block;\n          cursor: pointer;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n              right: 0;\n              top: 15%;\n}\n}\n@media (max-width: 768px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n              right: 15px;\n}\n}\n@media (max-width: 476px) {\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n              right: 10px;\n}\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::before {\n          -webkit-transform: rotate(45deg);\n                  transform: rotate(45deg);\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]::after {\n          -webkit-transform: rotate(-45deg);\n                  transform: rotate(-45deg);\n}\n.order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]:hover::before, .order .orderProducts .product .deleteProduct .close[data-v-5f7dfad1]:hover::after {\n        background: #727272;\n}\n.order .utilities[data-v-5f7dfad1] {\n    display: grid;\n    grid-template-columns: 40% 60%;\n    position: relative;\n}\n.order .utilities .submitDiv .submit[data-v-5f7dfad1] {\n      margin-top: 20px;\n      background-color: #f54339;\n      color: white;\n      -webkit-transition: .2s all ease-in-out;\n      transition: .2s all ease-in-out;\n      cursor: pointer;\n      padding: 8px 16px 8px 16px;\n      border: 0;\n      border-radius: 3px;\n}\n.order .utilities .submitDiv .submit[data-v-5f7dfad1]:hover {\n      background-color: #f5543f;\n}\n.order .utilities .submitDiv .submit[data-v-5f7dfad1]:focus {\n      outline: none;\n      -webkit-box-shadow: 0 3.75px 7.5px #b9bbbe;\n              box-shadow: 0 3.75px 7.5px #b9bbbe;\n}\n.order .utilities .clearAll[data-v-5f7dfad1] {\n      color: #666666;\n      font-family: 'Open Sans', sans-serif;\n      font-size: 14px;\n      position: relative;\n      height: 100%;\n      text-align: right;\n}\n.order .utilities .clearAll .clearAllTitle[data-v-5f7dfad1] {\n        position: absolute;\n        right: 0;\n        top: 50%;\n        cursor: pointer;\n}\n.order .utilities .clearAll .clearAllTitle[data-v-5f7dfad1]:hover {\n        color: #999999;\n}\n.order .orderLowWidthButton[data-v-5f7dfad1] {\n    font-size: 22px;\n    cursor: pointer;\n    position: fixed;\n    right: 100%;\n    top: 50%;\n    padding: 8px 12px 8px 12px;\n    background: white;\n    border-radius: 3px;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    -webkit-touch-callout: none;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    -webkit-box-shadow: 0 1px 2px #b9bbbe;\n            box-shadow: 0 1px 2px #b9bbbe;\n    z-index: 999999;\n}\n@media (min-width: 768px) {\n.order .orderLowWidthButton[data-v-5f7dfad1] {\n        display: none;\n}\n}\n.order .orderLowWidthButton .orderButtonTitle[data-v-5f7dfad1] {\n      font-size: 12px;\n      text-align: center;\n}\n.order .loaderContainer[data-v-5f7dfad1] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    width: 100%;\n    padding-top: 30px;\n    padding-bottom: 5px;\n}\n.order .fade-enter-active[data-v-5f7dfad1], .order .fade-leave-active[data-v-5f7dfad1] {\n    -webkit-transition: opacity .5s;\n    transition: opacity .5s;\n}\n.order .fade-enter[data-v-5f7dfad1], .order .fade-leave-to[data-v-5f7dfad1] {\n    opacity: 0;\n}\n", ""]);
 
 // exports
 
@@ -17765,6 +17765,16 @@ exports.push([module.i, "\n.order[data-v-5f7dfad1] {\n  font-size: 24px;\n}\n@me
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -17834,7 +17844,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         addingProduct: function addingProduct(productAdding) {
             if (productAdding === true) {
                 this.addToOrder(this.productID, this.productType);
-                this.$emit('productAdded');
             }
         }
     },
@@ -17869,20 +17878,47 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).then(function (Response) {
                 _this2.records = Response.data.data;
                 _this2.loading = false;
+                _this2.$emit('showFlash', 'Product successfully added!');
                 _this2.updateSummary();
             });
         },
-        deleteProduct: function deleteProduct() {
-            alert('jd');
+        deleteProduct: function deleteProduct(id) {
+            var _this3 = this;
+
+            this.loading = true;
+
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(this.api_link + '/api/basket_delete', {
+                'id': id
+            }).then(function (Response) {
+                _this3.records = Response.data.data;
+                _this3.loading = false;
+                _this3.$emit('showFlash', 'Product successfully deleted!');
+                _this3.updateSummary();
+            });
         },
         updateSummary: function updateSummary() {
-            var _this3 = this;
+            var _this4 = this;
 
             this.summary = 0;
             this.records.forEach(function (record) {
-                _this3.summary += record.price;
+                _this4.summary += record.price;
             });
             this.summary = Math.round(this.summary * 100) / 100;
+        },
+        clearAll: function clearAll() {
+            var _this5 = this;
+
+            this.loading = true;
+
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete(this.api_link + '/api/basket_delete_all').then(function () {
+                _this5.records = [];
+                _this5.loading = false;
+                _this5.$emit('showFlash', 'All products successfully deleted!');
+                _this5.updateSummary();
+            });
+        },
+        sumbitOrder: function sumbitOrder() {
+            alert('jd');
         }
     }
 });
@@ -17895,83 +17931,118 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "order", attrs: { id: "order" } }, [
-    _c("div", { staticClass: "orderTitle" }, [_vm._v("\n        Order\n    ")]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "summary" },
-      [
-        _c("div", { staticClass: "summaryTitle" }, [
-          _vm._v("\n            Summary\n        ")
-        ]),
-        _vm._v(" "),
-        _c("transition", { attrs: { name: "fade" } }, [
-          _vm.loading === false
-            ? _c("div", { staticClass: "summaryPrice" }, [
-                _vm._v(
-                  "\n                $" + _vm._s(_vm.summary) + "\n            "
-                )
-              ])
-            : _vm._e()
-        ])
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "orderProducts" },
-      [
-        _c(
-          "transition-group",
-          { attrs: { name: "fade" } },
-          _vm._l(_vm.records, function(record) {
-            return _vm.loading === false
-              ? _c("div", { key: record.id, staticClass: "product" }, [
-                  _c("div", { staticClass: "productName" }, [
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(record.product) +
-                        "\n                "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "productPrice" }, [
-                    _vm._v(
-                      "\n                    $" +
-                        _vm._s(record.price) +
-                        "\n                "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "deleteProduct" }, [
-                    _c("div", {
-                      staticClass: "close",
-                      on: { click: _vm.deleteProduct }
-                    })
-                  ])
+  return _c(
+    "div",
+    { staticClass: "order", attrs: { id: "order" } },
+    [
+      _c("div", { staticClass: "orderTitle" }, [
+        _vm._v("\n        Order\n    ")
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "summary" },
+        [
+          _c("div", { staticClass: "summaryTitle" }, [
+            _vm._v("\n            Summary\n        ")
+          ]),
+          _vm._v(" "),
+          _c("transition", { attrs: { name: "fade" } }, [
+            _vm.loading === false
+              ? _c("div", { staticClass: "summaryPrice" }, [
+                  _vm._v(
+                    "\n                $" +
+                      _vm._s(_vm.summary) +
+                      "\n            "
+                  )
                 ])
               : _vm._e()
-          })
-        )
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "orderLowWidthButton",
-        on: { click: _vm.showBasketMethod }
-      },
-      [
-        _c("i", { staticClass: "demo-icon icon-shopping-basket" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "orderButtonTitle" }, [_vm._v("Order")])
-      ]
-    )
-  ])
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "orderProducts" },
+        [
+          _c(
+            "transition-group",
+            { attrs: { name: "fade" } },
+            _vm._l(_vm.records, function(record) {
+              return _vm.loading === false
+                ? _c("div", { key: record.id, staticClass: "product" }, [
+                    _c("div", { staticClass: "productName" }, [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(record.product) +
+                          "\n                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "productPrice" }, [
+                      _vm._v(
+                        "\n                    $" +
+                          _vm._s(record.price) +
+                          "\n                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "deleteProduct" }, [
+                      _c("div", {
+                        staticClass: "close",
+                        on: {
+                          click: function($event) {
+                            _vm.deleteProduct(record.id)
+                          }
+                        }
+                      })
+                    ])
+                  ])
+                : _vm._e()
+            })
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("transition", { attrs: { name: "fade" } }, [
+        _vm.summary !== 0 && _vm.loading === false
+          ? _c("div", { staticClass: "utilities" }, [
+              _c("div", { staticClass: "submitDiv" }, [
+                _c(
+                  "button",
+                  { staticClass: "submit", on: { click: _vm.sumbitOrder } },
+                  [_vm._v("Submit")]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "clearAll" }, [
+                _c(
+                  "div",
+                  { staticClass: "clearAllTitle", on: { click: _vm.clearAll } },
+                  [_vm._v("Clear all")]
+                )
+              ])
+            ])
+          : _vm._e()
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "orderLowWidthButton",
+          on: { click: _vm.showBasketMethod }
+        },
+        [
+          _c("i", { staticClass: "demo-icon icon-shopping-basket" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "orderButtonTitle" }, [_vm._v("Order")])
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -18139,7 +18210,11 @@ var render = function() {
             productType: _vm.productType,
             addingProduct: _vm.addingProduct
           },
-          on: { productAdded: _vm.productAdded }
+          on: {
+            showFlash: function($event) {
+              _vm.showFlash($event)
+            }
+          }
         }),
         _vm._v(" "),
         _c("flash-message", {

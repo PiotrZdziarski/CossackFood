@@ -23,11 +23,21 @@
                         ${{ record.price }}
                     </div>
                     <div class="deleteProduct">
-                        <div @click="deleteProduct" class="close"></div>
+                        <div @click="deleteProduct(record.id)" class="close"></div>
                     </div>
                 </div>
             </transition-group>
         </div>
+        <transition name="fade">
+            <div class="utilities"  v-if="summary !== 0 && loading === false">
+                <div class="submitDiv">
+                    <button @click="sumbitOrder" class="submit">Submit</button>
+                </div>
+                <div class="clearAll">
+                    <div @click="clearAll" class="clearAllTitle">Clear all</div>
+                </div>
+            </div>
+        </transition>
         <div class="orderLowWidthButton" @click="showBasketMethod">
             <i class="demo-icon icon-shopping-basket"></i>
             <div class="orderButtonTitle">Order</div>
@@ -66,7 +76,6 @@
             addingProduct: function (productAdding) {
                 if (productAdding === true) {
                     this.addToOrder(this.productID, this.productType);
-                    this.$emit('productAdded');
                 }
             }
         },
@@ -98,20 +107,45 @@
                 }).then((Response) => {
                     this.records = Response.data.data;
                     this.loading = false;
+                    this.$emit('showFlash', 'Product successfully added!');
                     this.updateSummary();
                 });
             },
 
-            deleteProduct() {
-                alert('jd');
+            deleteProduct(id) {
+                this.loading = true;
+
+                axios.post(this.api_link + '/api/basket_delete', {
+                    'id': id
+                }).then((Response) => {
+                    this.records = Response.data.data;
+                    this.loading = false;
+                    this.$emit('showFlash', 'Product successfully deleted!');
+                    this.updateSummary();
+                });
             },
 
             updateSummary() {
                 this.summary = 0;
-                this.records.forEach((record) =>{
+                this.records.forEach((record) => {
                     this.summary += record.price;
                 });
-                this.summary = Math.round(this.summary*100) / 100;
+                this.summary = Math.round(this.summary * 100) / 100;
+            },
+
+            clearAll() {
+                this.loading = true;
+
+                axios.delete(this.api_link + '/api/basket_delete_all').then(() => {
+                    this.records = [];
+                    this.loading = false;
+                    this.$emit('showFlash', 'All products successfully deleted!');
+                    this.updateSummary();
+                });
+            },
+
+            sumbitOrder(){
+                alert('jd');
             }
         }
     }
@@ -252,6 +286,54 @@
                             background: #727272;
                         }
                     }
+                }
+            }
+        }
+        .utilities {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            position: relative;
+
+            .submitDiv {
+
+                .submit {
+                    margin-top: 20px;
+                    background-color: #f54339;
+                    color: white;
+                    transition: .2s all ease-in-out;
+                    cursor: pointer;
+                    padding: 8px 16px 8px 16px;
+                    border: 0;
+                    border-radius: 3px;
+                }
+
+                .submit:hover {
+                    background-color: #f5543f;
+                }
+
+                .submit:focus {
+                    outline: none;
+                    box-shadow: 0 3.75px 7.5px #b9bbbe;
+                }
+            }
+
+            .clearAll {
+                color: #666666;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 14px;
+                position: relative;
+                height: 100%;
+                text-align: right;
+
+                .clearAllTitle {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    cursor: pointer;
+                }
+
+                .clearAllTitle:hover {
+                    color: #999999;
                 }
             }
         }
