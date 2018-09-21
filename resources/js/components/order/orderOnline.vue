@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <div :style="{background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)) ,url(' + api_link + '/images/orderClaim.jpg' + ')'}"
+        <div :style="{background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) ,url(' + api_link + '/images/orderClaim.jpg' + ')'}"
              class="claimImage">
             <div>
                 <div class="title">Order Online!</div>
@@ -20,7 +20,7 @@
                 <div data-aos="fade-in"
                      :style="{background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(' + api_link + '/images/dishes/' + record.image + ')'}"
                      data-aos-offset="-100" data-aos-once="true" v-if="food === 'dishes'" class="product"
-                     v-for="record in records" v-cloak @click="addDish(record.id)">
+                     v-for="record in records" v-cloak @click="storeProduct(record.id, 'dish')">
                     <div class="productTitle">
                         {{ record.dish }}
                     </div>
@@ -31,7 +31,7 @@
                 </div>
 
                 <div data-aos="fade-in" data-aos-offset="-100" data-aos-once="true" v-if="food === 'pizza'"
-                     class="product" v-for="record in records" @click="addPizza(record.id)">
+                     class="product pizzaHover" v-for="record in records" @click="storeProduct(record.id, 'pizza')">
                     <div class="productTitle pizzaTitle">
                         {{ record.pizza }}
                     </div>
@@ -50,6 +50,8 @@
                     :addingProduct="addingProduct"
                     @productAdded="productAdded">
             </order-menu>
+
+            <flash-message :messageFlash="messageFlash" :flashCount="flashCount"></flash-message>
         </div>
     </div>
 </template>
@@ -90,6 +92,9 @@
                 productID: 0,
                 productType: '',
                 addingProduct: false,
+
+                messageFlash: '',
+                flashCount: 0,
             }
         },
         mounted() {
@@ -115,19 +120,17 @@
                 this.records = this.dishesCompute;
             },
 
-            addDish(id) {
+            storeProduct(id, type) {
                 this.productID = id;
-                this.productType = 'dish';
+                this.productType = type;
 
                 this.addingProduct = true;
             },
 
-            addPizza(id) {
-
-            },
-
             productAdded() {
                 this.addingProduct = false;
+                this.messageFlash = 'Product added!';
+                this.flashCount += 1;
             }
 
         }
@@ -171,12 +174,19 @@
         .claimImage {
             height: 373px;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-position: 40% !important;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             box-shadow: 0 1px 2px #b9bbbe;
+
+            @media(min-width: 768px) {
+                background-position: 20% !important;
+            }
+            @media(min-width: 1200px) {
+                background-position: 0 !important;
+            }
 
             .title {
                 margin-top: 120px;
@@ -210,7 +220,7 @@
 
                 .product {
                     margin: 4%;
-                    padding: 50px 30px 50px 30px;
+                    padding: 60px 30px 60px 30px;
                     transition: all ease-in-out .3s;
                     border-radius: 4px;
                     cursor: pointer;
@@ -218,11 +228,10 @@
                     grid-template-columns: 75% 25%;
                     position: relative;
                     border: 1px solid #f1f1f1;
-                    background-size: cover;
-                    background-position: 50%;
+                    background-size: cover !important;
 
                     @media(min-width: 768px) and (max-width: 1000px) {
-                        padding: 15px;
+                        padding:  30px 15px 30px 15px;
                     }
                     .productTitle {
                         display: flex;
@@ -262,9 +271,17 @@
                     }
                 }
 
-                .product:hover {
-                    box-shadow: 0 1px 12px black;
+                @media(min-width: 768px) {
+
+                    .product:hover {
+                        box-shadow: 0 1px 12px black;
+                    }
+
+                    .pizzaHover:hover {
+                        box-shadow: 0 1px 12px #b9bbbe;
+                    }
                 }
+
 
             }
         }

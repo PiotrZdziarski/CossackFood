@@ -15472,7 +15472,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.reservedTable[data-v-2c4cd5d5] {\n  cursor: auto !important;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 67, 57, 0.5)), to(rgba(245, 67, 57, 0.5)));\n  background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5));\n}\n.reservedTable[data-v-2c4cd5d5]:hover {\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 67, 57, 0.5)), to(rgba(245, 67, 57, 0.5))) !important;\n  background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5)) !important;\n  -webkit-box-shadow: 0 0 2px white !important;\n          box-shadow: 0 0 2px white !important;\n}\n@-webkit-keyframes fadeIn-data-v-2c4cd5d5 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes fadeIn-data-v-2c4cd5d5 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n.animationFadeIn[data-v-2c4cd5d5] {\n  display: block;\n  -webkit-animation: fadeIn-data-v-2c4cd5d5 .5s;\n  animation: fadeIn-data-v-2c4cd5d5 .5s;\n}\n.displayNone[data-v-2c4cd5d5] {\n  display: none !important;\n}\n.lds-ring[data-v-2c4cd5d5] {\n  display: block;\n  position: relative;\n  margin-left: auto;\n  margin-top: 200px;\n  margin-right: auto;\n  -webkit-transform: translateX(15%);\n          transform: translateX(15%);\n  width: 104px;\n  height: 104px;\n}\n.lds-ring div[data-v-2c4cd5d5] {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  display: block;\n  position: absolute;\n  width: 71px;\n  height: 71px;\n  margin: 6px;\n  border: 7px solid #cccccc;\n  border-radius: 50%;\n  -webkit-animation: lds-ring-data-v-2c4cd5d5 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\n          animation: lds-ring-data-v-2c4cd5d5 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\n  border-color: #b9bbbe transparent transparent transparent;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(1) {\n  -webkit-animation-delay: -0.45s;\n          animation-delay: -0.45s;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(2) {\n  -webkit-animation-delay: -0.3s;\n          animation-delay: -0.3s;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(3) {\n  -webkit-animation-delay: -0.15s;\n          animation-delay: -0.15s;\n}\n@-webkit-keyframes lds-ring-data-v-2c4cd5d5 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes lds-ring-data-v-2c4cd5d5 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n.fade-enter-active[data-v-2c4cd5d5], .fade-leave-active[data-v-2c4cd5d5] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-2c4cd5d5], .fade-leave-to[data-v-2c4cd5d5] {\n  opacity: 0;\n}\n.openHours[data-v-2c4cd5d5] {\n  text-align: center;\n  color: #b91d19;\n  display: block;\n  margin-bottom: 40px;\n  margin-top: 40px;\n}\n.selectTime[data-v-2c4cd5d5] {\n  text-align: center;\n  margin-bottom: 50px;\n  display: grid;\n  grid-template-columns: 1fr;\n}\n@media (min-width: 768px) {\n.selectTime[data-v-2c4cd5d5] {\n      grid-template-columns: 1fr 1fr;\n}\n}\n.selectTime #date[data-v-2c4cd5d5] {\n    margin-bottom: 60px;\n}\n@media (min-width: 768px) {\n.selectTime #date[data-v-2c4cd5d5] {\n        margin-bottom: 20px;\n}\n}\n.selectTime label[data-v-2c4cd5d5] {\n    color: #b91d19;\n    font-size: 26px;\n    font-weight: 700;\n}\n.selectTime input[data-v-2c4cd5d5] {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 15px;\n    background: none;\n    color: #444444;\n    text-align: center;\n    font-size: 22px;\n    border: 0;\n    border-bottom: 1px solid #777777;\n}\n.selectTime input[data-v-2c4cd5d5]:focus {\n    outline: none;\n    -webkit-box-shadow: 0 8px 16px -8px #777777;\n            box-shadow: 0 8px 16px -8px #777777;\n}\n.error[data-v-2c4cd5d5] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.claimImage[data-v-2c4cd5d5] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: 50% 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.claimImage .title[data-v-2c4cd5d5] {\n    margin-top: 50px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #b91d19;\n    margin-bottom: 50px;\n}\n@media (min-width: 768px) {\n.claimImage .title[data-v-2c4cd5d5] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.claimReservations[data-v-2c4cd5d5] {\n  display: block;\n  color: #b91d19;\n  text-align: center;\n  margin-bottom: 80px;\n}\n.boxShadow[data-v-2c4cd5d5] {\n  -webkit-box-shadow: 0 0 2px white;\n          box-shadow: 0 0 2px white;\n}\n.container[data-v-2c4cd5d5] {\n  margin-top: 50px;\n}\n.container .tables[data-v-2c4cd5d5] {\n    margin-left: auto;\n    margin-right: auto;\n    display: grid;\n    position: relative;\n    border: 1px solid #f1f1f1;\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;\n    z-index: 1;\n}\n.container .tables .twoInOne[data-v-2c4cd5d5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .tables .twoInOne .twoInOneTable[data-v-2c4cd5d5] {\n        float: left;\n        width: 50%;\n}\n.container .tables .image[data-v-2c4cd5d5] {\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      -webkit-filter: brightness(70%);\n              filter: brightness(70%);\n      z-index: -1;\n}\n.container .tables .table[data-v-2c4cd5d5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      font-weight: 700;\n      color: white;\n      padding: 35% 0 35% 0;\n      cursor: pointer;\n      -webkit-transition: .2s all ease-in-out;\n      transition: .2s all ease-in-out;\n      -webkit-box-shadow: 0 0 2px white;\n              box-shadow: 0 0 2px white;\n      font-size: 10px;\n}\n.container .tables .table .infotable[data-v-2c4cd5d5] {\n        word-wrap: break-word;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n        font-size: 12px;\n}\n@media (min-width: 476px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 13px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 16px;\n}\n}\n@media (min-width: 768px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 16px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 20px;\n}\n}\n@media (min-width: 1000px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 18px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 28px;\n}\n}\n@media (min-width: 1200px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 32px;\n}\n}\n.container .tables .table[data-v-2c4cd5d5]:hover {\n      -webkit-box-shadow: 0 0 7px white;\n              box-shadow: 0 0 7px white;\n      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));\n      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));\n}\n", ""]);
+exports.push([module.i, "\n@media (max-width: 476px) {\n.container[data-v-2c4cd5d5] {\n    width: 99%;\n}\n}\n.reservedTable[data-v-2c4cd5d5] {\n  cursor: auto !important;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 67, 57, 0.5)), to(rgba(245, 67, 57, 0.5)));\n  background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5));\n}\n.reservedTable[data-v-2c4cd5d5]:hover {\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 67, 57, 0.5)), to(rgba(245, 67, 57, 0.5))) !important;\n  background: linear-gradient(rgba(245, 67, 57, 0.5), rgba(245, 67, 57, 0.5)) !important;\n  -webkit-box-shadow: 0 0 2px white !important;\n          box-shadow: 0 0 2px white !important;\n}\n@-webkit-keyframes fadeIn-data-v-2c4cd5d5 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes fadeIn-data-v-2c4cd5d5 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n.animationFadeIn[data-v-2c4cd5d5] {\n  display: block;\n  -webkit-animation: fadeIn-data-v-2c4cd5d5 .5s;\n  animation: fadeIn-data-v-2c4cd5d5 .5s;\n}\n.displayNone[data-v-2c4cd5d5] {\n  display: none !important;\n}\n.lds-ring[data-v-2c4cd5d5] {\n  display: block;\n  position: relative;\n  margin-left: auto;\n  margin-top: 200px;\n  margin-right: auto;\n  -webkit-transform: translateX(15%);\n          transform: translateX(15%);\n  width: 104px;\n  height: 104px;\n}\n.lds-ring div[data-v-2c4cd5d5] {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  display: block;\n  position: absolute;\n  width: 71px;\n  height: 71px;\n  margin: 6px;\n  border: 7px solid #cccccc;\n  border-radius: 50%;\n  -webkit-animation: lds-ring-data-v-2c4cd5d5 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\n          animation: lds-ring-data-v-2c4cd5d5 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\n  border-color: #b9bbbe transparent transparent transparent;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(1) {\n  -webkit-animation-delay: -0.45s;\n          animation-delay: -0.45s;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(2) {\n  -webkit-animation-delay: -0.3s;\n          animation-delay: -0.3s;\n}\n.lds-ring div[data-v-2c4cd5d5]:nth-child(3) {\n  -webkit-animation-delay: -0.15s;\n          animation-delay: -0.15s;\n}\n@-webkit-keyframes lds-ring-data-v-2c4cd5d5 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes lds-ring-data-v-2c4cd5d5 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n.fade-enter-active[data-v-2c4cd5d5], .fade-leave-active[data-v-2c4cd5d5] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-2c4cd5d5], .fade-leave-to[data-v-2c4cd5d5] {\n  opacity: 0;\n}\n.openHours[data-v-2c4cd5d5] {\n  text-align: center;\n  color: #b91d19;\n  display: block;\n  margin-bottom: 40px;\n  margin-top: 40px;\n}\n.selectTime[data-v-2c4cd5d5] {\n  text-align: center;\n  margin-bottom: 50px;\n  display: grid;\n  grid-template-columns: 1fr;\n}\n@media (min-width: 768px) {\n.selectTime[data-v-2c4cd5d5] {\n      grid-template-columns: 1fr 1fr;\n}\n}\n.selectTime #date[data-v-2c4cd5d5] {\n    margin-bottom: 60px;\n}\n@media (min-width: 768px) {\n.selectTime #date[data-v-2c4cd5d5] {\n        margin-bottom: 20px;\n}\n}\n.selectTime label[data-v-2c4cd5d5] {\n    color: #b91d19;\n    font-size: 26px;\n    font-weight: 700;\n}\n.selectTime input[data-v-2c4cd5d5] {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 15px;\n    background: none;\n    color: #444444;\n    text-align: center;\n    font-size: 22px;\n    border: 0;\n    border-bottom: 1px solid #777777;\n}\n.selectTime input[data-v-2c4cd5d5]:focus {\n    outline: none;\n    -webkit-box-shadow: 0 8px 16px -8px #777777;\n            box-shadow: 0 8px 16px -8px #777777;\n}\n.error[data-v-2c4cd5d5] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.claimImage[data-v-2c4cd5d5] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: 50% 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.claimImage .title[data-v-2c4cd5d5] {\n    margin-top: 50px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #b91d19;\n    margin-bottom: 50px;\n}\n@media (min-width: 768px) {\n.claimImage .title[data-v-2c4cd5d5] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.claimReservations[data-v-2c4cd5d5] {\n  display: block;\n  color: #b91d19;\n  text-align: center;\n  margin-bottom: 80px;\n}\n.boxShadow[data-v-2c4cd5d5] {\n  -webkit-box-shadow: 0 0 2px white;\n          box-shadow: 0 0 2px white;\n}\n.container[data-v-2c4cd5d5] {\n  margin-top: 50px;\n}\n.container .tables[data-v-2c4cd5d5] {\n    margin-left: auto;\n    margin-right: auto;\n    display: grid;\n    position: relative;\n    border: 1px solid #f1f1f1;\n    grid-template-columns: 20% 20% 20% 20% 20%;\n    z-index: 1;\n}\n.container .tables .twoInOne[data-v-2c4cd5d5] {\n      display: grid;\n      position: relative;\n      grid-template-columns: 50% 50%;\n}\n.container .tables .twoInOne .twoInOneTable[data-v-2c4cd5d5] {\n        width: 100%;\n        height: 100%;\n        grid-row: 1;\n}\n.container .tables .image[data-v-2c4cd5d5] {\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      -webkit-filter: brightness(70%);\n              filter: brightness(70%);\n      z-index: -1;\n}\n.container .tables .table[data-v-2c4cd5d5] {\n      font-weight: 700;\n      color: white;\n      padding: 35% 0 35% 0;\n      cursor: pointer;\n      -webkit-transition: .2s all ease-in-out;\n      transition: .2s all ease-in-out;\n      -webkit-box-shadow: 0 0 2px white;\n              box-shadow: 0 0 2px white;\n      font-size: 10px;\n      text-align: center;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .tables .table .infotable[data-v-2c4cd5d5] {\n        word-wrap: break-word;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n        font-size: 12px;\n}\n@media (min-width: 476px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 13px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 16px;\n}\n}\n@media (min-width: 768px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 16px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 20px;\n}\n}\n@media (min-width: 1000px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 18px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 28px;\n}\n}\n@media (min-width: 1200px) {\n.container .tables .table[data-v-2c4cd5d5] {\n          font-size: 22px;\n}\n.container .tables .table .icon-restaurant[data-v-2c4cd5d5] {\n            font-size: 32px;\n}\n}\n.container .tables .table[data-v-2c4cd5d5]:hover {\n      -webkit-box-shadow: 0 0 7px white;\n              box-shadow: 0 0 7px white;\n      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));\n      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));\n}\n", ""]);
 
 // exports
 
@@ -15656,10 +15656,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             availableHoursAtTable: [],
             availableReservation: 6,
             loading: true,
-            showFlash: false,
-            messageFlash: '',
-            removeClosingModal: false
+            removeClosingModal: false,
 
+            messageFlash: '',
+            flashCount: 0
         };
     },
     mounted: function mounted() {
@@ -15704,15 +15704,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         reservationAdd: function reservationAdd(message) {
             //show communicat
             this.messageFlash = message;
-            this.showFlash = true;
-
-            var self = this;
-            //close flash after a while
-            setTimeout(function () {
-                self.showFlash = false;
-            }, 3500);
-
-            this.loading = true;
+            this.flashCount += 1;
 
             document.getElementById('tables').classList.remove('animationFadeIn');
             document.getElementById('tables').classList.add('displayNone');
@@ -16369,7 +16361,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.fade-enter-active[data-v-6fc00def], .fade-leave-active[data-v-6fc00def] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-6fc00def], .fade-leave-to[data-v-6fc00def] {\n  opacity: 0;\n}\n.error[data-v-6fc00def] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.container[data-v-6fc00def] {\n  margin-top: 50px;\n}\n.container .modal-container[data-v-6fc00def] {\n    position: fixed;\n    z-index: 399;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background: transparent;\n}\n.container .modal-container .modal[data-v-6fc00def] {\n      position: fixed;\n      background: #f5f5f5;\n      -webkit-box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n              box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n      left: 50%;\n      -webkit-transform: translate(-50%, -50%);\n              transform: translate(-50%, -50%);\n      width: 95%;\n      border-radius: 5px;\n      z-index: 400;\n      top: 50%;\n}\n@media (min-width: 768px) {\n.container .modal-container .modal[data-v-6fc00def] {\n          width: 75%;\n}\n}\n@media (min-width: 1000px) {\n.container .modal-container .modal[data-v-6fc00def] {\n          width: 60%;\n}\n}\n.container .modal-container .modal .modalGrid[data-v-6fc00def] {\n        display: grid;\n        grid-template-columns: 1fr;\n        width: 100%;\n        height: 100%;\n        text-align: center;\n}\n@media (min-width: 476px) {\n.container .modal-container .modal .modalGrid[data-v-6fc00def] {\n            grid-template-columns: 1fr 1fr;\n}\n}\n.container .modal-container .modal .modalGrid .form[data-v-6fc00def] {\n          padding: 10%;\n}\n.container .modal-container .modal .modalGrid .form .titleModal[data-v-6fc00def] {\n            font-size: 26px;\n            font-weight: 500;\n            color: #b91d19;\n            margin-bottom: 30px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def] {\n            margin-top: 40px;\n            background-color: #f54339;\n            color: white;\n            -webkit-transition: .2s all ease-in-out;\n            transition: .2s all ease-in-out;\n            cursor: pointer;\n            padding: 10px 20px 10px 20px;\n            border: 0;\n            border-radius: 3px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def]:hover {\n            background-color: #f5543f;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 3.75px 7.5px #b9bbbe;\n                    box-shadow: 0 3.75px 7.5px #b9bbbe;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm label[data-v-6fc00def] {\n            display: block;\n            font-size: 20px;\n            margin-top: 25px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-6fc00def] {\n            display: block;\n            margin-left: auto;\n            margin-right: auto;\n            margin-top: 15px;\n            background: none;\n            color: #444444;\n            text-align: center;\n            font-size: 16px;\n            border: 0;\n            border-bottom: 1px solid #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm select[data-v-6fc00def] {\n            display: block;\n            margin-left: auto;\n            margin-right: auto;\n            margin-top: 15px;\n            background: none;\n            color: #444444;\n            text-align: center;\n            font-size: 16px;\n            border: 0;\n            border-bottom: 1px solid #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 8px 16px -8px #777777;\n                    box-shadow: 0 8px 16px -8px #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm select[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 8px 16px -8px #777777;\n                    box-shadow: 0 8px 16px -8px #777777;\n}\n.container .modal-container .modal .modalGrid .claimModal[data-v-6fc00def] {\n          background-position: 60%;\n          border-radius: 5px;\n          background-repeat: no-repeat;\n          background-size: cover;\n}\n@media (max-width: 476px) {\n.container .modal-container .modal .modalGrid .claimModal[data-v-6fc00def] {\n              display: none;\n}\n}\n.container .modal-container .modal .close[data-v-6fc00def] {\n        position: absolute;\n        width: 30px;\n        height: 30px;\n        padding: 30px;\n        right: 0;\n        top: 0;\n        cursor: pointer;\n}\n.container .modal-container .modal .close[data-v-6fc00def]::before, .container .modal-container .modal .close[data-v-6fc00def]::after {\n          position: absolute;\n          top: 30px;\n          right: 20px;\n          content: '';\n          width: 20px;\n          height: 2px;\n          background: black;\n          display: block;\n}\n.container .modal-container .modal .close[data-v-6fc00def]::before {\n          -webkit-transform: rotate(45deg);\n                  transform: rotate(45deg);\n}\n.container .modal-container .modal .close[data-v-6fc00def]::after {\n          -webkit-transform: rotate(-45deg);\n                  transform: rotate(-45deg);\n}\n.container .modal-container .modal .close[data-v-6fc00def]:hover::before, .container .modal-container .modal .close[data-v-6fc00def]:hover::after {\n        background: #444444;\n}\n", ""]);
+exports.push([module.i, "\n.fade-enter-active[data-v-6fc00def], .fade-leave-active[data-v-6fc00def] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.fade-enter[data-v-6fc00def], .fade-leave-to[data-v-6fc00def] {\n  opacity: 0;\n}\n.error[data-v-6fc00def] {\n  border-bottom: 1px solid #b91d19 !important;\n}\n.container[data-v-6fc00def] {\n  margin-top: 50px;\n}\n.container .modal-container[data-v-6fc00def] {\n    position: fixed;\n    z-index: 399;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background: transparent;\n}\n.container .modal-container .modal[data-v-6fc00def] {\n      position: fixed;\n      background: #f5f5f5;\n      -webkit-box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n              box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);\n      left: 50%;\n      -webkit-transform: translate(-50%, -50%);\n              transform: translate(-50%, -50%);\n      width: 95%;\n      border-radius: 5px;\n      z-index: 400;\n      top: 50%;\n}\n@media (min-width: 768px) {\n.container .modal-container .modal[data-v-6fc00def] {\n          width: 75%;\n}\n}\n@media (min-width: 1000px) {\n.container .modal-container .modal[data-v-6fc00def] {\n          width: 60%;\n}\n}\n.container .modal-container .modal .modalGrid[data-v-6fc00def] {\n        display: grid;\n        grid-template-columns: 1fr;\n        width: 100%;\n        height: 100%;\n        text-align: center;\n}\n@media (min-width: 476px) {\n.container .modal-container .modal .modalGrid[data-v-6fc00def] {\n            grid-template-columns: 1fr 1fr;\n}\n}\n.container .modal-container .modal .modalGrid .form[data-v-6fc00def] {\n          padding: 10%;\n}\n.container .modal-container .modal .modalGrid .form .titleModal[data-v-6fc00def] {\n            font-size: 26px;\n            font-weight: 500;\n            color: #b91d19;\n            margin-bottom: 30px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def] {\n            margin-top: 40px;\n            background-color: #f54339;\n            color: white;\n            -webkit-transition: .2s all ease-in-out;\n            transition: .2s all ease-in-out;\n            cursor: pointer;\n            padding: 10px 20px 10px 20px;\n            border: 0;\n            border-radius: 3px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def]:hover {\n            background-color: #f5543f;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm .submit[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 3.75px 7.5px #b9bbbe;\n                    box-shadow: 0 3.75px 7.5px #b9bbbe;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm label[data-v-6fc00def] {\n            display: block;\n            font-size: 20px;\n            margin-top: 25px;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-6fc00def] {\n            display: block;\n            margin-left: auto;\n            margin-right: auto;\n            margin-top: 15px;\n            background: none;\n            color: #444444;\n            text-align: center;\n            font-size: 16px;\n            border: 0;\n            border-bottom: 1px solid #777777;\n}\n@media (min-width: 476px) and (max-width: 768px) {\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-6fc00def] {\n                width: 80%;\n}\n}\n.container .modal-container .modal .modalGrid .form #reservationForm select[data-v-6fc00def] {\n            display: block;\n            margin-left: auto;\n            margin-right: auto;\n            margin-top: 15px;\n            background: none;\n            color: #444444;\n            text-align: center;\n            font-size: 16px;\n            border: 0;\n            border-bottom: 1px solid #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm input[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 8px 16px -8px #777777;\n                    box-shadow: 0 8px 16px -8px #777777;\n}\n.container .modal-container .modal .modalGrid .form #reservationForm select[data-v-6fc00def]:focus {\n            outline: none;\n            -webkit-box-shadow: 0 8px 16px -8px #777777;\n                    box-shadow: 0 8px 16px -8px #777777;\n}\n.container .modal-container .modal .modalGrid .claimModal[data-v-6fc00def] {\n          background-position: 60%;\n          border-radius: 5px;\n          background-repeat: no-repeat;\n          background-size: cover;\n}\n@media (max-width: 476px) {\n.container .modal-container .modal .modalGrid .claimModal[data-v-6fc00def] {\n              display: none;\n}\n}\n.container .modal-container .modal .close[data-v-6fc00def] {\n        position: absolute;\n        width: 30px;\n        height: 30px;\n        padding: 30px;\n        right: 0;\n        top: 0;\n        cursor: pointer;\n}\n.container .modal-container .modal .close[data-v-6fc00def]::before, .container .modal-container .modal .close[data-v-6fc00def]::after {\n          position: absolute;\n          top: 30px;\n          right: 20px;\n          content: '';\n          width: 20px;\n          height: 2px;\n          background: black;\n          display: block;\n}\n.container .modal-container .modal .close[data-v-6fc00def]::before {\n          -webkit-transform: rotate(45deg);\n                  transform: rotate(45deg);\n}\n.container .modal-container .modal .close[data-v-6fc00def]::after {\n          -webkit-transform: rotate(-45deg);\n                  transform: rotate(-45deg);\n}\n.container .modal-container .modal .close[data-v-6fc00def]:hover::before, .container .modal-container .modal .close[data-v-6fc00def]:hover::after {\n        background: #444444;\n}\n", ""]);
 
 // exports
 
@@ -17248,7 +17240,7 @@ var render = function() {
         }),
         _vm._v(" "),
         _c("flash-message", {
-          attrs: { showFlash: _vm.showFlash, messageFlash: _vm.messageFlash }
+          attrs: { messageFlash: _vm.messageFlash, flashCount: _vm.flashCount }
         })
       ],
       1
@@ -17360,7 +17352,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.fade-enter-active[data-v-6f263642], .fade-leave-active[data-v-6f263642] {\n  -webkit-transition: opacity .5s;\n  transition: opacity .5s;\n}\n.fade-enter[data-v-6f263642], .fade-leave-to[data-v-6f263642] {\n  opacity: 0;\n}\n.message[data-v-6f263642] {\n  position: fixed;\n  width: 90%;\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  padding: 20px;\n  background: #d64243;\n  border: 1px solid white;\n  bottom: 20px;\n  text-align: center;\n  border-radius: 3px;\n  color: white;\n  z-index: 999999;\n}\n@media (min-width: 476px) {\n.message[data-v-6f263642] {\n      width: 80%;\n}\n}\n@media (min-width: 768px) {\n.message[data-v-6f263642] {\n      width: 70%;\n}\n}\n@media (min-width: 1000px) {\n.message[data-v-6f263642] {\n      width: 40%;\n}\n}\n", ""]);
+exports.push([module.i, "\n.fade-enter-active[data-v-6f263642], .fade-leave-active[data-v-6f263642] {\n  -webkit-transition: opacity .5s;\n  transition: opacity .5s;\n}\n.fade-enter[data-v-6f263642], .fade-leave-to[data-v-6f263642] {\n  opacity: 0;\n}\n.message[data-v-6f263642] {\n  position: fixed;\n  width: 90%;\n  padding: 20px;\n  right: 0;\n  left: 0;\n  margin-right: auto;\n  margin-left: auto;\n  background: #fafafa;\n  bottom: 20px;\n  text-align: center;\n  border-radius: 5px;\n  border: 1px solid #e8ede2;\n  color: #e75949;\n  z-index: 999999;\n  font-weight: 700;\n  font-size: 18px;\n  font-family: 'Open Sans', sans-serif;\n}\n@media (min-width: 476px) {\n.message[data-v-6f263642] {\n      width: 80%;\n}\n}\n@media (min-width: 768px) {\n.message[data-v-6f263642] {\n      width: 50%;\n}\n}\n@media (min-width: 1000px) {\n.message[data-v-6f263642] {\n      width: 25%;\n}\n}\n", ""]);
 
 // exports
 
@@ -17386,8 +17378,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         messageFlash: {
             type: String
         },
-        showFlash: {
-            type: Boolean
+        flashCount: {
+            type: Number
+        }
+    },
+    data: function data() {
+        return {
+            previousFlash: true,
+            flashNumber: 0,
+            flashQueue: []
+        };
+    },
+
+    watch: {
+        flashCount: function flashCount(flashNumber) {
+            var _this = this;
+
+            this.flashQueue.push(flashNumber);
+            this.flashNumber = flashNumber;
+
+            setTimeout(function () {
+                _this.flashQueue = _this.flashQueue.filter(function (item) {
+                    return item !== flashNumber;
+                });
+            }, 3500);
         }
     }
 });
@@ -17401,7 +17415,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("transition", { attrs: { name: "fade" } }, [
-    _vm.showFlash
+    _vm.flashQueue.includes(_vm.flashNumber)
       ? _c("div", { staticClass: "message" }, [
           _vm._v("\n        " + _vm._s(_vm.messageFlash) + "\n    ")
         ])
@@ -17504,7 +17518,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.wrapper .subpages[data-v-8f025976] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  grid-column-start: 1;\n  grid-column-end: 3;\n  height: 90px;\n}\n.wrapper .subpages .subpage[data-v-8f025976] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 35px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.wrapper .subpages .subpage[data-v-8f025976]:hover {\n    color: #777777;\n}\n.wrapper .subpages .active[data-v-8f025976] {\n    color: #b91d19;\n}\n.wrapper .subpages .active[data-v-8f025976]:hover {\n    color: #b91d19;\n}\n.wrapper .claimImage[data-v-8f025976] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n.wrapper .claimImage .title[data-v-8f025976] {\n    margin-top: 120px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #ff5d65;\n    margin-bottom: 50px;\n}\n@media (min-width: 768px) {\n.wrapper .claimImage .title[data-v-8f025976] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.wrapper .container[data-v-8f025976] {\n  margin-top: 30px;\n}\n@media (min-width: 768px) {\n.wrapper .container[data-v-8f025976] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: start;\n          -ms-flex-align: start;\n              align-items: flex-start;\n}\n}\n.wrapper .container .products[data-v-8f025976] {\n    position: relative;\n}\n@media (min-width: 768px) {\n.wrapper .container .products[data-v-8f025976] {\n        width: 70%;\n        display: grid;\n        grid-template-columns: 1fr 1fr;\n}\n}\n.wrapper .container .products .product[data-v-8f025976] {\n      margin: 4%;\n      padding: 50px 30px 50px 30px;\n      -webkit-transition: all ease-in-out .3s;\n      transition: all ease-in-out .3s;\n      border-radius: 4px;\n      cursor: pointer;\n      display: grid;\n      grid-template-columns: 75% 25%;\n      position: relative;\n      border: 1px solid #f1f1f1;\n      background-size: cover;\n      background-position: 50%;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          padding: 15px;\n}\n}\n.wrapper .container .products .product .productTitle[data-v-8f025976] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: left;\n            -ms-flex-pack: left;\n                justify-content: left;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        position: relative;\n        color: white;\n        word-wrap: break-word;\n        width: 100%;\n}\n.wrapper .container .products .product .pizzaTitle[data-v-8f025976] {\n        color: black;\n}\n.wrapper .container .products .product .price[data-v-8f025976] {\n        position: relative;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        color: #fe404f;\n        font-size: 22px;\n        font-weight: 500;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        margin-left: 5px;\n}\n@media (min-width: 768px) {\n.wrapper .container .products .product .price[data-v-8f025976] {\n            font-size: 16px;\n}\n}\n@media (min-width: 1000px) {\n.wrapper .container .products .product .price[data-v-8f025976] {\n            font-size: 20px;\n}\n}\n@media (min-width: 768px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          margin: 5%;\n}\n}\n.wrapper .container .products .product[data-v-8f025976]:hover {\n      -webkit-box-shadow: 0 1px 12px black;\n              box-shadow: 0 1px 12px black;\n}\n.wrapper fade-enter-active[data-v-8f025976], .wrapper .fade-leave-active[data-v-8f025976] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.wrapper .fade-enter[data-v-8f025976], .wrapper .fade-leave-to[data-v-8f025976] {\n  opacity: 0;\n}\n.wrapper .lds-dual-ring[data-v-8f025976] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin-left: auto;\n  height: 100px;\n  width: 100px;\n  margin-right: auto;\n  margin-top: 150px;\n  grid-column-start: 1;\n  grid-column-end: 3;\n}\n.wrapper .lds-dual-ring[data-v-8f025976]:after {\n  content: \" \";\n  display: block;\n  width: 56px;\n  height: 56px;\n  margin: 1px;\n  border-radius: 50%;\n  border: 8px solid lightgray;\n  border-color: lightgray transparent lightgray transparent;\n  -webkit-animation: lds-dual-ring-data-v-8f025976 1.2s linear infinite;\n          animation: lds-dual-ring-data-v-8f025976 1.2s linear infinite;\n}\n@-webkit-keyframes lds-dual-ring-data-v-8f025976 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes lds-dual-ring-data-v-8f025976 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n", ""]);
+exports.push([module.i, "\n.wrapper .subpages[data-v-8f025976] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  grid-column-start: 1;\n  grid-column-end: 3;\n  height: 90px;\n}\n.wrapper .subpages .subpage[data-v-8f025976] {\n    font-family: 'Great Vibes', cursive;\n    font-size: 35px;\n    float: left;\n    cursor: pointer;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n.wrapper .subpages .subpage[data-v-8f025976]:hover {\n    color: #777777;\n}\n.wrapper .subpages .active[data-v-8f025976] {\n    color: #b91d19;\n}\n.wrapper .subpages .active[data-v-8f025976]:hover {\n    color: #b91d19;\n}\n.wrapper .claimImage[data-v-8f025976] {\n  height: 373px;\n  background-repeat: no-repeat;\n  background-position: 40% !important;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-shadow: 0 1px 2px #b9bbbe;\n          box-shadow: 0 1px 2px #b9bbbe;\n}\n@media (min-width: 768px) {\n.wrapper .claimImage[data-v-8f025976] {\n      background-position: 20% !important;\n}\n}\n@media (min-width: 1200px) {\n.wrapper .claimImage[data-v-8f025976] {\n      background-position: 0 !important;\n}\n}\n.wrapper .claimImage .title[data-v-8f025976] {\n    margin-top: 120px;\n    font-size: 42px;\n    font-family: 'Great Vibes', cursive;\n    color: #ff5d65;\n    margin-bottom: 50px;\n}\n@media (min-width: 768px) {\n.wrapper .claimImage .title[data-v-8f025976] {\n        margin-top: 140px;\n        font-size: 62px;\n}\n}\n.wrapper .container[data-v-8f025976] {\n  margin-top: 30px;\n}\n@media (min-width: 768px) {\n.wrapper .container[data-v-8f025976] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: start;\n          -ms-flex-align: start;\n              align-items: flex-start;\n}\n}\n.wrapper .container .products[data-v-8f025976] {\n    position: relative;\n}\n@media (min-width: 768px) {\n.wrapper .container .products[data-v-8f025976] {\n        width: 70%;\n        display: grid;\n        grid-template-columns: 1fr 1fr;\n}\n}\n.wrapper .container .products .product[data-v-8f025976] {\n      margin: 4%;\n      padding: 60px 30px 60px 30px;\n      -webkit-transition: all ease-in-out .3s;\n      transition: all ease-in-out .3s;\n      border-radius: 4px;\n      cursor: pointer;\n      display: grid;\n      grid-template-columns: 75% 25%;\n      position: relative;\n      border: 1px solid #f1f1f1;\n      background-size: cover !important;\n}\n@media (min-width: 768px) and (max-width: 1000px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          padding: 30px 15px 30px 15px;\n}\n}\n.wrapper .container .products .product .productTitle[data-v-8f025976] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: left;\n            -ms-flex-pack: left;\n                justify-content: left;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        position: relative;\n        color: white;\n        word-wrap: break-word;\n        width: 100%;\n}\n.wrapper .container .products .product .pizzaTitle[data-v-8f025976] {\n        color: black;\n}\n.wrapper .container .products .product .price[data-v-8f025976] {\n        position: relative;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        color: #fe404f;\n        font-size: 22px;\n        font-weight: 500;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        margin-left: 5px;\n}\n@media (min-width: 768px) {\n.wrapper .container .products .product .price[data-v-8f025976] {\n            font-size: 16px;\n}\n}\n@media (min-width: 1000px) {\n.wrapper .container .products .product .price[data-v-8f025976] {\n            font-size: 20px;\n}\n}\n@media (min-width: 768px) {\n.wrapper .container .products .product[data-v-8f025976] {\n          margin: 5%;\n}\n}\n@media (min-width: 768px) {\n.wrapper .container .products .product[data-v-8f025976]:hover {\n        -webkit-box-shadow: 0 1px 12px black;\n                box-shadow: 0 1px 12px black;\n}\n.wrapper .container .products .pizzaHover[data-v-8f025976]:hover {\n        -webkit-box-shadow: 0 1px 12px #b9bbbe;\n                box-shadow: 0 1px 12px #b9bbbe;\n}\n}\n.wrapper fade-enter-active[data-v-8f025976], .wrapper .fade-leave-active[data-v-8f025976] {\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n}\n.wrapper .fade-enter[data-v-8f025976], .wrapper .fade-leave-to[data-v-8f025976] {\n  opacity: 0;\n}\n.wrapper .lds-dual-ring[data-v-8f025976] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin-left: auto;\n  height: 100px;\n  width: 100px;\n  margin-right: auto;\n  margin-top: 150px;\n  grid-column-start: 1;\n  grid-column-end: 3;\n}\n.wrapper .lds-dual-ring[data-v-8f025976]:after {\n  content: \" \";\n  display: block;\n  width: 56px;\n  height: 56px;\n  margin: 1px;\n  border-radius: 50%;\n  border: 8px solid lightgray;\n  border-color: lightgray transparent lightgray transparent;\n  -webkit-animation: lds-dual-ring-data-v-8f025976 1.2s linear infinite;\n          animation: lds-dual-ring-data-v-8f025976 1.2s linear infinite;\n}\n@-webkit-keyframes lds-dual-ring-data-v-8f025976 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes lds-dual-ring-data-v-8f025976 {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n", ""]);
 
 // exports
 
@@ -17519,6 +17533,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__orderMenu_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__orderMenu_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios__);
+//
+//
 //
 //
 //
@@ -17610,7 +17626,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             loading: false,
             productID: 0,
             productType: '',
-            addingProduct: false
+            addingProduct: false,
+
+            messageFlash: '',
+            flashCount: 0
         };
     },
     mounted: function mounted() {
@@ -17633,15 +17652,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.food = 'dishes';
             this.records = this.dishesCompute;
         },
-        addDish: function addDish(id) {
+        storeProduct: function storeProduct(id, type) {
             this.productID = id;
-            this.productType = 'dish';
+            this.productType = type;
 
             this.addingProduct = true;
         },
-        addPizza: function addPizza(id) {},
         productAdded: function productAdded() {
             this.addingProduct = false;
+            this.messageFlash = 'Product added!';
+            this.flashCount += 1;
         }
     }
 });
@@ -17824,6 +17844,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(this.api_link + '/api/basket_products').then(function (Response) {
             _this.records = Response.data.data;
             _this.loading = false;
+            _this.updateSummary();
         });
     },
 
@@ -17842,17 +17863,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             this.loading = true;
 
-            if (type === 'dish') {
-                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(this.api_link + '/api/basket_dish', {
-                    'id': id
-                }).then(function (Response) {
-                    _this2.records = Response.data.data;
-                    _this2.loading = false;
-                });
-            }
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(this.api_link + '/api/basket_store', {
+                'id': id,
+                'type': type
+            }).then(function (Response) {
+                _this2.records = Response.data.data;
+                _this2.loading = false;
+                _this2.updateSummary();
+            });
         },
         deleteProduct: function deleteProduct() {
             alert('jd');
+        },
+        updateSummary: function updateSummary() {
+            var _this3 = this;
+
+            this.summary = 0;
+            this.records.forEach(function (record) {
+                _this3.summary += record.price;
+            });
+            this.summary = Math.round(this.summary * 100) / 100;
         }
     }
 });
@@ -17879,7 +17909,9 @@ var render = function() {
         _c("transition", { attrs: { name: "fade" } }, [
           _vm.loading === false
             ? _c("div", { staticClass: "summaryPrice" }, [
-                _vm._v("\n                0$\n            ")
+                _vm._v(
+                  "\n                $" + _vm._s(_vm.summary) + "\n            "
+                )
               ])
             : _vm._e()
         ])
@@ -17966,7 +17998,7 @@ var render = function() {
         staticClass: "claimImage",
         style: {
           background:
-            "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)) ,url(" +
+            "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) ,url(" +
             _vm.api_link +
             "/images/orderClaim.jpg" +
             ")"
@@ -18027,7 +18059,7 @@ var render = function() {
                       },
                       on: {
                         click: function($event) {
-                          _vm.addDish(record.id)
+                          _vm.storeProduct(record.id, "dish")
                         }
                       }
                     },
@@ -18057,7 +18089,7 @@ var render = function() {
                 ? _c(
                     "div",
                     {
-                      staticClass: "product",
+                      staticClass: "product pizzaHover",
                       attrs: {
                         "data-aos": "fade-in",
                         "data-aos-offset": "-100",
@@ -18065,7 +18097,7 @@ var render = function() {
                       },
                       on: {
                         click: function($event) {
-                          _vm.addPizza(record.id)
+                          _vm.storeProduct(record.id, "pizza")
                         }
                       }
                     },
@@ -18108,6 +18140,10 @@ var render = function() {
             addingProduct: _vm.addingProduct
           },
           on: { productAdded: _vm.productAdded }
+        }),
+        _vm._v(" "),
+        _c("flash-message", {
+          attrs: { messageFlash: _vm.messageFlash, flashCount: _vm.flashCount }
         })
       ],
       1

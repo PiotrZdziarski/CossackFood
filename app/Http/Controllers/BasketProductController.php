@@ -7,6 +7,7 @@ use App\Basket;
 use App\BasketProduct;
 use App\Dish;
 use App\Http\Resources\BasketResource;
+use App\Pizza;
 use Illuminate\Http\Request;
 
 class BasketProductController extends Controller
@@ -40,30 +41,32 @@ class BasketProductController extends Controller
 
 
     /**
-     * Adding dish to basket
+     * Store product to basket
      * @param Request $request
      * @return mixed|string
      */
-    public function store_dish(Request $request)
-    {
+    public function store(Request $request) {
+
         $id = $request->input('id');
-        $dish = Dish::where('id', $id)->first();
+        $type = $request->input('type');
+
+        switch($type) {
+            case 'dish':
+                $product = Dish::where('id', $id)->first();
+                break;
+            case 'pizza':
+                $product = Pizza::where('id', $id)->first();
+                break;
+            default:
+                $product = Dish::where('id', $id)->first();
+                break;
+        }
 
         if(isset($_SESSION['basket_id'])) {
             $basket_id = $_SESSION['basket_id'];
 
             //add new product to basket
-            $basket_product = new BasketProduct;
-            $basket_product->basket_id = $basket_id;
-            $basket_product->product = $dish->dish;
-            $basket_product->price = $dish->price;
-
-
-            if($basket_product->save()) {
-                return $this->all_basket_products();
-            } else {
-                return $error = "Couldn't add product!";
-            }
+            return $this->newBasketProduct($type,$product,$basket_id);
 
         } else {
             $basket = new Basket;
@@ -72,16 +75,35 @@ class BasketProductController extends Controller
             $basket_id = $basket->id;
             $_SESSION['basket_id'] = $basket_id;
 
-            $basket_product = new BasketProduct;
-            $basket_product->basket_id = $basket_id;
-            $basket_product->product = $dish->dish;
-            $basket_product->price = $dish->price;
+            return $this->newBasketProduct($type, $product, $basket_id);
+        }
+    }
 
-            if($basket_product->save()) {
-                return $this->all_basket_products();
-            } else {
-                return $error = "Couldn't add product!";
-            }
+
+
+    public function newBasketProduct($type, $product, $basket_id)
+    {
+        $basket_product = new BasketProduct;
+        $basket_product->basket_id = $basket_id;
+        $basket_product->price = $product->price;
+
+        switch ($type) {
+            case 'dish':
+                $basket_product->product = $product->dish;
+                break;
+            case 'pizza':
+                $basket_product->product = $product->pizza;
+                break;
+            default:
+                $basket_product->product = '';
+                break;
+        }
+
+
+        if($basket_product->save()) {
+            return $this->all_basket_products();
+        } else {
+            return $error = "Couldn't add product!";
         }
     }
 }

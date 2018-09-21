@@ -9,7 +9,7 @@
             </div>
             <transition name="fade">
                 <div class="summaryPrice" v-if="loading === false">
-                    0$
+                    ${{ summary }}
                 </div>
             </transition>
         </div>
@@ -74,6 +74,7 @@
             axios.get(this.api_link + '/api/basket_products').then((Response) => {
                 this.records = Response.data.data;
                 this.loading = false;
+                this.updateSummary();
             });
         },
         methods: {
@@ -91,18 +92,26 @@
             addToOrder(id, type) {
                 this.loading = true;
 
-                if (type === 'dish') {
-                    axios.post(this.api_link + '/api/basket_dish', {
-                        'id': id,
-                    }).then((Response) => {
-                        this.records = Response.data.data;
-                        this.loading = false;
-                    });
-                }
+                axios.post(this.api_link + '/api/basket_store', {
+                    'id': id,
+                    'type': type
+                }).then((Response) => {
+                    this.records = Response.data.data;
+                    this.loading = false;
+                    this.updateSummary();
+                });
             },
 
             deleteProduct() {
                 alert('jd');
+            },
+
+            updateSummary() {
+                this.summary = 0;
+                this.records.forEach((record) =>{
+                    this.summary += record.price;
+                });
+                this.summary = Math.round(this.summary*100) / 100;
             }
         }
     }

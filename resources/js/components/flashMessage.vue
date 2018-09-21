@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <div v-if="showFlash" class="message">
+        <div v-if="flashQueue.includes(flashNumber)" class="message">
             {{ messageFlash }}
         </div>
     </transition>
@@ -13,8 +13,25 @@
             messageFlash: {
                 type: String
             },
-            showFlash: {
-                type: Boolean
+            flashCount: {
+                type: Number
+            }
+        },
+        data() {
+            return {
+                previousFlash: true,
+                flashNumber: 0,
+                flashQueue: [],
+            }
+        },
+        watch: {
+            flashCount: function(flashNumber)  {
+                this.flashQueue.push(flashNumber);
+                this.flashNumber = flashNumber;
+
+                setTimeout(() => {
+                    this.flashQueue = this.flashQueue.filter(item => item !== flashNumber);
+                }, 3500);
             }
         }
     }
@@ -26,37 +43,41 @@
         transition: opacity .5s;
     }
 
-    .fade-enter, .fade-leave-to
-    {
+    .fade-enter, .fade-leave-to {
         opacity: 0;
     }
 
     .message {
         position: fixed;
         width: 90%;
-        left: 50%;
-        transform: translateX(-50%);
         padding: 20px;
-        background: #d64243;
-        border: 1px solid white;
+        right: 0;
+        left: 0;
+        margin-right: auto;
+        margin-left: auto;
+
+        background: #fafafa;
         bottom: 20px;
         text-align: center;
-        border-radius: 3px;
-        color: white;
+        border-radius: 5px;
+        border: 1px solid #e8ede2;
+        color: #e75949;
         z-index: 999999;
+        font-weight: 700;
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
 
         @media(min-width: 476px) {
             width: 80%;
         }
 
         @media(min-width: 768px) {
-            width: 70%;
+            width: 50%;
         }
 
         @media(min-width: 1000px) {
-            width: 40%;
+            width: 25%;
         }
-
 
     }
 </style>

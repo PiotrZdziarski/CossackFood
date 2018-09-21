@@ -249,6 +249,9 @@
                                 font-size: 16px;
                                 border: 0;
                                 border-bottom: 1px solid #777777;
+                                @media(min-width: 476px) and (max-width: 768px) {
+                                    width: 80%;
+                                }
                             }
 
 

@@ -128,7 +128,7 @@
                                :reserving="reserving"
                                :availableReservation="availableReservation"></reservation-modal>
 
-            <flash-message :showFlash="showFlash" :messageFlash="messageFlash"></flash-message>
+            <flash-message :messageFlash="messageFlash" :flashCount="flashCount"></flash-message>
         </div>
     </div>
 </template>
@@ -163,10 +163,10 @@
                 availableHoursAtTable: [],
                 availableReservation: 6,
                 loading: true,
-                showFlash: false,
-                messageFlash: '',
-                removeClosingModal: false
+                removeClosingModal: false,
 
+                messageFlash: '',
+                flashCount: 0
             }
         },
         mounted() {
@@ -214,15 +214,7 @@
             reservationAdd(message) {
                 //show communicat
                 this.messageFlash = message;
-                this.showFlash = true;
-
-                const self = this;
-                //close flash after a while
-                setTimeout(function () {
-                    self.showFlash = false;
-                }, 3500);
-
-                this.loading = true;
+                this.flashCount += 1;
 
                 document.getElementById('tables').classList.remove('animationFadeIn');
                 document.getElementById('tables').classList.add('displayNone');
@@ -388,6 +380,11 @@
 </script>
 
 <style lang="scss" scoped>
+    .container {
+        @media(max-width: 476px) {
+            width: 99%;
+        }
+    }
     .reservedTable {
         cursor: auto !important;
         -webkit-touch-callout: none;
@@ -583,15 +580,15 @@
         margin-top: 50px;
 
         .tables {
-
             .twoInOne {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                display: grid;
+                position: relative;
+                grid-template-columns: 50% 50%;
 
                 .twoInOneTable {
-                    float: left;
-                    width: 50%;
+                    width: 100%;
+                    height: 100%;
+                    grid-row: 1;
                 }
             }
             margin-left: auto;
@@ -599,7 +596,7 @@
             display: grid;
             position: relative;
             border: 1px solid #f1f1f1;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 20% 20% 20% 20% 20%;
             z-index: 1;
 
             .image {
@@ -610,9 +607,6 @@
                 z-index: -1;
             }
             .table {
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 font-weight: 700;
                 color: white;
                 padding: 35% 0 35% 0;
@@ -620,6 +614,10 @@
                 transition: .2s all ease-in-out;
                 box-shadow: 0 0 2px white;
                 font-size: 10px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 .infotable {
                     word-wrap: break-word;
