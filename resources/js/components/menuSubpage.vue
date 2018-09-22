@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <div :style="{backgroundImage: 'url(' + api_link + '/images/claimMenu.jpg' + ')'}" class="claimImage">
+        <div id="claim" :style="{background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) ,url(' + api_link + '/images/claimMenu.jpg' + ')'}" class="claimImage">
             <div>
                 <div class="title">Food Menu</div>
                 <div>
@@ -70,6 +70,14 @@
                 self.records = Response.data.data;
                 self.loading = false;
             });
+
+            if(window.innerWidth > 476) {
+                const claim = document.getElementById('claim');
+                window.addEventListener('scroll', function () {
+                    let offset = window.pageYOffset;
+                    claim.style.backgroundPositionY = offset * 0.7 + 'px';
+                });
+            }
         },
         methods: {
 
@@ -238,44 +246,49 @@
         }
 
         .claimImage {
-            height: 373px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 50% 50%;
+            height: 60vh;
+            background-size: cover !important;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             box-shadow: 0 1px 2px #b9bbbe;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
 
             .title {
                 margin-top: 50px;
                 @media(min-width: 1000px) {
                     margin-top: 100px;
                 }
-                font-size: 42px;
+                font-size: 52px;
                 font-family: 'Great Vibes', cursive;
-                color: #444444;
+                color: white;
                 margin-bottom: 50px;
             }
 
             .subpage {
                 font-family: 'Great Vibes', cursive;
-                font-size: 30px;
+                font-size: 40px;
                 float: left;
                 cursor: pointer;
                 transition: all .2s ease-in-out;
+                color: #999999;
             }
 
             .subpage:hover {
-                color: #777777;
+                color: #cccccc;
             }
 
             .active {
-                color: #b91d19;
+                color: #ff7679;
             }
             .active:hover {
-                color: #b91d19;
+                color: #df676b;
             }
         }
     }

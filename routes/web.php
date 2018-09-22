@@ -23,9 +23,6 @@ Route::get('/prepare_rows_dish', ['uses' => 'DishController@prepare_rows_from_se
 //menu
 Route::get('/menu', ['uses' => 'SitesController@menu']);
 
-//News
-Route::get('/news', ['uses' => 'SitesController@news']);
-
 //order
 Route::get('/order', ['uses' => 'SitesController@order']);
 

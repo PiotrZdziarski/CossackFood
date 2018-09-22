@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <div :style="{backgroundImage: 'url(' + api_link + '/images/claimMenu.jpg' + ')'}" class="claimImage">
+        <div id="claim" :style="{background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) ,url(' + api_link + '/images/claimMenu.jpg' + ')'}" class="claimImage">
             <div>
                 <div class="title">Book your table!</div>
             </div>
@@ -174,6 +174,13 @@
 
             //get reservations
             this.getReservations();
+            if(window.innerWidth > 476) {
+                const claim = document.getElementById('claim');
+                window.addEventListener('scroll', function () {
+                    let offset = window.pageYOffset;
+                    claim.style.backgroundPositionY = offset * 0.7 + 'px';
+                });
+            }
 
         },
         methods: {
@@ -541,9 +548,8 @@
     }
 
     .claimImage {
-        height: 373px;
-        background-repeat: no-repeat;
-        background-size: cover;
+        height: 60vh;
+        background-size: cover !important;
         background-position: 50% 50%;
         display: flex;
         justify-content: center;
@@ -559,7 +565,7 @@
             }
             font-size: 42px;
             font-family: 'Great Vibes', cursive;
-            color: #b91d19;
+            color: #ff7e7b;
             margin-bottom: 50px;
         }
     }

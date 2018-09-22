@@ -33,5 +33,5 @@ Route::post('store_reservation', ['uses' => 'ReservationController@store']);
 Route::get('basket_products', ['uses' => 'BasketProductController@index']);
 Route::post('basket_store', ['uses' => 'BasketProductController@store']);
 Route::post('basket_delete', ['uses' => 'BasketProductController@delete']);
-Route::delete('basket_delete_all', ['uses' => 'BasketProductController@delete_all']);
+Route::get('basket_delete_all', ['uses' => 'BasketProductController@delete_all']);
 
