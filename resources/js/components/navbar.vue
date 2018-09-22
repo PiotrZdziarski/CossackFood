@@ -2,7 +2,7 @@
     <nav>
         <div id="navbar" class="navbar" :class="{boxShadow: !nav_active}">
             <div class="logo">
-                <a :href="api_link"><img class="logo-image" :src="api_link + '/images/logo.png'"></a>
+                <a href="/"><img class="logo-image" :src="api_link + '/images/logo.png'"></a>
             </div>
             <div class="dropdown-menu">
                 <div class="dropdown-item">
@@ -10,9 +10,6 @@
                 </div>
                 <div class="dropdown-item">
                     <a class="href" :href="api_link+ '/order'">Order</a>
-                </div>
-                <div class="dropdown-item">
-                    News
                 </div>
                 <div class="dropdown-item">
                     <a class="href" :href="api_link+ '/reservations'">Reserevations</a>
@@ -32,7 +29,6 @@
             <div v-if="nav_active" class="menu">
                 <div class="menu-item"><a class="href" :href="api_link+ '/menu'">Menu</a></div>
                 <div class="menu-item"><a class="href" :href="api_link+ '/order'">Order</a></div>
-                <div class="menu-item">News</div>
                 <div class="menu-item"><a class="href" :href="api_link+ '/reservations'">Reservations</a></div>
                 <div class="menu-item">Contact</div>
             </div>
@@ -278,9 +274,9 @@
 
         .dropdown-item {
             text-align: center;
-            font-size: 15px;
+            font-size: 16px;
             color: #111111;
-            width: 18%;
+            width: 23%;
             font-family: 'Open Sans', sans-serif;
         }
     }
@@ -295,7 +291,7 @@
 
     .href {
         text-decoration: none;
-        font-size: 15px;
+        font-size: 16px;
         color: #111111;
         transition: .2s all ease-in-out;
         font-family: 'Open Sans', sans-serif;

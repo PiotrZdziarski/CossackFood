@@ -13,7 +13,7 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
+Vue.config.productionTip = false;
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('navbar', require('./components/navbar.vue'));
 Vue.component('scrolltop', require('./components/scrolltop.vue'));

@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <div :style="{background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) ,url(' + api_link + '/images/orderClaim.jpg' + ')'}"
+        <div id="claim" :style="{background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) ,url(' + api_link + '/images/orderClaim.jpg' + ')'}"
              class="claimImage">
             <div>
                 <div class="title">Order Online!</div>
@@ -101,6 +101,14 @@
             //convert data from controller to json
             this.records = this.dishesCompute;
 
+            if(window.innerWidth > 476) {
+                const claim = document.getElementById('claim');
+                window.addEventListener('scroll', function () {
+                    let offset = window.pageYOffset;
+                    claim.style.backgroundPositionY = offset * 0.7 + 'px';
+                });
+            }
+
         },
         methods: {
 
@@ -172,9 +180,9 @@
         }
 
         .claimImage {
-            height: 373px;
+            height: 60vh;
             background-repeat: no-repeat;
-            background-position: 40% !important;
+            background-position-x: 40% !important;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -182,10 +190,10 @@
             box-shadow: 0 1px 2px #b9bbbe;
 
             @media(min-width: 768px) {
-                background-position: 20% !important;
+                background-position-x: 20% !important;
             }
             @media(min-width: 1200px) {
-                background-position: 0 !important;
+                background-position-x: 0 !important;
             }
 
             .title {

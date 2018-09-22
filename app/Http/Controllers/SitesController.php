@@ -32,16 +32,6 @@ class SitesController extends Controller
 
 
     /**
-     * reservation subaoge
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function reservations()
-    {
-        return view('reservation');
-    }
-
-
-    /**
      * order online subpage
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
@@ -55,4 +45,15 @@ class SitesController extends Controller
             'pizzas' => $pizzas,
         ]);
     }
+
+
+    /**
+     * reservation subaoge
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function reservations()
+    {
+        return view('reservation');
+    }
+
 }

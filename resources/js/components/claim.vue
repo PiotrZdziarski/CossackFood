@@ -9,11 +9,13 @@
     export default {
         name: "claim",
         mounted() {
-            const claim = document.getElementById('claim');
-            window.addEventListener('scroll', function () {
-               let offset = window.pageYOffset;
-               claim.style.backgroundPositionY = offset * 0.7 + 'px';
-            });
+            if(window.innerWidth > 476) {
+                const claim = document.getElementById('claim');
+                window.addEventListener('scroll', function () {
+                    let offset = window.pageYOffset;
+                    claim.style.backgroundPositionY = offset * 0.6 + 'px';
+                });
+            }
         }
     }
 </script>
@@ -26,6 +28,12 @@
         flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
         justify-content: center;
         background: linear-gradient(
                 rgba(0, 0, 0, 0.7),

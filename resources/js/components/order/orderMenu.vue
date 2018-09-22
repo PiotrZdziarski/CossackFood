@@ -128,15 +128,17 @@
             updateSummary() {
                 this.summary = 0;
                 this.records.forEach((record) => {
-                    this.summary += record.price;
+                    this.summary += parseFloat(record.price);
                 });
-                this.summary = Math.round(this.summary * 100) / 100;
+
+                let power = Math.pow(10, 2 || 0);
+                this.summary = Math.round(this.summary * power) / power;
             },
 
             clearAll() {
                 this.loading = true;
 
-                axios.delete(this.api_link + '/api/basket_delete_all').then(() => {
+                axios.get(this.api_link + '/api/basket_delete_all').then(() => {
                     this.records = [];
                     this.loading = false;
                     this.$emit('showFlash', 'All products successfully deleted!');
@@ -147,7 +149,7 @@
             sumbitOrder(){
                 this.loading = true;
 
-                axios.delete(this.api_link + '/api/basket_delete_all').then(() => {
+                axios.get(this.api_link + '/api/basket_delete_all').then(() => {
                     this.records = [];
                     this.loading = false;
                     this.$emit('showFlash', 'Ordered!');
