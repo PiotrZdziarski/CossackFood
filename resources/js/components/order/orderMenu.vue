@@ -13,9 +13,9 @@
                 </div>
             </transition>
         </div>
-        <div class="orderProducts">
-            <transition-group name="fade">
-                <div class="product" :key="record.id" v-for="record in records" v-if="loading === false">
+        <transition name="fade">
+            <div class="orderProducts" v-if="loading === false">
+                <div class="product" v-for="record in records">
                     <div class="productName">
                         {{ record.product }}
                     </div>
@@ -26,12 +26,12 @@
                         <div @click="deleteProduct(record.id)" class="close"></div>
                     </div>
                 </div>
-            </transition-group>
-        </div>
+            </div>
+        </transition>
         <transition name="fade">
             <div class="utilities"  v-if="summary !== 0 && loading === false">
                 <div class="submitDiv">
-                    <button @click="sumbitOrder" class="submit">Submit</button>
+                    <button @click="sumbitOrder" class="submit">Order</button>
                 </div>
                 <div class="clearAll">
                     <div @click="clearAll" class="clearAllTitle">Clear all</div>
@@ -145,7 +145,14 @@
             },
 
             sumbitOrder(){
-                alert('jd');
+                this.loading = true;
+
+                axios.delete(this.api_link + '/api/basket_delete_all').then(() => {
+                    this.records = [];
+                    this.loading = false;
+                    this.$emit('showFlash', 'Ordered!');
+                    this.updateSummary();
+                });
             }
         }
     }

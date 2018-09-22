@@ -9,6 +9,19 @@ use App\Pizza;
 class SitesController extends Controller
 {
     /**
+     * home page
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index()
+    {
+        $dishes = Dish::all();
+        return view('home', [
+            'dishes' => $dishes
+        ]);
+    }
+
+
+    /**
      * menu subpage
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */

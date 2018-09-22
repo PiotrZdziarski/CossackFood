@@ -17,62 +17,75 @@
                 </div>
             </div>
         </div>
-        <div id="dishes" class="dishes">
-            <div class="dish" v-for="record in records">
-                <div class="image" :style="{backgroundImage: 'url(' +'/images/dishes/' + record.image + ')'}"></div>
-                <div class="description">
-                    <div class="title">
-                        {{ record.dish }}
-                    </div>
-                    <div class="price">
-                        {{ record.price }}$
+        <transition name="fade">
+            <section v-if="loading === false" id="dishes" class="dishes">
+                <div class="dish" :id="'dish' + record.id" v-for="record in records">
+                    <div class="image"
+                         :style="{backgroundImage: 'url(' +'/images/dishes/' + record.image + ')'}"></div>
+                    <div class="description">
+                        <div class="title">
+                            {{ record.dish }}
+                        </div>
+                        <div class="price">
+                            {{ record.price }}$
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div v-if="loading" id="loader" class="lds-dual-ring"></div>
+            </section>
+        </transition>
     </div>
 </template>
 
 <script>
-    import axios from 'axios';
-
     export default {
         name: "featuredDishes",
         props: {
             api_link: {
                 Type: String
+            },
+            dishes_prop: {
+                Type: Object
             }
         },
         data() {
             return {
                 records: [],
-                pages: 1,
-                max_pages: 1,
-                loading: true
+                pageNumber: 1,
+                loading: true,
+                dishes: [],
+                carouselInterval: 0,
             }
         },
-        mounted() {
-            const self = this;
-            axios.get(this.api_link + '/api/dishes_page?page=1').then(function (Response) {
-                self.records = Response.data.data;
-                self.loading = false;
-            });
+        computed: {
+            dishes_propCompute: function () {
+                return JSON.parse(this.dishes_prop);
+            },
         },
-        methods : {
+        mounted() {
+            this.dishes = this.dishes_propCompute;
+
+            for (let i = 0; i < 4; i++) {
+                this.records.push(this.dishes[i]);
+            }
+            this.loading = false;
+            this.carousel();
+        },
+        methods: {
             page(page) {
-
+                this.loading = true;
+                this.pageNumber = page;
                 this.records = [];
-                const self = this;
-                self.loading = true;
+                let begin = (page - 1) * 4;
+                let end = page * 4;
 
-                axios.get(this.api_link + '/api/dishes_page?page=' + page).then(function (Response) {
-                    self.loading = false;
-                    self.records = Response.data.data;
-                });
+                for (let i = begin; i < end; i++) {
+                    if (typeof this.dishes[i] !== 'undefined') {
+                        this.records.push(this.dishes[i]);
+                    }
+                }
 
-                for(let i = 1; i <= 4; i++) {
-                    if(i === page) {
+                for (let i = 1; i <= 4; i++) {
+                    if (i === page) {
                         document.getElementById('page' + i).classList.add('active');
                         document.getElementById('page' + i).classList.remove('inactive');
                     } else {
@@ -80,48 +93,53 @@
                         document.getElementById('page' + i).classList.remove('active');
                     }
                 }
+
+                setTimeout(() => {
+                    this.loading = false;
+                }, 75);
+
+                this.restartCarousel();
             },
+
+            carousel() {
+                this.carouselInterval = setInterval(() => {
+                    if(this.pageNumber < 4) {
+                        this.page(this.pageNumber + 1);
+                    } else {
+                        this.page(this.pageNumber = 1);
+                    }
+                }, 5000);
+            },
+
+            restartCarousel() {
+                clearInterval(this.carouselInterval);
+
+                this.carousel();
+            }
         }
     }
 </script>
 
 <style lang="scss" scoped>
-
-    .lds-dual-ring {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80px;
-        height: 1396px;
-
-        @media(min-width: 476px) {
-            height: 1996px
-        }
-
-        @media(min-width: 768px) {
-            height: 628px;
-        }
-
-
-        @media(min-width: 1000px) {
-            height: 239px;
-        }
-
-
-        margin-left: auto;
-        margin-right: auto;
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .8s;
     }
-    .lds-dual-ring:after {
-        content: " ";
-        display: block;
-        width: 56px;
-        height: 56px;
-        margin: 1px;
-        border-radius: 50%;
-        border: 8px solid lightgray;
-        border-color: lightgray transparent lightgray transparent;
-        animation: lds-dual-ring 1.2s linear infinite;
+
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
     }
+
+    .fadeIn {
+        -webkit-animation: fadeIn 1s;
+        -moz-animation:    fadeIn 1s;
+        -o-animation:      fadeIn 1s;
+        animation:         fadeIn 1s;
+    }
+    @keyframes fadeIn {
+        0%   { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
     @keyframes lds-dual-ring {
         0% {
             transform: rotate(0deg);
