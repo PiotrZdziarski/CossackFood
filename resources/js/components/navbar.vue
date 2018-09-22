@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <nav>
         <div id="navbar" class="navbar" :class="{boxShadow: !nav_active}">
             <div class="logo">
                 <a :href="api_link"><img class="logo-image" :src="api_link + '/images/logo.png'"></a>
@@ -37,7 +37,7 @@
                 <div class="menu-item">Contact</div>
             </div>
         </transition>
-    </div>
+    </nav>
 </template>
 
 <script>

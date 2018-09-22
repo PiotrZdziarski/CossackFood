@@ -21,7 +21,13 @@
             </div>
             <div class="footerColumn">
                 <img data-aos="fade-in" data-aos-once="true" data-aos-offset="-300" class="imageFooter"  :src="api_link + '/images/logo2.png'">
-                <p>No rights reserved</p>
+                <p>I do not reserve the right to the images placed on this website</p>
+                <p>
+                    2018 &copy Piotr Zdziarski
+                </p>
+                <p>
+                    <a target="_blank" class="hrefGithub" href="https://github.com/PiotrZdziarski">Github</a>
+                </p>
             </div>
         </div>
     </footer>
@@ -78,6 +84,16 @@
                 @media(min-width: 1200px) {
                     width: 100%;
                 }
+            }
+
+            .hrefGithub {
+                color: white;
+                border-bottom: 1px solid white;
+                text-decoration: none;
+            }
+            .hrefGithub:hover {
+                color: #cccccc;
+                border-bottom: 1px solid #cccccc;
             }
         }
     }

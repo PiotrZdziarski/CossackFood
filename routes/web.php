@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// home
+Route::get('/', ['uses' => 'SitesController@index']);
 
 //pizzax
 Route::get('/remove_dots', ['uses' => 'PizzaController@remove_dots']);
@@ -24,8 +23,11 @@ Route::get('/prepare_rows_dish', ['uses' => 'DishController@prepare_rows_from_se
 //menu
 Route::get('/menu', ['uses' => 'SitesController@menu']);
 
-//reservations
-Route::get('/reservations', ['uses' => 'SitesController@reservations']);
+//News
+Route::get('/news', ['uses' => 'SitesController@news']);
 
 //order
 Route::get('/order', ['uses' => 'SitesController@order']);
+
+//reservations
+Route::get('/reservations', ['uses' => 'SitesController@reservations']);

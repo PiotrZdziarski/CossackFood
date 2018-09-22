@@ -44,12 +44,6 @@ class orderTest extends DuskTestCase
     {
         $dishes = DishResource::collection(Dish::all());
         $this->assertEquals($this->dishController->index(), $dishes);
-
-        $this->browse(function (Browser $browser) {
-            $browser->visit('/order')
-                ->assertSee($this->dishController->index()->first()->dish)
-                ->assertSee('Summary');
-        });
     }
 
 
@@ -83,7 +77,9 @@ class orderTest extends DuskTestCase
     }
 
 
-
+    /**
+     * Test deleting single product
+     */
     public function testDeletingSingleProduct()
     {
         $testProduct =  $this->orderTestComponents->createOneBasketProductRecord();
@@ -101,6 +97,7 @@ class orderTest extends DuskTestCase
             $_SESSION['basket_id'] = $previousBasketID;
         }
     }
+
 
     /**
      * Test deleting all products

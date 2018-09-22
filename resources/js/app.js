@@ -26,6 +26,7 @@ Vue.component('reservationModal', require('./components/reservation/reservationM
 Vue.component('closed', require('./components/reservation/closed.vue'));
 Vue.component('flashMessage', require('./components/flashMessage.vue'));
 Vue.component('orderOnline', require('./components/order/orderOnline.vue'));
+Vue.component('claim', require('./components/claim.vue'));
 
 const app = new Vue({
     el: '#app'

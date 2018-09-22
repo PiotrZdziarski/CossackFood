@@ -1,4 +1,4 @@
-@extends('app')
+'@extends('app')
 @section('title') Menu @endsection
 @section('content')
     <div class="clearfix"></div>

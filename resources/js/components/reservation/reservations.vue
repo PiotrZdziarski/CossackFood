@@ -119,7 +119,6 @@
 
             <closed :restaurantClosed="restaurantClosed"></closed>
 
-
             <reservation-modal @reservationAdd="reservationAdd($event)"
                                :time-start="time"
                                :date="date"
